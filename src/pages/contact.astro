@@ -321,13 +321,15 @@ const rules: { id: string; errorId: string; validate: (v: string) => string | nu
     errorId: 'phone-error',
     validate: (v) => {
       const digits = v.replace(/\D/g, '');
-      return digits.length < 8 ? 'Please enter a valid phone number.' : null;
+      // +61 international format = 11 digits starting with 61
+      const valid = (digits.startsWith('61') && digits.length === 11) || digits.length === 10;
+      return valid ? null : 'Please enter a valid 10-digit phone number (e.g. 0400 000 000).';
     },
   },
   {
     id: 'email',
     errorId: 'email-error',
-    validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? null : 'Please enter a valid email address.',
+    validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? null : 'Please enter a valid email address (e.g. jane@example.com).',
   },
   {
     id: 'interest',
