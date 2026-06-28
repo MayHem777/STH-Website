@@ -4,7 +4,7 @@ backend:
   name: github
   repo: MayHem777/STH-Website
   branch: main
-  base_url: https://sth-oauth.YOUR-SUBDOMAIN.workers.dev  # TODO: update after Worker deploy
+  base_url: https://sth-oauth.mitchjcroft.workers.dev
 
 site_url: https://sth-website.pages.dev
 display_url: https://sth-website.pages.dev
