@@ -120,12 +120,14 @@ const currentPath = Astro.url.pathname;
   height: 72px;
 }
 
+.logo-link {
+  flex-shrink: 0;
+}
 .logo-link img {
   display: block;
-  height: 48px;
+  height: auto;
+  max-height: 52px;
   width: auto;
-  max-width: 220px;
-  object-fit: contain;
 }
 
 .nav-toggle {
