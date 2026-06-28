@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="About Us | Sunshine Tiny Houses"
+  description="Meet the team behind Sunshine Tiny Houses — Mitch and Nat, QBCC licensed builders with 20+ years of experience crafting custom tiny homes on the Sunshine Coast, QLD."
+  canonical="https://www.sunshinetinyhouses.com.au/about/"
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Our Story</p>
+      <h1>Meet Our Team</h1>
+      <p class="page-hero__sub">Queensland-licensed builders with a passion for crafting unique, high-quality tiny homes.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container about-intro">
+      <div class="about-intro__text">
+        <h2>Welcome to Sunshine Tiny Houses</h2>
+        <p>Our passion for crafting unique, quality tiny houses meets your dream of sustainable, affordable living. Our journey began well before the recent economic shifts that have spotlighted the need for cost-effective housing solutions — fuelled by the global trend towards minimalism and efficient living spaces.</p>
+        <p>Setting ourselves apart from mass production, our ethos revolves around quality over quantity. We don't just build houses — we create homes designed to last a lifetime. Our commitment to excellence is evident in every tiny house we construct, ensuring each project is handled with the utmost care and precision.</p>
+      </div>
+      <div class="about-intro__stats">
+        <div class="stat-card">
+          <span class="stat-card__num">20+</span>
+          <span class="stat-card__label">Years of local building experience</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__num">2020</span>
+          <span class="stat-card__label">Founded on the Sunshine Coast</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card__num">QBCC</span>
+          <span class="stat-card__label">Licensed Builder #15205110</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="container">
+      <p class="eyebrow">What We Do</p>
+      <h2>Custom-Built Tiny Homes Tailored to You</h2>
+      <div class="about-pillars">
+        <div class="pillar">
+          <h3>Unmatched Local Expertise</h3>
+          <p>With over 20 years of local building and carpentry experience, our Queensland-based team brings expertise and flexibility to every project. We collaborate closely with you, incorporating your desired materials and designs to bring your vision to life.</p>
+        </div>
+        <div class="pillar">
+          <h3>Fully Licensed &amp; Insured</h3>
+          <p>As a fully licensed and insured building company, we uphold the highest standards in every aspect of our builds, employing only skilled, licensed tradespeople. We deliver a superior product at a competitive price — every time.</p>
+        </div>
+        <div class="pillar">
+          <h3>Australia-Wide Delivery</h3>
+          <p>Our services extend beyond Queensland. We can arrange transport Australia-wide, ensuring your dream tiny house is delivered right to your doorstep. Contact us to discuss flexible, affordable options.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <p class="eyebrow" style="color: rgba(255,255,255,.45)">What Our Customers Say</p>
+      <h2>Highly Recommended</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <p class="review-card__stars">★★★★★</p>
+          <blockquote>"We first approached Nat and Mitch about their design process. We were so impressed with their knowledge and expertise we decided to have them build our Tiny from start to finish. Nat's communication throughout the entire process was amazing. We cannot speak highly enough of the quality and care from the team, from design through to delivery."</blockquote>
+          <p class="review-card__author">— Queensland Customer</p>
+        </div>
+        <div class="review-card">
+          <p class="review-card__stars">★★★★★</p>
+          <blockquote>"Absolutely loved working with Mitch and his team. The attention to detail was everything I needed. Mitch's communication was always on point — always incredibly responsive and full of knowledge. Wouldn't hesitate to have the guys again."</blockquote>
+          <p class="review-card__author">— Taleah C.</p>
+        </div>
+        <div class="review-card">
+          <p class="review-card__stars">★★★★★</p>
+          <blockquote>"Mitch built the most amazing tiny home for us. We were stunned by how beautifully crafted it was. The attention to detail is very impressive. From start to finish it was a pleasure working with Mitch and Nat. The price was very reasonable."</blockquote>
+          <p class="review-card__author">— Queensland Customer</p>
+        </div>
+        <div class="review-card">
+          <p class="review-card__stars">★★★★★</p>
+          <blockquote>"Just took delivery of my tiny home and I'm absolutely thrilled. Nat, Mitch and the team were amazing to deal with — nothing was too much trouble. They designed the perfect home for me, delivered on time and on budget."</blockquote>
+          <p class="review-card__author">— Queensland Customer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container about-cta">
+      <h2>Ready to Start Your Tiny House Journey?</h2>
+      <p>Get in touch with Mitch and Nat today for a free, no-obligation conversation about your project.</p>
+      <div class="about-cta__btns">
+        <a href="/contact/" class="btn btn--primary">Get a Free Quote</a>
+        <a href="tel:0753158365" class="btn btn--outline">(07) 5315 8365</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.page-hero {
+  background: var(--color-surface-dark);
+  color: #fff;
+  padding: 4rem 0 3rem;
+}
+.page-hero h1 { color: #fff; }
+.page-hero__sub { color: rgba(255,255,255,.7); margin-top: .75rem; font-size: 1.1rem; max-width: 560px; }
+
+/* Intro */
+.about-intro {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 4rem;
+  align-items: start;
+}
+.about-intro__text h2 { margin-bottom: 1rem; }
+.about-intro__text p + p { margin-top: 1rem; }
+.about-intro__stats { display: flex; flex-direction: column; gap: 1rem; }
+.stat-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+}
+.stat-card__num { display: block; font-size: 2rem; font-weight: 800; color: var(--color-primary); line-height: 1; margin-bottom: .3rem; font-family: var(--font-heading); }
+.stat-card__label { font-size: .82rem; color: var(--color-text-body); }
+
+/* Pillars */
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.pillar h3 { margin-bottom: .6rem; }
+
+/* Reviews */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+.review-card {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+.review-card__stars { color: var(--color-accent); letter-spacing: 2px; margin-bottom: .75rem; }
+.review-card blockquote { font-style: italic; font-size: .92rem; line-height: 1.75; color: rgba(255,255,255,.85); margin-bottom: 1rem; }
+.review-card__author { font-size: .8rem; color: rgba(255,255,255,.45); font-weight: 600; }
+
+/* CTA */
+.about-cta { text-align: center; }
+.about-cta h2 { margin-bottom: .75rem; }
+.about-cta p { color: var(--color-text-body); margin-bottom: 2rem; }
+.about-cta__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: .9rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  text-align: center;
+}
+.btn--primary { background: var(--color-primary); color: #fff; }
+.btn--primary:hover { background: var(--color-primary-hover); transform: translateY(-2px); }
+.btn--outline { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
+.btn--outline:hover { background: var(--color-primary); color: #fff; }
+
+@media (max-width: 900px) {
+  .about-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .about-pillars { grid-template-columns: 1fr; gap: 1.5rem; }
+  .reviews-grid { grid-template-columns: 1fr; }
+}
+</style>

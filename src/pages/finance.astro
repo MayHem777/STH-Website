@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Finance Options | Sunshine Tiny Houses"
+  description="Flexible finance options for your tiny house or modular home. Access 50+ lenders through Emu Money, or apply through Handypay for loans up to $75,000."
+  canonical="https://www.sunshinetinyhouses.com.au/finance/"
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Finance</p>
+      <h1>Finance Options</h1>
+      <p class="page-hero__sub">Flexible finance to help make your tiny house or modular home a reality.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container finance-intro">
+      <p>We've partnered with two trusted finance providers so you can get into your new home sooner. Whether you're looking for a personal loan or want access to a broad range of lenders, we can help point you in the right direction.</p>
+      <p>Enquiring doesn't affect your credit score, and you're under no obligation to proceed.</p>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="container">
+      <div class="finance-cards">
+
+        <div class="finance-card">
+          <div class="finance-card__header">
+            <p class="eyebrow">Finance Partner</p>
+            <h2>Emu Money</h2>
+          </div>
+          <p class="finance-card__intro">Access to 50+ Australian lenders through one simple application — personal and business finance options available.</p>
+          <ul class="finance-features">
+            <li>
+              <span class="feature-icon">&#x1F4C5;</span>
+              <div>
+                <strong>Loan terms</strong>
+                <span>6 to 60 months</span>
+              </div>
+            </li>
+            <li>
+              <span class="feature-icon">&#x1F3E6;</span>
+              <div>
+                <strong>Lender access</strong>
+                <span>50+ Australian lenders</span>
+              </div>
+            </li>
+            <li>
+              <span class="feature-icon">&#x26A1;</span>
+              <div>
+                <strong>Fast approval</strong>
+                <span>Typically 24–48 hours</span>
+              </div>
+            </li>
+            <li>
+              <span class="feature-icon">&#x1F4B3;</span>
+              <div>
+                <strong>Options</strong>
+                <span>Personal and business finance</span>
+              </div>
+            </li>
+          </ul>
+          <div class="finance-steps">
+            <h3>How it works</h3>
+            <ol>
+              <li>Browse our designs and get a quote</li>
+              <li>Submit your online application</li>
+              <li>Receive fast approval</li>
+              <li>Move into your new space</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="finance-card">
+          <div class="finance-card__header">
+            <p class="eyebrow">Finance Partner</p>
+            <h2>Handypay</h2>
+          </div>
+          <p class="finance-card__intro">A straightforward personal loan with competitive rates — up to $75,000 per applicant, with two joint applicants able to finance up to $150,000.</p>
+          <ul class="finance-features">
+            <li>
+              <span class="feature-icon">&#x1F4B0;</span>
+              <div>
+                <strong>Loan range</strong>
+                <span>$2,001 – $75,000 per applicant</span>
+              </div>
+            </li>
+            <li>
+              <span class="feature-icon">&#x1F4C5;</span>
+              <div>
+                <strong>Available terms</strong>
+                <span>1 to 7 years</span>
+              </div>
+            </li>
+            <li>
+              <span class="feature-icon">&#x1F4C6;</span>
+              <div>
+                <strong>Repayments</strong>
+                <span>Weekly, fortnightly or monthly</span>
+              </div>
+            </li>
+            <li>
+              <span class="feature-icon">&#x1F4C8;</span>
+              <div>
+                <strong>Rate from</strong>
+                <span>6.29% p.a. (comparison rate 6.80%)</span>
+              </div>
+            </li>
+          </ul>
+          <div class="finance-eligibility">
+            <h3>Eligibility</h3>
+            <ul>
+              <li>18+ years old</li>
+              <li>Australian citizen or permanent resident</li>
+              <li>Must have employment income</li>
+              <li>Consumer use only</li>
+            </ul>
+          </div>
+          <p class="finance-note">Enquiring doesn't impact your credit score. Approved in seconds — Handypay covers the upfront cost and payments align with your income schedule.</p>
+          <p class="finance-contact">Call Handypay direct: <a href="tel:1300990115">1300 990 115</a></p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container finance-cta">
+      <h2>Ready to Explore Your Options?</h2>
+      <p>Get in touch with us first and we can point you to the right finance partner for your project.</p>
+      <div class="finance-cta__btns">
+        <a href="/contact/" class="btn btn--primary">Get a Free Quote</a>
+        <a href="tel:0753158365" class="btn btn--outline">(07) 5315 8365</a>
+      </div>
+      <p class="finance-disclaimer">Finance is subject to lending criteria and your personal circumstances. Interest rates are indicative and may vary. Always read the product disclosure before applying.</p>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.page-hero {
+  background: var(--color-surface-dark);
+  color: #fff;
+  padding: 4rem 0 3rem;
+}
+.page-hero h1 { color: #fff; }
+.page-hero__sub { color: rgba(255,255,255,.7); margin-top: .75rem; font-size: 1.1rem; max-width: 560px; }
+
+.finance-intro p { color: var(--color-text-body); max-width: 680px; }
+.finance-intro p + p { margin-top: .75rem; }
+
+.finance-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.finance-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2rem;
+}
+.finance-card__header { margin-bottom: 1rem; }
+.finance-card__header h2 { font-size: 1.75rem; }
+.finance-card__intro { color: var(--color-text-body); margin-bottom: 1.5rem; line-height: 1.65; }
+
+.finance-features { list-style: none; display: flex; flex-direction: column; gap: .85rem; margin-bottom: 1.75rem; }
+.finance-features li { display: flex; align-items: flex-start; gap: .85rem; }
+.feature-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: .1rem; }
+.finance-features strong { display: block; font-size: .88rem; font-weight: 700; color: var(--color-text); }
+.finance-features span { font-size: .85rem; color: var(--color-text-body); }
+
+.finance-steps h3,
+.finance-eligibility h3 { font-size: .9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-primary); margin-bottom: .6rem; }
+.finance-steps ol { padding-left: 1.25rem; display: flex; flex-direction: column; gap: .4rem; }
+.finance-steps ol li { font-size: .9rem; color: var(--color-text-body); line-height: 1.55; }
+.finance-eligibility ul { list-style: disc; padding-left: 1.25rem; display: flex; flex-direction: column; gap: .3rem; }
+.finance-eligibility ul li { font-size: .9rem; color: var(--color-text-body); }
+
+.finance-note { font-size: .82rem; color: var(--color-text-body); margin-top: 1.25rem; line-height: 1.6; }
+.finance-contact { font-size: .88rem; margin-top: .6rem; font-weight: 600; }
+.finance-contact a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+
+.finance-cta { text-align: center; }
+.finance-cta h2 { margin-bottom: .75rem; }
+.finance-cta p { color: var(--color-text-body); max-width: 520px; margin: 0 auto 2rem; }
+.finance-cta__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+.finance-disclaimer { font-size: .78rem; color: var(--color-text-body); opacity: .7; max-width: 540px; margin: 0 auto; }
+
+.btn {
+  display: inline-block;
+  padding: .9rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  text-align: center;
+}
+.btn--primary { background: var(--color-primary); color: #fff; }
+.btn--primary:hover { background: var(--color-primary-hover); transform: translateY(-2px); }
+.btn--outline { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
+.btn--outline:hover { background: var(--color-primary); color: #fff; }
+
+@media (max-width: 860px) {
+  .finance-cards { grid-template-columns: 1fr; }
+}
+</style>

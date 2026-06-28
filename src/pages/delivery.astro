@@ -1,0 +1,189 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Delivery | Sunshine Tiny Houses"
+  description="Sunshine Tiny Houses delivers across Australia through a network of experienced, insured transport contractors. Get a tailored delivery quote for your build."
+  canonical="https://www.sunshinetinyhouses.com.au/delivery/"
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Delivery</p>
+      <h1>We Deliver Australia-Wide</h1>
+      <p class="page-hero__sub">Safe, professional delivery through our trusted network of transport contractors.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container delivery-intro">
+      <div class="delivery-intro__text">
+        <h2>Getting Your Home to You</h2>
+        <p>At Sunshine Tiny Houses, we understand the importance of safe and reliable delivery for your dream home. While we don't operate our own delivery vehicles, we've built a network of experienced, fully insured transport contractors across Australia — so your tiny house or modular home arrives securely, no matter where you are.</p>
+        <p>Every delivery is quoted individually based on your specific circumstances — size of the build, delivery location, access requirements, and any permits needed for oversized loads. We handle the coordination so you don't have to.</p>
+      </div>
+      <div class="delivery-intro__aside">
+        <div class="delivery-highlight">
+          <span class="delivery-highlight__icon">&#x1F697;</span>
+          <h3>Australia-Wide</h3>
+          <p>We can deliver to any state or territory through our contractor network.</p>
+        </div>
+        <div class="delivery-highlight">
+          <span class="delivery-highlight__icon">&#x1F6E1;&#xFE0F;</span>
+          <h3>Fully Insured</h3>
+          <p>All our transport partners carry full transit insurance for your peace of mind.</p>
+        </div>
+        <div class="delivery-highlight">
+          <span class="delivery-highlight__icon">&#x1F4CB;</span>
+          <h3>Quoted Per Job</h3>
+          <p>Delivery cost depends on your location and build — we provide a personalised quote.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="container delivery-process">
+      <p class="eyebrow">How It Works</p>
+      <h2>Delivery Process</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step__num">01</span>
+          <h3>Your Build Nears Completion</h3>
+          <p>As your tiny house or modular home approaches the final stages, we begin coordinating your delivery logistics.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">02</span>
+          <h3>Delivery Quote</h3>
+          <p>We quote your delivery based on your build dimensions, weight, delivery address, and any access or permit requirements for your route.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">03</span>
+          <h3>Site Preparation</h3>
+          <p>You prepare your site — level pad, utilities access, and clear vehicle access. We'll advise on what's needed for your specific build.</p>
+        </div>
+        <div class="step">
+          <span class="step__num">04</span>
+          <h3>Delivery Day</h3>
+          <p>Our contractor transports and positions your home on-site. For modular homes, the site connection process begins the day after delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container delivery-faq">
+      <h2>Delivery FAQs</h2>
+      <div class="dfaq-list">
+        <div class="dfaq-item">
+          <h3>Do you deliver to rural areas?</h3>
+          <p>Yes, we can arrange delivery to rural and regional areas across Australia. Access requirements and lead times may vary — let us know your location when requesting a quote.</p>
+        </div>
+        <div class="dfaq-item">
+          <h3>What site preparation do I need?</h3>
+          <p>You'll need a clear, level pad with adequate vehicle access for the transport truck and trailer. For modular homes, a concrete slab or screw pile foundation needs to be ready before delivery. We can advise on specifics for your build.</p>
+        </div>
+        <div class="dfaq-item">
+          <h3>What does delivery cost?</h3>
+          <p>Delivery is quoted case by case. Cost depends on your location, the size and weight of your build, and any route permits required for oversize loads. Contact us with your address for a delivery estimate.</p>
+        </div>
+        <div class="dfaq-item">
+          <h3>Do I need to be present for delivery?</h3>
+          <p>We recommend being on-site for delivery so you can approve the positioning and inspect your home upon arrival. Someone over 18 should be present to accept the delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container delivery-cta">
+      <h2>Ready to Get a Delivery Quote?</h2>
+      <p>Tell us your location and build details and we'll provide a personalised delivery estimate.</p>
+      <div class="delivery-cta__btns">
+        <a href="/contact/" class="btn btn--accent">Request a Quote</a>
+        <a href="tel:0753158365" class="btn btn--ghost">(07) 5315 8365</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.page-hero {
+  background: var(--color-surface-dark);
+  color: #fff;
+  padding: 4rem 0 3rem;
+}
+.page-hero h1 { color: #fff; }
+.page-hero__sub { color: rgba(255,255,255,.7); margin-top: .75rem; font-size: 1.1rem; max-width: 560px; }
+
+.delivery-intro {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 4rem;
+  align-items: start;
+}
+.delivery-intro__text h2 { margin-bottom: 1rem; }
+.delivery-intro__text p + p { margin-top: 1rem; }
+
+.delivery-intro__aside { display: flex; flex-direction: column; gap: 1.25rem; }
+.delivery-highlight {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+.delivery-highlight__icon { font-size: 1.5rem; display: block; margin-bottom: .5rem; }
+.delivery-highlight h3 { font-size: 1rem; margin-bottom: .35rem; }
+.delivery-highlight p { font-size: .88rem; color: var(--color-text-body); }
+
+.delivery-process { max-width: 860px; }
+.delivery-process h2 { margin: .75rem 0 2.5rem; }
+
+.steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+.step {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1.75rem;
+  position: relative;
+}
+.step__num { display: block; font-size: 2.25rem; font-weight: 900; color: var(--color-accent); font-family: var(--font-heading); line-height: 1; margin-bottom: .75rem; }
+.step h3 { margin-bottom: .5rem; }
+.step p { font-size: .9rem; color: var(--color-text-body); }
+
+.delivery-faq { max-width: 860px; }
+.delivery-faq h2 { margin-bottom: 2rem; }
+.dfaq-list { display: flex; flex-direction: column; gap: 0; }
+.dfaq-item { padding: 1.5rem 0; border-bottom: 1px solid var(--color-border); }
+.dfaq-item:first-child { border-top: 1px solid var(--color-border); }
+.dfaq-item h3 { font-size: 1rem; margin-bottom: .5rem; }
+.dfaq-item p { color: var(--color-text-body); font-size: .92rem; }
+
+.delivery-cta { text-align: center; }
+.delivery-cta h2 { color: #fff; margin-bottom: .75rem; }
+.delivery-cta p { color: rgba(255,255,255,.7); margin-bottom: 2rem; }
+.delivery-cta__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: .9rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  text-align: center;
+}
+.btn--accent { background: var(--color-accent); color: #fff; }
+.btn--accent:hover { opacity: .9; transform: translateY(-2px); }
+.btn--ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.5); }
+.btn--ghost:hover { border-color: #fff; }
+
+@media (max-width: 900px) {
+  .delivery-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .steps { grid-template-columns: 1fr; }
+}
+</style>
