@@ -1,5 +1,37 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const PLACE_ID = 'ChIJ_ZsOPnJ5k2sRFUIODm2zP4k';
+const API_KEY = import.meta.env.GOOGLE_PLACES_API_KEY;
+
+let reviews = [];
+let rating = 5;
+let totalRatings = 0;
+
+if (API_KEY) {
+  try {
+    const res = await fetch(
+      `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=reviews,rating,user_ratings_total&key=${API_KEY}`
+    );
+    const data = await res.json();
+    reviews = data.result?.reviews ?? [];
+    rating = data.result?.rating ?? 5;
+    totalRatings = data.result?.user_ratings_total ?? 0;
+  } catch (e) {
+    console.warn('Google Places fetch failed, using fallback reviews');
+  }
+}
+
+// Fallback reviews if API key not set or fetch fails
+if (reviews.length === 0) {
+  reviews = [
+    { author_name: 'Zofia Nordqvist', rating: 5, text: "Nat and Mitch were amazing the whole way through the process of designing and building our beautiful double loft tiny home and custom made trailer, we're stoked with the result! If you're thinking of building a tiny home we highly recommend the Sunshine Tiny Houses Crew!" },
+    { author_name: 'James Simpson', rating: 5, text: "It was an absolute pleasure working with Nat, Mitch and the team. Nothing was a problem for them to help us achieve our beautiful tiny home. Their attention to detail, input and their after service was fantastic. I have and would highly recommend engaging with Sunshine Tiny Houses for your dream tiny home." },
+    { author_name: 'Kellee Myers', rating: 5, text: "Highly recommend Sunshine Tiny Houses. We first approached Nat and Mitch about their design process. We were so impressed with their knowledge and expertise we decided to have them build our Tiny from start to finish. We had a custom 3 bedroom build, and cannot be happier. Thank you guys." },
+    { author_name: 'Peter Carr', rating: 5, text: "Mitch and Nat were amazing to deal with, from my initial contact requesting a quote on a custom 9x2.8m Tiny House On Wheels, through the design and construction process and final delivery. I couldn't be any happier with the final result!" },
+    { author_name: 'N T', rating: 5, text: "We recently purchased a custom build tiny house on wheels from Nat and Mitch and are thrilled with it. The quality of the finishes, attention to detail and customer service is amazing. Exceptional service and product. Thanks Nat and Mitch." },
+  ];
+}
 ---
 
 <BaseLayout
@@ -64,33 +96,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <section class="section section--dark">
     <div class="container">
       <p class="eyebrow" style="color: rgba(255,255,255,.45)">What Our Customers Say</p>
-      <h2>Highly Recommended</h2>
+      <h2>Rated {rating} Stars &mdash; {totalRatings > 0 ? `${totalRatings} Google Reviews` : 'Google Reviews'}</h2>
       <div class="reviews-grid">
-        <div class="review-card">
-          <p class="review-card__stars">★★★★★</p>
-          <blockquote>"Nat and Mitch were amazing the whole way through the process of designing and building our beautiful double loft tiny home and custom made trailer, we're stoked with the result! Couldn't have done it without them! If you're thinking of building a tiny home we highly recommend the Sunshine Tiny Houses Crew!"</blockquote>
-          <p class="review-card__author">— Zofia Nordqvist &nbsp;·&nbsp; Google Review</p>
-        </div>
-        <div class="review-card">
-          <p class="review-card__stars">★★★★★</p>
-          <blockquote>"Sunshine Tiny Houses is an amazing team of people that will work to ensure your tiny house is a tiny home. They are amazing people who always respond promptly and will work closely with you to achieve every feasible dream you have. The Sunshine Tiny House team helped me achieve a life long dream. I would highly recommend trusting them with yours too."</blockquote>
-          <p class="review-card__author">— Alia S &nbsp;·&nbsp; Google Review</p>
-        </div>
-        <div class="review-card">
-          <p class="review-card__stars">★★★★★</p>
-          <blockquote>"We recently purchased a custom build tiny house on wheels from Nat and Mitch and are thrilled with it. The entire process from design to delivery was easy and Nat and Mitch are excellent communicators, patient and extremely pleasant to deal with. The quality of the finishes, attention to detail and customer service is amazing."</blockquote>
-          <p class="review-card__author">— N T &nbsp;·&nbsp; Google Review</p>
-        </div>
-        <div class="review-card">
-          <p class="review-card__stars">★★★★★</p>
-          <blockquote>"Absolutely loved working with Mitch and his team. The attention to detail was everything I needed in our tiny house build. Mitch's communication was always on point. Always incredibly responsive and full of knowledge. Big thanks to Pala, Dan and Nick for your wonderful workmanship. Wouldn't hesitate to have the guys again."</blockquote>
-          <p class="review-card__author">— Taleah (T-Leaf Collections) &nbsp;·&nbsp; Google Review</p>
-        </div>
-        <div class="review-card">
-          <p class="review-card__stars">★★★★★</p>
-          <blockquote>"My project wasn't the easiest but with the Sunshine Tiny Houses professionalism the result has been better than I expected. Great crew to work with. Well done."</blockquote>
-          <p class="review-card__author">— Keith Poole &nbsp;·&nbsp; Google Review</p>
-        </div>
+        {reviews.map((r) => (
+          <div class="review-card">
+            <p class="review-card__stars">{'★'.repeat(r.rating)}</p>
+            <blockquote>"{r.text}"</blockquote>
+            <p class="review-card__author">— {r.author_name} &nbsp;·&nbsp; Google Review</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
