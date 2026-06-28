@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Gallery | Sunshine Tiny Houses"
+  description="Browse photos of completed tiny houses, modular homes and backyard studios built by Sunshine Tiny Houses in Noosaville, QLD."
+  canonical="https://www.sunshinetinyhouses.com.au/gallery/"
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Gallery</p>
+      <h1>Our Builds</h1>
+      <p class="page-hero__sub">A look at some of our favourite completed tiny homes and modular builds.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container gallery-empty">
+      <div class="gallery-empty__icon">&#x1F4F7;</div>
+      <h2>Photos Coming Soon</h2>
+      <p>We're pulling together photos from our best builds. In the meantime, check out our Instagram for the latest from the workshop.</p>
+      <div class="gallery-empty__btns">
+        <a href="https://www.instagram.com/sunshinetinyhouses/" target="_blank" rel="noopener" class="btn btn--primary">View on Instagram</a>
+        <a href="/contact/" class="btn btn--outline">Get a Free Quote</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.page-hero {
+  background: var(--color-surface-dark);
+  color: #fff;
+  padding: 4rem 0 3rem;
+}
+.page-hero h1 { color: #fff; }
+.page-hero__sub { color: rgba(255,255,255,.7); margin-top: .75rem; font-size: 1.1rem; }
+
+.gallery-empty {
+  text-align: center;
+  max-width: 480px;
+}
+.gallery-empty__icon { font-size: 3rem; margin-bottom: 1.5rem; }
+.gallery-empty h2 { margin-bottom: 1rem; }
+.gallery-empty p { color: var(--color-text-body); margin-bottom: 2rem; }
+.gallery-empty__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: .9rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+}
+.btn--primary { background: var(--color-primary); color: #fff; }
+.btn--primary:hover { background: var(--color-primary-hover); transform: translateY(-2px); }
+.btn--outline { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
+.btn--outline:hover { background: var(--color-primary); color: #fff; }
+</style>
