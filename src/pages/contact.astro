@@ -36,16 +36,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <div class="form-field">
               <label for="name">Full name <span aria-hidden="true">*</span></label>
               <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith" />
+              <span class="field-error" id="name-error"></span>
             </div>
             <div class="form-field">
               <label for="phone">Phone number <span aria-hidden="true">*</span></label>
-              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="0400 000 000" />
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="0400 000 000"
+                pattern="^[\d\s\+\(\)\-]{8,15}$" />
+              <span class="field-error" id="phone-error"></span>
             </div>
           </div>
 
           <div class="form-field">
             <label for="email">Email address <span aria-hidden="true">*</span></label>
             <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com" />
+            <span class="field-error" id="email-error"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="location">Suburb / Postcode</label>
+            <input type="text" id="location" name="location" autocomplete="address-level2" placeholder="e.g. Noosa Heads 4567" />
           </div>
 
           <div class="form-field">
@@ -58,6 +67,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
               <option value="Trailer only">Trailer only</option>
               <option value="Not sure yet">Not sure yet</option>
             </select>
+            <span class="field-error" id="interest-error"></span>
           </div>
 
           <div class="form-field">
@@ -192,6 +202,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   outline: none;
   border-color: var(--color-primary);
 }
+.form-field input.is-invalid,
+.form-field select.is-invalid {
+  border-color: #c0392b;
+}
+
+.field-error {
+  display: none;
+  font-size: 0.78rem;
+  color: #c0392b;
+  font-weight: 500;
+}
+.field-error.is-visible {
+  display: block;
+}
 .form-field textarea {
   resize: vertical;
 }
@@ -282,3 +306,75 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 }
 </style>
+
+<script>
+const form = document.getElementById('quote-form') as HTMLFormElement;
+
+const rules: { id: string; errorId: string; validate: (v: string) => string | null }[] = [
+  {
+    id: 'name',
+    errorId: 'name-error',
+    validate: (v) => v.trim().length < 2 ? 'Please enter your full name.' : null,
+  },
+  {
+    id: 'phone',
+    errorId: 'phone-error',
+    validate: (v) => {
+      const digits = v.replace(/\D/g, '');
+      return digits.length < 8 ? 'Please enter a valid phone number.' : null;
+    },
+  },
+  {
+    id: 'email',
+    errorId: 'email-error',
+    validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? null : 'Please enter a valid email address.',
+  },
+  {
+    id: 'interest',
+    errorId: 'interest-error',
+    validate: (v) => v ? null : 'Please select a product line.',
+  },
+];
+
+function showError(rule: typeof rules[0], message: string | null) {
+  const input = document.getElementById(rule.id) as HTMLInputElement | HTMLSelectElement;
+  const error = document.getElementById(rule.errorId) as HTMLSpanElement;
+  if (message) {
+    input.classList.add('is-invalid');
+    error.textContent = message;
+    error.classList.add('is-visible');
+  } else {
+    input.classList.remove('is-invalid');
+    error.textContent = '';
+    error.classList.remove('is-visible');
+  }
+}
+
+// Validate on blur so errors appear as soon as user leaves a field
+rules.forEach((rule) => {
+  const input = document.getElementById(rule.id) as HTMLInputElement | HTMLSelectElement;
+  input?.addEventListener('blur', () => {
+    showError(rule, rule.validate((input as HTMLInputElement).value));
+  });
+  input?.addEventListener('input', () => {
+    if (input.classList.contains('is-invalid')) {
+      showError(rule, rule.validate((input as HTMLInputElement).value));
+    }
+  });
+});
+
+// Full validation on submit
+form?.addEventListener('submit', (e) => {
+  let valid = true;
+  rules.forEach((rule) => {
+    const input = document.getElementById(rule.id) as HTMLInputElement | HTMLSelectElement;
+    const error = rule.validate((input as HTMLInputElement).value);
+    showError(rule, error);
+    if (error) valid = false;
+  });
+  if (!valid) {
+    e.preventDefault();
+    form.querySelector<HTMLElement>('.is-invalid')?.focus();
+  }
+});
+</script>
