@@ -1,18 +1,50 @@
 # Cloudflare Pages redirect rules
-# Format: /old-url  /new-url  301
+# Format: /old-url  /new-url  status
+# All Squarespace URLs → new Astro site
 
-# Squarespace URL → new site mapping
-# ⚠️  INCOMPLETE — update after Mitch provides full Squarespace URL list
+# ── Top-level pages ──────────────────────────────────────────────────────────
+/home-1-1                    /                                              301
+/our-tiny-houses             /tiny-houses-on-wheels/                        301
+/contact                     /contact/                                      301
+/gallery                     /gallery/                                      301
+/faqs                        /faq/                                          301
+/finance                     /finance/                                      301
+/delivery                    /delivery/                                     301
+/offgrid                     /off-grid/                                     301
+/council-regulations         /council-regulations/                          301
+/about                       /about/                                        301
+/things-to-know              /faq/                                          301
 
-/modulars                    /modular-homes/                       301
-/modulars/*                  /modular-homes/:splat                 301
-/tiny-houses-on-wheels       /tiny-houses-on-wheels/               301
-/trailers                    /tiny-houses-on-wheels/trailers/       301
-/things-to-know              /finance/                             301
+# ── Modulars (Squarespace nav item) ──────────────────────────────────────────
+/modulars                    /modular-homes/                                301
+/modulars/*                  /modular-homes/:splat                          301
 
-# Keep ad landing pages at existing URLs (active Google Ads campaign)
-# /google-ads-offer stays as-is (rebuilt as new page)
-# /meta-ads-offer stays as-is (rebuilt as new page)
+# ── THOW product pages (lived at root on Squarespace) ────────────────────────
+/1770                        /tiny-houses-on-wheels/1770/                   301
+/little-cove                 /tiny-houses-on-wheels/little-cove/            301
+/granite-bay                 /tiny-houses-on-wheels/granite-bay/            301
+/boiling-pot                 /tiny-houses-on-wheels/boiling-pot/            301
+/bondi                       /tiny-houses-on-wheels/bondi/                  301
+/castaways                   /tiny-houses-on-wheels/castaways/              301
+/lennox                      /tiny-houses-on-wheels/lennox/                 301
+/custom-design-build         /tiny-houses-on-wheels/custom-design-build/    301
+/trailers                    /tiny-houses-on-wheels/trailers/               301
+/tiny-houses-on-wheels       /tiny-houses-on-wheels/                        301
 
-# Legacy blog paths (if Squarespace used /blog/year/month/title)
-# /blog/*/*/*/*   /blog/:splat   301
+# ── Blog posts → blog index (until posts are rebuilt in Astro) ───────────────
+/blog/the-rise-of-modern-modular-why-a-granny-flat-is-the-ultimate-property-upgrade            /blog/    301
+/blog/noosa-council-abolishes-7000-infrastructure-charge-for-secondary-dwellingsheres-what-that-means-for-you  /blog/  301
+/blog/benefits-pod-tiny-homes-sunshine-coast                                                   /blog/    301
+/blog/tiny-home-living-sunshine-coast                                                          /blog/    301
+/blog/boiling-pot-model-cozy-fun-living                                                        /blog/    301
+/blog/build-your-dream-tiny-home-on-the-sunshine-coast                                        /blog/    301
+/blog/a-deep-dive-into-the-tiny-home-1770-model                                               /blog/    301
+/blog/benefits-of-tiny-homes-for-remote-rural-living                                          /blog/    301
+/blog/customizing-your-dream-tiny-home                                                         /blog/    301
+/blog/tiny-living-maximizing-small-spaces                                                      /blog/    301
+/blog/tiny-vs-traditional-homes-a-comparative-analysis                                        /blog/    301
+/blog/the-financial-benefits-of-downsizing-to-a-tiny-house                                    /blog/    301
+/blog/2023-tiny-home-design-trends                                                             /blog/    301
+/blog/tinyhousedreamhome                                                                       /blog/    301
+/blog/choosingtinyhomeliving                                                                   /blog/    301
+/blog/embracingfreedomtinyhouses                                                               /blog/    301
