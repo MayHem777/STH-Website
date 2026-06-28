@@ -65,22 +65,29 @@ export default {
         return errorPage(data.error_description ?? data.error ?? 'Unknown error');
       }
 
-      // Decap CMS expects this exact postMessage format
-      const payload = JSON.stringify({
-        token: data.access_token,
-        provider: 'github',
-      });
+      // Decap CMS two-step handshake:
+      // 1. Popup announces itself with "authorizing:github"
+      // 2. Decap echoes it back so popup knows the opener origin
+      // 3. Popup sends the token to that exact origin
+      const token = data.access_token;
 
       const html = `<!doctype html>
 <html><head><meta charset="utf-8"></head>
 <body>
 <script>
 (function(){
-  var msg = 'authorization:github:success:' + ${JSON.stringify(payload)};
-  if (window.opener) {
-    window.opener.postMessage(msg, '*');
+  var token = ${JSON.stringify(token)};
+  var authMsg = 'authorization:github:success:' + JSON.stringify({ token: token, provider: 'github' });
+
+  function receiveMessage(e) {
+    if (typeof e.data !== 'string' || !e.data.startsWith('authorizing:')) return;
+    window.removeEventListener('message', receiveMessage, false);
+    window.opener.postMessage(authMsg, e.origin);
+    setTimeout(function(){ window.close(); }, 500);
   }
-  window.close();
+
+  window.addEventListener('message', receiveMessage, false);
+  window.opener.postMessage('authorizing:github', '*');
 })();
 </script>
 </body></html>`;
