@@ -2,14 +2,15 @@
 export interface Props {
   href: string;
   variant?: 'primary' | 'secondary' | 'ghost';
+  size?: 'default' | 'lg';
   class?: string;
 }
-const { href, variant = 'primary', class: className } = Astro.props;
+const { href, variant = 'primary', size = 'default', class: className } = Astro.props;
 ---
 
 <a
   href={href}
-  class:list={['btn', `btn--${variant}`, className]}
+  class:list={['btn', `btn--${variant}`, size === 'lg' && 'btn--lg', className]}
 >
   <slot />
 </a>
@@ -17,46 +18,60 @@ const { href, variant = 'primary', class: className } = Astro.props;
 <style>
 .btn {
   display: inline-block;
-  padding: 0.75rem 2rem;
+  padding: 1rem 2rem;
   border-radius: var(--radius-btn);
   font-family: var(--font-body);
-  font-size: var(--font-size-sm);
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
   text-align: center;
-  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
-  cursor: pointer;
   white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+.btn--lg {
+  padding: 1.15rem 2.5rem;
+  font-size: var(--font-size-lg);
 }
 
 .btn--primary {
   background-color: var(--color-primary);
   color: #fff;
-  border: 2px solid var(--color-primary);
+  border: none;
+  box-shadow: var(--shadow-btn);
 }
 .btn--primary:hover {
   background-color: var(--color-primary-hover);
-  border-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn-hover);
 }
 
 .btn--secondary {
   background-color: transparent;
   color: var(--color-primary);
   border: 2px solid var(--color-primary);
+  box-shadow: none;
 }
 .btn--secondary:hover {
   background-color: var(--color-primary);
   color: #fff;
+  transform: translateY(-2px);
 }
 
 .btn--ghost {
   background-color: transparent;
-  color: var(--color-text-on-dark);
-  border: 2px solid var(--color-text-on-dark);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  box-shadow: none;
 }
 .btn--ghost:hover {
-  background-color: var(--color-text-on-dark);
-  color: var(--color-text);
+  background-color: rgba(255, 255, 255, 0.10);
+  border-color: rgba(255, 255, 255, 0.80);
 }
 </style>

@@ -1,51 +1,89 @@
 /*
   DESIGN TOKENS — Sunshine Tiny Houses
-  ⚠️  PLACEHOLDER VALUES — update from brand screenshots before launch.
-  Ask Mitch for screenshots of /google-ads-offer and /meta-ads-offer.
+  Extracted from landing-page-v6-squarespace-codeblock.html (June 2026)
 */
+
+/* Outfit font — loaded from Google Fonts (replaces Squarespace/Typekit delivery) */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+
 :root {
-  /* Colours */
-  --color-bg:             #ffffff;
-  --color-surface:        #f8f6f2;   /* warm off-white for section backgrounds */
-  --color-surface-dark:   #1e1e1e;   /* dark sections */
-  --color-text:           #1a1a1a;
-  --color-text-muted:     #6b6b6b;
-  --color-text-on-dark:   #ffffff;
-  --color-primary:        #2a5c3f;   /* placeholder — replace from brand */
-  --color-primary-hover:  #1e4430;
-  --color-accent:         #c8963c;   /* placeholder — replace from brand */
-  --color-border:         #e2ddd6;
+  /* ── Colours ─────────────────────────────────────────── */
+  --color-bg:              #ffffff;
+  --color-surface:         #f4f0eb;   /* warm beige — benefits, FAQ, trust bar */
+  --color-surface-input:   #fafaf8;   /* form inputs unfocused */
+  --color-surface-dark:    #1a1a1a;   /* dark sections: hero overlay, mid-CTA, final CTA */
+  --color-text:            #1a1a1a;
+  --color-text-body:       #555555;
+  --color-text-muted:      #666666;
+  --color-text-on-dark:    #ffffff;
+  --color-primary:         #5c6a5b;   /* sage green — buttons, step numbers, icons, borders */
+  --color-primary-hover:   #4a574a;
+  --color-primary-shadow:  rgba(92, 106, 91, 0.4);
+  --color-primary-shadow-hover: rgba(92, 106, 91, 0.45);
+  --color-primary-focus:   rgba(92, 106, 91, 0.12);
+  --color-primary-icon-bg: rgba(92, 106, 91, 0.10);
+  --color-accent:          #c8a96e;   /* warm gold — eyebrows, stars, highlights, left-border on featured testimonial */
+  --color-accent-bg:       rgba(200, 169, 110, 0.20);
+  --color-accent-border:   rgba(200, 169, 110, 0.55);
+  --color-border:          #ddd8d0;
+  --color-border-light:    #dde2db;
+  --color-border-form:     #e4e0da;
+  --color-error:           #c0392b;
+  --color-error-bg:        #fff8f7;
+  --color-error-shadow:    rgba(192, 57, 43, 0.10);
+  --color-badge-bg:        #eaf1ea;
+  --color-badge-text:      #3a4a3a;
 
-  /* Typography */
-  --font-heading: 'Georgia', serif;   /* placeholder — replace from brand */
-  --font-body:    system-ui, -apple-system, sans-serif; /* placeholder */
-  --font-size-xs:  0.75rem;
-  --font-size-sm:  0.875rem;
+  /* ── Typography ──────────────────────────────────────── */
+  --font-heading: 'Outfit', system-ui, sans-serif;
+  --font-body:    'Outfit', system-ui, sans-serif;
+
+  /* Sizes */
+  --font-size-xs:   0.72rem;
+  --font-size-sm:   0.875rem;
   --font-size-base: 1rem;
-  --font-size-lg:  1.125rem;
-  --font-size-xl:  1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
+  --font-size-lg:   1.05rem;
+  --font-size-xl:   1.15rem;
+  --font-size-2xl:  1.5rem;
+  --font-size-3xl:  clamp(1.65rem, 3vw, 2.25rem);
+  --font-size-4xl:  clamp(1.8rem, 3.5vw, 2.6rem);
+  --font-size-5xl:  clamp(2rem, 4.5vw, 3.2rem);
 
-  /* Spacing */
-  --spacing-section: 5rem;
-  --spacing-section-sm: 3rem;
+  /* Weights */
+  --font-weight-base:    400;
+  --font-weight-medium:  500;
+  --font-weight-bold:    700;
+  --font-weight-black:   800;
 
-  /* Layout */
-  --container-max: 1200px;
+  /* Label style (uppercase caps) */
+  --label-size:    0.72rem;
+  --label-weight:  700;
+  --label-spacing: 2.5px;
+
+  /* ── Spacing ─────────────────────────────────────────── */
+  --spacing-section:    5.5rem;
+  --spacing-section-sm: 3.75rem;
+
+  /* ── Layout ──────────────────────────────────────────── */
+  --container-max:     1080px;
   --container-padding: 1.5rem;
 
-  /* Buttons */
-  --radius-btn: 0.25rem;           /* placeholder — replace from brand */
-  --radius-card: 0.5rem;
+  /* ── Radii ───────────────────────────────────────────── */
+  --radius-btn:    8px;
+  --radius-card:   14px;
+  --radius-card-sm: 12px;
+  --radius-form:   8px;
+  --radius-icon:   10px;
 
-  /* Shadows */
-  --shadow-card: 0 2px 12px rgba(0,0,0,0.08);
-  --shadow-card-hover: 0 6px 24px rgba(0,0,0,0.14);
+  /* ── Shadows ─────────────────────────────────────────── */
+  --shadow-btn:         0 4px 16px rgba(92, 106, 91, 0.40);
+  --shadow-btn-hover:   0 6px 20px rgba(92, 106, 91, 0.45);
+  --shadow-card:        0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-form-card:   0 20px 60px rgba(0, 0, 0, 0.35);
+  --shadow-final-card:  0 16px 56px rgba(0, 0, 0, 0.40);
 
-  /* Transitions */
+  /* ── Transitions ─────────────────────────────────────── */
   --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 450ms ease;
 }
