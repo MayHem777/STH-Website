@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Thanks — We'll Be in Touch | Sunshine Tiny Houses"
+  description="Thank you for your quote request. We'll be in touch within one business day."
+  noindex={true}
+>
+  <section class="thankyou">
+    <div class="container thankyou__inner">
+      <div class="thankyou__icon" aria-hidden="true">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+          <circle cx="28" cy="28" r="28" fill="var(--color-primary)" opacity="0.12"/>
+          <circle cx="28" cy="28" r="20" fill="var(--color-primary)" opacity="0.18"/>
+          <polyline points="18,28 25,35 38,21" stroke="var(--color-primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </div>
+      <h1>Thanks — we'll be in touch!</h1>
+      <p>Your quote request has been received. We'll get back to you within one business day.</p>
+      <p>In the meantime, feel free to browse our range.</p>
+      <div class="thankyou__links">
+        <a href="/tiny-houses-on-wheels/" class="btn btn--primary">Tiny Houses on Wheels</a>
+        <a href="/modular-homes/" class="btn btn--secondary">Modular Homes</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.thankyou {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-section) 0;
+}
+.thankyou__inner {
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.thankyou__icon {
+  margin-bottom: 0.5rem;
+}
+.thankyou h1 {
+  margin: 0;
+}
+.thankyou p {
+  color: var(--color-text-muted);
+  margin: 0;
+}
+.thankyou__links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-btn);
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+}
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+.btn--secondary {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+</style>

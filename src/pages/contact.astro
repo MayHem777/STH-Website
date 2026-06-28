@@ -1,0 +1,284 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Get a Free Quote | Sunshine Tiny Houses"
+  description="Contact Sunshine Tiny Houses for a free quote on tiny homes on wheels, modular homes, or backyard studios. QBCC licensed builder based in Noosaville, QLD."
+  canonical="https://www.sunshinetinyhouses.com.au/contact/"
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Get in Touch</p>
+      <h1>Get a Free Quote</h1>
+      <p class="page-hero__sub">Tell us about your project and we'll get back to you within one business day.</p>
+    </div>
+  </section>
+
+  <section class="section contact-section">
+    <div class="container contact-grid">
+
+      <!-- Form -->
+      <div class="contact-form-wrap">
+        <form
+          id="quote-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          novalidate
+        >
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
+          <input type="hidden" name="subject" value="New quote request — Sunshine Tiny Houses" />
+          <input type="hidden" name="redirect" value="https://sth-website.pages.dev/contact/thank-you/" />
+          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" />
+
+          <div class="form-row form-row--half">
+            <div class="form-field">
+              <label for="name">Full name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith" />
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="0400 000 000" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email address <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com" />
+          </div>
+
+          <div class="form-field">
+            <label for="interest">I'm interested in <span aria-hidden="true">*</span></label>
+            <select id="interest" name="interest" required>
+              <option value="" disabled selected>Select a product line…</option>
+              <option value="Tiny House on Wheels">Tiny House on Wheels</option>
+              <option value="Modular Home / Granny Flat">Modular Home / Granny Flat</option>
+              <option value="Backyard Studio">Backyard Studio (Class 10a)</option>
+              <option value="Trailer only">Trailer only</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Tell us more about your project</label>
+            <textarea id="message" name="message" rows="5" placeholder="Size, land situation, timeline, budget — anything helps us give you a better quote."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--lg btn--full">Send My Quote Request</button>
+
+          <p class="form-note">We reply within one business day. Your details are never shared.</p>
+        </form>
+      </div>
+
+      <!-- Contact details sidebar -->
+      <aside class="contact-details">
+        <h2>Contact Details</h2>
+
+        <ul class="contact-list">
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:0753158365">(07) 5315 8365</a>
+            </div>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:hello@sunshinetinyhouses.com.au">hello@sunshinetinyhouses.com.au</a>
+            </div>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <strong>Factory</strong>
+              <address>24 Venture Drive<br />Noosaville QLD 4566</address>
+              <small>Visits by appointment only</small>
+            </div>
+          </li>
+          <li>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div>
+              <strong>Hours</strong>
+              <p>Mon–Fri: 7:30am – 4:00pm<br />Sat: By appointment<br />Sun: Closed</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="contact-credentials">
+          <p><strong>QBCC License:</strong> #15205110</p>
+          <p><strong>ABN:</strong> 40 270 427 080</p>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.page-hero {
+  background-color: var(--color-surface);
+  padding: var(--spacing-section) 0 3rem;
+  text-align: center;
+}
+.page-hero h1 {
+  margin: 0.5rem 0 1rem;
+}
+.page-hero__sub {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.contact-section {
+  padding-top: 3rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Form */
+.contact-form-wrap form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row--half {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+.form-field label span {
+  color: var(--color-accent);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background: #fff;
+  transition: border-color var(--transition-fast);
+  width: 100%;
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+.form-field textarea {
+  resize: vertical;
+}
+
+.btn--full {
+  width: 100%;
+  justify-content: center;
+}
+
+.form-note {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  text-align: center;
+  margin: 0;
+}
+
+/* Sidebar */
+.contact-details h2 {
+  margin-bottom: 1.5rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.contact-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.contact-list svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-primary);
+}
+.contact-list strong {
+  display: block;
+  font-size: var(--font-size-sm);
+  margin-bottom: 0.2rem;
+}
+.contact-list a,
+.contact-list address,
+.contact-list p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-style: normal;
+  margin: 0;
+  line-height: 1.6;
+}
+.contact-list a:hover {
+  color: var(--color-primary);
+}
+.contact-list small {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.contact-credentials {
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .form-row--half {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
