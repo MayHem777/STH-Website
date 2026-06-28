@@ -79,8 +79,8 @@ Replace `https://sth-oauth.YOUR-SUBDOMAIN.workers.dev` with the actual Worker UR
 7. **DNS cut-over** — final step after everything is verified on preview URL
 
 ## GitHub
-Repo: `github.com/mitchjcroft/STH-Website`
-Note: GitHub remote not yet added — add with `git remote add origin <url>`
+Repo: `github.com/MayHem777/STH-Website`
+Remote: `https://github.com/MayHem777/STH-Website.git` (already set)
 
 ## Astro dev server
 ```bash
