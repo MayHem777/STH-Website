@@ -24,7 +24,7 @@ const { Content } = await render(product);
     subtitle={product.data.tagline}
     image={product.data.heroImage}
     imageAlt={product.data.heroImageAlt ?? product.data.title}
-    ctaText="Get a Free Quote"
+    ctaText="Contact Now"
     ctaHref="/contact/"
     secondaryCtaText="View All Studios"
     secondaryCtaHref="/backyard-studios/"
@@ -37,7 +37,7 @@ const { Content } = await render(product);
         <div class="cta-card">
           <h2>Interested in a {product.data.title}?</h2>
           <p>Get a free, no-obligation quote from our team.</p>
-          <CTAButton href="/contact/" class="cta-btn">Get a Free Quote</CTAButton>
+          <CTAButton href="/contact/" class="cta-btn">Contact Now</CTAButton>
         </div>
       </aside>
     </div>
