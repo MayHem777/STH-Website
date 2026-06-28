@@ -27,8 +27,6 @@ const currentPath = Astro.url.pathname;
       <img
         src="https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/e858209c-0eb1-4a4f-9df5-2beb53f5ef8e/logo.png"
         alt="Sunshine Tiny Houses"
-        width="180"
-        height="60"
         loading="eager"
         fetchpriority="high"
       />
@@ -123,8 +121,11 @@ const currentPath = Astro.url.pathname;
 }
 
 .logo-link img {
+  display: block;
   height: 48px;
   width: auto;
+  max-width: 220px;
+  object-fit: contain;
 }
 
 .nav-toggle {
