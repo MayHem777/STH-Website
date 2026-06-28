@@ -75,7 +75,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <textarea id="message" name="message" rows="5" placeholder="Size, land situation, timeline, budget — anything helps us give you a better quote."></textarea>
           </div>
 
-          <button type="submit" class="btn btn--primary btn--lg btn--full">Send My Quote Request</button>
+          <button type="submit" class="btn btn--submit btn--full">Send My Enquiry</button>
 
           <p class="form-note">We reply within one business day. Your details are never shared.</p>
         </form>
@@ -223,6 +223,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 .btn--full {
   width: 100%;
   justify-content: center;
+}
+
+.btn--submit {
+  padding: 1.1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  background-color: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-btn);
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(200, 169, 110, 0.35);
+  transition: background-color var(--transition-base), transform var(--transition-fast), box-shadow var(--transition-base);
+}
+.btn--submit:hover {
+  background-color: #b8963d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 169, 110, 0.45);
 }
 
 .form-note {
