@@ -8,7 +8,12 @@ export default defineConfig({
   output: 'static',
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/admin/'),
+      filter: (page) =>
+        !page.includes('/admin/') &&
+        !page.includes('/google-ads-offer/') &&
+        !page.includes('/meta-ads-offer/') &&
+        !page.includes('/privacy-policy/') &&
+        !page.includes('/contact/thank-you/'),
     }),
   ],
   adapter: cloudflare(),
