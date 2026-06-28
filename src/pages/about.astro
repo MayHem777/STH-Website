@@ -68,23 +68,28 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="reviews-grid">
         <div class="review-card">
           <p class="review-card__stars">★★★★★</p>
-          <blockquote>"We first approached Nat and Mitch about their design process. We were so impressed with their knowledge and expertise we decided to have them build our Tiny from start to finish. Nat's communication throughout the entire process was amazing. We cannot speak highly enough of the quality and care from the team, from design through to delivery."</blockquote>
-          <p class="review-card__author">— Queensland Customer</p>
+          <blockquote>"Nat and Mitch were amazing the whole way through the process of designing and building our beautiful double loft tiny home and custom made trailer, we're stoked with the result! Couldn't have done it without them! If you're thinking of building a tiny home we highly recommend the Sunshine Tiny Houses Crew!"</blockquote>
+          <p class="review-card__author">— Zofia Nordqvist &nbsp;·&nbsp; Google Review</p>
         </div>
         <div class="review-card">
           <p class="review-card__stars">★★★★★</p>
-          <blockquote>"Absolutely loved working with Mitch and his team. The attention to detail was everything I needed. Mitch's communication was always on point — always incredibly responsive and full of knowledge. Wouldn't hesitate to have the guys again."</blockquote>
-          <p class="review-card__author">— Taleah C.</p>
+          <blockquote>"Sunshine Tiny Houses is an amazing team of people that will work to ensure your tiny house is a tiny home. They are amazing people who always respond promptly and will work closely with you to achieve every feasible dream you have. The Sunshine Tiny House team helped me achieve a life long dream. I would highly recommend trusting them with yours too."</blockquote>
+          <p class="review-card__author">— Alia S &nbsp;·&nbsp; Google Review</p>
         </div>
         <div class="review-card">
           <p class="review-card__stars">★★★★★</p>
-          <blockquote>"Mitch built the most amazing tiny home for us. We were stunned by how beautifully crafted it was. The attention to detail is very impressive. From start to finish it was a pleasure working with Mitch and Nat. The price was very reasonable."</blockquote>
-          <p class="review-card__author">— Queensland Customer</p>
+          <blockquote>"We recently purchased a custom build tiny house on wheels from Nat and Mitch and are thrilled with it. The entire process from design to delivery was easy and Nat and Mitch are excellent communicators, patient and extremely pleasant to deal with. The quality of the finishes, attention to detail and customer service is amazing."</blockquote>
+          <p class="review-card__author">— N T &nbsp;·&nbsp; Google Review</p>
         </div>
         <div class="review-card">
           <p class="review-card__stars">★★★★★</p>
-          <blockquote>"Just took delivery of my tiny home and I'm absolutely thrilled. Nat, Mitch and the team were amazing to deal with — nothing was too much trouble. They designed the perfect home for me, delivered on time and on budget."</blockquote>
-          <p class="review-card__author">— Queensland Customer</p>
+          <blockquote>"Absolutely loved working with Mitch and his team. The attention to detail was everything I needed in our tiny house build. Mitch's communication was always on point. Always incredibly responsive and full of knowledge. Big thanks to Pala, Dan and Nick for your wonderful workmanship. Wouldn't hesitate to have the guys again."</blockquote>
+          <p class="review-card__author">— Taleah (T-Leaf Collections) &nbsp;·&nbsp; Google Review</p>
+        </div>
+        <div class="review-card">
+          <p class="review-card__stars">★★★★★</p>
+          <blockquote>"My project wasn't the easiest but with the Sunshine Tiny Houses professionalism the result has been better than I expected. Great crew to work with. Well done."</blockquote>
+          <p class="review-card__author">— Keith Poole &nbsp;·&nbsp; Google Review</p>
         </div>
       </div>
     </div>
@@ -144,10 +149,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 /* Reviews */
 .reviews-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
   margin-top: 2rem;
 }
+.reviews-grid .review-card:nth-child(4) { grid-column: 1 / 2; }
+.reviews-grid .review-card:nth-child(5) { grid-column: 2 / 3; }
 .review-card {
   background: rgba(255,255,255,.07);
   border: 1px solid rgba(255,255,255,.12);
@@ -182,6 +189,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 @media (max-width: 900px) {
   .about-intro { grid-template-columns: 1fr; gap: 2rem; }
   .about-pillars { grid-template-columns: 1fr; gap: 1.5rem; }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid .review-card:nth-child(4),
+  .reviews-grid .review-card:nth-child(5) { grid-column: auto; }
+}
+@media (max-width: 600px) {
   .reviews-grid { grid-template-columns: 1fr; }
 }
 </style>
