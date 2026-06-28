@@ -23,14 +23,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <div class="contact-form-wrap">
         <form
           id="quote-form"
-          action="https://api.web3forms.com/submit"
+          action="https://formsubmit.co/hello@sunshinetinyhouses.com.au"
           method="POST"
           novalidate
         >
-          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
-          <input type="hidden" name="subject" value="New quote request — Sunshine Tiny Houses" />
-          <input type="hidden" name="redirect" value="https://sth-website.pages.dev/contact/thank-you/" />
-          <input type="checkbox" name="botcheck" class="sr-only" tabindex="-1" autocomplete="off" />
+          <input type="hidden" name="_subject" value="New quote request — Sunshine Tiny Houses" />
+          <input type="hidden" name="_next" value="https://www.sunshinetinyhouses.com.au/contact/thank-you/" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
 
           <div class="form-row form-row--half">
             <div class="form-field">
