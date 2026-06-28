@@ -22,6 +22,12 @@ if (API_KEY) {
   }
 }
 
+const toInitials = (name: string) =>
+  name.replace(/\(.*?\)/g, '').trim()
+      .split(/\s+/)
+      .map(w => w[0].toUpperCase() + '.')
+      .join(' ');
+
 // Fallback reviews if API key not set or fetch fails
 if (reviews.length === 0) {
   reviews = [
@@ -102,7 +108,7 @@ if (reviews.length === 0) {
           <div class="review-card">
             <p class="review-card__stars">{'★'.repeat(r.rating)}</p>
             <blockquote>"{r.text}"</blockquote>
-            <p class="review-card__author">— {r.author_name} &nbsp;·&nbsp; Google Review</p>
+            <p class="review-card__author">— {toInitials(r.author_name)} &nbsp;·&nbsp; Google Review</p>
           </div>
         ))}
       </div>
