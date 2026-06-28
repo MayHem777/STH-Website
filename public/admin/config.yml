@@ -2,9 +2,12 @@
 # OAuth backend is a Cloudflare Worker (see CLAUDE.md for setup)
 backend:
   name: github
-  repo: mitchjcroft/STH-Website
+  repo: MayHem777/STH-Website
   branch: main
   base_url: https://sth-oauth.YOUR-SUBDOMAIN.workers.dev  # TODO: update after Worker deploy
+
+site_url: https://sth-website.pages.dev
+display_url: https://sth-website.pages.dev
 
 media_folder: public/assets/uploads
 public_folder: /assets/uploads
