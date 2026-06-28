@@ -5,7 +5,7 @@ description: "A bespoke sauna built to order — classic and contemporary materi
 draft: false
 order: 7
 badge: "Coming Soon"
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/d13ff83e-5295-4c6a-ad06-2e3ab254044f/Custom+Sauna2.jpg"
+heroImage: "/images/custom-sauna-2.jpg"
 heroImageAlt: "Custom sauna exterior"
 features:
   - "Classic and contemporary materials"

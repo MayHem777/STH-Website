@@ -4,7 +4,7 @@ tagline: "More room, more life."
 description: "Our 2-bedroom modular home range includes three models — Daintree, Straddie, and Jacaranda. Full kitchens, bathrooms, laundry, and generous living spaces."
 draft: false
 order: 4
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/88a6e5b2-f111-461f-9e3c-a0c41c8d3d22/Scene+2%281%29.png"
+heroImage: "/images/modular-scene-2.png"
 heroImageAlt: "2 bedroom modular home exterior"
 features:
   - "Three models: Daintree, Straddie, Jacaranda"

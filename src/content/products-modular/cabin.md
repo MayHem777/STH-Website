@@ -4,7 +4,7 @@ tagline: "Cosy living, beautifully designed."
 description: "Our cabin range offers studio and bedroom configurations for guest retreats, Airbnb listings, caravan parks, or compact homes. Three models: Banksia, Dahlia, and Raglan."
 draft: false
 order: 1
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/a5c4e14f-1c67-475c-916f-ed77cc7a1180/STH+-+BANKSIA+OFFICE+PITCHED+ROOF+%289%29_0002_Background.jpg"
+heroImage: "/images/banksia-office.jpg"
 heroImageAlt: "Sunshine Tiny Houses cabin exterior"
 features:
   - "Three models: Banksia, Dahlia, Raglan"

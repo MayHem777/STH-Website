@@ -4,7 +4,7 @@ tagline: "Double the comfort, double the fun."
 description: "The Granite Bay is an 8m tiny house on wheels with dual lofts — room for the whole family. Sleeps 4, with generous living spaces and quality finishes throughout."
 draft: false
 order: 4
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/d8d42cb3-2d3d-4353-8d50-42686c6e02ad/DSC04714.jpeg"
+heroImage: "/images/dsc04714.jpeg"
 heroImageAlt: "Granite Bay tiny house on wheels exterior"
 features:
   - "Dual lofts sleeping 4 (plus sofa for guests)"

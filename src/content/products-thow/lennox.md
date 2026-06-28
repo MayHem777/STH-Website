@@ -4,7 +4,7 @@ tagline: "Expand your horizons with extra height."
 description: "The Lennox is our flagship model at 9–10m — featuring a ground-floor master bedroom plus a loft, extra ceiling height, and the most spacious layout in our range. Sleeps 4+."
 draft: false
 order: 7
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/15d92a01-63ee-4c0c-a6d4-14ca761ea32c/STH+-+LENNOX+01.jpg"
+heroImage: "/images/lennox-01.jpg"
 heroImageAlt: "Lennox tiny house on wheels exterior"
 features:
   - "Ground-floor master bedroom + loft sleeping area"

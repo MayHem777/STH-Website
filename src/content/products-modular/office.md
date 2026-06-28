@@ -4,7 +4,7 @@ tagline: "A contemporary workspace designed for productivity."
 description: "The Banksia Office — a striking modular workspace with high vaulted ceilings, expansive windows, a kitchenette, and private bathroom. Work from home in style."
 draft: false
 order: 5
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/a5c4e14f-1c67-475c-916f-ed77cc7a1180/STH+-+BANKSIA+OFFICE+PITCHED+ROOF+%289%29_0002_Background.jpg"
+heroImage: "/images/banksia-office.jpg"
 heroImageAlt: "Banksia Office modular workspace exterior"
 features:
   - "Model: Banksia Office"

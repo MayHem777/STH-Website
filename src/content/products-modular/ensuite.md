@@ -4,7 +4,7 @@ tagline: "The perfect blend of comfort and style."
 description: "A self-contained modular ensuite — light-filled bedroom, sleek modern bathroom, and premium finishes. Fast to install and increases your property value immediately."
 draft: false
 order: 2
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/6a07b5ad-1cb7-430d-b674-936afe29379e/Scene+3%281%29.png"
+heroImage: "/images/modular-scene-3.png"
 heroImageAlt: "Modular ensuite exterior render"
 features:
   - "Light-filled bedroom"

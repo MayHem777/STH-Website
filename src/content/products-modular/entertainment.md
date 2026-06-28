@@ -5,7 +5,7 @@ description: "A custom modular entertainment area for your backyard — designed
 draft: false
 order: 8
 badge: "Coming Soon"
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/d13ff83e-5295-4c6a-ad06-2e3ab254044f/Custom+Sauna2.jpg"
+heroImage: "/images/custom-sauna-2.jpg"
 heroImageAlt: "Modular entertainment area"
 features:
   - "Fully customisable design"

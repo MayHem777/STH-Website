@@ -4,7 +4,7 @@ tagline: "Cosy living, big entertainment."
 description: "The Boiling Pot is our 9m model — dual lofts for 4, plus a separate TV room. Named after the iconic Noosa surf break. Available in 2.4m or 2.8m width."
 draft: false
 order: 6
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/65b2d958-8542-419a-a7dd-024520bf0c58/STH+-+BOILING+POT++13-06+-+01.jpg"
+heroImage: "/images/boiling-pot-01.jpg"
 heroImageAlt: "Boiling Pot tiny house on wheels exterior"
 features:
   - "Dual lofts sleeping 4 (plus sofa lounge)"

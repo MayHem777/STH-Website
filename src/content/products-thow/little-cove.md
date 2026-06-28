@@ -4,7 +4,7 @@ tagline: "Big living in a small space."
 description: "The Little Cove is a 6.2m tiny house on wheels with a single loft — efficiently designed for sustainable living without sacrificing comfort. Sleeps 2."
 draft: false
 order: 2
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/e0c5e469-08f0-45bf-9a19-6194c2af09ee/DSC04846.jpeg"
+heroImage: "/images/dsc04846.jpeg"
 heroImageAlt: "Little Cove tiny house on wheels exterior"
 features:
   - "Single loft sleeping for 2"

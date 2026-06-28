@@ -4,7 +4,7 @@ tagline: "Your own personal sanctuary."
 description: "Our 1-bedroom modular home range offers four distinct models — Bunya, Straddie, Rio, and Pandanus. Ideal for singles, couples, downsizers, or secondary dwellings."
 draft: false
 order: 3
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/6a07b5ad-1cb7-430d-b674-936afe29379e/Scene+3%281%29.png"
+heroImage: "/images/modular-scene-3.png"
 heroImageAlt: "1 bedroom modular home exterior"
 features:
   - "Four models: Bunya, Straddie, Rio, Pandanus"

@@ -4,7 +4,7 @@ tagline: "When simplicity meets luxury."
 description: "The Castaways is an 8m tiny house on wheels with dual lofts for 4. Beautifully finished with a cedar shiplap ceiling feature and premium inclusions throughout."
 draft: false
 order: 5
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/d91855a7-611f-4cfc-9b4a-39d3a8825762/STH+-+CASTAWAYS+-+08.jpg"
+heroImage: "/images/castaways-08.jpg"
 heroImageAlt: "Castaways tiny house on wheels exterior"
 features:
   - "Dual lofts sleeping 4 (plus sofa lounge)"
