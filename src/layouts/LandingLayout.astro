@@ -77,15 +77,21 @@ const { title, description, noindex = true, canonical } = Astro.props;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--spacing-container);
-  height: 64px;
+  height: auto;
+  min-height: 64px;
+  padding-top: .85rem;
+  padding-bottom: .85rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .lp-header img {
   display: block;
-  height: 40px;
+  height: 120px;
   width: auto;
+}
+@media (max-width: 640px) {
+  .lp-header img { height: 50px; }
 }
 .lp-phone {
   display: flex;
