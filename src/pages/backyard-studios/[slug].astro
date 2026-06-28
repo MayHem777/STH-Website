@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import CTAButton from '../../components/CTAButton.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const products = await getCollection('products-class10a', ({ data }) => !data.draft);
+  return products.map((p) => ({ params: { slug: p.id }, props: { product: p } }));
+}
+
+const { product } = Astro.props;
+const { Content } = await render(product);
+---
+
+<BaseLayout
+  title={`${product.data.title} | Sunshine Tiny Houses`}
+  description={product.data.description}
+  ogImage={product.data.ogImage}
+>
+
+  <Hero
+    title={product.data.title}
+    subtitle={product.data.tagline}
+    image={product.data.heroImage}
+    imageAlt={product.data.heroImageAlt ?? product.data.title}
+    ctaText="Get a Free Quote"
+    ctaHref="/contact/"
+    secondaryCtaText="View All Studios"
+    secondaryCtaHref="/backyard-studios/"
+  />
+
+  <section class="section">
+    <div class="container product-layout">
+      <article class="prose"><Content /></article>
+      <aside>
+        <div class="cta-card">
+          <h2>Interested in a {product.data.title}?</h2>
+          <p>Get a free, no-obligation quote from our team.</p>
+          <CTAButton href="/contact/" class="cta-btn">Get a Free Quote</CTAButton>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.product-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; align-items: start; }
+.prose { line-height: 1.75; }
+.prose p { margin-bottom: 1rem; }
+.cta-card { background: var(--color-primary); color: #fff; border-radius: var(--radius-card); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.cta-card h2 { font-size: var(--font-size-xl); color: #fff; }
+.cta-card p { font-size: var(--font-size-sm); opacity: 0.9; }
+.cta-btn { background-color: #fff !important; color: var(--color-primary) !important; border-color: #fff !important; text-align: center; }
+@media (max-width: 900px) { .product-layout { grid-template-columns: 1fr; } }
+</style>

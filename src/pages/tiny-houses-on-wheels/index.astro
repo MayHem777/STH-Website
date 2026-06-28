@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import CTAButton from '../../components/CTAButton.astro';
+import { getCollection } from 'astro:content';
+
+const products = (await getCollection('products-thow', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Tiny Houses on Wheels Queensland | Sunshine Tiny Houses"
+  description="Browse our range of Class 1a tiny houses on wheels — from the compact 1770 (6m) to the spacious Lennox (10m). QBCC-licensed builder, Noosaville QLD. Free quote."
+>
+
+  <Hero
+    title="Tiny Houses on Wheels"
+    subtitle="QBCC-licensed Class 1a tiny homes — road-registerable, fully liveable, and built to last. Choose from our range or design your own."
+    ctaText="Get a Free Quote"
+    ctaHref="/contact/"
+    secondaryCtaText="Custom Build"
+    secondaryCtaHref="/tiny-houses-on-wheels/custom-design-build/"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="products-grid">
+        {products.map((p) => (
+          <ProductCard
+            title={p.data.title}
+            description={p.data.description}
+            href={`/tiny-houses-on-wheels/${p.id}/`}
+            image={p.data.heroImage}
+            imageAlt={p.data.heroImageAlt ?? p.data.title}
+            badge={p.data.badge}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark cta-section">
+    <div class="container cta-inner">
+      <h2>Can't find what you're looking for?</h2>
+      <p>We specialise in custom designs. Tell us your vision and we'll make it happen.</p>
+      <CTAButton href="/tiny-houses-on-wheels/custom-design-build/" variant="ghost">Custom Design & Build</CTAButton>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.cta-section .cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.cta-inner h2 { color: var(--color-text-on-dark); }
+.cta-inner p { color: rgba(255,255,255,0.8); max-width: 460px; }
+
+@media (max-width: 900px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .products-grid { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+
+const products = (await getCollection('products-modular', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Modular Homes & Granny Flats Queensland | Sunshine Tiny Houses"
+  description="QBCC-licensed modular homes and granny flats built and delivered across Queensland. Class 1a compliant, finance available. Free quote from Noosaville QLD."
+>
+
+  <Hero
+    title="Modular Homes & Granny Flats"
+    subtitle="Permanent Class 1a modular structures delivered and installed in one week. Perfect as a granny flat, secondary dwelling, or standalone home."
+    ctaText="Get a Free Quote"
+    ctaHref="/contact/"
+    secondaryCtaText="Finance Options"
+    secondaryCtaHref="/finance/"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="products-grid">
+        {products.map((p) => (
+          <ProductCard
+            title={p.data.title}
+            description={p.data.description}
+            href={`/modular-homes/${p.id}/`}
+            image={p.data.heroImage}
+            imageAlt={p.data.heroImageAlt ?? p.data.title}
+            badge={p.data.badge}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 1100px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .products-grid { grid-template-columns: 1fr; } }
+</style>

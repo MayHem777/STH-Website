@@ -1,0 +1,51 @@
+---
+import SEOHead from '../components/SEOHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  schema?: object | object[];
+  class?: string;
+}
+
+const { class: className, ...seoProps } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <SEOHead {...seoProps} />
+  </head>
+  <body class={className}>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <Header />
+    <main id="main-content">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 var(--radius-btn) var(--radius-btn);
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  z-index: 9999;
+}
+.skip-link:focus {
+  top: 0;
+}
+</style>

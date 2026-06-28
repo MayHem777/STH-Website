@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+
+const products = (await getCollection('products-class10a', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="Backyard Studios Queensland | Offices, Saunas & Utility Rooms"
+  description="Custom backyard studios built by a QBCC-licensed builder in Queensland. Offices, saunas, and utility rooms delivered to your door. Free quote."
+>
+
+  <Hero
+    title="Backyard Studios"
+    subtitle="Transform your backyard with a purpose-built studio — offices, saunas, and utility rooms crafted to the same quality standard as our homes."
+    ctaText="Get a Free Quote"
+    ctaHref="/contact/"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="products-grid">
+        {products.map((p) => (
+          <ProductCard
+            title={p.data.title}
+            description={p.data.description}
+            href={`/backyard-studios/${p.id}/`}
+            image={p.data.heroImage}
+            imageAlt={p.data.heroImageAlt ?? p.data.title}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 768px) { .products-grid { grid-template-columns: 1fr; } }
+</style>

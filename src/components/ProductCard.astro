@@ -1,0 +1,108 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  href: string;
+  image?: string;
+  imageAlt?: string;
+  badge?: string;
+}
+const { title, description, href, image, imageAlt, badge } = Astro.props;
+---
+
+<a href={href} class="product-card">
+  <div class="product-card__image-wrap">
+    {image ? (
+      <img src={image} alt={imageAlt ?? title} width="480" height="320" loading="lazy" />
+    ) : (
+      <div class="product-card__placeholder" aria-hidden="true"></div>
+    )}
+    {badge && <span class="product-card__badge">{badge}</span>}
+  </div>
+  <div class="product-card__body">
+    <h3 class="product-card__title">{title}</h3>
+    <p class="product-card__desc">{description}</p>
+    <span class="product-card__cta">Learn more &rarr;</span>
+  </div>
+</a>
+
+<style>
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  text-decoration: none;
+  color: inherit;
+}
+.product-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-3px);
+}
+
+.product-card__image-wrap {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  background-color: var(--color-surface);
+}
+.product-card__image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+.product-card:hover .product-card__image-wrap img {
+  transform: scale(1.04);
+}
+
+.product-card__placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-border) 100%);
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.625rem;
+  border-radius: 2px;
+}
+
+.product-card__body {
+  padding: 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card__title {
+  font-size: var(--font-size-xl);
+  margin-bottom: 0.5rem;
+}
+
+.product-card__desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+.product-card__cta {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+  transition: gap var(--transition-fast);
+}
+</style>

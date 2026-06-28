@@ -1,0 +1,18 @@
+# Cloudflare Pages redirect rules
+# Format: /old-url  /new-url  301
+
+# Squarespace URL → new site mapping
+# ⚠️  INCOMPLETE — update after Mitch provides full Squarespace URL list
+
+/modulars                    /modular-homes/                       301
+/modulars/*                  /modular-homes/:splat                 301
+/tiny-houses-on-wheels       /tiny-houses-on-wheels/               301
+/trailers                    /tiny-houses-on-wheels/trailers/       301
+/things-to-know              /finance/                             301
+
+# Keep ad landing pages at existing URLs (active Google Ads campaign)
+# /google-ads-offer stays as-is (rebuilt as new page)
+# /meta-ads-offer stays as-is (rebuilt as new page)
+
+# Legacy blog paths (if Squarespace used /blog/year/month/title)
+# /blog/*/*/*/*   /blog/:splat   301

@@ -1,0 +1,92 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  schema?: object | object[];
+}
+
+const SITE_NAME = 'Sunshine Tiny Houses';
+const SITE_URL = 'https://www.sunshinetinyhouses.com.au';
+const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.jpg`;
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = DEFAULT_OG_IMAGE,
+  noindex = false,
+  schema,
+} = Astro.props;
+
+const canonicalURL = canonical ?? new URL(Astro.url.pathname, SITE_URL).href;
+const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Sunshine Tiny Houses',
+  url: SITE_URL,
+  telephone: '+61753158365',
+  email: 'hello@sunshinetinyhouses.com.au',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '24 Venture Drive',
+    addressLocality: 'Noosaville',
+    addressRegion: 'QLD',
+    postalCode: '4566',
+    addressCountry: 'AU',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -26.394,
+    longitude: 153.073,
+  },
+  sameAs: [
+    'https://www.instagram.com/sunshinetinyhouses',
+    'https://www.facebook.com/sunshinetinyhouses',
+    'https://www.youtube.com/@SunshineTinyHouses',
+  ],
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', credentialCategory: 'QBCC Licence #15205110' },
+  ],
+};
+
+const schemas = [
+  localBusinessSchema,
+  ...(Array.isArray(schema) ? schema : schema ? [schema] : []),
+];
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+{noindex && <meta name="robots" content="noindex,nofollow" />}
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={SITE_NAME} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:locale" content="en_AU" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+<!-- Schema.org structured data -->
+{schemas.map((s) => (
+  <script type="application/ld+json" set:html={JSON.stringify(s)} />
+))}

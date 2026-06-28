@@ -1,0 +1,51 @@
+/*
+  DESIGN TOKENS — Sunshine Tiny Houses
+  ⚠️  PLACEHOLDER VALUES — update from brand screenshots before launch.
+  Ask Mitch for screenshots of /google-ads-offer and /meta-ads-offer.
+*/
+:root {
+  /* Colours */
+  --color-bg:             #ffffff;
+  --color-surface:        #f8f6f2;   /* warm off-white for section backgrounds */
+  --color-surface-dark:   #1e1e1e;   /* dark sections */
+  --color-text:           #1a1a1a;
+  --color-text-muted:     #6b6b6b;
+  --color-text-on-dark:   #ffffff;
+  --color-primary:        #2a5c3f;   /* placeholder — replace from brand */
+  --color-primary-hover:  #1e4430;
+  --color-accent:         #c8963c;   /* placeholder — replace from brand */
+  --color-border:         #e2ddd6;
+
+  /* Typography */
+  --font-heading: 'Georgia', serif;   /* placeholder — replace from brand */
+  --font-body:    system-ui, -apple-system, sans-serif; /* placeholder */
+  --font-size-xs:  0.75rem;
+  --font-size-sm:  0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg:  1.125rem;
+  --font-size-xl:  1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Spacing */
+  --spacing-section: 5rem;
+  --spacing-section-sm: 3rem;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-padding: 1.5rem;
+
+  /* Buttons */
+  --radius-btn: 0.25rem;           /* placeholder — replace from brand */
+  --radius-card: 0.5rem;
+
+  /* Shadows */
+  --shadow-card: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow-card-hover: 0 6px 24px rgba(0,0,0,0.14);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+}
