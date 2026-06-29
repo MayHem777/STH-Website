@@ -73,6 +73,21 @@ import LandingLayout from '../layouts/LandingLayout.astro';
   #sth-meta .m-field-error { display: none; font-size: .72rem; color: #C0392B; margin-top: .3rem; font-weight: 600; font-family: 'Outfit', system-ui, sans-serif; }
   #sth-meta .m-field-error.m-visible { display: block; }
   #sth-meta .m-privacy { font-size: .7rem; color: #AAA; text-align: center; margin-top: .65rem; font-family: 'Outfit', system-ui, sans-serif; }
+
+  /* HubSpot form overrides — match native form styles */
+  #sth-meta .hs-form { font-family: 'Outfit', system-ui, sans-serif !important; }
+  #sth-meta .hs-form-field { margin-bottom: .75rem !important; }
+  #sth-meta .hs-form-field label { display: block !important; font-size: .7rem !important; font-weight: 700 !important; letter-spacing: .6px !important; text-transform: uppercase !important; color: #555 !important; margin-bottom: .3rem !important; font-family: 'Outfit', system-ui, sans-serif !important; }
+  #sth-meta .hs-form-field .hs-input,
+  #sth-meta .hs-form-field select { width: 100% !important; padding: .9rem 1rem !important; border: 1.5px solid #DDD8D0 !important; border-radius: 8px !important; font-family: 'Outfit', system-ui, sans-serif !important; font-size: 1rem !important; color: #1A1A1A !important; background: #FAFAF8 !important; -webkit-appearance: none !important; appearance: none !important; line-height: 1.4 !important; box-shadow: none !important; }
+  #sth-meta .hs-form-field .hs-input:focus,
+  #sth-meta .hs-form-field select:focus { outline: none !important; border-color: #5C6A5B !important; background: #fff !important; box-shadow: 0 0 0 3px rgba(92,106,91,.12) !important; }
+  #sth-meta .hs-button { width: 100% !important; padding: 1rem 2rem !important; background: #5C6A5B !important; color: #fff !important; border: none !important; border-radius: 8px !important; font-family: 'Outfit', system-ui, sans-serif !important; font-size: 1rem !important; font-weight: 700 !important; cursor: pointer !important; box-shadow: 0 4px 16px rgba(92,106,91,.4) !important; transition: background .2s, transform .15s !important; margin-top: .5rem !important; }
+  #sth-meta .hs-button:hover { background: #4A574A !important; transform: translateY(-2px) !important; }
+  #sth-meta .hs-error-msgs { list-style: none !important; margin: .3rem 0 0 !important; padding: 0 !important; }
+  #sth-meta .hs-error-msgs li label { font-size: .72rem !important; color: #C0392B !important; font-weight: 600 !important; text-transform: none !important; letter-spacing: 0 !important; }
+  #sth-meta .hs-richtext, #sth-meta .hs-form .legal-consent-container { font-size: .7rem !important; color: #AAA !important; text-align: center !important; margin-top: .4rem !important; }
+  #sth-meta .submitted-message { text-align: center; padding: 2rem 1rem; font-family: 'Outfit', system-ui, sans-serif; }
   #sth-meta .m-form-success { display: none; text-align: center; padding: 2rem 1rem; }
   #sth-meta .m-form-success .fs-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
   #sth-meta .m-form-success h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: .4rem; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; }
