@@ -424,39 +424,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
           <h3>Check My Block &rarr;</h3>
           <p class="m-form-sub">Just your name, number, email and location to get started.</p>
 
-          <form class="m-lp-form" data-form-id="m-main-form">
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="New Lead: Meta Ads Enquiry!" />
-            <input type="text"   name="_honey"   style="display:none" tabindex="-1" autocomplete="off" />
-
-            <div class="m-form-row">
-              <label for="m-name">Your Name</label>
-              <input type="text"  id="m-name"   name="name"     placeholder="e.g. Sarah Johnson" required autocomplete="name" />
-            </div>
-            <div class="m-form-row">
-              <label for="m-phone">Phone Number</label>
-              <input type="tel"   id="m-phone"  name="phone"    placeholder="e.g. 0412 345 678" required autocomplete="tel" />
-            </div>
-            <div class="m-form-row">
-              <label for="m-email">Email Address</label>
-              <input type="email" id="m-email"  name="email"    placeholder="e.g. sarah@email.com" required autocomplete="email" />
-            </div>
-            <div class="m-form-row">
-              <label for="m-suburb">Suburb, Postcode or Address</label>
-              <input type="text"  id="m-suburb" name="location" placeholder="e.g. Cooroy QLD 4563 or 12 Smith St" required autocomplete="address-level2" />
-            </div>
-
-            <button type="submit" class="m-btn m-btn-primary m-btn-full" style="margin-top:.5rem;">
-              Find Out What&rsquo;s Possible &rarr;
-            </button>
-            <p class="m-privacy">&#x1F512; No spam. No obligation. Ever.</p>
-          </form>
-
-          <div class="m-form-success" id="m-main-form-success" aria-live="polite">
-            <span class="fs-icon">&#x2705;</span>
-            <h3>You&rsquo;re all set.</h3>
-            <p>Mitch or Nat will be in touch personally within 24 hours.</p>
-          </div>
+          <div id="hs-meta-form"></div>
         </div>
       </div>
     </section>
@@ -469,84 +437,9 @@ import LandingLayout from '../layouts/LandingLayout.astro';
 
   </div>
 
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
   <script is:inline>
-  (function () {
-    'use strict';
-    var ENDPOINT = 'https://formsubmit.co/ajax/hello@sunshinetinyhouses.com.au';
-
-    function isValidPhone(v) { return v.replace(/[\s\-().+]/g, '').length >= 10; }
-    function isValidEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
-
-    function showError(input, msg) {
-      input.classList.add('m-invalid');
-      var err = input.parentNode.querySelector('.m-field-error');
-      if (!err) { err = document.createElement('span'); err.className = 'm-field-error'; input.parentNode.appendChild(err); }
-      err.textContent = msg;
-      err.classList.add('m-visible');
-    }
-    function clearError(input) {
-      input.classList.remove('m-invalid');
-      var err = input.parentNode.querySelector('.m-field-error');
-      if (err) err.classList.remove('m-visible');
-    }
-    function validatePhone(input) {
-      if (!input.value) return true;
-      if (!isValidPhone(input.value)) { showError(input, 'Please enter a valid phone number.'); return false; }
-      clearError(input); return true;
-    }
-    function validateEmail(input) {
-      if (!input.value) return true;
-      if (!isValidEmail(input.value)) { showError(input, 'Please enter a valid email address.'); return false; }
-      clearError(input); return true;
-    }
-
-    document.querySelectorAll('.m-lp-form').forEach(function (form) {
-      var submitBtn  = form.querySelector('[type="submit"]');
-      var phoneInput = form.querySelector('input[name="phone"]');
-      var emailInput = form.querySelector('input[name="email"]');
-
-      if (phoneInput) {
-        phoneInput.addEventListener('blur',  function () { validatePhone(phoneInput); });
-        phoneInput.addEventListener('input', function () { if (phoneInput.classList.contains('m-invalid')) validatePhone(phoneInput); });
-      }
-      if (emailInput) {
-        emailInput.addEventListener('blur',  function () { validateEmail(emailInput); });
-        emailInput.addEventListener('input', function () { if (emailInput.classList.contains('m-invalid')) validateEmail(emailInput); });
-      }
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (phoneInput && !validatePhone(phoneInput)) return;
-        if (emailInput && !validateEmail(emailInput)) return;
-        submitBtn.textContent = 'Sending…';
-        submitBtn.disabled = true;
-
-        fetch(ENDPOINT, { method: 'POST', body: new FormData(form) })
-          .then(function (r) { return r.json(); })
-          .then(function (res) {
-            if (res.success) {
-              if (window.fbq) fbq('track', 'Lead');
-              window.location.href = '/contact/thank-you/';
-            } else {
-              submitBtn.textContent = 'Error — please try again';
-              submitBtn.disabled = false;
-            }
-          })
-          .catch(function () {
-            submitBtn.textContent = 'Error — please try again';
-            submitBtn.disabled = false;
-          });
-      });
-    });
-
-    var hero   = document.querySelector('#sth-meta .m-hero');
-    var sticky = document.getElementById('m-sticky-cta');
-    if (hero && sticky && 'IntersectionObserver' in window) {
-      new IntersectionObserver(function (entries) {
-        sticky.style.display = entries[0].isIntersecting ? 'none' : '';
-      }, { threshold: 0.05 }).observe(hero);
-    }
-  })();
+    hbspt.forms.create({ region: "ap1", portalId: "442170069", formId: "abcc6489-5270-4b70-8e18-b5477c19f227", target: "#hs-meta-form" });
   </script>
 
 </LandingLayout>

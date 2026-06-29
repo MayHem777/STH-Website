@@ -456,39 +456,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
           <p class="sth-hfc-title">Is Your Property Suitable?</p>
           <p class="sth-hfc-sub">Free assessment. No obligation. Mitch or Nat will be in touch within 24 hours.</p>
 
-          <form class="sth-lp-form" data-form-id="sth-hero-form">
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="New Lead: Modular Assessment Enquiry!" />
-            <input type="text"   name="_honey"   style="display:none" tabindex="-1" autocomplete="off" />
-
-            <div class="sth-form-row">
-              <label for="sth-hf-name">Full Name</label>
-              <input type="text"  id="sth-hf-name"     name="name"     placeholder="e.g. Sarah Johnson" required autocomplete="name" />
-            </div>
-            <div class="sth-form-row">
-              <label for="sth-hf-email">Email Address</label>
-              <input type="email" id="sth-hf-email"    name="email"    placeholder="e.g. sarah@email.com" required autocomplete="email" />
-            </div>
-            <div class="sth-form-row">
-              <label for="sth-hf-phone">Phone Number</label>
-              <input type="tel"   id="sth-hf-phone"    name="phone"    placeholder="e.g. 0412 345 678" autocomplete="tel" />
-            </div>
-            <div class="sth-form-row">
-              <label for="sth-hf-location">Suburb, Postcode or Address</label>
-              <input type="text"  id="sth-hf-location" name="location" placeholder="e.g. Cooroy QLD 4563 or 12 Smith St" required autocomplete="address-level2" />
-            </div>
-
-            <button type="submit" class="sth-btn sth-btn-primary sth-btn-lg sth-btn-full" style="margin-top:.25rem;">
-              Get My Free Block Assessment
-            </button>
-            <p class="sth-form-privacy">&#x1F512; No spam. No obligation. Mitch or Nat will be in touch personally.</p>
-          </form>
-
-          <div class="sth-form-success" id="sth-hero-form-success" aria-live="polite">
-            <span class="fs-icon">&#x2705;</span>
-            <h3>Request received.</h3>
-            <p>Mitch or Nat will contact you personally within 24 business hours.</p>
-          </div>
+          <div id="hs-hero-form"></div>
         </div>
 
       </div>
@@ -901,44 +869,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
           <p class="sth-ffc-title">Free Property Assessment</p>
           <p class="sth-ffc-sub">Tell us about your property and what you're trying to achieve. We'll be in touch within 24 hours with a straight answer.</p>
 
-          <form class="sth-lp-form" data-form-id="sth-final-form">
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="New Lead: Modular Assessment Enquiry!" />
-            <input type="text"   name="_honey"   style="display:none" tabindex="-1" autocomplete="off" />
-
-            <div class="sth-form-row">
-              <label for="sth-ff-name">Full Name</label>
-              <input type="text"  id="sth-ff-name"     name="name"     placeholder="e.g. Sarah Johnson" required autocomplete="name" />
-            </div>
-            <div class="sth-form-row">
-              <label for="sth-ff-email">Email Address</label>
-              <input type="email" id="sth-ff-email"    name="email"    placeholder="e.g. sarah@email.com" required autocomplete="email" />
-            </div>
-            <div class="sth-form-row">
-              <label for="sth-ff-phone">Phone Number</label>
-              <input type="tel"   id="sth-ff-phone"    name="phone"    placeholder="e.g. 0412 345 678" autocomplete="tel" />
-            </div>
-            <div class="sth-form-row">
-              <label for="sth-ff-location">Suburb, Postcode or Address</label>
-              <input type="text"  id="sth-ff-location" name="location" placeholder="e.g. Cooroy QLD 4563 or 12 Smith St" required autocomplete="address-level2" />
-            </div>
-            <div class="sth-form-row">
-              <label for="sth-ff-details">Tell Us About Your Project</label>
-              <textarea id="sth-ff-details" name="project_details" rows="3"
-                placeholder="e.g. Looking to add a 1-bed granny flat for a family member. Want to understand what's possible."></textarea>
-            </div>
-
-            <button type="submit" class="sth-btn sth-btn-primary sth-btn-lg sth-btn-full">
-              Get My Free Block Assessment &rarr;
-            </button>
-            <p class="sth-form-privacy" style="margin-top:.65rem;">&#x1F512; No spam. No obligation. Ever.</p>
-          </form>
-
-          <div class="sth-form-success" id="sth-final-form-success" aria-live="polite">
-            <span class="fs-icon">&#x2705;</span>
-            <h3>Request received.</h3>
-            <p>Mitch or Nat will contact you personally within 24 business hours.</p>
-          </div>
+          <div id="hs-final-form"></div>
         </div>
 
       </div>
@@ -952,90 +883,10 @@ import LandingLayout from '../layouts/LandingLayout.astro';
 
   </div>
 
+  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
   <script is:inline>
-  (function () {
-    'use strict';
-    var ENDPOINT = 'https://formsubmit.co/ajax/hello@sunshinetinyhouses.com.au';
-
-    function isValidEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
-    function isValidPhone(v) { return v.replace(/[\s\-().+]/g, '').length >= 10; }
-
-    function showError(input, msg) {
-      input.classList.add('sth-invalid');
-      var err = input.parentNode.querySelector('.sth-field-error');
-      if (!err) {
-        err = document.createElement('span');
-        err.className = 'sth-field-error';
-        input.parentNode.appendChild(err);
-      }
-      err.textContent = msg;
-      err.classList.add('sth-visible');
-    }
-    function clearError(input) {
-      input.classList.remove('sth-invalid');
-      var err = input.parentNode.querySelector('.sth-field-error');
-      if (err) err.classList.remove('sth-visible');
-    }
-    function validateField(input) {
-      var name = input.getAttribute('name');
-      var val  = input.value;
-      if (name === 'email' && val) {
-        if (!isValidEmail(val)) { showError(input, 'Please enter a valid email address.'); return false; }
-        else clearError(input);
-      }
-      if (name === 'phone' && val) {
-        if (!isValidPhone(val)) { showError(input, 'Please enter a valid phone number (at least 10 digits).'); return false; }
-        else clearError(input);
-      }
-      return true;
-    }
-
-    document.querySelectorAll('.sth-lp-form').forEach(function (form) {
-      var submitBtn = form.querySelector('[type="submit"]');
-
-      form.querySelectorAll('input[name="email"], input[name="phone"]').forEach(function (input) {
-        input.addEventListener('blur', function () { validateField(input); });
-        input.addEventListener('input', function () { if (input.classList.contains('sth-invalid')) validateField(input); });
-      });
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var valid = true;
-        form.querySelectorAll('input[name="email"], input[name="phone"]').forEach(function (input) {
-          if (!validateField(input)) valid = false;
-        });
-        if (!valid) return;
-
-        var orig = submitBtn.textContent;
-        submitBtn.textContent = 'Sending…';
-        submitBtn.disabled = true;
-
-        fetch(ENDPOINT, { method: 'POST', body: new FormData(form) })
-          .then(function (r) { return r.json(); })
-          .then(function (res) {
-            if (res.success) {
-              if (window.gtag) gtag('event', 'generate_lead', { event_category: 'landing_page' });
-              window.location.href = '/contact/thank-you/';
-            } else {
-              submitBtn.textContent = 'Error — please try again';
-              submitBtn.disabled = false;
-            }
-          })
-          .catch(function () {
-            submitBtn.textContent = 'Error — please try again';
-            submitBtn.disabled = false;
-          });
-      });
-    });
-
-    var heroCard  = document.getElementById('sth-hero-form-card');
-    var stickyCta = document.getElementById('sth-sticky-cta');
-    if (heroCard && stickyCta && 'IntersectionObserver' in window) {
-      new IntersectionObserver(function (entries) {
-        stickyCta.style.display = entries[0].isIntersecting ? 'none' : '';
-      }, { threshold: 0.05 }).observe(heroCard);
-    }
-  })();
+    hbspt.forms.create({ region: "ap1", portalId: "442170069", formId: "abcc6489-5270-4b70-8e18-b5477c19f227", target: "#hs-hero-form" });
+    hbspt.forms.create({ region: "ap1", portalId: "442170069", formId: "abcc6489-5270-4b70-8e18-b5477c19f227", target: "#hs-final-form" });
   </script>
 
 </LandingLayout>
