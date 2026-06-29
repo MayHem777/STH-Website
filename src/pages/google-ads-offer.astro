@@ -916,8 +916,8 @@ import LandingLayout from '../layouts/LandingLayout.astro';
       var bowtie = form.querySelector('.hs-form-bowtie');
       if (bowtie) bowtie.style.setProperty('display', 'none', 'important');
     }
-    hbspt.forms.create({ region: "ap1", portalId: "442170069", formId: "abcc6489-5270-4b70-8e18-b5477c19f227", target: "#hs-hero-form", onFormReady: function($form) { styleHsForm($form[0]); } });
-    hbspt.forms.create({ region: "ap1", portalId: "442170069", formId: "abcc6489-5270-4b70-8e18-b5477c19f227", target: "#hs-final-form", onFormReady: function($form) { styleHsForm($form[0]); } });
+    hbspt.forms.create({ region: "ap1", portalId: "442170069", formId: "abcc6489-5270-4b70-8e18-b5477c19f227", target: "#hs-hero-form", onFormReady: function($form) { styleHsForm($form[0]); }, onFormSubmitted: function() { window.location.href = '/thank-you'; } });
+    hbspt.forms.create({ region: "ap1", portalId: "442170069", formId: "abcc6489-5270-4b70-8e18-b5477c19f227", target: "#hs-final-form", onFormReady: function($form) { styleHsForm($form[0]); }, onFormSubmitted: function() { window.location.href = '/thank-you'; } });
   </script>
 
 </LandingLayout>

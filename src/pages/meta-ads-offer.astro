@@ -207,6 +207,18 @@ import LandingLayout from '../layouts/LandingLayout.astro';
   #sth-meta .m-rev-card .m-rev-detail { color: #999; white-space: nowrap; }
   #sth-meta .m-rev-card .m-avatar { background: #DDE2DB; color: #1A1A1A; }
 
+  /* ── Factory-built explainer ── */
+  #sth-meta .m-factory { background: #fff; padding: 3.5rem 1.25rem; border-top: 1px solid #EDE8E1; }
+  #sth-meta .m-factory-intro { text-align: center; margin-bottom: 2rem; }
+  #sth-meta .m-factory-intro .m-label { font-size: .72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #5C6A5B; display: block; margin-bottom: .3rem; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-meta .m-factory-intro h2 { font-size: clamp(1.35rem, 3vw, 1.8rem); font-weight: 800; color: #1A1A1A; line-height: 1.2; margin-bottom: .75rem; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-meta .m-factory-intro p { font-size: .95rem; color: #555; line-height: 1.72; max-width: 520px; margin: 0 auto; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-meta .m-factory-grid { max-width: 680px; margin: 1.75rem auto 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  #sth-meta .m-factory-item { background: #F4F0EB; border-radius: 12px; padding: 1.5rem; }
+  #sth-meta .m-factory-icon { font-size: 1.6rem; display: block; margin-bottom: .6rem; }
+  #sth-meta .m-factory-item h3 { font-size: .95rem; font-weight: 700; color: #1A1A1A; margin-bottom: .35rem; line-height: 1.3; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-meta .m-factory-item p { font-size: .85rem; color: #555; line-height: 1.65; font-family: 'Outfit', system-ui, sans-serif; }
+
   /* ── CTA + Form ── */
   #sth-meta .m-cta { background: #1A1A1A; padding: 4rem 1.25rem; }
   #sth-meta .m-cta-inner { max-width: 520px; margin: 0 auto; text-align: center; }
@@ -253,6 +265,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
     #sth-meta .m-oc               { padding: .85rem .5rem; }
     #sth-meta .m-oc .oc-icon      { font-size: 1.3rem; }
     #sth-meta .m-oc .oc-label     { font-size: .72rem; }
+    #sth-meta .m-factory-grid      { grid-template-columns: 1fr; }
   }
 </style>
 
@@ -287,9 +300,9 @@ import LandingLayout from '../layouts/LandingLayout.astro';
         <span class="m-eyebrow">Sunshine Coast &amp; South East Queensland</span>
         <h1>Your Block Could Be<br><em>Working For You.</em></h1>
         <p class="m-hero-sub">
-          A granny flat or secondary dwelling adds space for family, generates rental income,
+          A modular granny flat or secondary dwelling adds space for family, generates rental income,
           and we handle every step &mdash; design, council approvals, build and delivery.
-          Factory-built in Noosaville. Turn-key.
+          Factory-built in our Noosaville workshop, delivered and installed complete on your block. Turn-key.
         </p>
         <div class="m-hero-cta-wrap">
           <a href="#m-enquire" class="m-btn m-btn-primary">Find Out What&rsquo;s Possible on My Block &rarr;</a>
@@ -393,6 +406,37 @@ import LandingLayout from '../layouts/LandingLayout.astro';
       </div>
     </section>
 
+    <!-- FACTORY-BUILT EXPLAINER -->
+    <section class="m-factory">
+      <div class="m-factory-intro">
+        <span class="m-label">How We Build</span>
+        <h2>Built in a Factory. Delivered Complete.</h2>
+        <p>Unlike a traditional on-site build, a Sunshine Tiny Houses modular home is constructed almost entirely inside our Noosaville workshop &mdash; then delivered to your block ready to install.</p>
+      </div>
+      <div class="m-factory-grid m-container">
+        <div class="m-factory-item">
+          <span class="m-factory-icon">&#x1F3ED;</span>
+          <h3>Built Under Controlled Conditions</h3>
+          <p>Your home takes shape inside our factory &mdash; no weather delays, no warping timber, no waiting on tradies between rain days. Quality doesn&rsquo;t depend on the forecast.</p>
+        </div>
+        <div class="m-factory-item">
+          <span class="m-factory-icon">&#x1F69A;</span>
+          <h3>Delivered &amp; Crane-Lifted Onto Your Block</h3>
+          <p>On install day, your modular home arrives on the truck and is crane-lifted into position. What would take months on-site is done in days.</p>
+        </div>
+        <div class="m-factory-item">
+          <span class="m-factory-icon">&#x1F6B7;</span>
+          <h3>No Months of On-Site Disruption</h3>
+          <p>Because 95% of the build happens off your property, you don&rsquo;t have tradies camped at your house for weeks. Your block stays yours until delivery day.</p>
+        </div>
+        <div class="m-factory-item">
+          <span class="m-factory-icon">&#x2705;</span>
+          <h3>Certified and Move-In Ready</h3>
+          <p>It arrives with the bulk of construction already complete. On-site work &mdash; stairs, decks, and service connections &mdash; is handled quickly, followed by a final inspection. Far less disruption than a traditional build.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- SUPPORTING REVIEWS -->
     <section class="m-reviews2">
       <div class="m-reviews2-grid m-container">
@@ -474,6 +518,10 @@ import LandingLayout from '../layouts/LandingLayout.astro';
         }
         var bowtie = $form[0].querySelector('.hs-form-bowtie');
         if (bowtie) bowtie.style.setProperty('display', 'none', 'important');
+      },
+      onFormSubmitted: function() {
+        if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+        window.location.href = '/thank-you';
       }
     });
   </script>
