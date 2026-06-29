@@ -74,24 +74,27 @@ import LandingLayout from '../layouts/LandingLayout.astro';
   #sth-meta .m-field-error.m-visible { display: block; }
   #sth-meta .m-privacy { font-size: .7rem; color: #AAA; text-align: center; margin-top: .65rem; font-family: 'Outfit', system-ui, sans-serif; }
 
-  /* HubSpot form overrides — match native form styles */
-  #sth-meta .hs-form { font-family: 'Outfit', system-ui, sans-serif !important; }
-  #sth-meta .hs-form-field { margin-bottom: .75rem !important; }
-  #sth-meta .hs-form-field label { display: block !important; font-size: .7rem !important; font-weight: 700 !important; letter-spacing: .6px !important; text-transform: uppercase !important; color: #555 !important; margin-bottom: .3rem !important; font-family: 'Outfit', system-ui, sans-serif !important; }
-  #sth-meta .hs-form-field .hs-input,
-  #sth-meta .hs-form-field select { width: 100% !important; padding: .9rem 1rem !important; border: 1.5px solid #DDD8D0 !important; border-radius: 8px !important; font-family: 'Outfit', system-ui, sans-serif !important; font-size: 1rem !important; color: #1A1A1A !important; background: #FAFAF8 !important; -webkit-appearance: none !important; appearance: none !important; line-height: 1.4 !important; box-shadow: none !important; }
-  #sth-meta .hs-form-field .hs-input:focus,
-  #sth-meta .hs-form-field select:focus { outline: none !important; border-color: #5C6A5B !important; background: #fff !important; box-shadow: 0 0 0 3px rgba(92,106,91,.12) !important; }
-  #sth-meta input.hs-button,
-  #sth-meta .hs-button { width: 100% !important; padding: 1rem 2rem !important; background: #5C6A5B !important; color: #fff !important; border: none !important; border-radius: 8px !important; font-family: 'Outfit', system-ui, sans-serif !important; font-size: 1rem !important; font-weight: 700 !important; cursor: pointer !important; box-shadow: 0 4px 16px rgba(92,106,91,.4) !important; transition: background .2s, transform .15s !important; margin-top: .5rem !important; -webkit-appearance: none !important; appearance: none !important; }
-  #sth-meta input.hs-button:hover,
-  #sth-meta .hs-button:hover { background: #4A574A !important; transform: translateY(-2px) !important; }
-  #sth-meta .hs-error-msgs { list-style: none !important; margin: .3rem 0 0 !important; padding: 0 !important; }
-  #sth-meta .hs-error-msgs li label { font-size: .72rem !important; color: #C0392B !important; font-weight: 600 !important; text-transform: none !important; letter-spacing: 0 !important; }
-  #sth-meta .hs-richtext, #sth-meta .hs-form .legal-consent-container { font-size: .7rem !important; color: #AAA !important; text-align: center !important; margin-top: .4rem !important; }
-  #sth-meta .submitted-message { text-align: center; padding: 2rem 1rem; font-family: 'Outfit', system-ui, sans-serif; }
-  #sth-meta .hs-form .hs-form-bowtie,
-  #sth-meta .hbspt-form .hs-form-bowtie { display: none !important; }
+  #sth-meta .m-form-row select {
+    width: 100%;
+    padding: .9rem 1rem;
+    border: 1.5px solid #DDD8D0;
+    border-radius: 8px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 1rem;
+    color: #1A1A1A;
+    background: #FAFAF8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 1rem center;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    transition: border-color .18s, box-shadow .18s;
+    line-height: 1.4;
+  }
+  #sth-meta .m-form-row select:focus {
+    outline: none;
+    border-color: #5C6A5B;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(92,106,91,.12);
+  }
   #sth-meta .m-form-success { display: none; text-align: center; padding: 2rem 1rem; }
   #sth-meta .m-form-success .fs-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
   #sth-meta .m-form-success h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: .4rem; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; }
@@ -487,7 +490,64 @@ import LandingLayout from '../layouts/LandingLayout.astro';
           <h3>Check My Block &rarr;</h3>
           <p class="m-form-sub">Just your name, number, email and location to get started.</p>
 
-          <div id="hs-meta-form"></div>
+          <form id="m-main-form" novalidate>
+            <div class="m-form-row">
+              <label for="m-name">Your Name</label>
+              <input type="text" id="m-name" name="name" placeholder="e.g. Sarah Johnson" required autocomplete="name" />
+              <span class="m-field-error" id="m-name-err">Please enter your name.</span>
+            </div>
+            <div class="m-form-row">
+              <label for="m-phone">Phone Number</label>
+              <input type="tel" id="m-phone" name="phone" placeholder="e.g. 0412 345 678" required autocomplete="tel" />
+              <span class="m-field-error" id="m-phone-err">Please enter a valid phone number.</span>
+            </div>
+            <div class="m-form-row">
+              <label for="m-email">Email Address</label>
+              <input type="email" id="m-email" name="email" placeholder="e.g. sarah@email.com" required autocomplete="email" />
+              <span class="m-field-error" id="m-email-err">Please enter a valid email address.</span>
+            </div>
+            <div class="m-form-row">
+              <label for="m-suburb">Suburb, Postcode or Address</label>
+              <input type="text" id="m-suburb" name="location" placeholder="e.g. Cooroy QLD 4563" required autocomplete="address-level2" />
+              <span class="m-field-error" id="m-suburb-err">Please enter your suburb or postcode.</span>
+            </div>
+            <div class="m-form-row">
+              <label for="m-ideal">What&rsquo;s your ideal home/project?</label>
+              <select id="m-ideal" name="ideal_home">
+                <option value="" disabled selected>Select an option</option>
+                <option value="1 Bed, 1 Bath">1 Bed, 1 Bath</option>
+                <option value="2 Bed, 1 Bath">2 Bed, 1 Bath</option>
+                <option value="2 Bed, 2 Bath">2 Bed, 2 Bath</option>
+                <option value="Utility Room">Utility Room</option>
+                <option value="Office Space">Office Space</option>
+                <option value="Something larger or custom">Something larger or custom</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <div class="m-form-row">
+              <label for="m-budget">What&rsquo;s your approximate budget?</label>
+              <select id="m-budget" name="approximate_budget">
+                <option value="" disabled selected>Select a range</option>
+                <option value="$100k – $125k">$100k &ndash; $125k</option>
+                <option value="$125k – $150k">$125k &ndash; $150k</option>
+                <option value="$150k – $175k">$150k &ndash; $175k</option>
+                <option value="$175k – $200k">$175k &ndash; $200k</option>
+                <option value="$200k – $225k">$200k &ndash; $225k</option>
+                <option value="$225k – $250k">$225k &ndash; $250k</option>
+                <option value="$250k – $275k">$250k &ndash; $275k</option>
+                <option value="$275k – $300k">$275k &ndash; $300k</option>
+                <option value="$300k+">$300k+</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <button type="submit" class="m-btn m-btn-primary m-btn-full" style="margin-top:.5rem;">Find Out What&rsquo;s Possible &rarr;</button>
+            <p class="m-privacy">&#x1F512; No spam. No obligation. Ever.</p>
+          </form>
+          <div class="m-form-success" id="m-form-success" aria-live="polite">
+            <span class="fs-icon">&#x2705;</span>
+            <h3>You&rsquo;re all set.</h3>
+            <p>Mitch or Nat will be in touch personally within 24 hours.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -500,30 +560,68 @@ import LandingLayout from '../layouts/LandingLayout.astro';
 
   </div>
 
-  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
   <script is:inline>
-    hbspt.forms.create({
-      region: "ap1",
-      portalId: "442170069",
-      formId: "abcc6489-5270-4b70-8e18-b5477c19f227",
-      target: "#hs-meta-form",
-      onFormReady: function($form) {
-        var btn = $form[0].querySelector('input.hs-button');
-        if (btn) {
-          btn.style.setProperty('background', '#5C6A5B', 'important');
-          btn.style.setProperty('color', '#fff', 'important');
-          btn.style.setProperty('border', 'none', 'important');
-          btn.style.setProperty('width', '100%', 'important');
-          btn.style.setProperty('border-radius', '8px', 'important');
-        }
-        var bowtie = $form[0].querySelector('.hs-form-bowtie');
-        if (bowtie) bowtie.style.setProperty('display', 'none', 'important');
-      },
-      onFormSubmitted: function() {
-        if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-        window.location.href = '/thank-you';
+  (function () {
+    var HS = 'https://api.hsforms.com/submissions/v3/integration/submit/442170069/abcc6489-5270-4b70-8e18-b5477c19f227';
+    function validPhone(v) { return /^[\d\s\+\-\(\)]{8,15}$/.test(v.trim()); }
+    function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
+
+    var form    = document.getElementById('m-main-form');
+    var success = document.getElementById('m-form-success');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name  = form.querySelector('[name="name"]');
+      var phone = form.querySelector('[name="phone"]');
+      var email = form.querySelector('[name="email"]');
+      var loc   = form.querySelector('[name="location"]');
+      var ok = true;
+
+      function check(el, errId, bad) {
+        var err = document.getElementById(errId);
+        if (bad) { el.classList.add('m-invalid'); err && err.classList.add('m-visible'); ok = false; }
+        else     { el.classList.remove('m-invalid'); err && err.classList.remove('m-visible'); }
       }
+      check(name,  'm-name-err',   !name.value.trim());
+      check(phone, 'm-phone-err',  !validPhone(phone.value));
+      check(email, 'm-email-err',  !validEmail(email.value));
+      check(loc,   'm-suburb-err', !loc.value.trim());
+      if (!ok) return;
+
+      var btn = form.querySelector('button[type="submit"]');
+      var orig = btn.textContent;
+      btn.disabled = true; btn.textContent = 'Sending…';
+
+      var hutkMatch = document.cookie.match(/hubspotutk=([^;]+)/);
+      var payload = {
+        fields: [
+          { name: 'firstname',          value: name.value.trim() },
+          { name: 'phone_number_text',  value: phone.value.trim() },
+          { name: 'email',              value: email.value.trim() },
+          { name: 'city',               value: loc.value.trim() },
+          { name: 'ideal_home',         value: (form.querySelector('[name="ideal_home"]') || {}).value || '' },
+          { name: 'approximate_budget', value: (form.querySelector('[name="approximate_budget"]') || {}).value || '' }
+        ],
+        context: { pageUri: window.location.href, pageName: document.title }
+      };
+      if (hutkMatch) payload.context.hutk = hutkMatch[1];
+
+      fetch(HS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+        .then(function (r) {
+          if (r.ok) {
+            if (typeof fbq === 'function') fbq('track', 'Lead');
+            window.location.href = '/thank-you';
+          } else {
+            btn.disabled = false; btn.textContent = orig;
+            alert('Something went wrong — please try again or call us on (07) 5315 8365.');
+          }
+        })
+        .catch(function () {
+          btn.disabled = false; btn.textContent = orig;
+          alert('Something went wrong — please try again or call us on (07) 5315 8365.');
+        });
     });
+  })();
   </script>
 
 </LandingLayout>

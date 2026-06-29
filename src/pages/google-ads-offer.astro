@@ -100,24 +100,6 @@ import LandingLayout from '../layouts/LandingLayout.astro';
   #sth-lp .sth-form-privacy { font-size: .7rem; color: #BBBBBB; text-align: center; margin-top: .6rem; font-family: 'Outfit', system-ui, sans-serif; }
   #sth-lp .sth-form-success { display: none; text-align: center; padding: 2rem 1rem; }
 
-  /* HubSpot form overrides — match native form styles */
-  #sth-lp .hs-form { font-family: 'Outfit', system-ui, sans-serif !important; }
-  #sth-lp .hs-form-field { margin-bottom: .75rem !important; }
-  #sth-lp .hs-form-field label { display: block !important; font-size: .7rem !important; font-weight: 700 !important; letter-spacing: .6px !important; text-transform: uppercase !important; color: #555 !important; margin-bottom: .3rem !important; font-family: 'Outfit', system-ui, sans-serif !important; }
-  #sth-lp .hs-form-field .hs-input,
-  #sth-lp .hs-form-field select { width: 100% !important; padding: .85rem 1rem !important; border: 1.5px solid #DDD8D0 !important; border-radius: 8px !important; font-family: 'Outfit', system-ui, sans-serif !important; font-size: 1rem !important; color: #1A1A1A !important; background: #FAFAF8 !important; -webkit-appearance: none !important; appearance: none !important; line-height: 1.4 !important; box-shadow: none !important; }
-  #sth-lp .hs-form-field .hs-input:focus,
-  #sth-lp .hs-form-field select:focus { outline: none !important; border-color: #5C6A5B !important; background: #FFFFFF !important; box-shadow: 0 0 0 3px rgba(92,106,91,.12) !important; }
-  #sth-lp input.hs-button,
-  #sth-lp .hs-button { width: 100% !important; padding: 1rem 2rem !important; background: #5C6A5B !important; color: #FFFFFF !important; border: none !important; border-radius: 8px !important; font-family: 'Outfit', system-ui, sans-serif !important; font-size: 1rem !important; font-weight: 700 !important; cursor: pointer !important; box-shadow: 0 4px 16px rgba(92,106,91,.4) !important; transition: background .2s, transform .15s !important; margin-top: .25rem !important; -webkit-appearance: none !important; appearance: none !important; }
-  #sth-lp input.hs-button:hover,
-  #sth-lp .hs-button:hover { background: #4A574A !important; transform: translateY(-2px) !important; }
-  #sth-lp .hs-error-msgs { list-style: none !important; margin: .3rem 0 0 !important; padding: 0 !important; }
-  #sth-lp .hs-error-msgs li label { font-size: .72rem !important; color: #C0392B !important; font-weight: 600 !important; text-transform: none !important; letter-spacing: 0 !important; }
-  #sth-lp .hs-richtext, #sth-lp .hs-form .legal-consent-container { font-size: .7rem !important; color: #BBBBBB !important; text-align: center !important; margin-top: .4rem !important; }
-  #sth-lp .submitted-message { text-align: center; padding: 2rem 1rem; font-family: 'Outfit', system-ui, sans-serif; }
-  #sth-lp .hs-form .hs-form-bowtie,
-  #sth-lp .hbspt-form .hs-form-bowtie { display: none !important; }
   #sth-lp .sth-form-success .fs-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
   #sth-lp .sth-form-success h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: .45rem; color: #1A1A1A; }
   #sth-lp .sth-form-success p  { font-size: .9rem; color: #666; line-height: 1.6; }
@@ -475,7 +457,64 @@ import LandingLayout from '../layouts/LandingLayout.astro';
           <p class="sth-hfc-title">Is Your Property Suitable?</p>
           <p class="sth-hfc-sub">Free assessment. No obligation. Mitch or Nat will be in touch within 24 hours.</p>
 
-          <div id="hs-hero-form"></div>
+          <form id="sth-hero-form" novalidate>
+            <div class="sth-form-row">
+              <label for="sth-hf-name">Your Name</label>
+              <input type="text" id="sth-hf-name" name="name" placeholder="e.g. Sarah Johnson" required autocomplete="name" />
+              <span class="sth-field-error" id="sth-hf-name-err">Please enter your name.</span>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-hf-phone">Phone Number</label>
+              <input type="tel" id="sth-hf-phone" name="phone" placeholder="e.g. 0412 345 678" required autocomplete="tel" />
+              <span class="sth-field-error" id="sth-hf-phone-err">Please enter a valid phone number.</span>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-hf-email">Email Address</label>
+              <input type="email" id="sth-hf-email" name="email" placeholder="e.g. sarah@email.com" required autocomplete="email" />
+              <span class="sth-field-error" id="sth-hf-email-err">Please enter a valid email address.</span>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-hf-suburb">Suburb, Postcode or Address</label>
+              <input type="text" id="sth-hf-suburb" name="location" placeholder="e.g. Cooroy QLD 4563" required autocomplete="address-level2" />
+              <span class="sth-field-error" id="sth-hf-suburb-err">Please enter your suburb or postcode.</span>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-hf-ideal">What&rsquo;s your ideal home/project?</label>
+              <select id="sth-hf-ideal" name="ideal_home">
+                <option value="" disabled selected>Select an option</option>
+                <option value="1 Bed, 1 Bath">1 Bed, 1 Bath</option>
+                <option value="2 Bed, 1 Bath">2 Bed, 1 Bath</option>
+                <option value="2 Bed, 2 Bath">2 Bed, 2 Bath</option>
+                <option value="Utility Room">Utility Room</option>
+                <option value="Office Space">Office Space</option>
+                <option value="Something larger or custom">Something larger or custom</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-hf-budget">What&rsquo;s your approximate budget?</label>
+              <select id="sth-hf-budget" name="approximate_budget">
+                <option value="" disabled selected>Select a range</option>
+                <option value="$100k – $125k">$100k &ndash; $125k</option>
+                <option value="$125k – $150k">$125k &ndash; $150k</option>
+                <option value="$150k – $175k">$150k &ndash; $175k</option>
+                <option value="$175k – $200k">$175k &ndash; $200k</option>
+                <option value="$200k – $225k">$200k &ndash; $225k</option>
+                <option value="$225k – $250k">$225k &ndash; $250k</option>
+                <option value="$250k – $275k">$250k &ndash; $275k</option>
+                <option value="$275k – $300k">$275k &ndash; $300k</option>
+                <option value="$300k+">$300k+</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <button type="submit" class="sth-btn sth-btn-primary sth-btn-full" style="margin-top:.25rem;">Get My Free Assessment &rarr;</button>
+            <p class="sth-form-privacy">&#x1F512; No spam. No obligation. Ever.</p>
+          </form>
+          <div class="sth-form-success" id="sth-hf-success" aria-live="polite">
+            <span class="fs-icon">&#x2705;</span>
+            <h3>You&rsquo;re all set.</h3>
+            <p>Mitch or Nat will be in touch personally within 24 hours.</p>
+          </div>
         </div>
 
       </div>
@@ -888,7 +927,68 @@ import LandingLayout from '../layouts/LandingLayout.astro';
           <p class="sth-ffc-title">Free Property Assessment</p>
           <p class="sth-ffc-sub">Tell us about your property and what you're trying to achieve. We'll be in touch within 24 hours with a straight answer.</p>
 
-          <div id="hs-final-form"></div>
+          <form id="sth-final-form" novalidate>
+            <div class="sth-form-row">
+              <label for="sth-ff-name">Your Name</label>
+              <input type="text" id="sth-ff-name" name="name" placeholder="e.g. Sarah Johnson" required autocomplete="name" />
+              <span class="sth-field-error" id="sth-ff-name-err">Please enter your name.</span>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-ff-phone">Phone Number</label>
+              <input type="tel" id="sth-ff-phone" name="phone" placeholder="e.g. 0412 345 678" required autocomplete="tel" />
+              <span class="sth-field-error" id="sth-ff-phone-err">Please enter a valid phone number.</span>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-ff-email">Email Address</label>
+              <input type="email" id="sth-ff-email" name="email" placeholder="e.g. sarah@email.com" required autocomplete="email" />
+              <span class="sth-field-error" id="sth-ff-email-err">Please enter a valid email address.</span>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-ff-suburb">Suburb, Postcode or Address</label>
+              <input type="text" id="sth-ff-suburb" name="location" placeholder="e.g. Cooroy QLD 4563" required autocomplete="address-level2" />
+              <span class="sth-field-error" id="sth-ff-suburb-err">Please enter your suburb or postcode.</span>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-ff-ideal">What&rsquo;s your ideal home/project?</label>
+              <select id="sth-ff-ideal" name="ideal_home">
+                <option value="" disabled selected>Select an option</option>
+                <option value="1 Bed, 1 Bath">1 Bed, 1 Bath</option>
+                <option value="2 Bed, 1 Bath">2 Bed, 1 Bath</option>
+                <option value="2 Bed, 2 Bath">2 Bed, 2 Bath</option>
+                <option value="Utility Room">Utility Room</option>
+                <option value="Office Space">Office Space</option>
+                <option value="Something larger or custom">Something larger or custom</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-ff-budget">What&rsquo;s your approximate budget?</label>
+              <select id="sth-ff-budget" name="approximate_budget">
+                <option value="" disabled selected>Select a range</option>
+                <option value="$100k – $125k">$100k &ndash; $125k</option>
+                <option value="$125k – $150k">$125k &ndash; $150k</option>
+                <option value="$150k – $175k">$150k &ndash; $175k</option>
+                <option value="$175k – $200k">$175k &ndash; $200k</option>
+                <option value="$200k – $225k">$200k &ndash; $225k</option>
+                <option value="$225k – $250k">$225k &ndash; $250k</option>
+                <option value="$250k – $275k">$250k &ndash; $275k</option>
+                <option value="$275k – $300k">$275k &ndash; $300k</option>
+                <option value="$300k+">$300k+</option>
+                <option value="Not sure yet">Not sure yet</option>
+              </select>
+            </div>
+            <div class="sth-form-row">
+              <label for="sth-ff-details">Tell Us About Your Project <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:.68rem;color:#999">(optional)</span></label>
+              <textarea id="sth-ff-details" name="project_details" placeholder="Any details about your block, goals, or timeline…" rows="3"></textarea>
+            </div>
+            <button type="submit" class="sth-btn sth-btn-primary sth-btn-full" style="margin-top:.25rem;">Send My Enquiry &rarr;</button>
+            <p class="sth-form-privacy">&#x1F512; No spam. No obligation. Ever.</p>
+          </form>
+          <div class="sth-form-success" id="sth-ff-success" aria-live="polite">
+            <span class="fs-icon">&#x2705;</span>
+            <h3>You&rsquo;re all set.</h3>
+            <p>Mitch or Nat will be in touch personally within 24 hours.</p>
+          </div>
         </div>
 
       </div>
@@ -902,22 +1002,74 @@ import LandingLayout from '../layouts/LandingLayout.astro';
 
   </div>
 
-  <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
   <script is:inline>
-    function styleHsForm(form) {
-      var btn = form.querySelector('input.hs-button');
-      if (btn) {
-        btn.style.setProperty('background', '#5C6A5B', 'important');
-        btn.style.setProperty('color', '#fff', 'important');
-        btn.style.setProperty('border', 'none', 'important');
-        btn.style.setProperty('width', '100%', 'important');
-        btn.style.setProperty('border-radius', '8px', 'important');
-      }
-      var bowtie = form.querySelector('.hs-form-bowtie');
-      if (bowtie) bowtie.style.setProperty('display', 'none', 'important');
+  (function () {
+    var HS = 'https://api.hsforms.com/submissions/v3/integration/submit/442170069/abcc6489-5270-4b70-8e18-b5477c19f227';
+    function validPhone(v) { return /^[\d\s\+\-\(\)]{8,15}$/.test(v.trim()); }
+    function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
+
+    function wireForm(formId, successId, errPrefix) {
+      var form    = document.getElementById(formId);
+      var success = document.getElementById(successId);
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var name  = form.querySelector('[name="name"]');
+        var phone = form.querySelector('[name="phone"]');
+        var email = form.querySelector('[name="email"]');
+        var loc   = form.querySelector('[name="location"]');
+        var ok = true;
+
+        function check(el, errId, bad) {
+          var err = document.getElementById(errId);
+          if (bad) { el.classList.add('sth-invalid'); err && err.classList.add('sth-visible'); ok = false; }
+          else     { el.classList.remove('sth-invalid'); err && err.classList.remove('sth-visible'); }
+        }
+        check(name,  errPrefix + '-name-err',   !name.value.trim());
+        check(phone, errPrefix + '-phone-err',  !validPhone(phone.value));
+        check(email, errPrefix + '-email-err',  !validEmail(email.value));
+        check(loc,   errPrefix + '-suburb-err', !loc.value.trim());
+        if (!ok) return;
+
+        var btn = form.querySelector('button[type="submit"]');
+        var orig = btn.textContent;
+        btn.disabled = true; btn.textContent = 'Sending…';
+
+        var hutkMatch = document.cookie.match(/hubspotutk=([^;]+)/);
+        var fields = [
+          { name: 'firstname',          value: name.value.trim() },
+          { name: 'phone_number_text',  value: phone.value.trim() },
+          { name: 'email',              value: email.value.trim() },
+          { name: 'city',               value: loc.value.trim() },
+          { name: 'ideal_home',         value: (form.querySelector('[name="ideal_home"]') || {}).value || '' },
+          { name: 'approximate_budget', value: (form.querySelector('[name="approximate_budget"]') || {}).value || '' }
+        ];
+        var details = form.querySelector('[name="project_details"]');
+        if (details && details.value.trim()) fields.push({ name: 'project_details', value: details.value.trim() });
+
+        var payload = { fields: fields, context: { pageUri: window.location.href, pageName: document.title } };
+        if (hutkMatch) payload.context.hutk = hutkMatch[1];
+
+        fetch(HS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+          .then(function (r) {
+            if (r.ok) {
+              window.location.href = '/thank-you';
+            } else {
+              btn.disabled = false; btn.textContent = orig;
+              alert('Something went wrong — please try again or call us on (07) 5315 8365.');
+            }
+          })
+          .catch(function () {
+            btn.disabled = false; btn.textContent = orig;
+            alert('Something went wrong — please try again or call us on (07) 5315 8365.');
+          });
+      });
     }
-    hbspt.forms.create({ region: "ap1", portalId: "442170069", formId: "abcc6489-5270-4b70-8e18-b5477c19f227", target: "#hs-hero-form", onFormReady: function($form) { styleHsForm($form[0]); }, onFormSubmitted: function() { window.location.href = '/thank-you'; } });
-    hbspt.forms.create({ region: "ap1", portalId: "442170069", formId: "abcc6489-5270-4b70-8e18-b5477c19f227", target: "#hs-final-form", onFormReady: function($form) { styleHsForm($form[0]); }, onFormSubmitted: function() { window.location.href = '/thank-you'; } });
+
+    wireForm('sth-hero-form',  'sth-hf-success', 'sth-hf');
+    wireForm('sth-final-form', 'sth-ff-success', 'sth-ff');
+  })();
   </script>
 
 </LandingLayout>
