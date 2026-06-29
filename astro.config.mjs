@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
   site: 'https://www.sunshinetinyhouses.com.au',
@@ -16,5 +15,4 @@ export default defineConfig({
         !page.includes('/contact/thank-you/'),
     }),
   ],
-  adapter: cloudflare(),
 });

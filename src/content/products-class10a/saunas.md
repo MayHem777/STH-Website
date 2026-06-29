@@ -4,8 +4,8 @@ tagline: "Hotel-quality wellness, at home."
 description: "Custom-built backyard saunas by Sunshine Tiny Houses — traditional Finnish or infrared, fully lined and fitted. Your personal wellness sanctuary, delivered and installed."
 draft: false
 order: 2
-heroImage: "/images/custom-sauna-2.jpg"
-heroImageAlt: "Custom built backyard sauna exterior"
+heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/d13ff83e-5295-4c6a-ad06-2e3ab254044f/Custom+Sauna2.jpg"
+heroImageAlt: "Custom built backyard sauna by Sunshine Tiny Houses"
 features:
   - "Traditional Finnish or infrared sauna options"
   - "Western red cedar or thermory ash internal lining"

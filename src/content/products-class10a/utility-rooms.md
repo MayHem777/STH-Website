@@ -4,8 +4,8 @@ tagline: "Built for the work that needs doing."
 description: "Purpose-built utility rooms for laundry, storage, workshop or hobby space — designed to complement your home and finished to last."
 draft: false
 order: 3
-heroImage: ""
-heroImageAlt: "Sunshine Tiny Houses utility room exterior"
+heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/a5c4e14f-1c67-475c-916f-ed77cc7a1180/STH+-+BANKSIA+OFFICE+PITCHED+ROOF+%289%29_0002_Background.jpg"
+heroImageAlt: "Sunshine Tiny Houses modular utility room exterior"
 features:
   - "Laundry fit-out — trough, plumbing, cabinetry"
   - "Workshop wiring — 15A outlets, RCD protection"

@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const publishDate = post.data.publishDate.toLocaleDateString('en-AU', {
+  day: 'numeric', month: 'long', year: 'numeric'
+});
+---
+
+<BaseLayout
+  title={`${post.data.title} | Sunshine Tiny Houses`}
+  description={post.data.description}
+  ogImage={post.data.ogImage ?? post.data.heroImage}
+>
+
+  <article>
+
+    {post.data.heroImage && (
+      <div class="post-hero">
+        <img
+          src={post.data.heroImage}
+          alt={post.data.heroImageAlt ?? post.data.title}
+          class="post-hero__img"
+          loading="eager"
+        />
+      </div>
+    )}
+
+    <div class="container post-layout">
+
+      <header class="post-header">
+        <a href="/blog/" class="back-link">← Back to Blog</a>
+        <h1>{post.data.title}</h1>
+        <div class="post-meta">
+          <span>{post.data.author}</span>
+          <span class="dot">·</span>
+          <time datetime={post.data.publishDate.toISOString()}>{publishDate}</time>
+        </div>
+      </header>
+
+      <div class="prose">
+        <Content />
+      </div>
+
+      <footer class="post-footer">
+        <div class="cta-band">
+          <p>Ready to explore your options?</p>
+          <a href="/contact/" class="btn btn--primary">Get a Free Quote</a>
+        </div>
+        <a href="/blog/" class="back-link">← Back to Blog</a>
+      </footer>
+
+    </div>
+  </article>
+
+</BaseLayout>
+
+<style>
+.post-hero {
+  width: 100%;
+  max-height: 480px;
+  overflow: hidden;
+}
+.post-hero__img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  display: block;
+}
+
+.post-layout {
+  max-width: 760px;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  text-decoration: none;
+}
+.back-link:hover { text-decoration: underline; }
+
+.post-header h1 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+  margin-bottom: 2rem;
+}
+.dot { opacity: 0.4; }
+
+.prose {
+  line-height: 1.8;
+  color: var(--color-text-body);
+}
+.prose :global(h2) {
+  font-size: var(--font-size-xl);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+.prose :global(h3) {
+  font-size: var(--font-size-lg);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+.prose :global(p) { margin-bottom: 1.1rem; }
+.prose :global(ul), .prose :global(ol) {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.prose :global(li) { margin-bottom: 0.4rem; }
+.prose :global(a) {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose :global(strong) { color: var(--color-text); }
+
+.post-footer {
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-border);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cta-band {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.cta-band p {
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: .75rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  transition: background .2s, transform .15s;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn--primary { background: var(--color-primary); color: #fff; }
+.btn--primary:hover { background: var(--color-primary-hover); transform: translateY(-2px); }
+</style>
