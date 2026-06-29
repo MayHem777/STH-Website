@@ -21,64 +21,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <!-- Form -->
       <div class="contact-form-wrap">
-        <form
-          id="quote-form"
-          action="https://formsubmit.co/hello@sunshinetinyhouses.com.au"
-          method="POST"
-          novalidate
-        >
-          <input type="hidden" name="_subject" value="New quote request — Sunshine Tiny Houses" />
-          <input type="hidden" name="_next" value="https://sth-website.pages.dev/contact/thank-you/" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="text" name="_honey" class="sr-only" tabindex="-1" autocomplete="off" />
-
-          <div class="form-row form-row--half">
-            <div class="form-field">
-              <label for="name">Full name <span aria-hidden="true">*</span></label>
-              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith" />
-              <span class="field-error" id="name-error"></span>
-            </div>
-            <div class="form-field">
-              <label for="phone">Phone number <span aria-hidden="true">*</span></label>
-              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="0400 000 000"
-                pattern="^[\d\s\+\(\)\-]{8,15}$" />
-              <span class="field-error" id="phone-error"></span>
-            </div>
-          </div>
-
-          <div class="form-field">
-            <label for="email">Email address <span aria-hidden="true">*</span></label>
-            <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com" />
-            <span class="field-error" id="email-error"></span>
-          </div>
-
-          <div class="form-field">
-            <label for="location">Address, Suburb or Postcode</label>
-            <input type="text" id="location" name="location" autocomplete="street-address" placeholder="e.g. 12 Smith St, Noosa Heads 4567" />
-          </div>
-
-          <div class="form-field">
-            <label for="interest">I'm interested in <span aria-hidden="true">*</span></label>
-            <select id="interest" name="interest" required>
-              <option value="" disabled selected>Select a product line…</option>
-              <option value="Tiny House on Wheels">Tiny House on Wheels</option>
-              <option value="Modular Home / Granny Flat">Modular Home / Granny Flat (Class 1a)</option>
-              <option value="Backyard Studio">Backyard Studio (Class 10a)</option>
-              <option value="Trailer only">Trailer only</option>
-              <option value="Not sure yet">Not sure yet</option>
-            </select>
-            <span class="field-error" id="interest-error"></span>
-          </div>
-
-          <div class="form-field">
-            <label for="message">Tell us more about your project</label>
-            <textarea id="message" name="message" rows="5" placeholder="Size, land situation, timeline, budget — anything helps us give you a better quote."></textarea>
-          </div>
-
-          <button type="submit" class="btn btn--submit btn--full">Send My Enquiry</button>
-
-          <p class="form-note">We reply within one business day. Your details are never shared.</p>
-        </form>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script is:inline>
+          hbspt.forms.create({
+            region: "ap1",
+            portalId: "442170069",
+            formId: "abcc6489-5270-4b70-8e18-b5477c19f227"
+          });
+        </script>
       </div>
 
       <!-- Contact details sidebar -->
@@ -155,100 +105,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   align-items: start;
 }
 
-/* Form */
-.contact-form-wrap form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
+/* HubSpot form overrides */
+.contact-form-wrap .hs-form fieldset {
+  max-width: 100% !important;
 }
-
-.form-row--half {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+.contact-form-wrap .hs-button {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  font-family: var(--font-body) !important;
+  font-weight: 800 !important;
+  font-size: 1.05rem !important;
+  padding: 1rem 2rem !important;
+  border-radius: var(--radius-btn) !important;
+  width: 100% !important;
+  cursor: pointer !important;
 }
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.form-field label {
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  color: var(--color-text);
-}
-.form-field label span {
-  color: var(--color-accent);
-}
-
-.form-field input,
-.form-field select,
-.form-field textarea {
-  padding: 0.75rem 1rem;
-  border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-btn);
-  font-family: var(--font-body);
-  font-size: var(--font-size-base);
-  color: var(--color-text);
-  background: #fff;
-  transition: border-color var(--transition-fast);
-  width: 100%;
-}
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
-  outline: none;
-  border-color: var(--color-primary);
-}
-.form-field input.is-invalid,
-.form-field select.is-invalid {
-  border-color: #c0392b;
-}
-
-.field-error {
-  display: none;
-  font-size: 0.78rem;
-  color: #c0392b;
-  font-weight: 500;
-}
-.field-error.is-visible {
-  display: block;
-}
-.form-field textarea {
-  resize: vertical;
-}
-
-.btn--full {
-  width: 100%;
-  justify-content: center;
-}
-
-.btn--submit {
-  padding: 1.1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  background-color: var(--color-accent);
-  color: #fff;
-  border: none;
-  border-radius: var(--radius-btn);
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(200, 169, 110, 0.35);
-  transition: background-color var(--transition-base), transform var(--transition-fast), box-shadow var(--transition-base);
-}
-.btn--submit:hover {
-  background-color: #b8963d;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(200, 169, 110, 0.45);
-}
-
-.form-note {
-  font-size: var(--font-size-sm);
-  color: var(--color-text-muted);
-  text-align: center;
-  margin: 0;
+.contact-form-wrap .hs-button:hover {
+  background-color: #b8963d !important;
+  border-color: #b8963d !important;
 }
 
 /* Sidebar */
@@ -305,97 +179,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   gap: 0.25rem;
 }
 
-/* Accessibility */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-}
-
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  .form-row--half {
-    grid-template-columns: 1fr;
-  }
 }
 </style>
 
-<script>
-const form = document.getElementById('quote-form') as HTMLFormElement;
-
-const rules: { id: string; errorId: string; validate: (v: string) => string | null }[] = [
-  {
-    id: 'name',
-    errorId: 'name-error',
-    validate: (v) => v.trim().length < 2 ? 'Please enter your full name.' : null,
-  },
-  {
-    id: 'phone',
-    errorId: 'phone-error',
-    validate: (v) => {
-      const digits = v.replace(/\D/g, '');
-      // +61 international format = 11 digits starting with 61
-      const valid = (digits.startsWith('61') && digits.length === 11) || digits.length === 10;
-      return valid ? null : 'Please enter a valid 10-digit phone number (e.g. 0400 000 000).';
-    },
-  },
-  {
-    id: 'email',
-    errorId: 'email-error',
-    validate: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) ? null : 'Please enter a valid email address (e.g. jane@example.com).',
-  },
-  {
-    id: 'interest',
-    errorId: 'interest-error',
-    validate: (v) => v ? null : 'Please select a product line.',
-  },
-];
-
-function showError(rule: typeof rules[0], message: string | null) {
-  const input = document.getElementById(rule.id) as HTMLInputElement | HTMLSelectElement;
-  const error = document.getElementById(rule.errorId) as HTMLSpanElement;
-  if (message) {
-    input.classList.add('is-invalid');
-    error.textContent = message;
-    error.classList.add('is-visible');
-  } else {
-    input.classList.remove('is-invalid');
-    error.textContent = '';
-    error.classList.remove('is-visible');
-  }
-}
-
-// Validate on blur so errors appear as soon as user leaves a field
-rules.forEach((rule) => {
-  const input = document.getElementById(rule.id) as HTMLInputElement | HTMLSelectElement;
-  input?.addEventListener('blur', () => {
-    showError(rule, rule.validate((input as HTMLInputElement).value));
-  });
-  input?.addEventListener('input', () => {
-    if (input.classList.contains('is-invalid')) {
-      showError(rule, rule.validate((input as HTMLInputElement).value));
-    }
-  });
-});
-
-// Full validation on submit
-form?.addEventListener('submit', (e) => {
-  let valid = true;
-  rules.forEach((rule) => {
-    const input = document.getElementById(rule.id) as HTMLInputElement | HTMLSelectElement;
-    const error = rule.validate((input as HTMLInputElement).value);
-    showError(rule, error);
-    if (error) valid = false;
-  });
-  if (!valid) {
-    e.preventDefault();
-    form.querySelector<HTMLElement>('.is-invalid')?.focus();
-  }
-});
-</script>
