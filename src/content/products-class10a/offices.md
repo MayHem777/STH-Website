@@ -1,11 +1,50 @@
 ---
 title: "Backyard Offices"
-tagline: "Work from home, properly."
-description: "A dedicated backyard office separates work from home life. Our modular offices are fully insulated, wired, and ready to connect — no more dining table meetings."
+tagline: "Your best work starts here."
+description: "A purpose-built backyard office from Sunshine Tiny Houses — fully insulated, wired, and air-conditioned. Separate your work from your home life for good."
 draft: false
 order: 1
+heroImage: "/images/banksia-office.jpg"
+heroImageAlt: "Sunshine Tiny Houses backyard office studio exterior"
+features:
+  - "Fully insulated walls, floor and ceiling"
+  - "Electrical fit-out — power, data, lighting"
+  - "Split-system air conditioning"
+  - "Double-glazed windows and sliding door"
+  - "Hardwood or composite timber decking"
+  - "Colorbond or Zincalume roofing"
+  - "Range of cladding options — Scyon, Weathertex, timber"
+  - "Built-in desk joinery available"
+  - "Fast site delivery — two weeks on your property"
+specs:
+  Classification: "Class 10a (non-habitable)"
+  "Common sizes": "3m × 3m to 6m × 4m"
+  Foundation: "Concrete slab or screw piles"
+  "On-site time": "Approx. 2 weeks"
+  "Build time": "16–22 weeks from design sign-off"
+  "Council approval": "Often accepted development — check with your council"
 ---
 
-## Backyard Offices
+## A Proper Office, Right in Your Backyard
 
-Content coming soon. Contact us for specifications and pricing.
+Working from the kitchen table or the spare bedroom doesn't cut it. A dedicated backyard office gives you a space that's designed for focus — separated from the noise and distractions of home, but just steps from your door.
+
+Our backyard offices are built to the same quality standard as our tiny homes and modular granny flats. Fully insulated, air-conditioned, and wired for power and data — these are not garden sheds. They're proper workspaces.
+
+### What's Included
+
+Every office is designed to your requirements. We work with you on layout, cladding, roofing, windows and internal fit-out. Common inclusions are split-system air conditioning, LED downlights, double power points, data outlets, and your choice of flooring — timber, vinyl plank, or polished concrete.
+
+Built-in desk joinery is available if you want a fully integrated setup. We can also incorporate storage cabinetry, a small kitchenette, or an ensuite bathroom for a truly self-contained workspace.
+
+### Class 10a — Simpler Approvals
+
+Backyard offices are classified as Class 10a non-habitable structures under the National Construction Code — the same category as garages and garden sheds. In most Queensland councils, a compliant office under a certain size and setback will be accepted development, meaning no development application required — just a building approval.
+
+We recommend checking with your local council or a building certifier for your specific property, but in most cases the approval process is significantly simpler than for a dwelling.
+
+### Fast Delivery
+
+Our modular construction method means your office is built in our Noosaville factory while your site is being prepared. Total time on your property is approximately two weeks — one week before delivery for foundation work, and one week after for connections and fit-out.
+
+*Pricing on application. Contact us for a free, no-obligation quote.*
