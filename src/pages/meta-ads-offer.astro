@@ -523,6 +523,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
                 <option value="Something larger or custom">Something larger or custom</option>
                 <option value="Not sure yet">Not sure yet</option>
               </select>
+              <span class="m-field-error" id="m-ideal-err">Please select your ideal home/project.</span>
             </div>
             <div class="m-form-row">
               <label for="m-budget">What&rsquo;s your approximate budget?</label>
@@ -539,6 +540,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
                 <option value="$300k+">$300k+</option>
                 <option value="Not sure yet">Not sure yet</option>
               </select>
+              <span class="m-field-error" id="m-budget-err">Please select your approximate budget.</span>
             </div>
             <button type="submit" class="m-btn m-btn-primary m-btn-full" style="margin-top:.5rem;">Find Out What&rsquo;s Possible &rarr;</button>
             <p class="m-privacy">&#x1F512; No spam. No obligation. Ever.</p>
@@ -582,10 +584,14 @@ import LandingLayout from '../layouts/LandingLayout.astro';
         if (bad) { el.classList.add('m-invalid'); err && err.classList.add('m-visible'); ok = false; }
         else     { el.classList.remove('m-invalid'); err && err.classList.remove('m-visible'); }
       }
-      check(name,  'm-name-err',   !name.value.trim());
-      check(phone, 'm-phone-err',  !validPhone(phone.value));
-      check(email, 'm-email-err',  !validEmail(email.value));
-      check(loc,   'm-suburb-err', !loc.value.trim());
+      var ideal  = form.querySelector('[name="ideal_home"]');
+      var budget = form.querySelector('[name="approximate_budget"]');
+      check(name,   'm-name-err',   !name.value.trim());
+      check(phone,  'm-phone-err',  !validPhone(phone.value));
+      check(email,  'm-email-err',  !validEmail(email.value));
+      check(loc,    'm-suburb-err', !loc.value.trim());
+      check(ideal,  'm-ideal-err',  !ideal.value);
+      check(budget, 'm-budget-err', !budget.value);
       if (!ok) return;
 
       var btn = form.querySelector('button[type="submit"]');

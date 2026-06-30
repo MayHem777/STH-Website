@@ -490,6 +490,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
                 <option value="Something larger or custom">Something larger or custom</option>
                 <option value="Not sure yet">Not sure yet</option>
               </select>
+              <span class="sth-field-error" id="sth-hf-ideal-err">Please select your ideal home/project.</span>
             </div>
             <div class="sth-form-row">
               <label for="sth-hf-budget">What&rsquo;s your approximate budget?</label>
@@ -506,6 +507,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
                 <option value="$300k+">$300k+</option>
                 <option value="Not sure yet">Not sure yet</option>
               </select>
+              <span class="sth-field-error" id="sth-hf-budget-err">Please select your approximate budget.</span>
             </div>
             <button type="submit" class="sth-btn sth-btn-primary sth-btn-full" style="margin-top:.25rem;">Get My Free Assessment &rarr;</button>
             <p class="sth-form-privacy">&#x1F512; No spam. No obligation. Ever.</p>
@@ -960,6 +962,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
                 <option value="Something larger or custom">Something larger or custom</option>
                 <option value="Not sure yet">Not sure yet</option>
               </select>
+              <span class="sth-field-error" id="sth-ff-ideal-err">Please select your ideal home/project.</span>
             </div>
             <div class="sth-form-row">
               <label for="sth-ff-budget">What&rsquo;s your approximate budget?</label>
@@ -976,6 +979,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
                 <option value="$300k+">$300k+</option>
                 <option value="Not sure yet">Not sure yet</option>
               </select>
+              <span class="sth-field-error" id="sth-ff-budget-err">Please select your approximate budget.</span>
             </div>
             <div class="sth-form-row">
               <label for="sth-ff-details">Tell Us About Your Project <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:.68rem;color:#999">(optional)</span></label>
@@ -1026,10 +1030,14 @@ import LandingLayout from '../layouts/LandingLayout.astro';
           if (bad) { el.classList.add('sth-invalid'); err && err.classList.add('sth-visible'); ok = false; }
           else     { el.classList.remove('sth-invalid'); err && err.classList.remove('sth-visible'); }
         }
-        check(name,  errPrefix + '-name-err',   !name.value.trim());
-        check(phone, errPrefix + '-phone-err',  !validPhone(phone.value));
-        check(email, errPrefix + '-email-err',  !validEmail(email.value));
-        check(loc,   errPrefix + '-suburb-err', !loc.value.trim());
+        var ideal  = form.querySelector('[name="ideal_home"]');
+        var budget = form.querySelector('[name="approximate_budget"]');
+        check(name,   errPrefix + '-name-err',   !name.value.trim());
+        check(phone,  errPrefix + '-phone-err',  !validPhone(phone.value));
+        check(email,  errPrefix + '-email-err',  !validEmail(email.value));
+        check(loc,    errPrefix + '-suburb-err', !loc.value.trim());
+        if (ideal)  check(ideal,  errPrefix + '-ideal-err',  !ideal.value);
+        if (budget) check(budget, errPrefix + '-budget-err', !budget.value);
         if (!ok) return;
 
         var btn = form.querySelector('button[type="submit"]');
