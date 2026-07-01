@@ -24,13 +24,23 @@ const productSchema = {
     seller: { '@type': 'Organization', name: 'Sunshine Tiny Houses' },
   },
 };
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sunshinetinyhouses.com.au/' },
+    { '@type': 'ListItem', position: 2, name: 'Modular Homes', item: 'https://www.sunshinetinyhouses.com.au/modular-homes/' },
+    { '@type': 'ListItem', position: 3, name: product.data.title, item: Astro.url.href },
+  ],
+};
 ---
 
 <BaseLayout
   title={`${product.data.title} Modular Home | Sunshine Tiny Houses`}
   description={product.data.description}
   ogImage={product.data.ogImage}
-  schema={productSchema}
+  schema={[productSchema, breadcrumbSchema]}
 >
 
   <Hero
