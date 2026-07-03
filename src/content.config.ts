@@ -27,12 +27,12 @@ const blogSchema = z.object({
   title: z.string(),
   description: z.string(),
   publishDate: z.date(),
+  updatedDate: z.date().optional(),
   draft: z.boolean().default(false),
   author: z.string().default('Sunshine Tiny Houses'),
   heroImage: z.string().optional(),
   heroImageAlt: z.string().optional(),
   ogImage: z.string().optional(),
-  tags: z.array(z.string()).optional(),
 });
 
 export const collections = {

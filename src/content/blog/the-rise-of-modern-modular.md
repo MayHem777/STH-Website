@@ -6,7 +6,6 @@ author: "Mitch Croft"
 draft: false
 heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/1772794640146-RSHEKOU7U3NG5GDWXSA2/JACARANDA%2BHOUSE%2B31-10%2B%282%29.webp"
 heroImageAlt: "Jacaranda modular home exterior by Sunshine Tiny Houses"
-tags: ["modular", "granny flat", "secondary dwelling", "sunshine coast"]
 ---
 
 For years, the conversation around alternative living has been dominated by tiny houses on wheels. But as more Australians look for long-term solutions to housing shortages, aging in place, or simply generating extra income, a new hero has emerged: the Modular Granny Flat.
