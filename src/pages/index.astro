@@ -64,9 +64,12 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
           <ul class="product-line-card__models" aria-label="THOW models">
             {thowProducts.map((p) => (
               <li>
-                <a href={`/tiny-houses-on-wheels/${p.id}/`}>
-                  {p.data.title}
-                  {p.data.specs?.Length && <span class="model-length">{p.data.specs.Length}</span>}
+                <a
+                  href={`/tiny-houses-on-wheels/${p.id}/`}
+                  aria-label={`${p.data.title}${p.data.specs?.Length ? ` — ${p.data.specs.Length}` : ''}`}
+                >
+                  <span aria-hidden="true">{p.data.title}</span>
+                  {p.data.specs?.Length && <span class="model-length" aria-hidden="true">{p.data.specs.Length}</span>}
                 </a>
               </li>
             ))}
