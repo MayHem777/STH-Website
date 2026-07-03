@@ -21,14 +21,168 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <!-- Form -->
       <div class="contact-form-wrap">
-        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-        <script is:inline>
-          hbspt.forms.create({
-            region: "ap1",
-            portalId: "442170069",
-            formId: "abcc6489-5270-4b70-8e18-b5477c19f227"
-          });
-        </script>
+
+        <form id="sth-contact-form" novalidate>
+
+          <!-- Step 1 -->
+          <div class="form-step" data-step="1">
+            <p class="form-step__eyebrow">Step 1 of 2</p>
+            <h2 class="form-step__title">What are you interested in?</h2>
+
+            <div class="product-choice-grid" role="radiogroup" aria-label="What are you interested in?">
+              <label class="product-choice">
+                <input type="radio" name="product_interest" value="Tiny House on Wheels" required />
+                <span class="product-choice__label">Tiny House on Wheels</span>
+                <span class="product-choice__sub">Fully liveable, road-registerable</span>
+              </label>
+              <label class="product-choice">
+                <input type="radio" name="product_interest" value="Modular Home or Granny Flat" />
+                <span class="product-choice__label">Modular Home or Granny Flat</span>
+                <span class="product-choice__sub">Permanent Class 1a structure</span>
+              </label>
+              <label class="product-choice">
+                <input type="radio" name="product_interest" value="Not Sure Yet" />
+                <span class="product-choice__label">Not Sure Yet</span>
+                <span class="product-choice__sub">Happy to talk it through</span>
+              </label>
+            </div>
+            <p class="form-field__err" id="step1-err">Please choose an option to continue.</p>
+
+            <button type="button" class="btn btn--primary btn--block" id="sth-step1-next">Continue</button>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-step" data-step="2" hidden>
+            <button type="button" class="form-step__back" id="sth-step2-back">&larr; Back</button>
+            <p class="form-step__eyebrow">Step 2 of 2</p>
+            <h2 class="form-step__title">Tell us about your project</h2>
+
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="firstname">First Name *</label>
+                <input type="text" id="firstname" name="firstname" required />
+                <span class="form-field__err">Please enter your first name.</span>
+              </div>
+              <div class="form-field">
+                <label for="lastname">Last Name *</label>
+                <input type="text" id="lastname" name="lastname" required />
+                <span class="form-field__err">Please enter your last name.</span>
+              </div>
+              <div class="form-field">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required />
+                <span class="form-field__err">Please enter a valid email address.</span>
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone *</label>
+                <input type="text" id="phone" name="phone" inputmode="tel" required />
+                <span class="form-field__err">Please enter a valid phone number.</span>
+              </div>
+              <div class="form-field form-field--full">
+                <label for="address">Site Address *</label>
+                <input type="text" id="address" name="address" placeholder="Where is this property located?" required />
+                <span class="form-field__err">Please enter the site address.</span>
+              </div>
+
+              <div class="form-field">
+                <label for="approximate_budget">Approximate Budget</label>
+                <select id="approximate_budget" name="approximate_budget">
+                  <option value=""></option>
+                  <option value="<$100k">&lt;$100k</option>
+                  <option value="$100k – $125k">$100k – $125k</option>
+                  <option value="$125k – $150k">$125k – $150k</option>
+                  <option value="$150k – $175k">$150k – $175k</option>
+                  <option value="$175k – $200k">$175k – $200k</option>
+                  <option value="$200k – $225k">$200k – $225k</option>
+                  <option value="$225k – $250k">$225k – $250k</option>
+                  <option value="$250k – $275k">$250k – $275k</option>
+                  <option value="$275k – $300k">$275k – $300k</option>
+                  <option value="$300k+">$300k+</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="financing_status">Financing Sorted?</label>
+                <select id="financing_status" name="financing_status">
+                  <option value=""></option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                  <option value="In Process">In Process</option>
+                </select>
+              </div>
+
+              <!-- Conditional: THOW only -->
+              <div class="form-field form-field--conditional form-field--thow" hidden>
+                <label for="thow_design">Which THOW model interests you?</label>
+                <select id="thow_design" name="thow_design">
+                  <option value=""></option>
+                  <option value="1770 - 6m">1770 - 6m</option>
+                  <option value="Little Cove - 6.2m">Little Cove - 6.2m</option>
+                  <option value="Bondi - 7.2m">Bondi - 7.2m</option>
+                  <option value="Granite Bay - 8m">Granite Bay - 8m</option>
+                  <option value="Castaways - 8m">Castaways - 8m</option>
+                  <option value="Boiling Pot - 9m">Boiling Pot - 9m</option>
+                  <option value="Lennox - 9m or 10m">Lennox - 9m or 10m</option>
+                  <option value="Custom Design">Custom Design</option>
+                </select>
+              </div>
+
+              <!-- Conditional: Modular / Class 1a only -->
+              <div class="form-field form-field--conditional form-field--class1a" hidden>
+                <label for="pod_home_design">Which model interests you?</label>
+                <select id="pod_home_design" name="pod_home_design">
+                  <option value=""></option>
+                  <option value="Banksia 6x3.2m">Banksia 6x3.2m</option>
+                  <option value="Fingal 8x3.5m">Fingal 8x3.5m</option>
+                  <option value="Bunya 9x3.5m">Bunya 9x3.5m</option>
+                  <option value="Straddie 10x3.8m">Straddie 10x3.8m</option>
+                  <option value="Pandanus 12x3.8m">Pandanus 12x3.8m</option>
+                  <option value="Daintree 13x3.8m">Daintree 13x3.8m</option>
+                  <option value="Custom Design">Custom Design</option>
+                </select>
+              </div>
+              <div class="form-field form-field--conditional form-field--class1a" hidden>
+                <label for="dwelling_type">Dwelling Type</label>
+                <select id="dwelling_type" name="dwelling_type">
+                  <option value=""></option>
+                  <option value="Primary Dwelling">Primary Dwelling</option>
+                  <option value="Secondary Dwelling (under 60m2 depending on council/zone)">Secondary Dwelling (under 60m&sup2;)</option>
+                </select>
+              </div>
+              <div class="form-field form-field--conditional form-field--class1a" hidden>
+                <label for="survey_soil_test_status">Do you have a survey / soil test?</label>
+                <select id="survey_soil_test_status" name="survey_soil_test_status">
+                  <option value=""></option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                  <option value="Other Documents">Other Documents</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="wants_phone_call">Prefer a phone call?</label>
+                <select id="wants_phone_call" name="wants_phone_call">
+                  <option value=""></option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="best_call_time">Best Time to Call</label>
+                <input type="text" id="best_call_time" name="best_call_time" placeholder="e.g. weekday mornings" />
+              </div>
+
+              <div class="form-field form-field--full">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+              </div>
+            </div>
+
+            <p class="form-submit-err" id="sth-submit-err" hidden>Something went wrong — please try again or call us on (07) 5315 8365.</p>
+            <button type="submit" class="btn btn--primary btn--block" id="sth-submit-btn">Send Enquiry</button>
+          </div>
+
+        </form>
       </div>
 
       <!-- Contact details sidebar -->
@@ -76,6 +230,121 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <script is:inline>
+  (function () {
+    var HS = 'https://api.hsforms.com/submissions/v3/integration/submit/442170069/a2d006e2-82f7-4577-b4af-23fc9e248c20';
+    var form = document.getElementById('sth-contact-form');
+    var step1 = form.querySelector('[data-step="1"]');
+    var step2 = form.querySelector('[data-step="2"]');
+    var step1Err = document.getElementById('step1-err');
+    var submitErr = document.getElementById('sth-submit-err');
+    var thowFields = form.querySelectorAll('.form-field--thow');
+    var class1aFields = form.querySelectorAll('.form-field--class1a');
+
+    function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()); }
+    function validPhone(v) { return /^[\d\s\+\-\(\)]{8,15}$/.test(v.trim()); }
+
+    function toggle(list, show) {
+      for (var i = 0; i < list.length; i++) list[i].hidden = !show;
+    }
+
+    function selectedInterest() {
+      var checked = form.querySelector('input[name="product_interest"]:checked');
+      return checked ? checked.value : '';
+    }
+
+    document.getElementById('sth-step1-next').addEventListener('click', function () {
+      var interest = selectedInterest();
+      if (!interest) {
+        step1Err.classList.add('sth-visible');
+        return;
+      }
+      step1Err.classList.remove('sth-visible');
+
+      toggle(thowFields, interest === 'Tiny House on Wheels');
+      toggle(class1aFields, interest === 'Modular Home or Granny Flat');
+
+      step1.hidden = true;
+      step2.hidden = false;
+      step2.querySelector('input, select, textarea').focus();
+    });
+
+    document.getElementById('sth-step2-back').addEventListener('click', function () {
+      step2.hidden = true;
+      step1.hidden = false;
+    });
+
+    function fieldError(el, bad) {
+      var err = el.parentElement.querySelector('.form-field__err');
+      if (bad) { el.classList.add('sth-invalid'); err && err.classList.add('sth-visible'); }
+      else     { el.classList.remove('sth-invalid'); err && err.classList.remove('sth-visible'); }
+      return bad;
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      submitErr.hidden = true;
+
+      var firstname = form.querySelector('#firstname');
+      var lastname  = form.querySelector('#lastname');
+      var email     = form.querySelector('#email');
+      var phone     = form.querySelector('#phone');
+      var address   = form.querySelector('#address');
+
+      var invalid = false;
+      if (fieldError(firstname, !firstname.value.trim())) invalid = true;
+      if (fieldError(lastname,  !lastname.value.trim()))  invalid = true;
+      if (fieldError(email,     !validEmail(email.value))) invalid = true;
+      if (fieldError(phone,     !validPhone(phone.value)))  invalid = true;
+      if (fieldError(address,   !address.value.trim()))    invalid = true;
+      if (invalid) return;
+
+      var btn = document.getElementById('sth-submit-btn');
+      var orig = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      var fields = [
+        { name: 'product_interest', value: selectedInterest() },
+        { name: 'firstname', value: firstname.value.trim() },
+        { name: 'lastname',  value: lastname.value.trim() },
+        { name: 'email',     value: email.value.trim() },
+        { name: 'phone',     value: phone.value.trim() },
+        { name: 'address',   value: address.value.trim() }
+      ];
+
+      [
+        'approximate_budget', 'financing_status', 'wants_phone_call',
+        'best_call_time', 'message', 'thow_design', 'pod_home_design',
+        'dwelling_type', 'survey_soil_test_status'
+      ].forEach(function (name) {
+        var el = form.querySelector('[name="' + name + '"]');
+        if (el && !el.closest('.form-field').hidden && el.value.trim()) {
+          fields.push({ name: name, value: el.value.trim() });
+        }
+      });
+
+      var hutkMatch = document.cookie.match(/hubspotutk=([^;]+)/);
+      var payload = { fields: fields, context: { pageUri: window.location.href, pageName: document.title } };
+      if (hutkMatch) payload.context.hutk = hutkMatch[1];
+
+      fetch(HS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+        .then(function (r) {
+          if (r.ok) {
+            window.location.href = '/contact/thank-you/';
+          } else {
+            btn.disabled = false; btn.textContent = orig;
+            submitErr.hidden = false;
+          }
+        })
+        .catch(function () {
+          btn.disabled = false; btn.textContent = orig;
+          submitErr.hidden = false;
+        });
+    });
+  })();
+  </script>
+
 </BaseLayout>
 
 <style>
@@ -105,24 +374,166 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   align-items: start;
 }
 
-/* HubSpot form overrides */
-.contact-form-wrap .hs-form fieldset {
-  max-width: 100% !important;
+/* Form steps */
+.form-step__eyebrow {
+  font-size: var(--label-size);
+  font-weight: var(--label-weight);
+  letter-spacing: var(--label-spacing);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
 }
-.contact-form-wrap .hs-button {
-  background-color: var(--color-accent) !important;
-  border-color: var(--color-accent) !important;
-  font-family: var(--font-body) !important;
-  font-weight: 800 !important;
-  font-size: 1.05rem !important;
-  padding: 1rem 2rem !important;
-  border-radius: var(--radius-btn) !important;
-  width: 100% !important;
-  cursor: pointer !important;
+.form-step__title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: 1.5rem;
 }
-.contact-form-wrap .hs-button:hover {
-  background-color: #b8963d !important;
-  border-color: #b8963d !important;
+.form-step__back {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.form-step__back:hover { text-decoration: underline; }
+
+/* Step 1: product choice cards */
+.product-choice-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.product-choice {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--color-border-form);
+  border-radius: var(--radius-form);
+  cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+.product-choice:hover {
+  border-color: var(--color-primary);
+}
+.product-choice input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.product-choice:has(input:checked) {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-focus);
+}
+.product-choice__label {
+  font-weight: 700;
+  font-size: var(--font-size-base);
+}
+.product-choice__sub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+/* Step 2: shared field grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.form-field--full {
+  grid-column: 1 / -1;
+}
+.form-field label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--color-border-form);
+  border-radius: var(--radius-form);
+  background-color: var(--color-surface-input);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-primary-focus);
+}
+.form-field input.sth-invalid,
+.form-field select.sth-invalid,
+.form-field textarea.sth-invalid {
+  border-color: var(--color-error);
+}
+.form-field textarea {
+  resize: vertical;
+}
+
+.form-field__err {
+  display: none;
+  color: var(--color-error);
+  font-size: var(--font-size-xs);
+  margin-top: 0.35rem;
+}
+.form-field__err.sth-visible {
+  display: block;
+}
+#step1-err {
+  margin-bottom: 1rem;
+}
+
+.form-submit-err {
+  color: var(--color-error);
+  background-color: var(--color-error-bg);
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-form);
+  padding: 0.75rem 1rem;
+  font-size: var(--font-size-sm);
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: var(--radius-btn);
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 1.05rem;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color var(--transition-fast);
+}
+.btn--primary {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+.btn--primary:hover {
+  background-color: #b8963d;
+}
+.btn--block {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Sidebar */
@@ -186,4 +597,3 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   }
 }
 </style>
-
