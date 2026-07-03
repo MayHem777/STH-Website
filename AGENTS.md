@@ -33,12 +33,45 @@ Checklist — verify against real repo state, don't assume:
    better than the current Squarespace site
 7. [ ] Final manual review of the old-URL → new-URL table done by Mitch —
    requires his explicit sign-off, not just Claude Code completion
+8. [ ] Email deliverability (MX records) — Confirm whether this DNS cutover
+   involves a nameserver/DNS provider change. If so, explicitly identify and
+   preserve the current MX records for hello@sunshinetinyhouses.com.au and
+   info@sunshinetinyhouses.com.au before cutover. HARD BLOCKER — losing
+   inbound email breaks the Outlook enquiry auto-draft system and HubSpot
+   lead notifications silently, with no visible error. Post-cutover, a test
+   email to both addresses must be sent and confirmed received before this
+   is ticked off.
+9. [ ] SSL/TLS certificate — Confirm Cloudflare Pages has issued and
+   activated a valid certificate for the apex domain and www subdomain
+   BEFORE DNS points there, so there's no window where visitors hit a
+   certificate warning.
+10. [ ] Form/tracking endpoint live test — After DNS cutover (or on a
+    production preview matching the final domain), submit one real test
+    enquiry through the live HubSpot form and confirm it lands in HubSpot.
+    Confirm GA4 and Meta Pixel events fire correctly from the production
+    domain, not just from the .pages.dev staging domain — some analytics
+    configs are domain-scoped and can silently break on a domain change.
+11. [ ] DNS TTL lowered pre-cutover — Confirm the TTL on current DNS records
+    has been lowered at least 24-48 hours before the planned cutover, so a
+    rollback (if needed) can propagate quickly rather than taking a full day
+    or more.
+12. [ ] Rollback plan documented — A written, specific rollback plan must
+    exist (e.g. "revert A/CNAME records to X, previous Squarespace site
+    remains accessible at Y") before cutover, not improvised after something
+    breaks.
+13. [ ] Directory/listing URL check — Confirm Google Business Profile, QBCC
+    listing, and any other external directories linking to specific old page
+    URLs are updated or unaffected post-migration. (Lower priority than
+    items 8-12, but should be checked, not skipped.)
 
 After reporting checklist status: if anything is incomplete, say so plainly
 and do not proceed with DNS/launch actions or advice on how to do them until
 Mitch has seen the gap and explicitly said he wants to proceed anyway despite
-it. Only once all items are checked off (or explicitly overridden by Mitch)
-should you engage normally with DNS cutover questions.
+it. Items 1/2 (redirect completeness), 7 (Mitch sign-off), and 8 (MX
+records) are treated with equal severity — a broken MX record is a silent
+business-critical failure, not just an SEO risk. Only once all 13 items are
+checked off (or explicitly overridden by Mitch) should you engage normally
+with DNS cutover questions.
 
 ---
 
