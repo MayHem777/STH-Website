@@ -4,6 +4,7 @@ import Hero from '../components/Hero.astro';
 import ProductCard from '../components/ProductCard.astro';
 import CTAButton from '../components/CTAButton.astro';
 import { getCollection } from 'astro:content';
+import { FOUNDED_YEAR } from '../config/site';
 
 const thowProducts = (await getCollection('products-thow', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order)
@@ -142,7 +143,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
         </li>
         <li>
           <strong>Tiny Home Specialists</strong>
-          <span>Since 2020</span>
+          <span>Since {FOUNDED_YEAR}</span>
         </li>
         <li>
           <strong>Finance Available</strong>
