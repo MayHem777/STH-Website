@@ -1,4 +1,6 @@
 ---
+import { SITE_NAME } from '../config/site';
+
 export interface Props {
   title: string;
   description: string;
@@ -8,8 +10,8 @@ export interface Props {
   schema?: object | object[];
 }
 
-const SITE_NAME = 'Sunshine Tiny Houses';
-const SITE_URL = 'https://www.sunshinetinyhouses.com.au';
+// Drive base URL from astro.config.mjs `site` so there's one source of truth.
+const SITE_URL = (Astro.site?.href ?? 'https://www.sunshinetinyhouses.com.au/').replace(/\/$/, '');
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-default.jpg`;
 
 const {
@@ -22,6 +24,11 @@ const {
 } = Astro.props;
 
 const canonicalURL = canonical ?? new URL(Astro.url.pathname, SITE_URL).href;
+
+// Build-time noindex: only CF Pages main-branch builds get indexed.
+// The _middleware.js also patches the tag at runtime for *.pages.dev hosts.
+const isProd = import.meta.env.CF_PAGES_BRANCH === 'main';
+const isNoindex = noindex || !isProd;
 const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
 
 const localBusinessSchema = {
@@ -65,7 +72,7 @@ const schemas = [
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
-{noindex ? <meta name="robots" content="noindex,nofollow" /> : <meta name="robots" content="index, follow" />}
+<meta name="robots" content={isNoindex ? 'noindex, nofollow' : 'index, follow'} />
 <meta name="geo.region" content="AU-QLD" />
 <meta name="geo.placename" content="Noosaville" />
 <meta name="theme-color" content="#5c6a5b" />
