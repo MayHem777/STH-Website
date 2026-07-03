@@ -9,8 +9,25 @@ const thowProducts = (await getCollection('products-thow', ({ data }) => !data.d
   .sort((a, b) => a.data.order - b.data.order)
   .slice(0, 4);
 
-const modularProducts = (await getCollection('products-modular', ({ data }) => !data.draft))
-  .sort((a, b) => a.data.order - b.data.order)
+const allModularProducts = (await getCollection('products-modular', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const modularStandalone = allModularProducts
+  .filter((p) => !p.data.bedrooms)
+  .map((p) => ({ order: p.data.order, title: p.data.title, href: `/modular-homes/${p.id}/` }));
+
+const modularBedroomCounts = [...new Set(allModularProducts.filter((p) => p.data.bedrooms).map((p) => p.data.bedrooms))].sort();
+const modularBedroomLinks = modularBedroomCounts.map((count) => {
+  const variants = allModularProducts.filter((p) => p.data.bedrooms === count);
+  return {
+    order: Math.min(...variants.map((p) => p.data.order)),
+    title: `${count} Bedroom`,
+    href: `/modular-homes/${count}-bedroom/`,
+  };
+});
+
+const modularProducts = [...modularStandalone, ...modularBedroomLinks]
+  .sort((a, b) => a.order - b.order)
   .slice(0, 4);
 
 const class10aProducts = (await getCollection('products-class10a', ({ data }) => !data.draft))
@@ -70,7 +87,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
           <ul class="product-line-card__models" aria-label="Modular models">
             {modularProducts.map((p) => (
               <li>
-                <a href={`/modular-homes/${p.id}/`}>{p.data.title}</a>
+                <a href={p.href}>{p.title}</a>
               </li>
             ))}
             <li><a href="/modular-homes/">View all models &rarr;</a></li>

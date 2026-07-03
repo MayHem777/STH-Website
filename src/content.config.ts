@@ -13,6 +13,7 @@ const productSchema = z.object({
   features: z.array(z.string()).optional(),
   specs: z.record(z.string()).optional(),
   badge: z.string().optional(),
+  bedrooms: z.number().optional(),
 });
 
 const pageSchema = z.object({

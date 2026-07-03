@@ -4,8 +4,38 @@ import Hero from '../../components/Hero.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
 
-const products = (await getCollection('products-modular', ({ data }) => !data.draft))
+const allProducts = (await getCollection('products-modular', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order);
+
+const standaloneCards = allProducts
+  .filter((p) => !p.data.bedrooms)
+  .map((p) => ({
+    id: p.id,
+    order: p.data.order,
+    title: p.data.title,
+    description: p.data.description,
+    href: `/modular-homes/${p.id}/`,
+    heroImage: p.data.heroImage,
+    heroImageAlt: p.data.heroImageAlt ?? p.data.title,
+    badge: p.data.badge,
+  }));
+
+const bedroomCounts = [...new Set(allProducts.filter((p) => p.data.bedrooms).map((p) => p.data.bedrooms))].sort();
+const bedroomCards = bedroomCounts.map((count) => {
+  const variants = allProducts.filter((p) => p.data.bedrooms === count);
+  return {
+    id: `${count}-bedroom`,
+    order: Math.min(...variants.map((p) => p.data.order)),
+    title: `${count} Bedroom`,
+    description: `${variants.length} model${variants.length === 1 ? '' : 's'}: ${variants.map((p) => p.data.title).join(', ')}`,
+    href: `/modular-homes/${count}-bedroom/`,
+    heroImage: variants[0].data.heroImage,
+    heroImageAlt: variants[0].data.heroImageAlt ?? `${count} bedroom modular home`,
+    badge: undefined,
+  };
+});
+
+const products = [...standaloneCards, ...bedroomCards].sort((a, b) => a.order - b.order);
 ---
 
 <BaseLayout
@@ -27,12 +57,12 @@ const products = (await getCollection('products-modular', ({ data }) => !data.dr
       <div class="products-grid">
         {products.map((p) => (
           <ProductCard
-            title={p.data.title}
-            description={p.data.description}
-            href={`/modular-homes/${p.id}/`}
-            image={p.data.heroImage}
-            imageAlt={p.data.heroImageAlt ?? p.data.title}
-            badge={p.data.badge}
+            title={p.title}
+            description={p.description}
+            href={p.href}
+            image={p.heroImage}
+            imageAlt={p.heroImageAlt}
+            badge={p.badge}
           />
         ))}
       </div>

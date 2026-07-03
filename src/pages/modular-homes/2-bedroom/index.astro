@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import ProductCard from '../../../components/ProductCard.astro';
+import { getCollection } from 'astro:content';
+
+const products = (await getCollection('products-modular', ({ data }) => !data.draft && data.bedrooms === 2))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout
+  title="2 Bedroom Modular Homes Queensland | Sunshine Tiny Houses"
+  description="Browse all of our 2-bedroom modular home models. QBCC-licensed, Class 1a compliant, delivered and installed across Queensland."
+>
+
+  <Hero
+    title="2 Bedroom Modular Homes"
+    subtitle="More room, more life. Browse all of our 2-bedroom modular home models below."
+    ctaText="Contact Now"
+    ctaHref="/contact/"
+    secondaryCtaText="All Modular Homes"
+    secondaryCtaHref="/modular-homes/"
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="products-grid">
+        {products.map((p) => (
+          <ProductCard
+            title={p.data.title}
+            description={p.data.description}
+            href={`/modular-homes/2-bedroom/${p.id}/`}
+            image={p.data.heroImage}
+            imageAlt={p.data.heroImageAlt ?? p.data.title}
+            badge={p.data.badge}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 1100px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .products-grid { grid-template-columns: 1fr; } }
+</style>

@@ -1,11 +1,11 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Hero from '../../components/Hero.astro';
-import CTAButton from '../../components/CTAButton.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import CTAButton from '../../../components/CTAButton.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const products = await getCollection('products-modular', ({ data }) => !data.draft && !data.bedrooms);
+  const products = await getCollection('products-modular', ({ data }) => !data.draft && data.bedrooms === 1);
   return products.map((p) => ({ params: { slug: p.id }, props: { product: p } }));
 }
 
@@ -27,7 +27,7 @@ const productSchema = {
 ---
 
 <BaseLayout
-  title={`${product.data.title} Modular Home | Sunshine Tiny Houses`}
+  title={`${product.data.title} — 1 Bedroom Modular Home | Sunshine Tiny Houses`}
   description={product.data.description}
   ogImage={product.data.ogImage}
   schema={productSchema}
@@ -40,8 +40,8 @@ const productSchema = {
     imageAlt={product.data.heroImageAlt ?? product.data.title}
     ctaText="Contact Now"
     ctaHref="/contact/"
-    secondaryCtaText="View All Models"
-    secondaryCtaHref="/modular-homes/"
+    secondaryCtaText="View All 1 Bedroom Models"
+    secondaryCtaHref="/modular-homes/1-bedroom/"
   />
 
   <section class="section">
