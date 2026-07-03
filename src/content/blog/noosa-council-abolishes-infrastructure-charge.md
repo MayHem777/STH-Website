@@ -4,7 +4,7 @@ description: "Starting 1 July 2025, Noosa Shire Council scrapped the ~$7,000 inf
 publishDate: 2025-08-13
 author: "Mitch Croft"
 draft: false
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/1755069793199-OBOOVDPP0MA1KSN0H4KK/JACARANDA+HOUSE+31-10+%282%29.jpg"
+heroImage: "/images/jacaranda-house.jpg"
 heroImageAlt: "Jacaranda modular home — secondary dwelling by Sunshine Tiny Houses"
 tags: ["noosa", "council", "secondary dwelling", "granny flat", "policy"]
 ---

@@ -4,7 +4,7 @@ tagline: "Your best work starts here."
 description: "A purpose-built backyard office from Sunshine Tiny Houses — fully insulated, wired, and air-conditioned. Separate your work from your home life for good."
 draft: false
 order: 1
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/a5c4e14f-1c67-475c-916f-ed77cc7a1180/STH+-+BANKSIA+OFFICE+PITCHED+ROOF+%289%29_0002_Background.jpg"
+heroImage: "/images/banksia-office.jpg"
 heroImageAlt: "Sunshine Tiny Houses Banksia backyard office — black exterior with pitched roof"
 features:
   - "Fully insulated walls, floor and ceiling"

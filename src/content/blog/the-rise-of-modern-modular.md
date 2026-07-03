@@ -4,7 +4,7 @@ description: "While tiny houses on wheels started the conversation, modular gran
 publishDate: 2026-03-06
 author: "Mitch Croft"
 draft: false
-heroImage: "https://images.squarespace-cdn.com/content/v1/63f446dc343cd34fe798c868/1772794640146-RSHEKOU7U3NG5GDWXSA2/JACARANDA%2BHOUSE%2B31-10%2B%282%29.webp"
+heroImage: "/images/jacaranda-house.jpg"
 heroImageAlt: "Jacaranda modular home exterior by Sunshine Tiny Houses"
 tags: ["modular", "granny flat", "secondary dwelling", "sunshine coast"]
 ---
