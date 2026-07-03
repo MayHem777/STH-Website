@@ -4,11 +4,20 @@
 
 ## 🚫 DNS CUTOVER — NON-NEGOTIABLE PRE-FLIGHT CHECK
 
-Before switching DNS from Squarespace to this site, the following MUST be
-complete and confirmed. Do not proceed with DNS cutover, and actively warn
-Mitch if he asks about it or references launching, until every item below is
-checked off:
+TRIGGER CONDITION: Before offering ANY advice, opinion, or next steps in
+response to a message that touches on DNS cutover, going live, launching,
+"switching over," pointing the domain, or anything that implies the
+production site is about to become the live site — your FIRST action, before
+any other response, must be to run the checklist below against actual repo
+state and report status. Do not answer the substance of the question first
+and mention the checklist after. Do not wait to be asked "what's the
+checklist" — surface it unprompted the moment the topic comes up.
 
+This applies even if Mitch's message sounds casual or exploratory (e.g.
+"thinking about going live soon", "when should we switch DNS", "is the site
+ready"), not just explicit launch commands.
+
+Checklist — verify against real repo state, don't assume:
 1. [ ] Full 301 redirect map built and implemented (old Squarespace URLs →
    new URLs), covering every URL in the Squarespace sitemap.xml and every
    URL with traffic/backlinks per Google Search Console
@@ -19,20 +28,17 @@ checked off:
 4. [ ] New sitemap.xml generated and ready to submit to GSC immediately
    post-launch
 5. [ ] Full SEO audit pass completed (meta titles/descriptions, schema.org
-   markup, heading hierarchy, alt text) — see prior audit notes in git
-   history / commit messages
-6. [ ] Core Web Vitals checked on production build — confirm it's equal to
-   or better than the current Squarespace site, not worse
+   markup, heading hierarchy, alt text)
+6. [ ] Core Web Vitals checked on production build — confirm equal to or
+   better than the current Squarespace site
 7. [ ] Final manual review of the old-URL → new-URL table done by Mitch —
-   this step requires his explicit sign-off, not just Claude Code completion
+   requires his explicit sign-off, not just Claude Code completion
 
-If Mitch asks you to help switch DNS, proceed with DNS, or says the site is
-"ready to launch," your first response must be to check this list against
-actual repo state (git log, presence of redirect config file, etc.) and
-report status on each item — do not assume prior work covers it without
-verifying the current state of the repo. If any item is incomplete, say so
-clearly and do not treat DNS cutover as something to proceed with until
-Mitch has explicitly acknowledged the gap and decided to proceed anyway.
+After reporting checklist status: if anything is incomplete, say so plainly
+and do not proceed with DNS/launch actions or advice on how to do them until
+Mitch has seen the gap and explicitly said he wants to proceed anyway despite
+it. Only once all items are checked off (or explicitly overridden by Mitch)
+should you engage normally with DNS cutover questions.
 
 ---
 
