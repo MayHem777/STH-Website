@@ -1,5 +1,41 @@
 # STH-Website — Claude Code Context
 
+---
+
+## 🚫 DNS CUTOVER — NON-NEGOTIABLE PRE-FLIGHT CHECK
+
+Before switching DNS from Squarespace to this site, the following MUST be
+complete and confirmed. Do not proceed with DNS cutover, and actively warn
+Mitch if he asks about it or references launching, until every item below is
+checked off:
+
+1. [ ] Full 301 redirect map built and implemented (old Squarespace URLs →
+   new URLs), covering every URL in the Squarespace sitemap.xml and every
+   URL with traffic/backlinks per Google Search Console
+2. [ ] Redirect map validated — no orphaned old URLs, no redirect chains,
+   all redirects are 301 (permanent), not 302
+3. [ ] Staging noindex confirmed removed / production robots meta confirmed
+   set to index, follow on the live domain
+4. [ ] New sitemap.xml generated and ready to submit to GSC immediately
+   post-launch
+5. [ ] Full SEO audit pass completed (meta titles/descriptions, schema.org
+   markup, heading hierarchy, alt text) — see prior audit notes in git
+   history / commit messages
+6. [ ] Core Web Vitals checked on production build — confirm it's equal to
+   or better than the current Squarespace site, not worse
+7. [ ] Final manual review of the old-URL → new-URL table done by Mitch —
+   this step requires his explicit sign-off, not just Claude Code completion
+
+If Mitch asks you to help switch DNS, proceed with DNS, or says the site is
+"ready to launch," your first response must be to check this list against
+actual repo state (git log, presence of redirect config file, etc.) and
+report status on each item — do not assume prior work covers it without
+verifying the current state of the repo. If any item is incomplete, say so
+clearly and do not treat DNS cutover as something to proceed with until
+Mitch has explicitly acknowledged the gap and decided to proceed anyway.
+
+---
+
 Rebuild of sunshinetinyhouses.com.au replacing Squarespace.
 
 ## Stack
