@@ -36,23 +36,44 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
 ---
 
 <BaseLayout
-  title="Sunshine Tiny Houses | Queensland Tiny Home Builders"
-  description="Sunshine Tiny Houses builds tiny homes on wheels, modular homes, and granny flats across Queensland. QBCC licensed. Free quote available."
+  title="Sunshine Tiny Houses | Queensland Modular Home Builders"
+  description="Sunshine Tiny Houses builds modular homes, granny flats, and tiny houses on wheels across Queensland. QBCC licensed. Free quote available."
 >
 
   <Hero
-    title="Build Your Dream Tiny Home in Queensland"
-    subtitle="Sunshine Tiny Houses is a QBCC-licensed builder crafting quality tiny houses on wheels, Class 1a modular homes, and backyard studios across Queensland."
+    title="Build Your Dream Modular Home in Queensland"
+    subtitle="Sunshine Tiny Houses is a QBCC-licensed builder specialising in Class 1a modular homes and granny flats, tiny houses on wheels, and backyard studios across Queensland."
     ctaText="Contact Now"
     ctaHref="/contact/"
     secondaryCtaText="View Our Range"
-    secondaryCtaHref="/tiny-houses-on-wheels/"
+    secondaryCtaHref="/modular-homes/"
   />
 
-  <!-- Two primary product lines — equal weight -->
+  <!-- Two primary product lines — modular first -->
   <section class="section product-lines">
     <div class="container">
       <div class="product-lines__grid">
+
+        <div class="product-line-card">
+          <div class="product-line-card__eyebrow">Class 1a Dwelling</div>
+          <h2 class="product-line-card__title">Modular Homes & Granny Flats</h2>
+          <p class="product-line-card__desc">
+            Permanent modular structures built to last — ideal as granny flats, secondary
+            dwellings, or standalone homes. Delivered and installed in one week.
+            Finance options available.
+          </p>
+          <ul class="product-line-card__models" aria-label="Modular models">
+            {modularProducts.map((p) => (
+              <li>
+                <a href={p.href}>{p.title}</a>
+              </li>
+            ))}
+            <li><a href="/modular-homes/">View all models &rarr;</a></li>
+          </ul>
+          <CTAButton href="/modular-homes/">Explore Modular Range</CTAButton>
+        </div>
+
+        <div class="product-line-divider" aria-hidden="true"></div>
 
         <div class="product-line-card">
           <div class="product-line-card__eyebrow" aria-hidden="true" style="visibility: hidden;">&nbsp;</div>
@@ -77,27 +98,6 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
             <li><a href="/tiny-houses-on-wheels/">View all models &rarr;</a></li>
           </ul>
           <CTAButton href="/tiny-houses-on-wheels/">Explore THOW Range</CTAButton>
-        </div>
-
-        <div class="product-line-divider" aria-hidden="true"></div>
-
-        <div class="product-line-card">
-          <div class="product-line-card__eyebrow">Class 1a Dwelling</div>
-          <h2 class="product-line-card__title">Modular Homes & Granny Flats</h2>
-          <p class="product-line-card__desc">
-            Permanent modular structures built to last — ideal as granny flats, secondary
-            dwellings, or standalone homes. Delivered and installed in one week.
-            Finance options available.
-          </p>
-          <ul class="product-line-card__models" aria-label="Modular models">
-            {modularProducts.map((p) => (
-              <li>
-                <a href={p.href}>{p.title}</a>
-              </li>
-            ))}
-            <li><a href="/modular-homes/">View all models &rarr;</a></li>
-          </ul>
-          <CTAButton href="/modular-homes/">Explore Modular Range</CTAButton>
         </div>
 
       </div>
