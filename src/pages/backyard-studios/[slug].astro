@@ -11,12 +11,36 @@ export async function getStaticPaths() {
 
 const { product } = Astro.props;
 const { Content } = await render(product);
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: product.data.title,
+  description: product.data.description,
+  brand: { '@type': 'Brand', name: 'Sunshine Tiny Houses' },
+  offers: {
+    '@type': 'Offer',
+    url: Astro.url.href,
+    seller: { '@type': 'Organization', name: 'Sunshine Tiny Houses' },
+  },
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sunshinetinyhouses.com.au/' },
+    { '@type': 'ListItem', position: 2, name: 'Backyard Studios', item: 'https://www.sunshinetinyhouses.com.au/backyard-studios/' },
+    { '@type': 'ListItem', position: 3, name: product.data.title, item: Astro.url.href },
+  ],
+};
 ---
 
 <BaseLayout
-  title={`${product.data.title} | Sunshine Tiny Houses`}
+  title={`${product.data.title} Backyard Studio | Sunshine Tiny Houses`}
   description={product.data.description}
   ogImage={product.data.ogImage}
+  schema={[productSchema, breadcrumbSchema]}
 >
 
   <Hero
