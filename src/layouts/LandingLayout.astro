@@ -16,6 +16,14 @@ const { title, description, noindex = true, canonical } = Astro.props;
 <html lang="en">
   <head>
     <SEOHead {title} {description} {noindex} {canonical} />
+    <!-- GA4 -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-E2818PQ3H9"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-E2818PQ3H9');
+    </script>
     <slot name="head-extra" />
   </head>
   <body>
