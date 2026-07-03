@@ -9,8 +9,25 @@ const thowProducts = (await getCollection('products-thow', ({ data }) => !data.d
   .sort((a, b) => a.data.order - b.data.order)
   .slice(0, 4);
 
-const modularProducts = (await getCollection('products-modular', ({ data }) => !data.draft))
-  .sort((a, b) => a.data.order - b.data.order)
+const allModularProducts = (await getCollection('products-modular', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const modularStandalone = allModularProducts
+  .filter((p) => !p.data.bedrooms)
+  .map((p) => ({ order: p.data.order, title: p.data.title, href: `/modular-homes/${p.id}/` }));
+
+const modularBedroomCounts = [...new Set(allModularProducts.filter((p) => p.data.bedrooms).map((p) => p.data.bedrooms))].sort();
+const modularBedroomLinks = modularBedroomCounts.map((count) => {
+  const variants = allModularProducts.filter((p) => p.data.bedrooms === count);
+  return {
+    order: Math.min(...variants.map((p) => p.data.order)),
+    title: `${count} Bedroom`,
+    href: `/modular-homes/${count}-bedroom/`,
+  };
+});
+
+const modularProducts = [...modularStandalone, ...modularBedroomLinks]
+  .sort((a, b) => a.order - b.order)
   .slice(0, 4);
 
 const class10aProducts = (await getCollection('products-class10a', ({ data }) => !data.draft))
@@ -24,7 +41,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
 
   <Hero
     title="Build Your Dream Tiny Home in Queensland"
-    subtitle="Sunshine Tiny Houses is a QBCC-licensed builder crafting quality tiny houses on wheels, modular homes, and backyard studios across Queensland."
+    subtitle="Sunshine Tiny Houses is a QBCC-licensed builder crafting quality tiny houses on wheels, Class 1a modular homes, and backyard studios across Queensland."
     ctaText="Contact Now"
     ctaHref="/contact/"
     secondaryCtaText="View Our Range"
@@ -37,6 +54,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
       <div class="product-lines__grid">
 
         <div class="product-line-card">
+          <div class="product-line-card__eyebrow" aria-hidden="true" style="visibility: hidden;">&nbsp;</div>
           <h2 class="product-line-card__title">Tiny Houses on Wheels</h2>
           <p class="product-line-card__desc">
             From compact 6m designs to our sprawling 10m Lennox model — fully liveable
@@ -70,7 +88,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
           <ul class="product-line-card__models" aria-label="Modular models">
             {modularProducts.map((p) => (
               <li>
-                <a href={`/modular-homes/${p.id}/`}>{p.data.title}</a>
+                <a href={p.href}>{p.title}</a>
               </li>
             ))}
             <li><a href="/modular-homes/">View all models &rarr;</a></li>
@@ -146,7 +164,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
 .product-lines__grid {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: start;
+  align-items: stretch;
 }
 .product-line-divider {
   width: 1px;
@@ -159,6 +177,10 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
   flex-direction: column;
   gap: 1rem;
   padding-block: 1rem;
+}
+.product-line-card > :global(.btn) {
+  margin-top: auto;
+  align-self: flex-start;
 }
 .product-line-card__eyebrow {
   font-size: var(--font-size-xs);

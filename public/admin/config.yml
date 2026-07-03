@@ -61,6 +61,7 @@ collections:
       - { label: "Description (SEO)", name: description, widget: text }
       - { label: "Published", name: draft, widget: boolean, default: true, hint: "Turn ON to publish. Turn OFF to hide from site." }
       - { label: "Sort Order", name: order, widget: number, default: 99 }
+      - { label: "Bedrooms", name: bedrooms, widget: number, required: false, hint: "Set this to group the model under a '1 Bedroom' / '2 Bedroom' etc. listing page instead of showing it as its own standalone card." }
       - { label: "Hero Image", name: heroImage, widget: image, required: false }
       - { label: "Hero Image Alt Text", name: heroImageAlt, widget: string, required: false }
       - label: "Specifications"
@@ -100,15 +101,12 @@ collections:
       - { label: "Title", name: title, widget: string }
       - { label: "Description (SEO)", name: description, widget: text }
       - { label: "Publish Date", name: publishDate, widget: datetime }
+      - { label: "Updated Date", name: updatedDate, widget: datetime, required: false, hint: "Only set this if you've made a meaningful update after the original publish date." }
       - { label: "Draft (unpublished)", name: draft, widget: boolean, default: true, hint: "Uncheck to publish." }
       - { label: "Author", name: author, widget: string, default: "Sunshine Tiny Houses" }
       - { label: "Hero Image", name: heroImage, widget: image, required: false }
       - { label: "Hero Image Alt Text", name: heroImageAlt, widget: string, required: false }
-      - label: "Tags"
-        name: tags
-        widget: list
-        required: false
-        field: { label: Tag, name: tag, widget: string }
+      - { label: "Social Share Image (OG Image)", name: ogImage, widget: image, required: false, hint: "Optional — falls back to Hero Image if left blank." }
       - { label: "Body", name: body, widget: markdown }
 
   # ─── Static Pages ────────────────────────────────────────────────

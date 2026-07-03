@@ -13,6 +13,7 @@ const productSchema = z.object({
   features: z.array(z.string()).optional(),
   specs: z.record(z.string()).optional(),
   badge: z.string().optional(),
+  bedrooms: z.number().optional(),
 });
 
 const pageSchema = z.object({
@@ -26,12 +27,12 @@ const blogSchema = z.object({
   title: z.string(),
   description: z.string(),
   publishDate: z.date(),
+  updatedDate: z.date().optional(),
   draft: z.boolean().default(false),
   author: z.string().default('Sunshine Tiny Houses'),
   heroImage: z.string().optional(),
   heroImageAlt: z.string().optional(),
   ogImage: z.string().optional(),
-  tags: z.array(z.string()).optional(),
 });
 
 export const collections = {

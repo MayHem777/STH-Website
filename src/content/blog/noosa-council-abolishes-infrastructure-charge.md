@@ -6,7 +6,6 @@ author: "Mitch Croft"
 draft: false
 heroImage: "/images/jacaranda-house.jpg"
 heroImageAlt: "Jacaranda modular home — secondary dwelling by Sunshine Tiny Houses"
-tags: ["noosa", "council", "secondary dwelling", "granny flat", "policy"]
 ---
 
 Exciting news for home builders, tiny house lovers, and renters across the Noosa region — starting **1 July 2025**, Noosa Shire Council has scrapped the hefty infrastructure charges (previously averaging about **$7,000**) for new secondary dwellings, including granny flats and backyard studios.
