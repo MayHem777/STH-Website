@@ -2,7 +2,7 @@
 title: "Custom Sauna"
 tagline: "Crafted for an authentic, elevated sauna experience."
 description: "A bespoke sauna built to order — classic and contemporary materials, built to last. Coming soon from Sunshine Tiny Houses."
-draft: false
+draft: true
 order: 7
 badge: "Coming Soon"
 heroImage: "/images/custom-sauna-2.jpg"
