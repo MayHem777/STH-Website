@@ -32,8 +32,8 @@
 /tiny-houses-on-wheels       /tiny-houses-on-wheels/                        301
 
 # ── Blog posts → blog index (until posts are rebuilt in Astro) ───────────────
-/blog/the-rise-of-modern-modular-why-a-granny-flat-is-the-ultimate-property-upgrade            /blog/    301
-/blog/noosa-council-abolishes-7000-infrastructure-charge-for-secondary-dwellingsheres-what-that-means-for-you  /blog/  301
+/blog/the-rise-of-modern-modular-why-a-granny-flat-is-the-ultimate-property-upgrade            /blog/the-rise-of-modern-modular/                301
+/blog/noosa-council-abolishes-7000-infrastructure-charge-for-secondary-dwellingsheres-what-that-means-for-you  /blog/noosa-council-abolishes-infrastructure-charge/  301
 /blog/benefits-pod-tiny-homes-sunshine-coast                                                   /blog/    301
 /blog/tiny-home-living-sunshine-coast                                                          /blog/    301
 /blog/boiling-pot-model-cozy-fun-living                                                        /blog/    301
