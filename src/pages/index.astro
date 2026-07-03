@@ -41,7 +41,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
 
   <Hero
     title="Build Your Dream Tiny Home in Queensland"
-    subtitle="Sunshine Tiny Houses is a QBCC-licensed builder crafting quality tiny houses on wheels, modular homes, and backyard studios across Queensland."
+    subtitle="Sunshine Tiny Houses is a QBCC-licensed builder crafting quality tiny houses on wheels, Class 1a modular homes, and backyard studios across Queensland."
     ctaText="Contact Now"
     ctaHref="/contact/"
     secondaryCtaText="View Our Range"
@@ -54,6 +54,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
       <div class="product-lines__grid">
 
         <div class="product-line-card">
+          <div class="product-line-card__eyebrow" aria-hidden="true" style="visibility: hidden;">&nbsp;</div>
           <h2 class="product-line-card__title">Tiny Houses on Wheels</h2>
           <p class="product-line-card__desc">
             From compact 6m designs to our sprawling 10m Lennox model — fully liveable
@@ -163,7 +164,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
 .product-lines__grid {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: start;
+  align-items: stretch;
 }
 .product-line-divider {
   width: 1px;
@@ -176,6 +177,10 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
   flex-direction: column;
   gap: 1rem;
   padding-block: 1rem;
+}
+.product-line-card > :global(.btn) {
+  margin-top: auto;
+  align-self: flex-start;
 }
 .product-line-card__eyebrow {
   font-size: var(--font-size-xs);
