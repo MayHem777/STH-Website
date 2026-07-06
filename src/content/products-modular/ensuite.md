@@ -1,7 +1,7 @@
 ---
 title: "Ensuite"
 tagline: "The perfect blend of comfort and style."
-description: "A self-contained modular ensuite — light-filled bedroom, sleek modern bathroom, and premium finishes. Fast to install and increases your property value immediately."
+description: "A self-contained modular ensuite — light-filled bedroom, sleek modern bathroom and premium finishes. Fast to install, instant property value."
 draft: false
 order: 2
 heroImage: "/images/modular-scene-3.png"

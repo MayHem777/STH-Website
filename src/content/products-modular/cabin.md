@@ -1,7 +1,7 @@
 ---
 title: "Cabin"
 tagline: "Cosy living, beautifully designed."
-description: "Our cabin range offers studio and bedroom configurations for guest retreats, Airbnb listings, caravan parks, or compact homes. Three models: Banksia, Dahlia, and Raglan."
+description: "Studio and bedroom cabin configurations for guest retreats, Airbnb, caravan parks or compact homes. Three models: Banksia, Dahlia and Raglan."
 draft: false
 order: 1
 heroImage: "/images/banksia-office.jpg"

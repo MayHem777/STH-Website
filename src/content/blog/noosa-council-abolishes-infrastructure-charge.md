@@ -1,6 +1,6 @@
 ---
 title: "Noosa Council Abolishes $7,000 Infrastructure Charge for Secondary Dwellings — Here's What That Means for You"
-description: "Starting 1 July 2025, Noosa Shire Council scrapped the ~$7,000 infrastructure charge for new secondary dwellings. Here's what the change means for homeowners looking to build a granny flat or backyard studio."
+description: "From 1 July 2025, Noosa Shire Council scrapped the ~$7,000 infrastructure charge on new secondary dwellings — what it means for granny flat builds."
 publishDate: 2025-08-13
 author: "Mitch Croft"
 draft: false

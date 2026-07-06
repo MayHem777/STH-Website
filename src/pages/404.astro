@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found | Sunshine Tiny Houses"
+  description="Sorry, that page doesn't exist. Explore our modular homes, granny flats and tiny houses on wheels, or get in touch for a free consultation."
+  canonical="https://www.sunshinetinyhouses.com.au/404/"
+  noindex={true}
+>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">404</p>
+      <h1>Page Not Found</h1>
+      <p class="page-hero__sub">Sorry — that page doesn't exist or has moved. Here's where you might want to go instead.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container notfound-links">
+      <a class="notfound-card" href="/modular-homes/">
+        <h2>Modular Homes</h2>
+        <p>Class 1a modular homes and granny flats — our most popular range.</p>
+      </a>
+      <a class="notfound-card" href="/tiny-houses-on-wheels/">
+        <h2>Tiny Houses on Wheels</h2>
+        <p>Our THOW range, from the compact 1770 to the family-sized Lennox.</p>
+      </a>
+      <a class="notfound-card" href="/contact/">
+        <h2>Contact Us</h2>
+        <p>Ask a question or book a free consultation — we're happy to help.</p>
+      </a>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+.page-hero {
+  background-color: var(--color-surface);
+  padding: var(--spacing-section) 0 3rem;
+  text-align: center;
+}
+.page-hero h1 {
+  margin: 0.5rem 0 1rem;
+}
+.page-hero__sub {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  max-width: 520px;
+  margin: 0 auto;
+}
+.notfound-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+@media (max-width: 767px) {
+  .notfound-links { grid-template-columns: 1fr; }
+}
+.notfound-card {
+  display: block;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid var(--color-border, #e5e5e5);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.2s;
+}
+.notfound-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.09);
+}
+.notfound-card h2 {
+  font-size: var(--font-size-lg);
+  margin-bottom: 0.5rem;
+}
+.notfound-card p {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm, 0.9rem);
+  margin: 0;
+}
+</style>

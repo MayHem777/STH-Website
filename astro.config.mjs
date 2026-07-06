@@ -12,7 +12,8 @@ export default defineConfig({
         !page.includes('/google-ads-offer/') &&
         !page.includes('/meta-ads-offer/') &&
         !page.includes('/privacy-policy/') &&
-        !page.includes('/contact/thank-you/'),
+        !page.includes('/contact/thank-you/') &&
+        !page.includes('/404/'),
     }),
   ],
 });

@@ -1,7 +1,7 @@
 ---
 title: "Retreat"
 tagline: "Heat, cold, and rest in one beautifully designed space."
-description: "The Vitalis — a complete wellness retreat combining a 4–6 person sauna, cold plunge, vanity, shower, and toilet. Turn any location into your personal recovery sanctuary."
+description: "The Vitalis — a complete wellness retreat with 4–6 person sauna, cold plunge, vanity, shower and toilet. Your personal recovery sanctuary, anywhere."
 draft: false
 order: 6
 heroImage: "/images/modular-scene-2.png"

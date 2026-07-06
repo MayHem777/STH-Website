@@ -1,7 +1,7 @@
 ---
 title: "Lennox"
 tagline: "Expand your horizons with extra height."
-description: "The Lennox is our flagship model at 9–10m — featuring a ground-floor master bedroom plus a loft, extra ceiling height, and the most spacious layout in our range. Sleeps 4+."
+description: "The Lennox is our flagship 9–10m model — ground-floor master bedroom plus loft, extra ceiling height and our most spacious layout. Sleeps 4+."
 draft: false
 order: 7
 heroImage: "/images/lennox-01.jpg"

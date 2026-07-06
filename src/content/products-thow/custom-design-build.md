@@ -1,7 +1,7 @@
 ---
 title: "Custom Design & Build"
 tagline: "Your vision, our craftsmanship."
-description: "Don't see exactly what you're looking for? We specialise in custom tiny house on wheels designs tailored to your lifestyle, block, and budget. Let's build something unique together."
+description: "We specialise in custom tiny house on wheels designs tailored to your lifestyle, block and budget. Let's build something unique together."
 draft: false
 order: 8
 heroImage: "/images/workshop-recent-1.jpeg"

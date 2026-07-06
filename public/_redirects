@@ -1,4 +1,10 @@
-# Cloudflare Pages redirect rules
+# ⚠️ THIS FILE IS NOT ACTIVE IN PRODUCTION.
+# functions/_middleware.js matches every route, and Cloudflare Pages disables
+# _redirects when a Function handles the request. The authoritative redirect
+# map lives in functions/_middleware.js (REDIRECTS). Keep both in sync —
+# this file remains as documentation and as a fallback if the middleware is
+# ever removed.
+#
 # Format: /old-url  /new-url  status
 # All Squarespace URLs → new Astro site
 

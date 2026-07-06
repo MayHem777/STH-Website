@@ -1,7 +1,7 @@
 ---
 title: "Bondi"
 tagline: "Bring the outdoors in."
-description: "The Bondi is a 7.2m tiny house on wheels designed to maximise your connection with the outdoors. A single loft, open layout, and beautiful finishes — sleeps 2 comfortably."
+description: "The Bondi is a 7.2m tiny house on wheels built to maximise outdoor connection — single loft, open layout, beautiful finishes. Sleeps 2."
 draft: false
 order: 3
 heroImage: "/images/bondi-02a.jpg"
