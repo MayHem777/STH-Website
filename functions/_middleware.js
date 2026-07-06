@@ -62,9 +62,13 @@ export async function onRequest(context) {
   const url = new URL(context.request.url);
   const path = url.pathname.replace(/\/+$/, '') || '/';
 
-  // 1. Legacy redirects (exact match, then /modulars/* splat)
+  // 1. Legacy redirects (exact match, then /modulars/* splat).
+  // Guard: `path` has trailing slashes stripped, so a rule like
+  // '/contact' → '/contact/' would also match a request for '/contact/'
+  // and redirect it to itself in an infinite loop. Never redirect when
+  // the request already IS the target.
   const target = REDIRECTS[path];
-  if (target) {
+  if (target && target !== url.pathname) {
     return Response.redirect(new URL(target, url.origin).href, 301);
   }
   if (path.startsWith('/modulars/')) {
