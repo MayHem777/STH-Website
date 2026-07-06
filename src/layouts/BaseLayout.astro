@@ -24,23 +24,43 @@ const { class: className, ...seoProps } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <SEOHead {...seoProps} />
-    <!-- GA4 -->
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-E2818PQ3H9"></script>
+    <!-- GA4 + Meta Pixel, deferred.
+         Stubs are created immediately so gtag()/fbq() calls anywhere on the
+         page queue safely; the external scripts (~145KB, the main source of
+         mobile main-thread blocking) load on first user interaction or
+         2.5s after page load, whichever comes first. Queued events
+         (including the PageView below) flush when the real scripts arrive. -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-E2818PQ3H9');
-    </script>
-    <!-- Meta Pixel -->
-    <script is:inline>
-      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+
+      !function(f,n){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-      document,'script','https://connect.facebook.net/en_US/fbevents.js');
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[]}(window);
       fbq('init', '1050187050868855');
       fbq('track', 'PageView');
+
+      (function () {
+        var loaded = false;
+        function loadTrackers() {
+          if (loaded) return;
+          loaded = true;
+          var g = document.createElement('script');
+          g.async = true;
+          g.src = 'https://www.googletagmanager.com/gtag/js?id=G-E2818PQ3H9';
+          document.head.appendChild(g);
+          var f = document.createElement('script');
+          f.async = true;
+          f.src = 'https://connect.facebook.net/en_US/fbevents.js';
+          document.head.appendChild(f);
+        }
+        ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) {
+          addEventListener(ev, loadTrackers, { once: true, passive: true });
+        });
+        addEventListener('load', function () { setTimeout(loadTrackers, 2500); });
+      })();
     </script>
     <noscript>
       <img height="1" width="1" style="display:none"

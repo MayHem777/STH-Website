@@ -105,6 +105,12 @@ const year = new Date().getFullYear();
   color: var(--color-text-on-dark);
 }
 
+/* global.css sets p { color: var(--color-text-body) } which would paint
+   footer paragraphs dark-on-dark — restore the footer's white cascade */
+.site-footer p {
+  color: inherit;
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.5fr;
@@ -181,7 +187,7 @@ const year = new Date().getFullYear();
   display: inline-block;
   padding: 0.75rem 2rem;
   background-color: var(--color-accent);
-  color: #fff;
+  color: var(--color-surface-dark); /* dark-on-gold passes WCAG (7.8:1); white-on-gold was 2.2:1 */
   font-size: var(--font-size-sm);
   font-weight: 700;
   letter-spacing: 0.06em;
