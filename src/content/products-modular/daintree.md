@@ -5,7 +5,7 @@ description: "The Daintree features a modern kitchenette, sophisticated cabinetr
 draft: false
 order: 4.1
 bedrooms: 2
-heroImage: "/images/modular-scene-2.png"
+heroImage: "/images/modular-scene-2.webp"
 heroImageAlt: "Daintree 2 bedroom modular home exterior"
 features:
   - "Two private bedrooms"

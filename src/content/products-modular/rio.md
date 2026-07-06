@@ -5,7 +5,7 @@ description: "The Rio is a beautifully designed 1-bedroom modular home with an o
 draft: false
 order: 3.3
 bedrooms: 1
-heroImage: "/images/modular-scene-3.png"
+heroImage: "/images/modular-scene-3.webp"
 heroImageAlt: "Rio 1 bedroom modular home exterior"
 features:
   - "Bedroom, kitchen, living, and bathroom"

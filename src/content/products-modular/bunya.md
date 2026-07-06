@@ -5,7 +5,7 @@ description: "The Bunya is an intimate 1-bedroom modular home designed for tranq
 draft: false
 order: 3.1
 bedrooms: 1
-heroImage: "/images/modular-scene-3.png"
+heroImage: "/images/modular-scene-3.webp"
 heroImageAlt: "Bunya 1 bedroom modular home exterior"
 features:
   - "Bedroom, kitchen, living, and bathroom"

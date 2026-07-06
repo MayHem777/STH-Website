@@ -5,7 +5,7 @@ description: "The 1-bedroom Straddie emphasises integrated storage solutions and
 draft: false
 order: 3.2
 bedrooms: 1
-heroImage: "/images/modular-scene-3.png"
+heroImage: "/images/modular-scene-3.webp"
 heroImageAlt: "Straddie 1 bedroom modular home exterior"
 features:
   - "Bedroom, kitchen, living, and bathroom"

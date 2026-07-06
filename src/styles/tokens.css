@@ -3,8 +3,9 @@
   Extracted from landing-page-v6-squarespace-codeblock.html (June 2026)
 */
 
-/* Outfit font — loaded from Google Fonts (replaces Squarespace/Typekit delivery) */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap');
+/* Outfit font is loaded via <link> tags in BaseLayout.astro (preconnect +
+   stylesheet) instead of a CSS @import, which would create a render-blocking
+   request chain (CSS -> font CSS -> font files). */
 
 :root {
   /* ── Colours ─────────────────────────────────────────── */

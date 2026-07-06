@@ -5,7 +5,7 @@ description: "The Pandanus offers open-plan living, dining, and kitchen with pri
 draft: false
 order: 3.4
 bedrooms: 1
-heroImage: "/images/modular-scene-3.png"
+heroImage: "/images/modular-scene-3.webp"
 heroImageAlt: "Pandanus 1 bedroom modular home exterior"
 features:
   - "Bedroom, kitchen, living, and bathroom"
