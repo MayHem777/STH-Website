@@ -63,13 +63,24 @@ Checklist — verify against real repo state, don't assume:
     listing, and any other external directories linking to specific old page
     URLs are updated or unaffected post-migration. (Lower priority than
     items 8-12, but should be checked, not skipped.)
+14. [ ] `files` subdomain CNAME preserved — `files.sunshinetinyhouses.com.au`
+    (CNAME → `sth-website.pages.dev`, added as a custom domain on this Pages
+    project) serves the brochure PDF linked from the STH Enquiry AutoDraft
+    pipeline (`sth-enquiry-autodraft` repo, `brochure_hosted_url` config,
+    2026-07-10). If this DNS cutover involves a nameserver/DNS provider
+    change, this CNAME must be explicitly recreated in the new provider —
+    otherwise every brochure link in every previously sent enquiry reply
+    breaks silently (a 404, not an obvious error). Confirm
+    `https://files.sunshinetinyhouses.com.au/downloads/sth-brochure.pdf`
+    still resolves with a valid cert after cutover, same as item 9 for the
+    main domain.
 
 After reporting checklist status: if anything is incomplete, say so plainly
 and do not proceed with DNS/launch actions or advice on how to do them until
 Mitch has seen the gap and explicitly said he wants to proceed anyway despite
 it. Items 1/2 (redirect completeness), 7 (Mitch sign-off), and 8 (MX
 records) are treated with equal severity — a broken MX record is a silent
-business-critical failure, not just an SEO risk. Only once all 13 items are
+business-critical failure, not just an SEO risk. Only once all 14 items are
 checked off (or explicitly overridden by Mitch) should you engage normally
 with DNS cutover questions.
 
