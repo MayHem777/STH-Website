@@ -129,16 +129,24 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
               <!-- Conditional: Modular / Class 1a only -->
               <div class="form-field form-field--conditional form-field--class1a" hidden>
-                <label for="pod_home_design">Which model interests you?</label>
-                <select id="pod_home_design" name="pod_home_design">
+                <label for="modular_home_design">Which model interests you?</label>
+                <select id="modular_home_design" name="modular_home_design">
                   <option value=""></option>
-                  <option value="Banksia 6x3.2m">Banksia 6x3.2m</option>
-                  <option value="Fingal 8x3.5m">Fingal 8x3.5m</option>
-                  <option value="Bunya 9x3.5m">Bunya 9x3.5m</option>
-                  <option value="Straddie 10x3.8m">Straddie 10x3.8m</option>
-                  <option value="Pandanus 12x3.8m">Pandanus 12x3.8m</option>
-                  <option value="Daintree 13x3.8m">Daintree 13x3.8m</option>
-                  <option value="Custom Design">Custom Design</option>
+                  <option value="Office">Office</option>
+                  <option value="Ensuite">Ensuite</option>
+                  <option value="Banksia (Studio)">Banksia (Studio)</option>
+                  <option value="Dahlia (Studio)">Dahlia (Studio)</option>
+                  <option value="Raglan (Studio)">Raglan (Studio)</option>
+                  <option value="Fingal (1 Bed)">Fingal (1 Bed)</option>
+                  <option value="Bunya (1 Bed)">Bunya (1 Bed)</option>
+                  <option value="Straddie (1 Bed)">Straddie (1 Bed)</option>
+                  <option value="Pandanus">Pandanus</option>
+                  <option value="Straddie (2 Bed)">Straddie (2 Bed)</option>
+                  <option value="Daintree (2 Bed)">Daintree (2 Bed)</option>
+                  <option value="Sunrise Beach House (2 Bed)">Sunrise Beach House (2 Bed)</option>
+                  <option value="Jacaranda (2 Bed)">Jacaranda (2 Bed)</option>
+                  <option value="Vitalis (Wellness Retreat)">Vitalis (Wellness Retreat)</option>
+                  <option value="Custom Design / Other">Custom Design / Other</option>
                 </select>
               </div>
               <div class="form-field form-field--conditional form-field--class1a" hidden>
@@ -315,7 +323,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       [
         'approximate_budget', 'financing_status', 'wants_phone_call',
-        'best_call_time', 'message', 'thow_design', 'pod_home_design',
+        'best_call_time', 'message', 'thow_design', 'modular_home_design',
         'dwelling_type', 'survey_soil_test_status'
       ].forEach(function (name) {
         var el = form.querySelector('[name="' + name + '"]');

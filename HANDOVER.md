@@ -64,14 +64,17 @@ auto-merge. Verified with a full `npm run build` after merging.
   or a GA4-to-Google-Ads Admin-side link with a marked key event. Didn't
   implement since I don't have your Conversion ID.
 
-- **HubSpot dropdown options vs. actual site content don't fully match.**
-  `pod_home_design` (HubSpot) offers Banksia, Fingal, Bunya, Straddie,
-  Pandanus, Daintree, Custom Design — but the site's modular-homes content
-  only has Bunya, Straddie, Rio, Pandanus (1-bed) and Daintree, Straddie,
-  Jacaranda (2-bed). Banksia/Fingal don't exist as site content; Rio/
-  Jacaranda aren't in the HubSpot dropdown. `thow_design` does fully match
-  the site's THOW models. Worth reconciling at some point — not done here,
-  out of scope for this session.
+- **HubSpot model dropdown — reconciled 2026-07-13.** The old `pod_home_design`
+  field (stale dimension-based options) was replaced in `contact.astro` by
+  `modular_home_design`, whose option list is the union of the July-2026
+  brochure, the live Squarespace site, and the AutoDraft pricing catalogue
+  (15 options incl. "Custom Design / Other" — Rio was dropped 2026-07-13,
+  confirmed by Mitch: not in the brochure, not quotable; `rio.md` is
+  draft-flagged, not deleted). The matching HubSpot contact
+  property `modular_home_design` must be created in HubSpot before this form
+  goes live — see `sunshine-tiny-houses/docs/HUBSPOT-FORM-SPEC.md` for the
+  full spec; the old `pod_home_design` property (zero contacts hold a value)
+  should be archived at the same time. `thow_design` unchanged, still matches.
 
 ## Not yet tested
 
