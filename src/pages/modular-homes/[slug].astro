@@ -73,7 +73,7 @@ const breadcrumbSchema = {
         <div class="cta-card">
           <h2>Interested in the {product.data.title}?</h2>
           <p>Get a free, no-obligation quote from our team.</p>
-          <CTAButton href="/contact/" class="cta-card__btn">Contact Now</CTAButton>
+          <CTAButton href="/contact/" variant="light" class="cta-card__btn">Contact Now</CTAButton>
         </div>
       </aside>
     </div>
@@ -93,7 +93,6 @@ const breadcrumbSchema = {
 .spec-list dd { font-size: var(--font-size-sm); }
 .cta-card { background: var(--color-primary); color: #fff; border-radius: var(--radius-card); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
 .cta-card h2 { font-size: var(--font-size-xl); color: #fff; }
-.cta-card p { font-size: var(--font-size-sm); opacity: 0.9; }
-.cta-card__btn { background-color: #fff !important; color: var(--color-primary) !important; border-color: #fff !important; text-align: center; }
+.cta-card p { font-size: var(--font-size-sm); color: #fff; opacity: 0.9; }
 @media (max-width: 900px) { .product-layout { grid-template-columns: 1fr; } }
 </style>

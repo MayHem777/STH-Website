@@ -1,7 +1,7 @@
 ---
 export interface Props {
   href: string;
-  variant?: 'primary' | 'secondary' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'ghost' | 'light';
   size?: 'default' | 'lg';
   class?: string;
 }
@@ -62,6 +62,19 @@ const { href, variant = 'primary', size = 'default', class: className } = Astro.
   background-color: var(--color-primary);
   color: #fff;
   transform: translateY(-2px);
+}
+
+/* white button for use on solid dark/primary surfaces (e.g. sidebar CTA card) */
+.btn--light {
+  background-color: #fff;
+  color: var(--color-primary);
+  border: none;
+  box-shadow: var(--shadow-btn);
+}
+.btn--light:hover {
+  background-color: var(--color-surface);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-btn-hover);
 }
 
 .btn--ghost {
