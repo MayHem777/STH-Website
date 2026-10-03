@@ -23,3 +23,21 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - DNS today: nameservers ns1-3.nameserver.net.au (not Cloudflare); apex A + www CNAME point at Squarespace; MX = Microsoft 365; SPF, DKIM selector1/2, DMARC (p=quarantine) and autodiscover present; `files` CNAME → sth-website.pages.dev. Apex A TTL is 14400 s (4 h), not yet lowered.
 - NOT done: apex and www are not yet added as custom domains on the Pages project (only `files.` is), so no certificate exists for them yet (item 9).
 - Still Mitch's: GSC export, URL table sign-off, TTL lowering, rollback values, post-cutover mail + HubSpot form test, directory listings.
+
+## Redirect gaps — branch `redirect-gaps` (17289bd, pushed 2026-10-03, NOT merged; worktree at ~/repos/STH-Website-redirects)
+The 25 unmapped old URLs are now in `functions/_middleware.js` (the active map) and `public/_redirects` (kept in sync). Tested against the middleware: all 59 old sitemap URLs resolve in one 301 to a page that exists, with and without a trailing slash, no chains. Mitch to sign off this table (checklist item 7):
+
+| Old URL | New URL | Confidence |
+|---|---|---|
+| /home | / | exact |
+| /our-modular-homes, /pod-homes/overview-1 | /modular-homes/ | good |
+| /1-bedroom, /2-bedroom, /cabin, /ensuite, /office, /retreat | /modular-homes/<same>/ | exact |
+| /custom-sauna | /backyard-studios/saunas/ | good |
+| /tiny-house-trailers | /tiny-houses-on-wheels/trailers/ | good |
+| /portfolio-2 + its 6 project pages | /gallery/ | good (they look like leftover template pages) |
+| /entertainment | /backyard-studios/ | **Mitch to check**: no entertainment page on the new site |
+| /thow-vs-class-1a-modular | /council-regulations/ | **Mitch to check**: a full article with no equivalent; better ported as a page or blog post |
+| /sunshine-coast-tiny-homes, /brisbane-tiny-homes, /gold-coast-tiny-homes, /queensland-tiny-houses | / | **Mitch to check**: location landing pages with no equivalent; if Search Console shows traffic, rebuild them instead |
+| /thank-you-pricing-guide | / | stop-gap |
+
+**Second blocker, NOT fixed: `/thank-you` does not exist on the new site.** Both ad landing pages (`google-ads-offer.astro`, `meta-ads-offer.astro`) send the visitor to `/thank-you` after a successful HubSpot submit, so after cutover every ad lead lands on the 404 page. The live Squarespace `/thank-you` also fires the Meta `Lead` event with a de-dupe event id and the Google Ads conversion (`AW-10788445574/...`); the new landing pages fire `fbq('track','Lead')` with no id and no Google Ads conversion. A `/thank-you` page carrying the same tracking is needed before cutover (see the `sth-tracking-fix` repo). Deliberately not redirected to `/`, which would hide the problem and still lose the conversions.
