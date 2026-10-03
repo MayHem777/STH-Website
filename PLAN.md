@@ -16,3 +16,10 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 ## Waiting on Mitch
 - Foundations guide: photos, then OK to merge to main.
 - DNS cutover checklist items.
+
+## Cutover pre-flight check, 2026-10-03 (read-only, run from Claudio)
+- **BLOCKER (checklist items 1/2): 25 of the 59 URLs in the live Squarespace sitemap return 404 on sth-website.pages.dev** and are not in `public/_redirects` (39 rules, last touched 2026-07-06). All 25 still return 200 on the old site: /1-bedroom, /2-bedroom, /brisbane-tiny-homes, /cabin, /custom-sauna, /ensuite, /entertainment, /gold-coast-tiny-homes, /home, /office, /our-modular-homes, /pod-homes/overview-1, /portfolio-2 (+ 6 project pages), /queensland-tiny-houses, /retreat, /sunshine-coast-tiny-homes, /thank-you-pricing-guide, /thow-vs-class-1a-modular, /tiny-house-trailers. The other 34 resolve in one 301/308 hop to a 200 (no chains).
+- OK: pages.dev is noindex (meta + header) with canonicals on the real domain; robots.txt and sitemap-index (39 URLs) present; brochure URL 200 with an active cert on `files.`.
+- DNS today: nameservers ns1-3.nameserver.net.au (not Cloudflare); apex A + www CNAME point at Squarespace; MX = Microsoft 365; SPF, DKIM selector1/2, DMARC (p=quarantine) and autodiscover present; `files` CNAME → sth-website.pages.dev. Apex A TTL is 14400 s (4 h), not yet lowered.
+- NOT done: apex and www are not yet added as custom domains on the Pages project (only `files.` is), so no certificate exists for them yet (item 9).
+- Still Mitch's: GSC export, URL table sign-off, TTL lowering, rollback values, post-cutover mail + HubSpot form test, directory listings.
