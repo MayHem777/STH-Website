@@ -54,3 +54,30 @@
 /blog/tinyhousedreamhome                                                                       /blog/    301
 /blog/choosingtinyhomeliving                                                                   /blog/    301
 /blog/embracingfreedomtinyhouses                                                               /blog/    301
+
+# ── Gaps found 2026-10-03: in the live Squarespace sitemap but unmapped ──────
+/home                                        /                                      301
+/our-modular-homes                           /modular-homes/                        301
+/pod-homes/overview-1                        /modular-homes/                        301
+/1-bedroom                                   /modular-homes/1-bedroom/              301
+/2-bedroom                                   /modular-homes/2-bedroom/              301
+/cabin                                       /modular-homes/cabin/                  301
+/ensuite                                     /modular-homes/ensuite/                301
+/office                                      /modular-homes/office/                 301
+/retreat                                     /modular-homes/retreat/                301
+/entertainment                               /backyard-studios/                     301
+/custom-sauna                                /backyard-studios/saunas/              301
+/tiny-house-trailers                         /tiny-houses-on-wheels/trailers/       301
+/thow-vs-class-1a-modular                    /council-regulations/                  301
+/sunshine-coast-tiny-homes                   /                                      301
+/brisbane-tiny-homes                         /                                      301
+/gold-coast-tiny-homes                       /                                      301
+/queensland-tiny-houses                      /                                      301
+/thank-you-pricing-guide                     /                                      301
+/portfolio-2                                 /gallery/                              301
+/portfolio-2/project-one-ephnc-x3a9g         /gallery/                              301
+/portfolio-2/project-two-llrgk-7zt7c         /gallery/                              301
+/portfolio-2/project-three-8zgh7-dn4sa       /gallery/                              301
+/portfolio-2/project-four-yjynj-npz8d        /gallery/                              301
+/portfolio-2/project-five-jkmzy-5nwr7        /gallery/                              301
+/portfolio-2/project-six-sz8wl-wtzg5         /gallery/                              301
