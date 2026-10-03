@@ -446,7 +446,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
           <p class="sth-hfc-title">Is Your Property Suitable?</p>
           <p class="sth-hfc-sub">Free assessment. No obligation. Mitch or Nat will be in touch within 24 hours.</p>
 
-          <form id="sth-hero-form" novalidate>
+          <form id="sth-hero-form" class="sth-lp-form" novalidate>
             <div class="sth-form-row">
               <label for="sth-hf-name">Your Name</label>
               <input type="text" id="sth-hf-name" name="name" placeholder="e.g. Sarah Johnson" required autocomplete="name" />
@@ -485,15 +485,13 @@ import LandingLayout from '../layouts/LandingLayout.astro';
               <label for="sth-hf-budget">What&rsquo;s your approximate budget?</label>
               <select id="sth-hf-budget" name="approximate_budget">
                 <option value="" disabled selected>Select a range</option>
+                <option value="<$100k">Under $100k</option>
                 <option value="$100k – $125k">$100k &ndash; $125k</option>
                 <option value="$125k – $150k">$125k &ndash; $150k</option>
                 <option value="$150k – $175k">$150k &ndash; $175k</option>
                 <option value="$175k – $200k">$175k &ndash; $200k</option>
-                <option value="$200k – $225k">$200k &ndash; $225k</option>
-                <option value="$225k – $250k">$225k &ndash; $250k</option>
-                <option value="$250k – $275k">$250k &ndash; $275k</option>
-                <option value="$275k – $300k">$275k &ndash; $300k</option>
-                <option value="$300k+">$300k+</option>
+                <option value="$200k – $250k">$200k &ndash; $250k</option>
+                <option value="$250k+">$250k+</option>
                 <option value="Not sure yet">Not sure yet</option>
               </select>
               <span class="sth-field-error" id="sth-hf-budget-err">Please select your approximate budget.</span>
@@ -918,7 +916,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
           <p class="sth-ffc-title">Free Property Assessment</p>
           <p class="sth-ffc-sub">Tell us about your property and what you're trying to achieve. We'll be in touch within 24 hours with a straight answer.</p>
 
-          <form id="sth-final-form" novalidate>
+          <form id="sth-final-form" class="sth-lp-form" novalidate>
             <div class="sth-form-row">
               <label for="sth-ff-name">Your Name</label>
               <input type="text" id="sth-ff-name" name="name" placeholder="e.g. Sarah Johnson" required autocomplete="name" />
@@ -957,15 +955,13 @@ import LandingLayout from '../layouts/LandingLayout.astro';
               <label for="sth-ff-budget">What&rsquo;s your approximate budget?</label>
               <select id="sth-ff-budget" name="approximate_budget">
                 <option value="" disabled selected>Select a range</option>
+                <option value="<$100k">Under $100k</option>
                 <option value="$100k – $125k">$100k &ndash; $125k</option>
                 <option value="$125k – $150k">$125k &ndash; $150k</option>
                 <option value="$150k – $175k">$150k &ndash; $175k</option>
                 <option value="$175k – $200k">$175k &ndash; $200k</option>
-                <option value="$200k – $225k">$200k &ndash; $225k</option>
-                <option value="$225k – $250k">$225k &ndash; $250k</option>
-                <option value="$250k – $275k">$250k &ndash; $275k</option>
-                <option value="$275k – $300k">$275k &ndash; $300k</option>
-                <option value="$300k+">$300k+</option>
+                <option value="$200k – $250k">$200k &ndash; $250k</option>
+                <option value="$250k+">$250k+</option>
                 <option value="Not sure yet">Not sure yet</option>
               </select>
               <span class="sth-field-error" id="sth-ff-budget-err">Please select your approximate budget.</span>
@@ -1033,25 +1029,26 @@ import LandingLayout from '../layouts/LandingLayout.astro';
         var orig = btn.textContent;
         btn.disabled = true; btn.textContent = 'Sending…';
 
-        var hutkMatch = document.cookie.match(/hubspotutk=([^;]+)/);
+        var budgetValue = (form.querySelector('[name="approximate_budget"]') || {}).value || '';
+        var message = 'Ideal home: ' + ((form.querySelector('[name="ideal_home"]') || {}).value || '');
+        // project_details is not a field on the HubSpot form, so it rides in the message.
+        var details = form.querySelector('[name="project_details"]');
+        if (details && details.value.trim()) message += '\nProject details: ' + details.value.trim();
         var fields = [
           { name: 'firstname',          value: name.value.trim() },
-          { name: 'phone_number_text',  value: phone.value.trim() },
+          { name: 'phone',              value: phone.value.trim() },
           { name: 'email',              value: email.value.trim() },
           { name: 'city',               value: loc.value.trim() },
-          { name: 'ideal_home',         value: (form.querySelector('[name="ideal_home"]') || {}).value || '' },
-          { name: 'approximate_budget', value: (form.querySelector('[name="approximate_budget"]') || {}).value || '' }
+          { name: 'message',            value: message },
+          { name: 'approximate_budget', value: budgetValue }
         ];
-        var details = form.querySelector('[name="project_details"]');
-        if (details && details.value.trim()) fields.push({ name: 'project_details', value: details.value.trim() });
 
-        var payload = { fields: fields, context: { pageUri: window.location.href, pageName: document.title } };
-        if (hutkMatch) payload.context.hutk = hutkMatch[1];
+        var payload = { fields: fields, context: window.STHLead.hubspotContext() };
 
         fetch(HS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
           .then(function (r) {
             if (r.ok) {
-              window.location.href = '/thank-you';
+              window.location.href = window.STHLead.conversionRedirect(budgetValue, 'google');
             } else {
               btn.disabled = false; btn.textContent = orig;
               alert('Something went wrong — please try again or call us on (07) 5315 8365.');

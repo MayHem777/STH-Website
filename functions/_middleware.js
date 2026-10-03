@@ -74,7 +74,6 @@ const REDIRECTS = {
   '/brisbane-tiny-homes': '/',
   '/gold-coast-tiny-homes': '/',
   '/queensland-tiny-houses': '/',
-  '/thank-you-pricing-guide': '/',
   '/portfolio-2': '/gallery/',
   '/portfolio-2/project-one-ephnc-x3a9g': '/gallery/',
   '/portfolio-2/project-two-llrgk-7zt7c': '/gallery/',

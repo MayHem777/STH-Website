@@ -473,7 +473,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
           <h3>Check My Block &rarr;</h3>
           <p class="m-form-sub">Just your name, number, email and location to get started.</p>
 
-          <form id="m-main-form" novalidate>
+          <form id="m-main-form" class="m-lp-form" novalidate>
             <div class="m-form-row">
               <label for="m-name">Your Name</label>
               <input type="text" id="m-name" name="name" placeholder="e.g. Sarah Johnson" required autocomplete="name" />
@@ -512,15 +512,13 @@ import LandingLayout from '../layouts/LandingLayout.astro';
               <label for="m-budget">What&rsquo;s your approximate budget?</label>
               <select id="m-budget" name="approximate_budget">
                 <option value="" disabled selected>Select a range</option>
+                <option value="<$100k">Under $100k</option>
                 <option value="$100k – $125k">$100k &ndash; $125k</option>
                 <option value="$125k – $150k">$125k &ndash; $150k</option>
                 <option value="$150k – $175k">$150k &ndash; $175k</option>
                 <option value="$175k – $200k">$175k &ndash; $200k</option>
-                <option value="$200k – $225k">$200k &ndash; $225k</option>
-                <option value="$225k – $250k">$225k &ndash; $250k</option>
-                <option value="$250k – $275k">$250k &ndash; $275k</option>
-                <option value="$275k – $300k">$275k &ndash; $300k</option>
-                <option value="$300k+">$300k+</option>
+                <option value="$200k – $250k">$200k &ndash; $250k</option>
+                <option value="$250k+">$250k+</option>
                 <option value="Not sure yet">Not sure yet</option>
               </select>
               <span class="m-field-error" id="m-budget-err">Please select your approximate budget.</span>
@@ -581,25 +579,24 @@ import LandingLayout from '../layouts/LandingLayout.astro';
       var orig = btn.textContent;
       btn.disabled = true; btn.textContent = 'Sending…';
 
-      var hutkMatch = document.cookie.match(/hubspotutk=([^;]+)/);
+      var budgetValue = (form.querySelector('[name="approximate_budget"]') || {}).value || '';
       var payload = {
         fields: [
           { name: 'firstname',          value: name.value.trim() },
-          { name: 'phone_number_text',  value: phone.value.trim() },
+          { name: 'phone',              value: phone.value.trim() },
           { name: 'email',              value: email.value.trim() },
           { name: 'city',               value: loc.value.trim() },
-          { name: 'ideal_home',         value: (form.querySelector('[name="ideal_home"]') || {}).value || '' },
-          { name: 'approximate_budget', value: (form.querySelector('[name="approximate_budget"]') || {}).value || '' }
+          { name: 'message',            value: 'Ideal home: ' + ((form.querySelector('[name="ideal_home"]') || {}).value || '') },
+          { name: 'approximate_budget', value: budgetValue }
         ],
-        context: { pageUri: window.location.href, pageName: document.title }
+        context: window.STHLead.hubspotContext()
       };
-      if (hutkMatch) payload.context.hutk = hutkMatch[1];
 
       fetch(HS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) {
           if (r.ok) {
-            if (typeof fbq === 'function') fbq('track', 'Lead');
-            window.location.href = '/thank-you';
+            // No fbq Lead here: /thank-you fires it once, from the flag (see LeadTracking.astro).
+            window.location.href = window.STHLead.conversionRedirect(budgetValue, 'meta');
           } else {
             btn.disabled = false; btn.textContent = orig;
             alert('Something went wrong — please try again or call us on (07) 5315 8365.');
