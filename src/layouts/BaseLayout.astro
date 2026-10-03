@@ -74,6 +74,26 @@ const { class: className, ...seoProps } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <!-- STH chat widget (separate repo: MayHem777/sth-chat-widget). Loaded on idle or first scroll
+         so it never competes with first paint. The Turnstile site key is public. -->
+    <script is:inline>
+      (function () {
+        function loadSthChat() {
+          if (window.__sthChatLoading) return;
+          window.__sthChatLoading = true;
+          var s = document.createElement("script");
+          s.id = "sth-chat-widget";
+          s.src = "https://sth-chat-widget.mitchjcroft.workers.dev/widget.js";
+          s.setAttribute("data-turnstile-sitekey", "0x4AAAAAAFNF_p5_z0A1jMCJ");
+          s.setAttribute("data-enquiry-url", "/contact/");
+          s.async = false;
+          document.body.appendChild(s);
+        }
+        var idle = window.requestIdleCallback || function (cb) { return setTimeout(cb, 2000); };
+        idle(loadSthChat);
+        window.addEventListener("scroll", loadSthChat, { once: true, passive: true });
+      })();
+    </script>
   </body>
 </html>
 
