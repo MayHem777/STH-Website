@@ -64,11 +64,50 @@ collections:
       - { label: "Bedrooms", name: bedrooms, widget: number, required: false, hint: "Set this to group the model under a '1 Bedroom' / '2 Bedroom' etc. listing page instead of showing it as its own standalone card." }
       - { label: "Hero Image", name: heroImage, widget: image, required: false }
       - { label: "Hero Image Alt Text", name: heroImageAlt, widget: string, required: false }
+      - { label: "Price From (whole dollars, incl. GST, ex factory)", name: priceFrom, widget: number, value_type: int, required: false, hint: "e.g. 165000. Shown as 'From $165,000' on the model page, listing cards and homepage." }
+      - { label: "Floor Area", name: area, widget: string, required: false, hint: "e.g. 35 m²" }
+      - { label: "Size", name: size, widget: string, required: false, hint: "e.g. 10 × 3.5 m" }
+      - { label: "Optional Upgrades", name: upgrades, widget: string, required: false }
+      - label: "Floor Plans"
+        name: floorPlans
+        widget: list
+        required: false
+        fields:
+          - { label: "Image", name: src, widget: image }
+          - { label: "Caption", name: label, widget: string, required: false }
+      - label: "Gallery"
+        name: gallery
+        widget: list
+        required: false
+        fields:
+          - { label: "Image", name: src, widget: image }
+          - { label: "Alt Text", name: alt, widget: string }
+      - label: "Models on this page"
+        name: models
+        widget: list
+        required: false
+        hint: "Only for pages that cover several models (the Cabin page)."
+        fields:
+          - { label: "Name", name: name, widget: string }
+          - { label: "Description", name: blurb, widget: text }
+          - { label: "Price From", name: priceFrom, widget: number, value_type: int, required: false }
+          - { label: "Floor Area", name: area, widget: string, required: false }
+          - { label: "Size", name: size, widget: string, required: false }
+          - { label: "Optional Upgrades", name: upgrades, widget: string, required: false }
+          - { label: "Image", name: image, widget: image, required: false }
+          - { label: "Image Alt Text", name: imageAlt, widget: string, required: false }
+          - { label: "Floor Plan", name: floorPlan, widget: image, required: false }
+      - { label: "Features", name: features, widget: list, required: false }
       - label: "Specifications"
         name: specs
         widget: object
         required: false
         fields:
+          - { label: "Bedrooms", name: Bedrooms, widget: string, required: false }
+          - { label: "Bathrooms", name: Bathrooms, widget: string, required: false }
+          - { label: "Size", name: Size, widget: string, required: false }
+          - { label: "Floor area", name: "Floor area", widget: string, required: false }
+          - { label: "Installation", name: Installation, widget: string, required: false }
           - { label: "Class", name: Class, widget: string, required: false }
           - { label: "Builder Licence", name: Builder, widget: string, required: false }
       - { label: "Page Body", name: body, widget: markdown }

@@ -14,6 +14,25 @@ const productSchema = z.object({
   specs: z.record(z.string()).optional(),
   badge: z.string().optional(),
   bedrooms: z.number().optional(),
+  // Pricing + plans (Oct 2026 brochure). priceFrom is whole dollars incl. GST, ex factory.
+  priceFrom: z.number().optional(),
+  area: z.string().optional(),
+  size: z.string().optional(),
+  upgrades: z.string().optional(),
+  floorPlans: z.array(z.object({ src: z.string(), label: z.string().optional() })).optional(),
+  gallery: z.array(z.object({ src: z.string(), alt: z.string() })).optional(),
+  // Several models on one page (the Cabin page: Banksia, Dahlia, Raglan)
+  models: z.array(z.object({
+    name: z.string(),
+    blurb: z.string(),
+    priceFrom: z.number().optional(),
+    area: z.string().optional(),
+    size: z.string().optional(),
+    upgrades: z.string().optional(),
+    image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    floorPlan: z.string().optional(),
+  })).optional(),
 });
 
 const pageSchema = z.object({

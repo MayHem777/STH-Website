@@ -33,4 +33,4 @@ Whether you're a professional athlete, a wellness enthusiast, or simply someone 
 
 Optional deck upgrade available.
 
-Contact us for current pricing and dimensions.
+[Contact us](/contact/) for pricing and dimensions on the Vitalis.

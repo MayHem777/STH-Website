@@ -1,0 +1,44 @@
+---
+import { formatPrice, EX_FACTORY_NOTE } from '../lib/price';
+
+export interface Props {
+  priceFrom?: number;
+  area?: string;
+  size?: string;
+  bedrooms?: number;
+}
+const { priceFrom, area, size, bedrooms } = Astro.props;
+---
+
+{priceFrom && (
+  <section class="model-price" aria-label="Price and size">
+    <div class="container model-price__inner">
+      <div class="model-price__main">
+        <span class="model-price__label">From</span>
+        <span class="model-price__amount">{formatPrice(priceFrom)}</span>
+        <span class="model-price__gst">incl. GST, ex factory</span>
+      </div>
+      <dl class="model-price__facts">
+        {area && <div><dt>Floor area</dt><dd>{area}</dd></div>}
+        {size && <div><dt>Size</dt><dd>{size}</dd></div>}
+        {bedrooms && <div><dt>Bedrooms</dt><dd>{bedrooms}</dd></div>}
+      </dl>
+      <p class="model-price__note">{EX_FACTORY_NOTE} <a href="/contact/">Ask us for a price for your site.</a></p>
+    </div>
+  </section>
+)}
+
+<style>
+.model-price { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding-block: 1.5rem; }
+.model-price__inner { display: grid; grid-template-columns: auto 1fr; gap: 1rem 3rem; align-items: center; }
+.model-price__main { display: flex; flex-direction: column; }
+.model-price__label { font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-text); }
+.model-price__amount { font-size: var(--font-size-4xl); font-weight: 700; line-height: 1.1; color: var(--color-text); }
+.model-price__gst { font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.model-price__facts { display: flex; flex-wrap: wrap; gap: 0.75rem 2.5rem; }
+.model-price__facts dt { font-size: var(--font-size-xs); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-muted); }
+.model-price__facts dd { font-size: var(--font-size-xl); font-weight: 600; }
+.model-price__note { grid-column: 1 / -1; font-size: var(--font-size-sm); color: var(--color-text-muted); line-height: 1.5; }
+.model-price__note a { color: var(--color-primary); font-weight: 600; text-decoration: underline; }
+@media (max-width: 700px) { .model-price__inner { grid-template-columns: 1fr; } }
+</style>

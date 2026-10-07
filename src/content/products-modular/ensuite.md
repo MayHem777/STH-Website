@@ -1,11 +1,27 @@
 ---
 title: "Ensuite"
 tagline: "The perfect blend of comfort and style."
-description: "A self-contained modular ensuite — light-filled bedroom, sleek modern bathroom and premium finishes. Fast to install, instant property value."
+description: "A self-contained 20.4 m² modular ensuite (6 × 3.4 m): a light-filled bedroom with an attached bathroom. From $100,000 incl. GST, ex factory."
 draft: false
 order: 2
-heroImage: "/images/modular-scene-3.webp"
+priceFrom: 100000
+area: "20.4 m²"
+size: "6 × 3.4 m"
+upgrades: "Deck."
+heroImage: "/images/models/ensuite-ext.webp"
 heroImageAlt: "Modular ensuite exterior render"
+floorPlans:
+  - src: "/images/models/ensuite-plan.webp"
+    label: "Ensuite modular floor plan, 6 × 3.4 m"
+gallery:
+  - src: "/images/models/ensuite-ext.webp"
+    alt: "Ensuite modular home exterior render"
+  - src: "/images/models/ensuite-int-1.webp"
+    alt: "Ensuite modular home interior render 1"
+  - src: "/images/models/ensuite-int-2.webp"
+    alt: "Ensuite modular home interior render 2"
+  - src: "/images/models/ensuite-int-3.webp"
+    alt: "Ensuite modular home interior render 3"
 features:
   - "Light-filled bedroom"
   - "Sleek modern bathroom"
@@ -18,6 +34,8 @@ features:
 specs:
   Bedrooms: "1"
   Bathrooms: "1 ensuite"
+  Size: "6 × 3.4 m"
+  "Floor area": "20.4 m²"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
   Installation: "~1 week on site"
@@ -25,10 +43,6 @@ specs:
 
 ## Ensuite
 
-The Ensuite module is a fast, cost-effective way to add a private bedroom and bathroom to your property. Whether it's for aging parents, adult children, or short-stay guests, it delivers hotel-quality finishes in a compact, efficient footprint.
+This ensuite modular provides a comfortable and private living space with the convenience of an attached bathroom, suitable for installations where space is limited or where additional living accommodation is needed.
 
-A light-filled bedroom paired with a sleek, modern bathroom — designed to complement any existing home or to stand on its own as a self-contained space.
-
-Optional deck upgrade available. Access stairs not included in standard package.
-
-Contact us for current pricing and dimensions.
+It is particularly useful where temporary housing or additional accommodation is needed without extensive construction timelines or noise disruption.

@@ -1,36 +1,38 @@
 ---
 title: "Office"
 tagline: "A contemporary workspace designed for productivity."
-description: "The Banksia Office — a striking modular workspace with high vaulted ceilings, expansive windows, a kitchenette, and private bathroom. Work from home in style."
+description: "A 19.2 m² modular office (6 × 3.2 m) with tall louvres, wide stacker doors, a kitchenette and restroom. From $100,000 incl. GST, ex factory."
 draft: false
 order: 5
+priceFrom: 100000
+area: "19.2 m²"
+size: "6 × 3.2 m"
+upgrades: "Deck."
 heroImage: "/images/banksia-office.jpg"
-heroImageAlt: "Banksia Office modular workspace exterior"
+heroImageAlt: "Modular office exterior"
+floorPlans:
+  - src: "/images/models/office-plan.webp"
+    label: "Office floor plan, 6 × 3.2 m"
 features:
-  - "Model: Banksia Office"
-  - "High vaulted ceilings for a spacious feel"
-  - "Expansive windows — maximum natural light"
-  - "Spacious workstation area"
-  - "Stylish kitchenette"
-  - "Private bathroom"
-  - "Striking black exterior finish"
+  - "Flexible, comfortable workspace"
+  - "Tall louvres and wide stacker doors"
+  - "Good ventilation and natural light"
+  - "Designed to be accessible"
+  - "Kitchenette"
+  - "Restroom"
   - "Compact footprint — fits most backyards"
   - "QBCC licensed build — Class 1a"
 specs:
-  Rooms: "Office + kitchenette + bathroom"
+  Size: "6 × 3.2 m"
+  "Floor area": "19.2 m²"
+  Rooms: "Office + kitchenette + restroom"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
   Installation: "~1 week on site"
 ---
 
-## Banksia Office
+## Office
 
-Stop commuting. The Banksia Office brings your workplace home — without sacrificing the separation you need to stay focused.
+This modern modular office provides a flexible, comfortable and productive workspace. It was designed to be accessible, accommodating different needs and ensuring ease of use for everyone.
 
-With high vaulted ceilings, expansive windows, a spacious workstation area, private bathroom, and stylish kitchenette, this is a proper workspace — not just a garden shed with a desk. The striking black exterior makes a statement in any backyard.
-
-Compact enough to fit most residential blocks, the Banksia Office is designed for professionals who want productivity and comfort in equal measure.
-
-*Note: Access stairs not included in standard package.*
-
-Contact us for current pricing and dimensions.
+The tall louvres and wide stacker doors provide good ventilation and plenty of light, which are crucial for comfort and productivity.

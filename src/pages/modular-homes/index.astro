@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
+import { formatPrice, EX_FACTORY_NOTE } from '../../lib/price';
 
 const allProducts = (await getCollection('products-modular', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order);
@@ -18,6 +19,8 @@ const standaloneCards = allProducts
     heroImage: p.data.heroImage,
     heroImageAlt: p.data.heroImageAlt ?? p.data.title,
     badge: p.data.badge,
+    price: p.data.priceFrom ? `From ${formatPrice(p.data.priceFrom)}` : undefined,
+    meta: p.data.area,
   }));
 
 const bedroomCounts = [...new Set(allProducts.filter((p) => p.data.bedrooms).map((p) => p.data.bedrooms))].sort();
@@ -32,6 +35,8 @@ const bedroomCards = bedroomCounts.map((count) => {
     heroImage: variants[0].data.heroImage,
     heroImageAlt: variants[0].data.heroImageAlt ?? `${count} bedroom modular home`,
     badge: undefined,
+    price: `From ${formatPrice(Math.min(...variants.map((p) => p.data.priceFrom ?? Infinity)))}`,
+    meta: undefined,
   };
 });
 
@@ -63,15 +68,19 @@ const products = [...standaloneCards, ...bedroomCards].sort((a, b) => a.order - 
             image={p.heroImage}
             imageAlt={p.heroImageAlt}
             badge={p.badge}
+            price={p.price}
+            meta={p.meta}
           />
         ))}
       </div>
+      <p class="price-note">Prices include GST. {EX_FACTORY_NOTE}</p>
     </div>
   </section>
 
 </BaseLayout>
 
 <style>
+.price-note { margin-top: 1.5rem; font-size: var(--font-size-sm); color: var(--color-text-muted); }
 .products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

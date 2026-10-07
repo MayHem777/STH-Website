@@ -3,6 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Hero from '../../../components/Hero.astro';
 import ProductCard from '../../../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
+import { formatPrice } from '../../../lib/price';
 
 const products = (await getCollection('products-modular', ({ data }) => !data.draft && data.bedrooms === 2))
   .sort((a, b) => a.data.order - b.data.order);
@@ -33,6 +34,8 @@ const products = (await getCollection('products-modular', ({ data }) => !data.dr
             image={p.data.heroImage}
             imageAlt={p.data.heroImageAlt ?? p.data.title}
             badge={p.data.badge}
+            price={p.data.priceFrom ? `From ${formatPrice(p.data.priceFrom)}` : undefined}
+            meta={[p.data.area, p.data.size].filter(Boolean).join(' · ') || undefined}
           />
         ))}
       </div>
