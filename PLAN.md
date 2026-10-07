@@ -17,8 +17,11 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - 2026-10-07: Mitch OK'd publishing from-prices on the site. Source of truth is the Oct 2026 brochure (`public/downloads/sth-brochure.pdf`); the ex-factory disclaimer sits beside every price.
 - 2026-10-07: Fingal and Sunrise Beach House added as new model pages and Rio re-published, because all three are in the Oct 2026 brochure. Jacaranda changed to 2 bathrooms + separate laundry to match it. Office page copy now follows the brochure's Office (19.2 m²), replacing the older "Banksia Office" wording.
 - 2026-10-07: model photos and floor plans were extracted from the web-optimised brochure PDF (photos about 600 to 800 px wide); replace with full-size originals when Mitch supplies them.
+- 2026-10-07: tiny house on wheels turn-key prices set from the live Squarespace pages (Nat's increase): 1770 $115,000, Little Cove $125,000, Bondi $145,000, Granite Bay $140,000, Castaways $145,000, Boiling Pot $180,000, Lennox $145,000 (our page said $155,000; live wins). Lock-up prices unchanged on live. On `site-content-upgrade` e707e93.
 
 ## Waiting on Mitch
+- AutoDraft catalogue (`sth-enquiry-autodraft/prompts/reply_system.md`) still has the old tiny house turn-key prices (e.g. 1770 $109,000, Boiling Pot $170,000, Lennox $140,000): OK to update it to the new ones?
+- Our trailers page has no prices; the live one lists 14 trailer prices. Copy them across?
 - Site content upgrade review (preview link above), then OK to merge. Questions: Pandanus 51.3 m² looks like it includes the 12 m² deck (plan shows 10.5 × 3.8 m enclosed) though the deck is listed as an upgrade; pages still claim a "7-star energy rating" while the brochure says "energy assessment required"; FAQ says lock-up tiny houses from $45,000–$50,000 and turn-key from $85,000–$95,000 but the 1770 page says $59,500 / $109,000; full-size renders and floor plans; 3–5 real reviews + Google rating; site-cost ranges for a "What it costs" page.
 - Foundations guide: photos, then OK to merge to main.
 - DNS cutover checklist items.
