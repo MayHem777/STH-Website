@@ -23,7 +23,7 @@ specs:
   Sleeps: "4+"
   Bedroom: "Ground floor + loft"
   "Lock-Up from": "$80,000 incl. GST"
-  "Turn Key from": "$155,000 incl. GST"
+  "Turn Key from": "$145,000 incl. GST"
   Trailer: "4.5T ATM triple axle"
   Registration: "Road-registerable"
 ---
@@ -42,7 +42,7 @@ Custom triple axle trailer with VIN plate (4.5T ATM), Bluescope steel frame, Col
 
 - **Lock-Up** — Structure, cladding, roof, windows and doors installed. From $80,000 incl. GST.
 - **Shell** — Lock-Up plus electrical and plumbing rough-in. Price on application.
-- **Turn Key** — Fully finished and move-in ready. From $155,000 incl. GST.
+- **Turn Key** — Fully finished and move-in ready. From $145,000 incl. GST.
 
 *Note: Toilet not included. Options range from $400 to $8,000+.*
 

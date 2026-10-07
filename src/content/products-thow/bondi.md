@@ -23,7 +23,7 @@ specs:
   Sleeps: "2"
   Bedroom: "Single loft"
   "Lock-Up from": "$71,500 incl. GST"
-  "Turn Key from": "$135,000 incl. GST"
+  "Turn Key from": "$145,000 incl. GST"
   Trailer: "4.5T ATM triple axle"
   Registration: "Road-registerable"
 ---
@@ -44,7 +44,7 @@ Optional upgrades include solar systems, home automation, skylights, and single-
 
 - **Lock-Up** — Structure, cladding, roof, windows and doors installed. From $71,500 incl. GST.
 - **Shell** — Lock-Up plus electrical and plumbing rough-in. Price on application.
-- **Turn Key** — Fully finished and move-in ready. From $135,000 incl. GST.
+- **Turn Key** — Fully finished and move-in ready. From $145,000 incl. GST.
 
 *Note: Toilet not included. Options range from $400 to $8,000+.*
 
