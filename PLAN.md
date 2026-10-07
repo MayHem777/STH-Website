@@ -7,13 +7,19 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - DNS cutover (items in the global projects list; all with Mitch).
 - Foundations guide (`src/content/blog/how-foundations-work-for-modular-homes.md`, branch `blog-foundations-guide`): text final per Mitch 2026-10-02, linked from FAQ + delivery page. Next: add 2–4 photos (piles/piers, crane set-down, subfloor) + real hero image, then merge to main (needs Mitch's OK).
 - Gallery page still "Photos Coming Soon".
+- Site content upgrade (branch `site-content-upgrade` 1328be6, worktree `~/repos/STH-Website-content`, pushed 2026-10-07, NOT merged; preview site-content-upgrade.sth-website.pages.dev): modular prices, sizes, floor plans, renders and inclusions from the Oct 2026 brochure; priced range + how-it-works on the homepage. Still to do after Mitch's review: reviews on homepage, "What it costs" page (needs real site-cost ranges), compare table.
 
 ## Assumptions
 - 2026-10-02: Foundations post covers modular homes only (Mitch); FAQ + delivery page wording aligned to "screw piles or concrete bored piers".
 - 2026-10-02: Foundations piece is a blog post (matches the existing blog collection), written from scratch in our own words, inspired by ach.net.au's foundations article but copying none of its text or its build-specific numbers.
 - 2026-10-02: STH-specific facts not already on the site are marked [CONFIRM] rather than guessed.
 
+- 2026-10-07: Mitch OK'd publishing from-prices on the site. Source of truth is the Oct 2026 brochure (`public/downloads/sth-brochure.pdf`); the ex-factory disclaimer sits beside every price.
+- 2026-10-07: Fingal and Sunrise Beach House added as new model pages and Rio re-published, because all three are in the Oct 2026 brochure. Jacaranda changed to 2 bathrooms + separate laundry to match it. Office page copy now follows the brochure's Office (19.2 m²), replacing the older "Banksia Office" wording.
+- 2026-10-07: model photos and floor plans were extracted from the web-optimised brochure PDF (photos about 600 to 800 px wide); replace with full-size originals when Mitch supplies them.
+
 ## Waiting on Mitch
+- Site content upgrade review (preview link above), then OK to merge. Questions: Pandanus 51.3 m² looks like it includes the 12 m² deck (plan shows 10.5 × 3.8 m enclosed) though the deck is listed as an upgrade; pages still claim a "7-star energy rating" while the brochure says "energy assessment required"; FAQ says lock-up tiny houses from $45,000–$50,000 and turn-key from $85,000–$95,000 but the 1770 page says $59,500 / $109,000; full-size renders and floor plans; 3–5 real reviews + Google rating; site-cost ranges for a "What it costs" page.
 - Foundations guide: photos, then OK to merge to main.
 - DNS cutover checklist items.
 
