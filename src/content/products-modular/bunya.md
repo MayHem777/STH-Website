@@ -19,12 +19,12 @@ specs:
   Bathrooms: "1"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
-  Installation: "~1 week on site"
+  Installation: "~2 weeks on site"
 ---
 
 ## Bunya
 
-Step into your own personal sanctuary, where every corner is designed to embrace you in warmth and comfort. The Bunya is an intimate layout designed for tranquillity, with a bedroom, kitchen, living space, and bathroom — delivered and installed in approximately one week.
+Step into your own personal sanctuary, where every corner is designed to embrace you in warmth and comfort. The Bunya is an intimate layout designed for tranquillity, with a bedroom, kitchen, living space, and bathroom, with about two weeks on site: one to prepare footings and services, one to install and connect.
 
 ---
 

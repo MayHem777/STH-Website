@@ -14,19 +14,19 @@ features:
   - "Dual entry doors"
   - "Combined bathroom-laundry space"
   - "Energy-efficient — 7-star rating minimum"
-  - "Delivered and installed in ~1 week"
+  - "About 2 weeks on site, start to finish"
   - "QBCC licensed build — Class 1a"
 specs:
   Bedrooms: "2"
   Bathrooms: "1"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
-  Installation: "~1 week on site"
+  Installation: "~2 weeks on site"
 ---
 
 ## Jacaranda
 
-An airy open-plan living space that flows seamlessly from kitchen to lounge to dining. Natural textures, warm timber tones, dual entry doors, two bedrooms, and a combined bathroom-laundry space. Available as real photographs — not just renders. Delivered and installed in approximately one week.
+An airy open-plan living space that flows seamlessly from kitchen to lounge to dining. Natural textures, warm timber tones, dual entry doors, two bedrooms, and a combined bathroom-laundry space. Available as real photographs — not just renders. About two weeks on site: one to prepare footings and services, one to install and connect.
 
 ---
 

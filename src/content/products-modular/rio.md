@@ -22,12 +22,12 @@ specs:
   Bathrooms: "1"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
-  Installation: "~1 week on site"
+  Installation: "~2 weeks on site"
 ---
 
 ## Rio
 
-A beautifully designed 1-bedroom modular home that blends modern style with clever use of space. Open-plan layout with a bright, spacious feel — ideal for singles, couples, downsizers, or guest accommodation. Delivered and installed in approximately one week.
+A beautifully designed 1-bedroom modular home that blends modern style with clever use of space. Open-plan layout with a bright, spacious feel — ideal for singles, couples, downsizers, or guest accommodation. About two weeks on site: one to prepare footings and services, one to install and connect.
 
 ---
 

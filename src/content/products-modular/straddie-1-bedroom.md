@@ -20,12 +20,12 @@ specs:
   Bathrooms: "1"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
-  Installation: "~1 week on site"
+  Installation: "~2 weeks on site"
 ---
 
 ## Straddie (1 Bedroom)
 
-The perfect balance of comfort and practicality. The 1-bedroom Straddie emphasises integrated storage solutions and a functional layout for compact living — delivered and installed in approximately one week.
+The perfect balance of comfort and practicality. The 1-bedroom Straddie emphasises integrated storage solutions and a functional layout for compact living, with about two weeks on site: one to prepare footings and services, one to install and connect.
 
 ---
 

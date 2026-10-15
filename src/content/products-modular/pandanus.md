@@ -21,12 +21,12 @@ specs:
   Bathrooms: "1"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
-  Installation: "~1 week on site"
+  Installation: "~2 weeks on site"
 ---
 
 ## Pandanus
 
-A chic, open-plan space that feels warm and welcoming. Open-plan living, dining, and kitchen with private patio access. Optional side deck and ramp upgrade available. Delivered and installed in approximately one week.
+A chic, open-plan space that feels warm and welcoming. Open-plan living, dining, and kitchen with private patio access. Optional side deck and ramp upgrade available. About two weeks on site: one to prepare footings and services, one to install and connect.
 
 ---
 

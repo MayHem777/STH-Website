@@ -13,19 +13,19 @@ features:
   - "Full bathroom and laundry"
   - "Cosy breakfast bar"
   - "Energy-efficient — 7-star rating minimum"
-  - "Delivered and installed in ~1 week"
+  - "About 2 weeks on site, start to finish"
   - "QBCC licensed build — Class 1a"
 specs:
   Bedrooms: "2"
   Bathrooms: "1"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
-  Installation: "~1 week on site"
+  Installation: "~2 weeks on site"
 ---
 
 ## Daintree
 
-An attractive granny flat or secondary dwelling featuring a modern kitchenette with premium appliances, beautiful bench tops, sophisticated cabinetry, a cosy breakfast bar, two private bedrooms, a full bathroom, and laundry facilities. Delivered and installed in approximately one week.
+An attractive granny flat or secondary dwelling featuring a modern kitchenette with premium appliances, beautiful bench tops, sophisticated cabinetry, a cosy breakfast bar, two private bedrooms, a full bathroom, and laundry facilities. About two weeks on site: one to prepare footings and services, one to install and connect.
 
 ---
 
