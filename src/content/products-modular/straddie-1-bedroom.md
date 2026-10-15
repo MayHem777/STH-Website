@@ -34,7 +34,7 @@ specs:
   "Floor area": "39.9 m²"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
-  Installation: "~1 week on site"
+  Installation: "~2 weeks on site"
 ---
 
 ## Straddie — 1 Bedroom

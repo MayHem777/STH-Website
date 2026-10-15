@@ -44,7 +44,7 @@ specs:
   "Floor area": "81.6 m² or 88.8 m²"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
-  Installation: "~1 week on site"
+  Installation: "~2 weeks on site"
 ---
 
 ## Sunrise Beach House
