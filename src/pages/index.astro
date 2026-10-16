@@ -5,6 +5,7 @@ import ProductCard from '../components/ProductCard.astro';
 import CTAButton from '../components/CTAButton.astro';
 import { getCollection } from 'astro:content';
 import { FOUNDED_YEAR } from '../config/site';
+import { formatPrice, EX_FACTORY_NOTE } from '../lib/price';
 
 const thowProducts = (await getCollection('products-thow', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order)
@@ -30,6 +31,29 @@ const modularBedroomLinks = modularBedroomCounts.map((count) => {
 const modularProducts = [...modularStandalone, ...modularBedroomLinks]
   .sort((a, b) => a.order - b.order)
   .slice(0, 4);
+
+// Every priced modular model, cheapest first, linking to its own page
+const pricedModular = allModularProducts
+  .filter((p) => p.data.priceFrom)
+  .sort((a, b) => (a.data.priceFrom ?? 0) - (b.data.priceFrom ?? 0))
+  .map((p) => ({
+    title: p.data.bedrooms && allModularProducts.filter((o) => o.data.title === p.data.title).length > 1
+      ? `${p.data.title} ${p.data.bedrooms} Bedroom`
+      : p.data.title,
+    description: p.data.tagline ?? p.data.description,
+    href: p.data.bedrooms ? `/modular-homes/${p.data.bedrooms}-bedroom/${p.id}/` : `/modular-homes/${p.id}/`,
+    image: p.data.heroImage,
+    imageAlt: p.data.heroImageAlt,
+    price: `From ${formatPrice(p.data.priceFrom!)}`,
+    meta: p.data.area,
+  }));
+
+const processSteps = [
+  { title: 'Choose a design', text: 'Pick one of our layouts, modify one to suit, or have us design from scratch. We look at your site, access, zoning and overlays first.' },
+  { title: 'Approvals and certification', text: 'A private certifier handles building and plumbing approval. Engineering is designed from your soil test and wind rating.' },
+  { title: 'We build it in our factory', text: 'Your home is built under cover in Noosaville while site works and footings are prepared on your land.' },
+  { title: 'Install, connections and handover', text: 'We transport and install the finished home, connect services and walk you through every detail.' },
+];
 
 const class10aProducts = (await getCollection('products-class10a', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order);
@@ -104,8 +128,41 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
     </div>
   </section>
 
+  <!-- Modular range with prices -->
+  <section class="section priced-range">
+    <div class="container">
+      <div class="eyebrow">Modular range</div>
+      <h2>Every model, with its price</h2>
+      <p class="priced-range__intro">From compact studios and offices to two-bedroom homes. Each page has the floor plan and the full inclusions list.</p>
+      <div class="priced-range__grid">
+        {pricedModular.map((p) => (
+          <ProductCard {...p} />
+        ))}
+      </div>
+      <p class="priced-range__note">Prices include GST. {EX_FACTORY_NOTE}</p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section--surface process">
+    <div class="container">
+      <div class="eyebrow">How it works</div>
+      <h2>Your journey to a modular house</h2>
+      <ol class="process__steps">
+        {processSteps.map((step, i) => (
+          <li>
+            <span class="process__num" aria-hidden="true">{i + 1}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </li>
+        ))}
+      </ol>
+      <CTAButton href="/delivery/" variant="secondary">Delivery and installation</CTAButton>
+    </div>
+  </section>
+
   <!-- Class 10a promo section -->
-  <section class="section section--surface class10a-promo">
+  <section class="section class10a-promo">
     <div class="container">
       <div class="class10a-promo__header">
         <div>
@@ -165,6 +222,17 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
 </BaseLayout>
 
 <style>
+.priced-range h2, .process h2 { margin-block: 0.375rem 0.75rem; }
+.priced-range__intro { color: var(--color-text-muted); margin-bottom: 2rem; }
+.priced-range__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+.priced-range__note { margin-top: 1.5rem; font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.process__steps { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-block: 2rem; }
+.process__steps li { display: flex; flex-direction: column; gap: 0.5rem; }
+.process__num { width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--color-primary); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+.process__steps h3 { font-size: var(--font-size-xl); }
+.process__steps p { color: var(--color-text-muted); line-height: 1.6; font-size: var(--font-size-sm); }
+@media (max-width: 1100px) { .priced-range__grid, .process__steps { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .priced-range__grid, .process__steps { grid-template-columns: 1fr; } }
 .product-lines__grid {
   display: grid;
   grid-template-columns: 1fr auto 1fr;

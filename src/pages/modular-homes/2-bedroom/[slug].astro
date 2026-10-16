@@ -2,6 +2,8 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Hero from '../../../components/Hero.astro';
 import CTAButton from '../../../components/CTAButton.astro';
+import ModelPrice from '../../../components/ModelPrice.astro';
+import ModelExtras from '../../../components/ModelExtras.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -21,6 +23,7 @@ const productSchema = {
   offers: {
     '@type': 'Offer',
     url: Astro.url.href,
+    ...(product.data.priceFrom && { price: product.data.priceFrom, priceCurrency: 'AUD' }),
     seller: { '@type': 'Organization', name: 'Sunshine Tiny Houses' },
   },
 };
@@ -42,6 +45,13 @@ const productSchema = {
     ctaHref="/contact/"
     secondaryCtaText="View All 2 Bedroom Models"
     secondaryCtaHref="/modular-homes/2-bedroom/"
+  />
+
+  <ModelPrice
+    priceFrom={product.data.priceFrom}
+    area={product.data.area}
+    size={product.data.size}
+    bedrooms={product.data.bedrooms}
   />
 
   <section class="section">
@@ -68,6 +78,14 @@ const productSchema = {
       </aside>
     </div>
   </section>
+
+  <ModelExtras
+    title={product.data.title}
+    upgrades={product.data.upgrades}
+    floorPlans={product.data.floorPlans}
+    gallery={product.data.gallery}
+    models={product.data.models}
+  />
 
 </BaseLayout>
 

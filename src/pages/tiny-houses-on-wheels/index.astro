@@ -34,6 +34,8 @@ const products = (await getCollection('products-thow', ({ data }) => !data.draft
             image={p.data.heroImage}
             imageAlt={p.data.heroImageAlt ?? p.data.title}
             badge={p.data.badge}
+            price={p.data.specs?.['Turn Key from'] ? `Turn key from ${p.data.specs['Turn Key from'].replace(' incl. GST', '')}` : undefined}
+            meta={p.data.specs?.Length}
           />
         ))}
       </div>

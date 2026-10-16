@@ -6,8 +6,10 @@ export interface Props {
   image?: string;
   imageAlt?: string;
   badge?: string;
+  price?: string;
+  meta?: string;
 }
-const { title, description, href, image, imageAlt, badge } = Astro.props;
+const { title, description, href, image, imageAlt, badge, price, meta } = Astro.props;
 ---
 
 <a href={href} class="product-card">
@@ -21,12 +23,21 @@ const { title, description, href, image, imageAlt, badge } = Astro.props;
   </div>
   <div class="product-card__body">
     <h3 class="product-card__title">{title}</h3>
+    {(price || meta) && (
+      <p class="product-card__facts">
+        {price && <strong>{price}</strong>}
+        {meta && <span>{meta}</span>}
+      </p>
+    )}
     <p class="product-card__desc">{description}</p>
     <span class="product-card__cta">Learn more &rarr;</span>
   </div>
 </a>
 
 <style>
+.product-card__facts { display: flex; flex-wrap: wrap; gap: 0.125rem 0.75rem; align-items: baseline; font-size: var(--font-size-sm); margin-bottom: 0.5rem; }
+.product-card__facts strong { color: var(--color-text); }
+.product-card__facts span { color: var(--color-text-muted); }
 .product-card {
   display: flex;
   flex-direction: column;

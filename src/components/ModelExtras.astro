@@ -1,0 +1,105 @@
+---
+import Inclusions from './Inclusions.astro';
+import { formatPrice } from '../lib/price';
+
+export interface Props {
+  title: string;
+  upgrades?: string;
+  floorPlans?: { src: string; label?: string }[];
+  gallery?: { src: string; alt: string }[];
+  models?: {
+    name: string; blurb: string; priceFrom?: number; area?: string; size?: string;
+    upgrades?: string; image?: string; imageAlt?: string; floorPlan?: string;
+  }[];
+}
+const { title, upgrades, floorPlans = [], gallery = [], models = [] } = Astro.props;
+---
+
+{models.length > 0 && (
+  <section class="section model-list">
+    <div class="container">
+      <h2>The {title.toLowerCase()} models</h2>
+      {models.map((m) => (
+        <article class="model-row" id={m.name.toLowerCase()}>
+          <div class="model-row__media">
+            {m.image && <img src={m.image} alt={m.imageAlt ?? m.name} width="614" height="389" loading="lazy" />}
+          </div>
+          <div class="model-row__body">
+            <h3>{m.name}</h3>
+            <p class="model-row__facts">
+              {m.priceFrom && <strong>From {formatPrice(m.priceFrom)} incl. GST</strong>}
+              {m.area && <span>{m.area}</span>}
+              {m.size && <span>{m.size}</span>}
+            </p>
+            <p>{m.blurb}</p>
+            {m.upgrades && <p class="model-row__upgrades"><strong>Optional upgrades:</strong> {m.upgrades}</p>}
+            {m.floorPlan && <p><a class="plan-link" href={m.floorPlan}>View the {m.name} floor plan</a></p>}
+          </div>
+          {m.floorPlan && (
+            <a class="model-row__plan" href={m.floorPlan}>
+              <img src={m.floorPlan} alt={`${m.name} floor plan${m.size ? `, ${m.size}` : ''}`} width="1600" height="1131" loading="lazy" />
+            </a>
+          )}
+        </article>
+      ))}
+    </div>
+  </section>
+)}
+
+{gallery.length > 0 && (
+  <section class="section model-gallery">
+    <div class="container">
+      <h2>Inside and out</h2>
+      <div class="model-gallery__grid">
+        {gallery.map((g) => (
+          <a href={g.src}><img src={g.src} alt={g.alt} width="780" height="494" loading="lazy" /></a>
+        ))}
+      </div>
+      <p class="model-gallery__note">Images are artist's renders and may show optional upgrades.</p>
+    </div>
+  </section>
+)}
+
+{floorPlans.length > 0 && (
+  <section class="section floor-plans" id="floor-plan">
+    <div class="container">
+      <h2>Floor plan{floorPlans.length > 1 ? 's' : ''}</h2>
+      {floorPlans.map((p) => (
+        <figure class="floor-plan">
+          <a href={p.src}><img src={p.src} alt={p.label ?? `${title} floor plan`} width="1600" height="1131" loading="lazy" /></a>
+          {p.label && <figcaption>{p.label}. Tap the plan to enlarge.</figcaption>}
+        </figure>
+      ))}
+      {upgrades && <p class="floor-plans__upgrades"><strong>Optional upgrades:</strong> {upgrades}</p>}
+      <p class="floor-plans__custom">Want to change the layout? We can modify any of our plans, or design from scratch. <a href="/contact/">Talk to us</a>.</p>
+    </div>
+  </section>
+)}
+
+<Inclusions />
+
+<style>
+.model-list h2, .model-gallery h2, .floor-plans h2 { margin-bottom: 1.5rem; }
+.model-row { display: grid; grid-template-columns: 1fr 1.2fr; gap: 1.5rem 2.5rem; padding-block: 2rem; border-top: 1px solid var(--color-border); scroll-margin-top: 6rem; }
+.model-row__media img { width: 100%; height: auto; border-radius: var(--radius-card); }
+.model-row__body { display: flex; flex-direction: column; gap: 0.75rem; line-height: 1.65; }
+.model-row__body h3 { font-size: var(--font-size-2xl); }
+.model-row__facts { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; align-items: baseline; }
+.model-row__facts strong { font-size: var(--font-size-xl); }
+.model-row__facts span { color: var(--color-text-muted); }
+.model-row__upgrades { font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.model-row__plan { grid-column: 1 / -1; display: block; border: 1px solid var(--color-border); border-radius: var(--radius-card); overflow: hidden; background: #fff; }
+.model-row__plan img { width: 100%; height: auto; display: block; }
+.plan-link { color: var(--color-primary); font-weight: 600; text-decoration: underline; }
+.model-gallery { padding-bottom: 0; }
+.model-gallery__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.model-gallery__grid img { width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius-card-sm); display: block; }
+.model-gallery__note { margin-top: 0.75rem; font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.floor-plan { margin: 0 0 1.5rem; }
+.floor-plan a { display: block; border: 1px solid var(--color-border); border-radius: var(--radius-card); overflow: hidden; background: #fff; }
+.floor-plan img { width: 100%; height: auto; display: block; }
+.floor-plan figcaption { margin-top: 0.5rem; font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.floor-plans__upgrades, .floor-plans__custom { line-height: 1.6; margin-top: 0.75rem; }
+.floor-plans__custom a { color: var(--color-primary); font-weight: 600; text-decoration: underline; }
+@media (max-width: 800px) { .model-row { grid-template-columns: 1fr; } }
+</style>
