@@ -55,6 +55,11 @@ const { class: className, ...seoProps } = Astro.props;
           f.async = true;
           f.src = 'https://connect.facebook.net/en_US/fbevents.js';
           document.head.appendChild(f);
+          // HubSpot tracking code (portal 442170069, ap1), same as the live Squarespace site
+          var h = document.createElement('script');
+          h.async = true; h.id = 'hs-script-loader';
+          h.src = 'https://js-ap1.hs-scripts.com/442170069.js';
+          document.head.appendChild(h);
         }
         ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) {
           addEventListener(ev, loadTrackers, { once: true, passive: true });

@@ -1,5 +1,6 @@
 ---
 import SEOHead from '../components/SEOHead.astro';
+import LeadTracking from '../components/LeadTracking.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -38,6 +39,9 @@ const { title, description, noindex = true, canonical } = Astro.props;
       <img height="1" width="1" style="display:none"
         src="https://www.facebook.com/tr?id=1050187050868855&ev=PageView&noscript=1" />
     </noscript>
+    <!-- HubSpot tracking code (portal 442170069, ap1): sets the hubspotutk cookie the forms send as hutk -->
+    <script is:inline type="text/javascript" id="hs-script-loader" async defer src="https://js-ap1.hs-scripts.com/442170069.js"></script>
+    <LeadTracking />
     <slot name="head-extra" />
   </head>
   <body>

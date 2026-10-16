@@ -2,7 +2,7 @@
 title: "Trailers"
 tagline: "Queensland-built trailers for tiny homes."
 description: "Our custom-engineered trailers are purpose-built for tiny houses on wheels. Designed and manufactured in Queensland to handle Australian roads and conditions."
-draft: false
+draft: true  # Trailers now live on www.tinytrailers.com.au (Mitch, 2026-10-16)
 order: 9
 heroImage: ""
 heroImageAlt: "Sunshine Tiny Houses custom trailer"
