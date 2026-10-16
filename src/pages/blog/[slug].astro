@@ -17,7 +17,8 @@ const updatedDate = post.data.updatedDate?.toLocaleDateString('en-AU', {
 });
 
 const SITE_URL = 'https://www.sunshinetinyhouses.com.au';
-const postImage = post.data.ogImage ?? post.data.heroImage;
+const heroPic = photo(post.data.heroImage, `blog/${post.id}/hero`);
+const postImage = post.data.ogImage ?? heroPic.src;
 const blogPostingSchema = {
   '@context': 'https://schema.org',
   '@type': 'BlogPosting',
@@ -34,21 +35,23 @@ const blogPostingSchema = {
   ...(postImage && { image: postImage }),
   mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.id}/` },
 };
+import { photo } from '../../lib/photos';
 ---
 
 <BaseLayout
   title={`${post.data.title} | Sunshine Tiny Houses`}
   description={post.data.description}
-  ogImage={post.data.ogImage ?? post.data.heroImage}
+  ogImage={postImage}
   schema={blogPostingSchema}
 >
 
   <article>
 
-    {post.data.heroImage && (
+    {heroPic.src && (
       <div class="post-hero">
         <img
-          src={post.data.heroImage}
+          src={heroPic.src}
+          data-spot={heroPic.n}
           alt={post.data.heroImageAlt ?? post.data.title}
           class="post-hero__img"
           loading="eager"

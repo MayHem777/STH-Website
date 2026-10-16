@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import CTAButton from '../../components/CTAButton.astro';
+import SpotGallery from '../../components/SpotGallery.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -34,12 +35,13 @@ const breadcrumbSchema = {
     { '@type': 'ListItem', position: 3, name: product.data.title, item: Astro.url.href },
   ],
 };
+import { photo } from '../../lib/photos';
 ---
 
 <BaseLayout
   title={`${product.data.title} Tiny House on Wheels | Sunshine Tiny Houses`}
   description={product.data.description}
-  ogImage={product.data.ogImage}
+  ogImage={product.data.ogImage ?? photo(product.data.heroImage, `thow/${product.id}/main`).src}
   schema={[productSchema, breadcrumbSchema]}
 >
 
@@ -47,6 +49,7 @@ const breadcrumbSchema = {
     title={product.data.title}
     subtitle={product.data.tagline}
     image={product.data.heroImage}
+    spotKey={`thow/${product.id}/main`}
     imageAlt={product.data.heroImageAlt ?? product.data.title}
     ctaText="Contact Now"
     ctaHref="/contact/"
@@ -94,6 +97,8 @@ const breadcrumbSchema = {
 
     </div>
   </section>
+
+  <SpotGallery prefix={`thow/${product.id}/g`} title={`${product.data.title} photos`} alt={`${product.data.title} tiny house on wheels, photo`} />
 
 </BaseLayout>
 

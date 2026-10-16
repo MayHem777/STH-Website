@@ -10,6 +10,7 @@ export interface Props {
   imageAlt?: string;
   overlay?: boolean;
   centered?: boolean;
+  spotKey?: string;
 }
 
 const {
@@ -23,13 +24,16 @@ const {
   imageAlt = '',
   overlay = true,
   centered = false,
+  spotKey,
 } = Astro.props;
+import { photo } from '../lib/photos';
+const pic = photo(image, spotKey);
 ---
 
-<section class:list={['hero', { 'hero--has-image': image, 'hero--centered': centered }]}>
-  {image && (
+<section class:list={['hero', { 'hero--has-image': pic.src, 'hero--centered': centered }]}>
+  {pic.src && (
     <div class="hero__bg" aria-hidden="true">
-      <img src={image} alt={imageAlt} width="1440" height="700" loading="eager" fetchpriority="high" />
+      <img src={pic.src} data-spot={pic.n} alt={imageAlt} width="1440" height="700" loading="eager" fetchpriority="high" />
       {overlay && <div class="hero__overlay"></div>}
     </div>
   )}

@@ -1,0 +1,69 @@
+---
+// Lead attribution + ad-conversion flag for the ad landing pages.
+// A port of the block that runs in the live landing-page gists (repo sth-tracking-fix, CLAUDE.md
+// "Conversion logic", decided 2026-09-23 — do not change without Mitch):
+//   - UTM + click ids from the landing URL are kept in sessionStorage 'sth_attr' and added to the
+//     pageUri HubSpot receives (never sent as fields: no such contact properties exist).
+//   - A QUALIFIED lead = budget $125k – $150k and above. On a successful submit the landing page
+//     writes sessionStorage 'sth_conv'; /thank-you reads it once and fires Meta Lead + the Google
+//     Ads conversion with one shared event id. Any other submit removes the flag.
+//   - Redirects: '<$100k' -> /thank-you-pricing-guide · qualified -> /thank-you ·
+//     everything else -> /thank-you?notag=1.
+// The landing pages must NOT call fbq('track','Lead') themselves.
+---
+<script is:inline>
+(function () {
+  'use strict';
+  var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'fbclid', 'gclid'];
+  /* Values must match the budget <option>s exactly (en dashes). */
+  var QUALIFIED = ['$125k – $150k', '$150k – $175k', '$175k – $200k', '$200k – $250k', '$250k+'];
+
+  function capture() {
+    try {
+      var qs = new URLSearchParams(window.location.search), found = {}, any = false;
+      KEYS.forEach(function (k) { var v = qs.get(k); if (v) { found[k] = v; any = true; } });
+      if (any) { found.landing_url = window.location.href; found.ts = Date.now(); sessionStorage.setItem('sth_attr', JSON.stringify(found)); }
+    } catch (e) {}
+  }
+  function attribution() {
+    try { return JSON.parse(sessionStorage.getItem('sth_attr')) || {}; } catch (e) { return {}; }
+  }
+  function pageUri(attr) {
+    try {
+      var u = new URL(window.location.href);
+      KEYS.forEach(function (k) { if (attr[k] && !u.searchParams.has(k)) u.searchParams.set(k, attr[k]); });
+      return u.toString();
+    } catch (e) { return window.location.href; }
+  }
+  function uuid() {
+    if (window.crypto && typeof crypto.randomUUID === 'function') { return crypto.randomUUID(); }
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0; return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+  }
+
+  window.STHLead = {
+    /* HubSpot Forms API context: current URL plus any stored UTM/click ids, and the hubspotutk cookie. */
+    hubspotContext: function () {
+      var ctx = { pageUri: pageUri(attribution()), pageName: document.title };
+      var m = document.cookie.match(/hubspotutk=([^;]+)/);
+      if (m) { ctx.hutk = m[1]; }
+      return ctx;
+    },
+    /* Sets or clears the conversion flag and returns where to send the visitor. source: 'meta' | 'google'. */
+    conversionRedirect: function (budget, source) {
+      var qualified = QUALIFIED.indexOf(budget) !== -1;
+      try {
+        if (qualified) {
+          sessionStorage.setItem('sth_conv', JSON.stringify({ event_id: uuid(), budget: budget, source: source, ts: Date.now() }));
+        } else {
+          sessionStorage.removeItem('sth_conv');
+        }
+      } catch (e) {}
+      if (budget === '<$100k') { return '/thank-you-pricing-guide/'; }
+      return qualified ? '/thank-you/' : '/thank-you/?notag=1';
+    }
+  };
+  capture();
+})();
+</script>

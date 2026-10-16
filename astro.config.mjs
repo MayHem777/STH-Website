@@ -13,7 +13,10 @@ export default defineConfig({
         !page.includes('/meta-ads-offer/') &&
         !page.includes('/privacy-policy/') &&
         !page.includes('/contact/thank-you/') &&
-        !page.includes('/404/'),
+        !page.includes('/thank-you/') &&
+        !page.includes('/thank-you-pricing-guide/') &&
+        !page.includes('/404/') &&
+        !page.includes('/photo-spots/'),
     }),
   ],
 });

@@ -1,4 +1,6 @@
 ---
+import SpotLabels from '../components/SpotLabels.astro';
+import LeadTracking from '../components/LeadTracking.astro';
 import SEOHead from '../components/SEOHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -55,6 +57,11 @@ const { class: className, ...seoProps } = Astro.props;
           f.async = true;
           f.src = 'https://connect.facebook.net/en_US/fbevents.js';
           document.head.appendChild(f);
+          // HubSpot tracking code (portal 442170069, ap1), same as the live Squarespace site
+          var h = document.createElement('script');
+          h.async = true; h.id = 'hs-script-loader';
+          h.src = 'https://js-ap1.hs-scripts.com/442170069.js';
+          document.head.appendChild(h);
         }
         ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (ev) {
           addEventListener(ev, loadTrackers, { once: true, passive: true });
@@ -64,7 +71,7 @@ const { class: className, ...seoProps } = Astro.props;
     </script>
     <noscript>
       <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1050187050868855&ev=PageView&noscript=1" />
+        src="https://www.facebook.com/tr?id=1050187050868855&ev=PageView&noscript=1" alt="" />
     </noscript>
   </head>
   <body class={className}>
@@ -74,6 +81,8 @@ const { class: className, ...seoProps } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <LeadTracking />
+    <SpotLabels />
   </body>
 </html>
 

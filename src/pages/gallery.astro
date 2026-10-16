@@ -1,5 +1,8 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SpotGallery from '../components/SpotGallery.astro';
+import { spotsWithPrefix, SHOW_SPOT_NUMBERS } from '../lib/photos';
+const hasPhotos = SHOW_SPOT_NUMBERS || spotsWithPrefix('gallery/').some((s) => s.src);
 ---
 
 <BaseLayout
@@ -16,6 +19,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <SpotGallery prefix="gallery/" alt="Sunshine Tiny Houses build, photo" />
+
+  {!hasPhotos && (
   <section class="section">
     <div class="container gallery-empty">
       <div class="gallery-empty__icon">&#x1F4F7;</div>
@@ -27,6 +33,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+  )}
 
 </BaseLayout>
 

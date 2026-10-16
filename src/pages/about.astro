@@ -38,70 +38,102 @@ if (reviews.length === 0) {
     { author_name: 'N T', rating: 5, text: "We recently purchased a custom build tiny house on wheels from Nat and Mitch and are thrilled with it. The quality of the finishes, attention to detail and customer service is amazing. Exceptional service and product. Thanks Nat and Mitch." },
   ];
 }
+import { spot } from '../lib/photos';
+const teamPic = spot('about/team', '/images/about-workshop.webp');
 ---
 
 <BaseLayout
   title="About Us | Sunshine Tiny Houses"
-  description="Meet Mitch and Nat — QBCC-licensed builders with 20+ years' experience crafting tiny homes and modular builds on the Sunshine Coast, QLD."
+  description="Sunshine Tiny Houses is a QBCC licensed Queensland builder. We design, approve, build and deliver tiny houses and modular homes, managing council, certifiers and every trade from concept to completion."
   canonical="https://www.sunshinetinyhouses.com.au/about/"
 >
 
   <section class="page-hero">
     <div class="container">
-      <p class="eyebrow">Our Story</p>
-      <h1>About Sunshine Tiny Houses</h1>
-      <p class="page-hero__sub">Queensland-licensed builders with a passion for crafting unique, high-quality tiny homes.</p>
+      <p class="eyebrow eyebrow--dark">About Sunshine Tiny Houses</p>
+      <h1>A Queensland licensed builder that handles your project <em>from concept to completion</em></h1>
+      <p class="page-hero__sub">We design, approve, build and deliver tiny houses on wheels, modular homes and granny flats from our factory in Noosaville. One builder, one contract and one point of contact, from the first sketch to handing you the keys.</p>
+      <ul class="hero-badges">
+        <li><b>QBCC</b> Licence 15205110</li>
+        <li>Fully licensed &amp; insured</li>
+        <li>20+ years building in Queensland</li>
+      </ul>
     </div>
   </section>
 
   <section class="section">
     <div class="container about-intro">
       <div class="about-intro__text">
-        <h2>Welcome to Sunshine Tiny Houses</h2>
-        <p>Our passion for crafting unique, quality tiny houses meets your dream of sustainable, affordable living. Our journey began well before the recent economic shifts that have spotlighted the need for cost-effective housing solutions — fuelled by the global trend towards minimalism and efficient living spaces.</p>
-        <p>Setting ourselves apart from mass production, our ethos revolves around quality over quantity. We don't just build houses — we create homes designed to last a lifetime. Our commitment to excellence is evident in every tiny house we construct, ensuring each project is handled with the utmost care and precision.</p>
-      </div>
-      <div class="about-intro__stats">
-        <div class="stat-card">
-          <span class="stat-card__num">20+</span>
-          <span class="stat-card__label">Years of local building experience</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-card__num">2020</span>
-          <span class="stat-card__label">Founded on the Sunshine Coast</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-card__num">QBCC</span>
-          <span class="stat-card__label">Licensed Builder #15205110</span>
+        <p class="eyebrow">Who we are</p>
+        <h2>Mitch and Nat, and a team of local tradespeople</h2>
+        <p>Sunshine Tiny Houses is run by Mitch and Nat Croft. Mitch is a builder with more than 20 years of building and carpentry experience on the Sunshine Coast, and Nat looks after design and keeps every client informed from start to finish.</p>
+        <p>We are a licensed building company, not a kit supplier or a reseller. Every home is built by our own team in our Noosaville factory, to your design, and we stay responsible for it all the way through approvals, delivery and installation.</p>
+        <div class="facts">
+          <div class="fact"><strong>2020</strong><span>Founded on the Sunshine Coast</span></div>
+          <div class="fact"><strong>20+</strong><span>Years of local building experience</span></div>
+          <div class="fact"><strong>Australia</strong><span>Wide delivery available</span></div>
         </div>
       </div>
+      <img class="about-intro__img" src={teamPic.src} data-spot={teamPic.n} width="1079" height="1065" alt="Sunshine Tiny Houses team at work on a tiny house in the Noosaville factory" loading="lazy" />
     </div>
   </section>
 
   <section class="section section--surface">
     <div class="container">
-      <p class="eyebrow">What We Do</p>
-      <h2>Custom-Built Tiny Homes Tailored to You</h2>
+      <p class="eyebrow">How we work</p>
+      <h2>We manage every step, so you don't have to</h2>
+      <p class="lead">Most people building a tiny house or modular home have never dealt with councils, certifiers or a building site before. You don't need to. We run the whole project and tell you when we need a decision or a signature.</p>
+      <ol class="steps">
+        <li class="step"><h3>Concept &amp; design</h3><p>We start with how you want to live, then design the home around you and your block. Custom layouts, your choice of finishes, and plans you approve before anything is built.</p></li>
+        <li class="step"><h3>Site check &amp; clear quote</h3><p>We look at your property, access, services and your council's rules, then give you a clear quote covering the build, delivery, installation and approvals.</p></li>
+        <li class="step"><h3>Approvals handled</h3><p>We prepare and lodge the paperwork with the building certifier and council, and engage the engineers, town planner and energy assessor where your project needs them.</p></li>
+        <li class="step"><h3>Factory build</h3><p>Your home is built under cover in our Noosaville factory by licensed tradespeople, with the floor system and framing inspected and certified by our structural engineer.</p></li>
+        <li class="step"><h3>Delivery &amp; installation</h3><p>We organise transport, cranage and site works, set the home on its footings or site, and have licensed plumbers and electricians connect it to services.</p></li>
+        <li class="step"><h3>Certified handover</h3><p>Final inspections and certification, a walk-through of your new home, and the keys in your hand. We are still here after handover if you need us.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container coord">
+      <div>
+        <p class="eyebrow">One point of contact</p>
+        <h2>Everyone your project needs, coordinated by us</h2>
+        <p>A home on your block involves a long list of approvals, consultants and trades. Instead of you chasing each one, we book them, brief them and make sure their work lines up with the build.</p>
+        <p class="callout">Your only role is to make the decisions and sign where we ask you to. We handle everything else.</p>
+      </div>
+      <ul class="who">
+        <li>Council approvals</li>
+        <li>Private building certifier</li>
+        <li>Structural &amp; civil engineers</li>
+        <li>Town planner</li>
+        <li>Energy assessor</li>
+        <li>Plumbing approval</li>
+        <li>Licensed plumbers &amp; drainers</li>
+        <li>Licensed electricians</li>
+        <li>Certified waterproofing</li>
+        <li>Septic design (where needed)</li>
+        <li>Transport &amp; crane</li>
+        <li>Site works &amp; connections</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section licensed">
+    <div class="container">
+      <p class="eyebrow eyebrow--dark">Why it matters</p>
+      <h2>Built by a licensed Queensland building company</h2>
       <div class="about-pillars">
-        <div class="pillar">
-          <h3>Unmatched Local Expertise</h3>
-          <p>With over 20 years of local building and carpentry experience, our Queensland-based team brings expertise and flexibility to every project. We collaborate closely with you, incorporating your desired materials and designs to bring your vision to life.</p>
-        </div>
-        <div class="pillar">
-          <h3>Fully Licensed &amp; Insured</h3>
-          <p>As a fully licensed and insured building company, we uphold the highest standards in every aspect of our builds, employing only skilled, licensed tradespeople. We deliver a superior product at a competitive price — every time.</p>
-        </div>
-        <div class="pillar">
-          <h3>Australia-Wide Delivery</h3>
-          <p>Our services extend beyond Queensland. We can arrange transport Australia-wide, ensuring your dream tiny house is delivered right to your doorstep. Contact us to discuss flexible, affordable options.</p>
-        </div>
+        <div class="pillar"><h3>QBCC licensed</h3><p>We hold a Queensland Building and Construction Commission licence (15205110). You are dealing with a builder who is accountable for the work, not a middleman.</p></div>
+        <div class="pillar"><h3>Built to the code</h3><p>Our modular homes are designed and certified as Class 1a dwellings under the Building Code of Australia, and every home is built by skilled, licensed tradespeople.</p></div>
+        <div class="pillar"><h3>Quality over quantity</h3><p>We are not a production line. Each home is built to last a lifetime, with the care and attention to detail our clients keep mentioning in their reviews.</p></div>
       </div>
     </div>
   </section>
 
   <section class="section section--dark">
     <div class="container">
-      <p class="eyebrow" style="color: rgba(255,255,255,.45)">What Our Customers Say</p>
+      <p class="eyebrow eyebrow--dark">What our clients say</p>
       <h2>Rated {rating} Stars &mdash; {totalRatings > 0 ? `${totalRatings} Google Reviews` : 'Google Reviews'}</h2>
       <div class="reviews-grid">
         {reviews.map((r) => (
@@ -117,10 +149,10 @@ if (reviews.length === 0) {
 
   <section class="section">
     <div class="container about-cta">
-      <h2>Ready to Start Your Tiny House Journey?</h2>
-      <p>Get in touch with Mitch and Nat today for a free, no-obligation conversation about your project.</p>
+      <h2>Let's talk about your project</h2>
+      <p>Tell us what you have in mind and where you want to put it. We'll tell you honestly what's possible, what it involves and what it costs.</p>
       <div class="about-cta__btns">
-        <a href="/contact/" class="btn btn--primary">Get a Free Quote</a>
+        <a href="/contact/" class="btn btn--primary">Get in touch</a>
         <a href="tel:0753158365" class="btn btn--outline">(07) 5315 8365</a>
       </div>
     </div>
@@ -132,88 +164,78 @@ if (reviews.length === 0) {
 .page-hero {
   background: var(--color-surface-dark);
   color: #fff;
-  padding: 4rem 0 3rem;
+  padding: 4.5rem 0 3.5rem;
 }
-.page-hero h1 { color: #fff; }
-.page-hero__sub { color: rgba(255,255,255,.7); margin-top: .75rem; font-size: 1.1rem; max-width: 560px; }
+.page-hero h1 { color: #fff; max-width: 820px; font-size: var(--font-size-5xl); }
+.page-hero h1 em { font-style: normal; color: var(--color-accent); }
+.page-hero__sub { color: rgba(255,255,255,.78); margin-top: 1rem; font-size: 1.1rem; max-width: 680px; }
+.eyebrow--dark { color: var(--color-accent); background: rgba(200,169,110,.12); }
+.hero-badges { list-style: none; padding: 0; margin: 1.75rem 0 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+.hero-badges li { border: 1px solid rgba(255,255,255,.25); border-radius: 99px; padding: .45rem 1rem; font-size: .9rem; font-weight: 600; }
+.hero-badges b { color: var(--color-accent); }
+
+h2 { margin-bottom: 1rem; }
+.lead { color: var(--color-text-body); max-width: 720px; font-size: 1.05rem; }
 
 /* Intro */
-.about-intro {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 4rem;
-  align-items: start;
-}
-.about-intro__text h2 { margin-bottom: 1rem; }
+.about-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; }
 .about-intro__text p + p { margin-top: 1rem; }
-.about-intro__stats { display: flex; flex-direction: column; gap: 1rem; }
-.stat-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 1.25rem 1.5rem;
-  text-align: center;
-}
-.stat-card__num { display: block; font-size: 2rem; font-weight: 800; color: var(--color-primary); line-height: 1; margin-bottom: .3rem; font-family: var(--font-heading); }
-.stat-card__label { font-size: .82rem; color: var(--color-text-body); }
+.about-intro__img { width: 100%; height: auto; border-radius: 14px; display: block; }
+.facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-top: 1.75rem; }
+.fact { background: var(--color-surface); border-radius: 12px; padding: 1rem .75rem; text-align: center; }
+.fact strong { display: block; font-size: 1.5rem; font-weight: 800; color: var(--color-primary); line-height: 1.1; font-family: var(--font-heading); }
+.fact span { font-size: .82rem; color: var(--color-text-body); }
 
-/* Pillars */
-.about-pillars {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 2.5rem;
-}
+/* Steps */
+.steps { list-style: none; padding: 0; margin: 2.25rem 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; counter-reset: step; }
+.step { background: #fff; border: 1px solid var(--color-border); border-radius: 14px; padding: 1.6rem 1.4rem; }
+.step::before { counter-increment: step; content: counter(step); display: inline-flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 50%; background: var(--color-primary); color: #fff; font-weight: 800; margin-bottom: .9rem; }
+.step h3 { font-size: 1.15rem; margin-bottom: .5rem; }
+.step p { font-size: .95rem; color: var(--color-text-body); }
+
+/* Coordination */
+.coord { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: start; }
+.coord p + p { margin-top: 1rem; }
+.who { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
+.who li { background: var(--color-surface); border-radius: 10px; padding: .75rem .9rem .75rem 2.5rem; position: relative; font-weight: 600; font-size: .95rem; }
+.who li::before { content: ""; position: absolute; left: 15px; top: 50%; width: 12px; height: 7px; border-left: 3px solid var(--color-primary); border-bottom: 3px solid var(--color-primary); transform: translateY(-70%) rotate(-45deg); }
+.callout { border-left: 4px solid var(--color-accent); padding: .25rem 0 .25rem 1rem; font-weight: 600; }
+
+/* Licensed */
+.licensed { background: var(--color-primary); color: #fff; }
+.licensed h2, .licensed h3 { color: #fff; }
+.about-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
 .pillar h3 { margin-bottom: .6rem; }
+.pillar p { color: rgba(255,255,255,.85); }
 
 /* Reviews */
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-  margin-top: 2rem;
-}
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2rem; }
 .reviews-grid .review-card:nth-child(4) { grid-column: 1 / 2; }
 .reviews-grid .review-card:nth-child(5) { grid-column: 2 / 3; }
-.review-card {
-  background: rgba(255,255,255,.07);
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 12px;
-  padding: 1.5rem;
-}
+.review-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 1.5rem; }
 .review-card__stars { color: var(--color-accent); letter-spacing: 2px; margin-bottom: .75rem; }
 .review-card blockquote { font-style: italic; font-size: .92rem; line-height: 1.75; color: rgba(255,255,255,.85); margin-bottom: 1rem; }
-.review-card__author { font-size: .8rem; color: rgba(255,255,255,.45); font-weight: 600; }
+.review-card__author { font-size: .8rem; color: rgba(255,255,255,.55); font-weight: 600; }
 
 /* CTA */
 .about-cta { text-align: center; }
-.about-cta h2 { margin-bottom: .75rem; }
-.about-cta p { color: var(--color-text-body); margin-bottom: 2rem; }
+.about-cta p { color: var(--color-text-body); margin: 0 auto 2rem; max-width: 600px; }
 .about-cta__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-.btn {
-  display: inline-block;
-  padding: .9rem 2rem;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1rem;
-  font-family: var(--font-heading);
-  cursor: pointer;
-  transition: background .2s, transform .15s;
-  text-align: center;
-}
+.btn { display: inline-block; padding: .9rem 2rem; border-radius: 8px; font-weight: 700; font-size: 1rem; font-family: var(--font-heading); cursor: pointer; transition: background .2s, transform .15s; text-align: center; }
 .btn--primary { background: var(--color-primary); color: #fff; }
 .btn--primary:hover { background: var(--color-primary-hover); transform: translateY(-2px); }
 .btn--outline { background: transparent; color: var(--color-primary); border: 2px solid var(--color-primary); }
 .btn--outline:hover { background: var(--color-primary); color: #fff; }
 
 @media (max-width: 900px) {
-  .about-intro { grid-template-columns: 1fr; gap: 2rem; }
-  .about-pillars { grid-template-columns: 1fr; gap: 1.5rem; }
+  .about-intro, .coord { grid-template-columns: 1fr; gap: 2rem; }
+  .steps, .about-pillars { grid-template-columns: 1fr 1fr; }
   .reviews-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid .review-card:nth-child(4),
   .reviews-grid .review-card:nth-child(5) { grid-column: auto; }
 }
 @media (max-width: 600px) {
-  .reviews-grid { grid-template-columns: 1fr; }
+  .steps, .about-pillars, .who, .reviews-grid { grid-template-columns: 1fr; }
+  .fact strong { font-size: 1.2rem; }
 }
 </style>

@@ -1,0 +1,77 @@
+---
+import LandingLayout from '../layouts/LandingLayout.astro';
+---
+
+<LandingLayout
+  title="Thank You | Sunshine Tiny Houses"
+  description="Thanks, your enquiry has been sent. Mitch or Nat will reply by email with model recommendations and pricing."
+  canonical="https://www.sunshinetinyhouses.com.au/thank-you/"
+  noindex={true}
+>
+  <!-- Google Ads tag for the conversion below. gtag() already exists (GA4, LandingLayout). -->
+  <script is:inline async slot="head-extra" src="https://www.googletagmanager.com/gtag/js?id=AW-10788445574"></script>
+
+  <section class="ty">
+    <div class="ty__inner">
+      <p class="ty__tick" aria-hidden="true">&#10003;</p>
+      <h1>Thanks &mdash; your enquiry has been sent.</h1>
+      <p>
+        Mitch or Nat will personally put together model recommendations and pricing to suit what
+        you're after, and reply by email &mdash; usually within a couple of business days.
+      </p>
+      <p class="ty__links">
+        <a href="/modular-homes/">See our modular homes</a>
+        <a href="/">Back to the home page</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- STH /thank-you conversion tag. Same logic as the live Squarespace block
+       (repo sth-tracking-fix, squarespace/thank-you-codeblock.html, 2026-09-23):
+       fires Meta Lead + the Google Ads conversion ONLY when a landing page left a
+       qualified-lead flag in sessionStorage 'sth_conv' less than 30 minutes ago.
+       The flag is deleted on read, so reloads, revisits and other forms fire nothing.
+       Pixel init + PageView come from LandingLayout: do NOT add fbq('init') here. -->
+  <script is:inline>
+  (function () {
+    'use strict';
+    window.dataLayer = window.dataLayer || [];
+    if (typeof window.gtag !== 'function') {
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      window.gtag('js', new Date());
+    }
+    window.gtag('config', 'AW-10788445574');
+
+    var MAX_AGE_MS = 30 * 60 * 1000;
+    var conv = null;
+    try {
+      conv = JSON.parse(sessionStorage.getItem('sth_conv'));
+      sessionStorage.removeItem('sth_conv');
+    } catch (e) { conv = null; }
+
+    var age = conv && typeof conv.ts === 'number' ? Date.now() - conv.ts : -1;
+    if (!conv || !conv.event_id || age < 0 || age > MAX_AGE_MS) { return; }
+
+    if (typeof window.fbq === 'function') {
+      window.fbq('track', 'Lead', {}, { eventID: conv.event_id });
+    }
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-10788445574/JV8tCNiOgMscEIa7qpgo',
+      transaction_id: conv.event_id
+    });
+  })();
+  </script>
+</LandingLayout>
+
+<style>
+.ty { padding: 4.5rem var(--spacing-container) 5rem; background: var(--color-surface); min-height: 55vh; }
+.ty__inner { max-width: 640px; margin: 0 auto; text-align: center; }
+.ty__tick {
+  width: 56px; height: 56px; line-height: 56px; margin: 0 auto 1.25rem; border-radius: 50%;
+  background: var(--color-primary); color: #fff; font-size: 1.6rem;
+}
+.ty h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); margin: 0 0 1rem; color: var(--color-text); }
+.ty p { color: var(--color-text-body); font-size: 1.05rem; line-height: 1.6; margin: 0 0 1rem; }
+.ty__links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1.75rem; }
+.ty__links a { color: var(--color-primary); font-weight: 600; }
+</style>

@@ -93,11 +93,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <option value="$125k – $150k">$125k – $150k</option>
                   <option value="$150k – $175k">$150k – $175k</option>
                   <option value="$175k – $200k">$175k – $200k</option>
-                  <option value="$200k – $225k">$200k – $225k</option>
-                  <option value="$225k – $250k">$225k – $250k</option>
-                  <option value="$250k – $275k">$250k – $275k</option>
-                  <option value="$275k – $300k">$275k – $300k</option>
-                  <option value="$300k+">$300k+</option>
+                  <!-- Must match the HubSpot property's options exactly (same 8 as the landing pages), or HubSpot silently drops the value -->
+                  <option value="$200k – $250k">$200k – $250k</option>
+                  <option value="$250k+">$250k+</option>
                   <option value="Not sure yet">Not sure yet</option>
                 </select>
               </div>
@@ -224,7 +222,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <div>
               <strong>Hours</strong>
-              <p>Mon–Fri: 7:30am – 4:00pm<br />Sat: By appointment<br />Sun: Closed</p>
+              <p>Mon–Fri: 7:00am – 4:00pm<br />Sat: By appointment<br />Sun: Closed</p>
             </div>
           </li>
         </ul>
@@ -332,9 +330,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         }
       });
 
-      var hutkMatch = document.cookie.match(/hubspotutk=([^;]+)/);
-      var payload = { fields: fields, context: { pageUri: window.location.href, pageName: document.title } };
-      if (hutkMatch) payload.context.hutk = hutkMatch[1];
+      // Attribution (UTM / gclid / fbclid kept from the landing URL) via LeadTracking in BaseLayout.
+      // The contact form never sets the 'sth_conv' ad-conversion flag: enquiries here are not ad conversions.
+      var ctx = (window.STHLead && window.STHLead.hubspotContext()) || { pageUri: window.location.href, pageName: document.title };
+      var payload = { fields: fields, context: ctx };
 
       fetch(HS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) {

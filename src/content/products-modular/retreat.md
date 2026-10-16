@@ -20,7 +20,7 @@ specs:
   Amenities: "Vanity, shower, toilet"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
-  Installation: "~1 week on site"
+  Installation: "~2 weeks on site"
 ---
 
 ## Vitalis Retreat
@@ -33,4 +33,4 @@ Whether you're a professional athlete, a wellness enthusiast, or simply someone 
 
 Optional deck upgrade available.
 
-Contact us for current pricing and dimensions.
+[Contact us](/contact/) for pricing and dimensions on the Vitalis.

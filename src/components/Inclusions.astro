@@ -1,0 +1,75 @@
+---
+// Standard inclusions for every modular house, from the October 2026 brochure.
+const inclusions: { item: string; standard: string; upgrades?: string }[] = [
+  { item: 'Structural base floor and frame', standard: 'Engineered structural floor system with engineered 90 mm steel stud frames or 90 mm engineered timber frames.' },
+  { item: 'Structural floor sheeting', standard: '19 mm Yellow Tongue (termite resistant), and 19 mm James Hardie Scyon Secura in wet areas.', upgrades: 'MgO (magnesium oxide) floor sheeting.' },
+  { item: 'Roofing (colour optional)', standard: '5.0° skillion roof in Colorbond Trimdek, Colorbond gutter and flashings, 90 mm PVC downpipes.', upgrades: 'Roof pitch greater than 5.0°, or a gable roof.' },
+  { item: 'Exterior cladding (colour optional)', standard: 'Colorbond Trimdek or Corrugated profile, James Hardie cladding products, or Weathertex.', upgrades: 'Rollsec Lux Collection, Rollsec Horizon, Alpine and standing seam profiles; hardwood timber such as western red cedar, spotted gum, Accoya or blackbutt.' },
+  { item: 'Insulation', standard: 'R2.5 batts to walls, R3.0 batts to ceilings, plus 80 mm Anticon blanket under the roof sheets.' },
+  { item: 'Kitchen appliances', standard: 'Westinghouse 60 cm rangehood, 60 cm electric oven and 60 cm ceramic cooktop.', upgrades: 'Bosch or other branded appliances, induction cooktop, gas appliances, Fisher & Paykel integrated dishwasher, under-sink water filter.' },
+  { item: 'Electrical', standard: 'Mains power ready for connection. 5 kW split system air conditioner to the lounge and 2.5 kW to bedrooms. Voltex 48" DC ceiling fans to living area and bedrooms. LED downlights throughout, smoke detectors as per regulations, and 2 power points with USB-C in the lounge and bedrooms.', upgrades: 'Multi-head or ducted air conditioning, different ceiling fans, integrated LED strip lighting, motorised pop-up bench power points, sensor lights.' },
+  { item: 'Hot water', standard: 'Enviroflo 180 L A Series heat pump.', upgrades: 'Larger or different hot water system, or gas hot water.' },
+  { item: 'Cabinetry (colour optional)', standard: 'Polytec or Laminex in the Matt/Smooth range with standard handles, as per layout. Australian made products only.', upgrades: 'Woodgrain, thermolaminated, Ultraglaze, Ultramatt and Venette ranges; 2-pack painted doors; bevelled edge or J-pull fronts; different handles.' },
+  { item: 'Benchtop (colour optional)', standard: 'Polytec Xenolith 15 mm premium coloured core composite laminate.', upgrades: 'Stone, Corian, microcement or solid timber.' },
+  { item: 'Cabinetry hardware', standard: 'Blum hinges, soft-close doors and drawers.', upgrades: 'Hafele storage solutions (pull-out bin, lazy susan, pocket doors, pull-down shelves, spice racks); Grass drawers and hinges.' },
+  { item: 'Windows and doors', standard: 'Bradnams powder-coated aluminium-framed windows and doors as per layout, N3 wind rating as standard. Flyscreens included (except bifold, casement and gas strut). Sliding doors 2100 mm high.', upgrades: 'Low-E or double glazing, louvres, French, casement and bifold doors, custom-shaped windows, custom insect screens, doors over 2100 mm high.' },
+  { item: 'Ceiling and wall linings', standard: '10 mm plasterboard walls and ceilings to all living areas and bedrooms.', upgrades: 'Feature walls in VJ, birch ply, timber or microcement.' },
+  { item: 'Bathroom', standard: '6 mm Villaboard or 10 mm Aquacheck to walls, 10 mm plasterboard ceiling, certified waterproofing to AS 3740:2021 with certificate, Roca The Gap rimless back-to-wall toilet suite with soft-close seat (4 star), frameless glass shower screen.', upgrades: 'Tiled wall divider, microcement, different fixtures, LED mirror, shower niche, shelves, bathtub.' },
+  { item: 'Laundry', standard: '10 mm Aquacheck water-resistant plasterboard to walls, 150 mm tiled splashback, certified waterproofing to AS 3740:2021 with certificate.', upgrades: 'Polytec Xenolith panels, different tiles, microcement.' },
+  { item: 'Tiles', standard: 'Bathroom: floor to 2400 mm high tiles in the shower area, 150 mm skirting and a vanity splashback. Kitchen: tiled splashback as per layout.', upgrades: 'Floor-to-ceiling or fully tiled bathroom, different tiles, glass, Corian, microcement or stainless splashbacks.' },
+  { item: 'Painting', standard: 'Dulux or Haymes low sheen 3 coat system to walls and ceiling, semi-gloss to skirtings and architraves.', upgrades: 'Mould-resistant paint, exterior painting, timber coating.' },
+  { item: 'Plumbing', standard: 'Kitchen, bathroom and laundry rough-in and fit-off as per layout.', upgrades: 'Septic system, water tanks, water filters, gutter guards, gas, site works and site connections.' },
+  { item: 'Tapware', standard: 'ABI Interiors, as per layout, in chrome or matte black.', upgrades: 'Other ABI Interiors tapware.' },
+  { item: 'Flooring', standard: '4.5 mm vinyl plank (Australian Select Timbers).', upgrades: 'Carpet to bedrooms, hybrid planks, engineered timber or hardwood flooring.' },
+];
+---
+
+<section class="section section--surface inclusions" id="inclusions">
+  <div class="container">
+    <h2>What's included</h2>
+    <p class="inclusions__intro">Standard to all of our modular houses. The right-hand column shows what can be upgraded.</p>
+    <details class="inclusions__details">
+      <summary>Show the full inclusions list ({inclusions.length} items)</summary>
+      <div class="inclusions__table-wrap">
+        <table class="inclusions__table">
+          <thead>
+            <tr><th scope="col">Item</th><th scope="col">Standard inclusion</th><th scope="col">Available upgrades</th></tr>
+          </thead>
+          <tbody>
+            {inclusions.map((row) => (
+              <tr>
+                <th scope="row">{row.item}</th>
+                <td data-label="Standard">{row.standard}</td>
+                <td data-label="Upgrades">{row.upgrades ?? '—'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </details>
+    <p class="inclusions__brochure"><a href="/downloads/sth-brochure.pdf">Download the full brochure (PDF)</a></p>
+  </div>
+</section>
+
+<style>
+.inclusions h2 { margin-bottom: 0.5rem; }
+.inclusions__intro { color: var(--color-text-muted); margin-bottom: 1.25rem; }
+.inclusions__details { background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-card); }
+.inclusions__details summary { cursor: pointer; padding: 1rem 1.25rem; font-weight: 700; color: var(--color-primary); }
+.inclusions__table-wrap { padding: 0 1.25rem 1.25rem; }
+.inclusions__table { width: 100%; border-collapse: collapse; font-size: var(--font-size-sm); line-height: 1.55; }
+.inclusions__table th, .inclusions__table td { text-align: left; vertical-align: top; padding: 0.75rem 0.75rem 0.75rem 0; border-top: 1px solid var(--color-border); }
+.inclusions__table thead th { border-top: 0; font-size: var(--font-size-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-muted); }
+.inclusions__table tbody th { width: 22%; font-weight: 700; }
+.inclusions__table td { color: var(--color-text-body); }
+.inclusions__table td:last-child { width: 34%; }
+.inclusions__brochure { margin-top: 1rem; font-size: var(--font-size-sm); }
+.inclusions__brochure a { color: var(--color-primary); font-weight: 600; text-decoration: underline; }
+@media (max-width: 700px) {
+  .inclusions__table thead { display: none; }
+  .inclusions__table, .inclusions__table tbody, .inclusions__table tr, .inclusions__table th, .inclusions__table td { display: block; width: 100% !important; }
+  .inclusions__table tr { border-top: 1px solid var(--color-border); padding-block: 0.75rem; }
+  .inclusions__table th, .inclusions__table td { border: 0; padding: 0.15rem 0; }
+  .inclusions__table td::before { content: attr(data-label) ': '; font-weight: 700; color: var(--color-text); }
+}
+</style>

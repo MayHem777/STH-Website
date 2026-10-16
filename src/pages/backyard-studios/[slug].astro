@@ -34,12 +34,13 @@ const breadcrumbSchema = {
     { '@type': 'ListItem', position: 3, name: product.data.title, item: Astro.url.href },
   ],
 };
+import { photo } from '../../lib/photos';
 ---
 
 <BaseLayout
   title={`${product.data.title} Backyard Studio | Sunshine Tiny Houses`}
   description={product.data.description}
-  ogImage={product.data.ogImage}
+  ogImage={product.data.ogImage ?? photo(product.data.heroImage, `studio/${product.id}/main`).src}
   schema={[productSchema, breadcrumbSchema]}
 >
 
@@ -47,6 +48,7 @@ const breadcrumbSchema = {
     title={product.data.title}
     subtitle={product.data.tagline}
     image={product.data.heroImage}
+    spotKey={`studio/${product.id}/main`}
     imageAlt={product.data.heroImageAlt ?? product.data.title}
     ctaText="Contact Now"
     ctaHref="/contact/"

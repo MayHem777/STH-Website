@@ -11,12 +11,12 @@ const products = (await getCollection('products-thow', ({ data }) => !data.draft
 
 <BaseLayout
   title="Tiny Houses on Wheels Queensland | Sunshine Tiny Houses"
-  description="Browse our range of Class 1a tiny houses on wheels — from the compact 1770 (6m) to the spacious Lennox (10m). QBCC-licensed builder, Noosaville QLD. Free quote."
+  description="Browse our range of tiny houses on wheels — from the compact 1770 (6 m) to the spacious Lennox (9–10 m). QBCC-licensed builder, Noosaville QLD. Free quote."
 >
 
   <Hero
     title="Tiny Houses on Wheels"
-    subtitle="QBCC-licensed Class 1a tiny homes — road-registerable, fully liveable, and built to last. Choose from our range or design your own."
+    subtitle="Tiny homes from a QBCC-licensed builder — road-registerable, fully liveable, and built to last. Choose from our range or design your own."
     ctaText="Contact Now"
     ctaHref="/contact/"
     secondaryCtaText="Custom Build"
@@ -32,8 +32,11 @@ const products = (await getCollection('products-thow', ({ data }) => !data.draft
             description={p.data.description}
             href={`/tiny-houses-on-wheels/${p.id}/`}
             image={p.data.heroImage}
+            spotKey={`thow/${p.id}/main`}
             imageAlt={p.data.heroImageAlt ?? p.data.title}
             badge={p.data.badge}
+            price={p.data.specs?.['Turn Key from'] ? `Turn key from ${p.data.specs['Turn Key from'].replace(' incl. GST', '')}` : undefined}
+            meta={p.data.specs?.Length}
           />
         ))}
       </div>

@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
+import { formatPrice, EX_FACTORY_NOTE } from '../../lib/price';
 
 const allProducts = (await getCollection('products-modular', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order);
@@ -16,8 +17,11 @@ const standaloneCards = allProducts
     description: p.data.description,
     href: `/modular-homes/${p.id}/`,
     heroImage: p.data.heroImage,
+    spotKey: `modular/${p.id}/main`,
     heroImageAlt: p.data.heroImageAlt ?? p.data.title,
     badge: p.data.badge,
+    price: p.data.priceFrom ? `From ${formatPrice(p.data.priceFrom)}` : undefined,
+    meta: p.data.area,
   }));
 
 const bedroomCounts = [...new Set(allProducts.filter((p) => p.data.bedrooms).map((p) => p.data.bedrooms))].sort();
@@ -30,8 +34,11 @@ const bedroomCards = bedroomCounts.map((count) => {
     description: `${variants.length} model${variants.length === 1 ? '' : 's'}: ${variants.map((p) => p.data.title).join(', ')}`,
     href: `/modular-homes/${count}-bedroom/`,
     heroImage: variants[0].data.heroImage,
+    spotKey: `modular/${variants[0].id}/main`,
     heroImageAlt: variants[0].data.heroImageAlt ?? `${count} bedroom modular home`,
     badge: undefined,
+    price: `From ${formatPrice(Math.min(...variants.map((p) => p.data.priceFrom ?? Infinity)))}`,
+    meta: undefined,
   };
 });
 
@@ -45,7 +52,7 @@ const products = [...standaloneCards, ...bedroomCards].sort((a, b) => a.order - 
 
   <Hero
     title="Modular Homes & Granny Flats"
-    subtitle="Permanent Class 1a modular structures delivered and installed in one week. Perfect as a granny flat, secondary dwelling, or standalone home."
+    subtitle="Permanent Class 1a modular homes with about two weeks on site, start to finish. Perfect as a granny flat, secondary dwelling, or standalone home."
     ctaText="Contact Now"
     ctaHref="/contact/"
     secondaryCtaText="Finance Options"
@@ -61,17 +68,22 @@ const products = [...standaloneCards, ...bedroomCards].sort((a, b) => a.order - 
             description={p.description}
             href={p.href}
             image={p.heroImage}
+            spotKey={p.spotKey}
             imageAlt={p.heroImageAlt}
             badge={p.badge}
+            price={p.price}
+            meta={p.meta}
           />
         ))}
       </div>
+      <p class="price-note">Prices include GST. {EX_FACTORY_NOTE}</p>
     </div>
   </section>
 
 </BaseLayout>
 
 <style>
+.price-note { margin-top: 1.5rem; font-size: var(--font-size-sm); color: var(--color-text-muted); }
 .products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
