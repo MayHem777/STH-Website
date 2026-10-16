@@ -34,7 +34,8 @@
 /castaways                   /tiny-houses-on-wheels/castaways/              301
 /lennox                      /tiny-houses-on-wheels/lennox/                 301
 /custom-design-build         /tiny-houses-on-wheels/custom-design-build/    301
-/trailers                    /tiny-houses-on-wheels/trailers/               301
+/trailers                    https://www.tinytrailers.com.au/               301
+/tiny-houses-on-wheels/trailers   https://www.tinytrailers.com.au/   301
 /tiny-houses-on-wheels       /tiny-houses-on-wheels/                        301
 
 # ── Blog posts → blog index (until posts are rebuilt in Astro) ───────────────
@@ -67,7 +68,7 @@
 /retreat                                     /modular-homes/retreat/                301
 /entertainment                               /backyard-studios/                     301
 /custom-sauna                                /backyard-studios/saunas/              301
-/tiny-house-trailers                         /tiny-houses-on-wheels/trailers/       301
+/tiny-house-trailers                         https://www.tinytrailers.com.au/       301
 /thow-vs-class-1a-modular                    /council-regulations/                  301
 /sunshine-coast-tiny-homes                   /                                      301
 /brisbane-tiny-homes                         /                                      301
