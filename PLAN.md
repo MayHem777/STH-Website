@@ -11,6 +11,7 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - Gallery page still "Photos Coming Soon".
 
 ## Assumptions
+- 2026-10-17 (Mitch): hours Mon–Fri 7am–4pm, Saturday by appointment; every direct email address on the site is hello@.
 - 2026-10-17: photo spots keep today's photo until Nat supplies one; empty spots (THOW galleries, gallery page) stay hidden on production until filled. Spot numbers are permanent once Nat has the list.
 - 2026-10-17: merge conflicts in modular model files resolved to the October brochure versions (site-content-upgrade).
 - 2026-10-17: contact form budget options cut to the same 8 as the landing pages (HubSpot drops values it doesn't know).
@@ -21,7 +22,6 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 
 ## Waiting on Mitch
 - OK the FAQ price wording; pricing-guide page says "from $110k / studios from $110k" but Ensuite and Office are listed at $100,000: which is right?
-- Opening hours 7.00 or 7.30 (site uses both); hello@ vs info@ on the pricing-guide page.
 - Merge `launch-prep` into main on GitHub.
 - Foundations guide: photos, then OK to merge to main.
 - DNS cutover checklist items.

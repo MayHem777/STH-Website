@@ -49,6 +49,13 @@ const localBusinessSchema = {
     postalCode: '4566',
     addressCountry: 'AU',
   },
+  // Mon–Fri 7 am – 4 pm; Saturday by appointment (Mitch, 2026-10-17)
+  openingHoursSpecification: [{
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+    opens: '07:00',
+    closes: '16:00',
+  }],
   geo: {
     '@type': 'GeoCoordinates',
     latitude: -26.394,
