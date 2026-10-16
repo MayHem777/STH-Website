@@ -28,7 +28,7 @@ features:
   - "Intimate layout designed for tranquillity"
   - "Energy-efficient and eco-friendly materials"
   - "7-star energy efficiency rating"
-  - "Minimum 1-week installation on site"
+  - "About 2 weeks on site, start to finish"
   - "QBCC licensed build — Class 1a"
 specs:
   Bedrooms: "1"

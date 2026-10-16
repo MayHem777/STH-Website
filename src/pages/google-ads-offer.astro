@@ -1,5 +1,13 @@
 ---
 import LandingLayout from '../layouts/LandingLayout.astro';
+import { spot } from '../lib/photos';
+const P = {
+  bg: spot('lp/google/badge-bg', '/images/badge-1.webp'),
+  g1: spot('lp/google/gallery-1', '/images/workshop-recent-1.jpeg'),
+  g2: spot('lp/google/gallery-2', '/images/workshop-recent-2.jpg'),
+  g3: spot('lp/google/gallery-3', '/images/workshop-recent-4.jpeg'),
+  why: spot('lp/google/why', '/images/workshop-recent-3.jpg'),
+};
 ---
 
 <style is:global>
@@ -121,7 +129,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
   #sth-lp .sth-hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('/images/badge-1.webp');
+    background-image: var(--sth-hero-photo);
     background-size: cover;
     background-position: center 40%;
   }
@@ -408,7 +416,7 @@ import LandingLayout from '../layouts/LandingLayout.astro';
 
     <!-- HERO -->
     <section class="sth-hero">
-      <div class="sth-hero-bg" role="img" aria-label="Completed secondary dwelling — Sunshine Tiny Houses, Queensland"></div>
+      <div class="sth-hero-bg" data-spot={P.bg.n} style={`--sth-hero-photo:url('${P.bg.src}')`} role="img" aria-label="Completed secondary dwelling — Sunshine Tiny Houses, Queensland"></div>
       <div class="sth-hero-inner">
 
         <div>
@@ -751,13 +759,13 @@ import LandingLayout from '../layouts/LandingLayout.astro';
         </div>
         <div class="sth-gallery-grid">
           <figure class="sth-gi">
-            <img src="/images/workshop-recent-1.jpeg" alt="Completed secondary dwelling exterior — Sunshine Tiny Houses" loading="lazy" />
+            <img src={P.g1.src} data-spot={P.g1.n} alt="Completed secondary dwelling exterior — Sunshine Tiny Houses" loading="lazy" />
           </figure>
           <figure class="sth-gi">
-            <img src="/images/workshop-recent-2.jpg" alt="Interior finish and fitout" loading="lazy" />
+            <img src={P.g2.src} data-spot={P.g2.n} alt="Interior finish and fitout" loading="lazy" />
           </figure>
           <figure class="sth-gi">
-            <img src="/images/workshop-recent-4.jpeg" alt="Kitchen and living fitout" loading="lazy" />
+            <img src={P.g3.src} data-spot={P.g3.n} alt="Kitchen and living fitout" loading="lazy" />
           </figure>
         </div>
       </div>
@@ -820,7 +828,8 @@ import LandingLayout from '../layouts/LandingLayout.astro';
         </div>
         <div class="sth-why-visual">
           <img
-            src="/images/workshop-recent-3.jpg"
+            src={P.why.src}
+            data-spot={P.why.n}
             alt="Sunshine Tiny Houses — completed project"
             loading="lazy"
           />

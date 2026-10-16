@@ -1,0 +1,64 @@
+---
+// The photo checklist for Nat: every numbered photo spot, where it is and what it should show.
+// Not linked from the site, never indexed. The same list is in PHOTOS.md.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SPOTS } from '../data/photo-spots';
+import { spot as resolve } from '../lib/photos';
+const SHAPE: Record<string, string> = {
+  wide: 'Wide (about 2:1), landscape, 2000 px+ wide',
+  landscape: 'Landscape (4:3 or 3:2), 1600 px+ wide',
+  square: 'Square-ish, 1200 px+',
+  portrait: 'Portrait (upright), 1200 px+ tall',
+};
+const rows = SPOTS.slice().sort((a, b) => a.n - b.n).map((s) => ({ ...s, num: String(s.n).padStart(3, '0'), now: resolve(s.key) }));
+const done = rows.filter((r) => r.now.replaced).length;
+---
+<BaseLayout title="Photo spots | Sunshine Tiny Houses" description="Checklist of numbered photo spots for the website." noindex={true}>
+  <section class="section">
+    <div class="container ps">
+      <div class="eyebrow">For Nat</div>
+      <h1>Photo spots</h1>
+      <p class="ps__lead">Every photo on the new website has a number. Make a folder of photos named after the numbers (<strong>001.jpg</strong>, <strong>002.jpg</strong> …), then tell Mitch where the folder is. You don't need to fill every spot: any spot without a new photo keeps the photo it has today.</p>
+      <ul class="ps__rules">
+        <li>Name each file with its 3-digit number. Extra words are fine: <strong>014 lennox kitchen.jpg</strong>.</li>
+        <li>JPG straight from the camera or phone is best. iPhone users: set Camera → Formats to "Most Compatible", or export as JPG.</li>
+        <li>Landscape (sideways) photos unless the spot says portrait. Bigger is better; we resize them.</li>
+        <li>Only real Sunshine Tiny Houses builds and our own photos. No photos of clients' faces without their OK.</li>
+      </ul>
+      <p class="ps__count"><strong>{rows.length}</strong> spots · <strong>{done}</strong> already have a new photo</p>
+      <div class="ps__table-wrap">
+        <table class="ps__table">
+          <thead><tr><th>No.</th><th>Today</th><th>Where</th><th>What it should show</th><th>Shape</th></tr></thead>
+          <tbody>
+            {rows.map((r) => (
+              <tr class:list={[{ 'is-done': r.now.replaced }]}>
+                <td class="ps__n">{r.num}</td>
+                <td class="ps__thumb">{r.now.src ? <img src={r.now.src} alt="" loading="lazy" width="120" height="80" /> : <span class="ps__none">No photo yet</span>}</td>
+                <td><a href={r.page}>{r.where}</a>{r.alsoOn && r.alsoOn.length > 0 && <div class="ps__also">Also shows on: {r.alsoOn.join(', ')}</div>}</td>
+                <td>{r.shows}</td>
+                <td class="ps__shape">{SHAPE[r.shape]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+.ps h1 { margin: .4rem 0 1rem; }
+.ps__lead { max-width: 760px; font-size: var(--font-size-lg); }
+.ps__rules { margin: 1rem 0 1.5rem; padding-left: 1.2rem; max-width: 760px; display: grid; gap: .35rem; }
+.ps__count { margin-bottom: 1rem; color: var(--color-text-body); }
+.ps__table-wrap { overflow-x: auto; }
+.ps__table { width: 100%; border-collapse: collapse; font-size: .95rem; min-width: 760px; }
+.ps__table th { text-align: left; font-size: var(--font-size-xs); text-transform: uppercase; letter-spacing: .08em; color: var(--color-text-muted); padding: .5rem .6rem; border-bottom: 2px solid var(--color-border); }
+.ps__table td { padding: .6rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+.ps__n { font-weight: 800; font-size: 1.2rem; color: #E8372C; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ps__thumb img { width: 120px; height: 80px; object-fit: cover; border-radius: 6px; display: block; }
+.ps__none { display: inline-block; width: 120px; height: 80px; line-height: 80px; text-align: center; font-size: .8rem; color: var(--color-text-muted); background: var(--color-surface); border-radius: 6px; }
+.ps__also { font-size: .82rem; color: var(--color-text-muted); margin-top: .25rem; }
+.ps__shape { font-size: .85rem; color: var(--color-text-body); }
+tr.is-done .ps__n::after { content: ' ✓'; color: var(--color-primary); }
+@media print { .ps__thumb img { width: 80px; height: 54px; } .ps__table { min-width: 0; font-size: 10pt; } }
+</style>

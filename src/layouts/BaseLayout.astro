@@ -1,4 +1,6 @@
 ---
+import SpotLabels from '../components/SpotLabels.astro';
+import LeadTracking from '../components/LeadTracking.astro';
 import SEOHead from '../components/SEOHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -69,7 +71,7 @@ const { class: className, ...seoProps } = Astro.props;
     </script>
     <noscript>
       <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1050187050868855&ev=PageView&noscript=1" />
+        src="https://www.facebook.com/tr?id=1050187050868855&ev=PageView&noscript=1" alt="" />
     </noscript>
   </head>
   <body class={className}>
@@ -79,6 +81,8 @@ const { class: className, ...seoProps } = Astro.props;
       <slot />
     </main>
     <Footer />
+    <LeadTracking />
+    <SpotLabels />
   </body>
 </html>
 

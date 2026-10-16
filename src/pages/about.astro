@@ -38,6 +38,8 @@ if (reviews.length === 0) {
     { author_name: 'N T', rating: 5, text: "We recently purchased a custom build tiny house on wheels from Nat and Mitch and are thrilled with it. The quality of the finishes, attention to detail and customer service is amazing. Exceptional service and product. Thanks Nat and Mitch." },
   ];
 }
+import { spot } from '../lib/photos';
+const teamPic = spot('about/team', '/images/about-workshop.webp');
 ---
 
 <BaseLayout
@@ -72,7 +74,7 @@ if (reviews.length === 0) {
           <div class="fact"><strong>Australia</strong><span>Wide delivery available</span></div>
         </div>
       </div>
-      <img class="about-intro__img" src="/images/about-workshop.webp" width="1079" height="1065" alt="Sunshine Tiny Houses team at work on a tiny house in the Noosaville factory" loading="lazy" />
+      <img class="about-intro__img" src={teamPic.src} data-spot={teamPic.n} width="1079" height="1065" alt="Sunshine Tiny Houses team at work on a tiny house in the Noosaville factory" loading="lazy" />
     </div>
   </section>
 

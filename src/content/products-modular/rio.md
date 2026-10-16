@@ -25,7 +25,7 @@ features:
   - "Kitchen with breakfast bar"
   - "Integrated entertainment unit"
   - "Modern bathroom and dedicated laundry space"
-  - "Minimum 1-week installation on site"
+  - "About 2 weeks on site, start to finish"
   - "QBCC licensed build — Class 1a"
 specs:
   Bedrooms: "1"

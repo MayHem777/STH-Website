@@ -28,7 +28,7 @@ collections:
       - { label: "Title", name: title, widget: string }
       - { label: "Tagline", name: tagline, widget: string, required: false }
       - { label: "Description (SEO)", name: description, widget: text }
-      - { label: "Published", name: draft, widget: boolean, default: true, hint: "Turn ON to publish. Turn OFF to hide from site." }
+      - { label: "Hidden (draft)", name: draft, widget: boolean, default: true, hint: "ON = hidden from the website. Turn OFF to publish." }
       - { label: "Sort Order", name: order, widget: number, default: 99 }
       - { label: "Hero Image", name: heroImage, widget: image, required: false }
       - { label: "Hero Image Alt Text", name: heroImageAlt, widget: string, required: false }
@@ -38,9 +38,15 @@ collections:
         widget: object
         required: false
         fields:
-          - { label: "Length", name: Length, widget: string, required: false }
-          - { label: "Class", name: Class, widget: string, required: false }
-          - { label: "Registration", name: Registration, widget: string, required: false }
+          # Every spec the tiny house pages use: a field missing here is DELETED when the page is saved in the CMS
+          - { label: "Length", name: "Length", widget: string, required: false }
+          - { label: "Width", name: "Width", widget: string, required: false }
+          - { label: "Sleeps", name: "Sleeps", widget: string, required: false }
+          - { label: "Bedroom", name: "Bedroom", widget: string, required: false }
+          - { label: "Lock-Up from", name: "Lock-Up from", widget: string, required: false }
+          - { label: "Turn Key from", name: "Turn Key from", widget: string, required: false }
+          - { label: "Trailer", name: "Trailer", widget: string, required: false }
+          - { label: "Registration", name: "Registration", widget: string, required: false }
       - label: "Features (bullet list)"
         name: features
         widget: list
@@ -59,7 +65,7 @@ collections:
       - { label: "Title", name: title, widget: string }
       - { label: "Tagline", name: tagline, widget: string, required: false }
       - { label: "Description (SEO)", name: description, widget: text }
-      - { label: "Published", name: draft, widget: boolean, default: true, hint: "Turn ON to publish. Turn OFF to hide from site." }
+      - { label: "Hidden (draft)", name: draft, widget: boolean, default: true, hint: "ON = hidden from the website. Turn OFF to publish." }
       - { label: "Sort Order", name: order, widget: number, default: 99 }
       - { label: "Bedrooms", name: bedrooms, widget: number, required: false, hint: "Set this to group the model under a '1 Bedroom' / '2 Bedroom' etc. listing page instead of showing it as its own standalone card." }
       - { label: "Hero Image", name: heroImage, widget: image, required: false }
@@ -123,7 +129,7 @@ collections:
       - { label: "Title", name: title, widget: string }
       - { label: "Tagline", name: tagline, widget: string, required: false }
       - { label: "Description (SEO)", name: description, widget: text }
-      - { label: "Published", name: draft, widget: boolean, default: true, hint: "Turn ON to publish. Turn OFF to hide from site." }
+      - { label: "Hidden (draft)", name: draft, widget: boolean, default: true, hint: "ON = hidden from the website. Turn OFF to publish." }
       - { label: "Sort Order", name: order, widget: number, default: 99 }
       - { label: "Hero Image", name: heroImage, widget: image, required: false }
       - { label: "Hero Image Alt Text", name: heroImageAlt, widget: string, required: false }
@@ -158,5 +164,5 @@ collections:
     fields:
       - { label: "Title", name: title, widget: string }
       - { label: "Description (SEO)", name: description, widget: text }
-      - { label: "Published", name: draft, widget: boolean, default: true, hint: "Turn ON to publish. Turn OFF to hide." }
+      - { label: "Hidden (draft)", name: draft, widget: boolean, default: true, hint: "ON = hidden from the website. Turn OFF to publish." }
       - { label: "Body", name: body, widget: markdown }

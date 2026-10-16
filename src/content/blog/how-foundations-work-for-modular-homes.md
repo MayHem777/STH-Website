@@ -62,4 +62,4 @@ Coastal Queensland gets serious wind. Every foundation design includes tie-downs
 
 ## Questions about your block?
 
-Every site is different, and foundations are one of the first things we work through with you. If you have a sloping block, tricky access or you're not sure what's under the grass, [get in touch](/contact) and we'll talk you through what your site needs.
+Every site is different, and foundations are one of the first things we work through with you. If you have a sloping block, tricky access or you're not sure what's under the grass, [get in touch](/contact/) and we'll talk you through what your site needs.

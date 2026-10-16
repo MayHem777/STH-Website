@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Hero from '../components/Hero.astro';
 import ProductCard from '../components/ProductCard.astro';
 import CTAButton from '../components/CTAButton.astro';
 import { getCollection } from 'astro:content';
 import { FOUNDED_YEAR } from '../config/site';
 import { formatPrice, EX_FACTORY_NOTE } from '../lib/price';
+import { spot, photo } from '../lib/photos';
 
 const thowProducts = (await getCollection('products-thow', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order)
@@ -43,6 +43,7 @@ const pricedModular = allModularProducts
     description: p.data.tagline ?? p.data.description,
     href: p.data.bedrooms ? `/modular-homes/${p.data.bedrooms}-bedroom/${p.id}/` : `/modular-homes/${p.id}/`,
     image: p.data.heroImage,
+    spotKey: `modular/${p.id}/main`,
     imageAlt: p.data.heroImageAlt,
     price: `From ${formatPrice(p.data.priceFrom!)}`,
     meta: p.data.area,
@@ -55,6 +56,16 @@ const processSteps = [
   { title: 'Install, connections and handover', text: 'We transport and install the finished home, connect services and walk you through every detail.' },
 ];
 
+const doorThow = spot('home/door-thow', '/images/thow-dark-on-site.webp');
+const doorModular = spot('home/door-modular', '/images/models/rio-ext.webp');
+
+const thowStrip = (await getCollection('products-thow', ({ data }) => !data.draft))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((p) => {
+    const r = photo(p.data.heroImage || undefined, `thow/${p.id}/main`);
+    return { href: `/tiny-houses-on-wheels/${p.id}/`, title: p.data.title, len: p.data.specs?.Length, src: r.src, n: r.n, alt: p.data.heroImageAlt ?? p.data.title };
+  });
+
 const class10aProducts = (await getCollection('products-class10a', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order);
 ---
@@ -64,67 +75,68 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
   description="Sunshine Tiny Houses builds modular homes, granny flats, and tiny houses on wheels across Queensland. QBCC licensed. Free quote available."
 >
 
-  <Hero
-    title="Build Your Dream Modular Home or Tiny House on Wheels in Queensland"
-    subtitle="Sunshine Tiny Houses is a QBCC-licensed builder specialising in Class 1a modular homes and granny flats, tiny houses on wheels, and backyard studios across Queensland."
-    ctaText="Contact Now"
-    ctaHref="/contact/"
-    secondaryCtaText="View Our Range"
-    secondaryCtaHref="/modular-homes/"
-  />
-
-  <!-- Two primary product lines — modular first -->
-  <section class="section product-lines">
+  <!-- Hero: two equal doors, tiny houses on wheels first (same layout as the Squarespace home page, Oct 2026) -->
+  <section class="home-hero">
     <div class="container">
-      <div class="product-lines__grid">
-
-        <div class="product-line-card">
-          <div class="product-line-card__eyebrow">Class 1a Dwelling</div>
-          <h2 class="product-line-card__title">Modular Homes & Granny Flats</h2>
-          <p class="product-line-card__desc">
-            Permanent modular structures built to last — ideal as granny flats, secondary
-            dwellings, or standalone homes. About two weeks on site, start to finish.
-            Finance options available.
-          </p>
-          <ul class="product-line-card__models" aria-label="Modular models">
-            {modularProducts.map((p) => (
-              <li>
-                <a href={p.href}>{p.title}</a>
-              </li>
-            ))}
-            <li><a href="/modular-homes/">View all models &rarr;</a></li>
-          </ul>
-          <CTAButton href="/modular-homes/">Explore Modular Range</CTAButton>
-        </div>
-
-        <div class="product-line-divider" aria-hidden="true"></div>
-
-        <div class="product-line-card">
-          <div class="product-line-card__eyebrow" aria-hidden="true" style="visibility: hidden;">&nbsp;</div>
-          <h2 class="product-line-card__title">Tiny Houses on Wheels</h2>
-          <p class="product-line-card__desc">
-            From compact 6m designs to our sprawling 10m Lennox model — fully liveable
-            and road-registerable. Perfect for primary residences, holiday homes, or
-            investment properties.
-          </p>
-          <ul class="product-line-card__models" aria-label="THOW models">
-            {thowProducts.map((p) => (
-              <li>
-                <a
-                  href={`/tiny-houses-on-wheels/${p.id}/`}
-                  aria-label={`${p.data.title}${p.data.specs?.Length ? ` — ${p.data.specs.Length}` : ''}`}
-                >
-                  <span aria-hidden="true">{p.data.title}</span>
-                  {p.data.specs?.Length && <span class="model-length" aria-hidden="true">{p.data.specs.Length}</span>}
-                </a>
-              </li>
-            ))}
-            <li><a href="/tiny-houses-on-wheels/">View all models &rarr;</a></li>
-          </ul>
-          <CTAButton href="/tiny-houses-on-wheels/">Explore THOW Range</CTAButton>
-        </div>
-
+      <p class="home-hero__eyebrow">Sunshine Tiny Houses · Noosaville, Queensland</p>
+      <h1 class="home-hero__title">Tiny houses on wheels and modular homes, <em>built by a licensed Queensland builder</em></h1>
+      <p class="home-hero__sub">Designed with you, built in our Noosaville factory and delivered anywhere in Australia. We handle the whole project, from the first sketch to handing you the keys.</p>
+      <p class="home-hero__ask">What are you looking for?</p>
+      <div class="doors">
+        <a class="door" href="/tiny-houses-on-wheels/">
+          <div class="door__ph">
+            <img src={doorThow.src} data-spot={doorThow.n} alt="A Sunshine Tiny Houses tiny house on wheels on its trailer" width="1400" height="1050" loading="eager" fetchpriority="high" />
+            <span class="door__tag">6 m to 10 m</span>
+          </div>
+          <div class="door__body">
+            <h2>Tiny houses on wheels</h2>
+            <p>A complete home on a road-registrable trailer we build ourselves. Live in it, rent it out or take it with you when you move.</p>
+            <span class="door__cta">Explore tiny houses <span aria-hidden="true">&rarr;</span></span>
+          </div>
+        </a>
+        <a class="door" href="/modular-homes/">
+          <div class="door__ph">
+            <img src={doorModular.src} data-spot={doorModular.n} alt="A Sunshine Tiny Houses modular home with a timber deck" width="1400" height="1050" loading="eager" />
+            <span class="door__tag">Class 1a</span>
+          </div>
+          <div class="door__body">
+            <h2>Modular homes &amp; granny flats</h2>
+            <p>A permanent, certified home for your block. Built in our factory, then craned in, installed and connected to services.</p>
+            <span class="door__cta">Explore modular homes <span aria-hidden="true">&rarr;</span></span>
+          </div>
+        </a>
       </div>
+      <ul class="home-hero__trust">
+        <li>QBCC Licence 15205110</li>
+        <li>5-star Google reviews</li>
+        <li>Building on the Sunshine Coast for 20+ years</li>
+        <li>Australia-wide delivery</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Tiny houses on wheels: every design with its photo -->
+  <section class="section thow-strip">
+    <div class="container">
+      <div class="thow-strip__head">
+        <div>
+          <div class="eyebrow">Tiny houses on wheels</div>
+          <h2>Find your tiny house</h2>
+          <p class="thow-strip__intro">Proven designs from 6 m to 10 m long, each one customised to suit you, or a custom design from a blank page.</p>
+        </div>
+        <a class="thow-strip__more" href="/tiny-houses-on-wheels/">See all tiny houses &rarr;</a>
+      </div>
+      <div class="thow-strip__row">
+        {thowStrip.map((p) => (
+          <a class="thow-card" href={p.href}>
+            <div class="thow-card__ph">
+              {p.src ? <img src={p.src} data-spot={p.n} alt={p.alt} width="480" height="360" loading="lazy" /> : <div class="thow-card__empty" data-spot={p.n}></div>}
+            </div>
+            <div class="thow-card__body"><h3>{p.title}</h3>{p.len && <span>{p.len}</span>}</div>
+          </a>
+        ))}
+      </div>
+      <p class="thow-strip__hint">Scroll sideways to see every design &rarr;</p>
     </div>
   </section>
 
@@ -179,6 +191,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
             description={p.data.description}
             href={`/backyard-studios/${p.id}/`}
             image={p.data.heroImage}
+            spotKey={`studio/${p.id}/main`}
             imageAlt={p.data.heroImageAlt}
           />
         ))}
@@ -364,5 +377,53 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
 }
 @media (max-width: 600px) {
   .class10a-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Home hero: two doors ─────────────────────────────── */
+.home-hero { background: var(--color-surface-dark); color: #fff; padding: 3.5rem 0 3rem; }
+.home-hero__eyebrow { font-size: var(--label-size); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent); margin-bottom: .75rem; }
+.home-hero__title { color: #fff; font-size: var(--font-size-5xl); max-width: 900px; line-height: 1.1; text-wrap: balance; }
+.home-hero__title em { font-style: normal; color: var(--color-accent); }
+.home-hero__sub { color: rgba(255,255,255,.78); font-size: var(--font-size-lg); max-width: 680px; margin-top: 1rem; }
+.home-hero__ask { margin: 2.25rem 0 .9rem; font-weight: 700; font-size: var(--font-size-sm); letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.6); }
+.doors { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; }
+.door { display: flex; flex-direction: column; border-radius: 18px; overflow: hidden; background: #262624; border: 1px solid rgba(255,255,255,.08); color: #fff; text-decoration: none; transition: transform .25s, border-color .25s; }
+.door:hover { transform: translateY(-4px); border-color: var(--color-accent-border); }
+.door__ph { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #2a2a2a; }
+.door__ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.door:hover .door__ph img { transform: scale(1.04); }
+.door__tag { position: absolute; right: 1.1rem; top: 1.1rem; background: var(--color-accent); color: var(--color-text); font-weight: 800; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 99px; }
+.door__body { padding: 1.5rem 1.6rem 1.6rem; display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
+.door__body h2 { color: #fff; font-size: clamp(1.45rem, 2.6vw, 2rem); margin-bottom: .5rem; }
+.door__body p { color: rgba(255,255,255,.8); max-width: 460px; flex: 1; }
+.door__cta { display: inline-flex; gap: .5rem; margin-top: 1.1rem; background: #fff; color: var(--color-text); font-weight: 700; padding: .7rem 1.25rem; border-radius: 8px; transition: background .2s; }
+.door:hover .door__cta { background: var(--color-accent); }
+.home-hero__trust { list-style: none; padding: 0; margin: 1.9rem 0 0; display: flex; flex-wrap: wrap; gap: .6rem 1.75rem; color: rgba(255,255,255,.82); font-weight: 600; font-size: .95rem; }
+.home-hero__trust li { display: flex; align-items: center; gap: .5rem; }
+.home-hero__trust li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent); flex: none; }
+
+/* ── Tiny house strip ─────────────────────────────────── */
+.thow-strip__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
+.thow-strip__intro { color: var(--color-text-body); max-width: 640px; }
+.thow-strip__more { font-weight: 700; color: var(--color-primary); border-bottom: 2px solid var(--color-accent); white-space: nowrap; }
+.thow-strip__row { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .6rem; }
+.thow-card { scroll-snap-align: start; display: block; border-radius: 14px; overflow: hidden; background: var(--color-bg); border: 1px solid var(--color-border); color: inherit; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+.thow-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
+.thow-card__ph { aspect-ratio: 4 / 3; background: var(--color-surface); overflow: hidden; }
+.thow-card__ph img, .thow-card__empty { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thow-card__body { padding: .85rem 1rem 1rem; display: flex; justify-content: space-between; align-items: baseline; gap: .6rem; }
+.thow-card__body h3 { font-size: 1.05rem; margin: 0; }
+.thow-card__body span { font-weight: 700; color: var(--color-primary); font-size: .95rem; white-space: nowrap; }
+.thow-strip__hint { font-size: var(--font-size-sm); color: var(--color-text-muted); margin-top: .5rem; }
+
+@media (max-width: 720px) {
+  .home-hero { padding: 2.5rem 0 2.25rem; }
+  .doors { grid-template-columns: 1fr; }
+  .door__body { padding: 1.25rem; }
+  .thow-strip__row { grid-auto-columns: 72%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .door, .door__ph img, .thow-card { transition: none; }
+  .door:hover, .door:hover .door__ph img, .thow-card:hover { transform: none; }
 }
 </style>

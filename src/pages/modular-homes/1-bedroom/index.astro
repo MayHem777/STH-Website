@@ -32,6 +32,7 @@ const products = (await getCollection('products-modular', ({ data }) => !data.dr
             description={p.data.description}
             href={`/modular-homes/1-bedroom/${p.id}/`}
             image={p.data.heroImage}
+            spotKey={`modular/${p.id}/main`}
             imageAlt={p.data.heroImageAlt ?? p.data.title}
             badge={p.data.badge}
             price={p.data.priceFrom ? `From ${formatPrice(p.data.priceFrom)}` : undefined}

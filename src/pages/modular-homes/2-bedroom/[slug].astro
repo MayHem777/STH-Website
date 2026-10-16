@@ -27,12 +27,13 @@ const productSchema = {
     seller: { '@type': 'Organization', name: 'Sunshine Tiny Houses' },
   },
 };
+import { photo } from '../../../lib/photos';
 ---
 
 <BaseLayout
   title={`${product.data.title} — 2 Bedroom Modular Home | Sunshine Tiny Houses`}
   description={product.data.description}
-  ogImage={product.data.ogImage}
+  ogImage={product.data.ogImage ?? photo(product.data.heroImage, `modular/${product.id}/main`).src}
   schema={productSchema}
 >
 
@@ -40,6 +41,7 @@ const productSchema = {
     title={product.data.title}
     subtitle={product.data.tagline}
     image={product.data.heroImage}
+    spotKey={`modular/${product.id}/main`}
     imageAlt={product.data.heroImageAlt ?? product.data.title}
     ctaText="Contact Now"
     ctaHref="/contact/"
@@ -84,6 +86,7 @@ const productSchema = {
     upgrades={product.data.upgrades}
     floorPlans={product.data.floorPlans}
     gallery={product.data.gallery}
+    spotPrefix={`modular/${product.id}`}
     models={product.data.models}
   />
 

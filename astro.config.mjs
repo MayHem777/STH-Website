@@ -15,7 +15,8 @@ export default defineConfig({
         !page.includes('/contact/thank-you/') &&
         !page.includes('/thank-you/') &&
         !page.includes('/thank-you-pricing-guide/') &&
-        !page.includes('/404/'),
+        !page.includes('/404/') &&
+        !page.includes('/photo-spots/'),
     }),
   ],
 });

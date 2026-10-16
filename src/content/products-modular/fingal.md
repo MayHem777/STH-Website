@@ -24,7 +24,7 @@ features:
   - "Fully equipped kitchen"
   - "Combined bathroom/laundry"
   - "Kitchen/living with room for a sofa and dining table"
-  - "Minimum 1-week installation on site"
+  - "About 2 weeks on site, start to finish"
   - "QBCC licensed build — Class 1a"
 specs:
   Bedrooms: "1"

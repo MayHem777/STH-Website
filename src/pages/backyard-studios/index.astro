@@ -29,6 +29,7 @@ const products = (await getCollection('products-class10a', ({ data }) => !data.d
             description={p.data.description}
             href={`/backyard-studios/${p.id}/`}
             image={p.data.heroImage}
+            spotKey={`studio/${p.id}/main`}
             imageAlt={p.data.heroImageAlt ?? p.data.title}
           />
         ))}

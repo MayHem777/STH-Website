@@ -1,0 +1,30 @@
+---
+// A grid of numbered photo spots (e.g. 'thow/lennox/g' or 'gallery/').
+// Production shows only spots that have a photo; preview builds also show the empty
+// ones as numbered placeholders so Nat can see where photos will go.
+import { spotsWithPrefix, SHOW_SPOT_NUMBERS } from '../lib/photos';
+export interface Props { prefix: string; title?: string; alt: string; }
+const { prefix, title, alt } = Astro.props;
+const all = spotsWithPrefix(prefix);
+const shown = all.filter((s) => s.src || SHOW_SPOT_NUMBERS);
+---
+{shown.length > 0 && (
+  <section class="section spot-gallery">
+    <div class="container">
+      {title && <h2>{title}</h2>}
+      <div class="spot-gallery__grid">
+        {shown.map((s, i) => s.src ? (
+          <a href={s.src}><img src={s.src} data-spot={s.n} alt={`${alt} ${i + 1}`} width="780" height="520" loading="lazy" /></a>
+        ) : (
+          <div class="spot-gallery__empty" data-spot={s.n} data-spot-empty=""><span>Photo {String(s.n).padStart(3, '0')}</span></div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+<style>
+.spot-gallery h2 { margin-bottom: 1.5rem; }
+.spot-gallery__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+.spot-gallery__grid img, .spot-gallery__empty { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius-card-sm); display: block; }
+.spot-gallery__empty { display: flex; align-items: center; justify-content: center; color: var(--color-text-muted); font-weight: 700; }
+</style>

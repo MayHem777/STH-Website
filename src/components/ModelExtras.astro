@@ -1,6 +1,7 @@
 ---
 import Inclusions from './Inclusions.astro';
 import { formatPrice } from '../lib/price';
+import { photo } from '../lib/photos';
 
 export interface Props {
   title: string;
@@ -11,8 +12,11 @@ export interface Props {
     name: string; blurb: string; priceFrom?: number; area?: string; size?: string;
     upgrades?: string; image?: string; imageAlt?: string; floorPlan?: string;
   }[];
+  spotPrefix?: string;   // e.g. 'modular/ensuite' (numbered photo spots)
 }
-const { title, upgrades, floorPlans = [], gallery = [], models = [] } = Astro.props;
+const { title, upgrades, floorPlans = [], gallery = [], models = [], spotPrefix } = Astro.props;
+const pics = gallery.map((g, i) => ({ ...g, pic: photo(g.src, spotPrefix && `${spotPrefix}/gallery-${i + 1}`) }));
+const modelPic = (m: { name: string; image?: string }) => photo(m.image, spotPrefix && `${spotPrefix}/model-${m.name.toLowerCase()}`);
 ---
 
 {models.length > 0 && (
@@ -22,7 +26,7 @@ const { title, upgrades, floorPlans = [], gallery = [], models = [] } = Astro.pr
       {models.map((m) => (
         <article class="model-row" id={m.name.toLowerCase()}>
           <div class="model-row__media">
-            {m.image && <img src={m.image} alt={m.imageAlt ?? m.name} width="614" height="389" loading="lazy" />}
+            {m.image && <img src={modelPic(m).src} data-spot={modelPic(m).n} alt={m.imageAlt ?? m.name} width="614" height="389" loading="lazy" />}
           </div>
           <div class="model-row__body">
             <h3>{m.name}</h3>
@@ -51,11 +55,11 @@ const { title, upgrades, floorPlans = [], gallery = [], models = [] } = Astro.pr
     <div class="container">
       <h2>Inside and out</h2>
       <div class="model-gallery__grid">
-        {gallery.map((g) => (
-          <a href={g.src}><img src={g.src} alt={g.alt} width="780" height="494" loading="lazy" /></a>
+        {pics.map((g) => (
+          <a href={g.pic.src}><img src={g.pic.src} data-spot={g.pic.n} alt={g.alt} width="780" height="494" loading="lazy" /></a>
         ))}
       </div>
-      <p class="model-gallery__note">Images are artist's renders and may show optional upgrades.</p>
+      {pics.some((g) => !g.pic.replaced) && <p class="model-gallery__note">Some images are artist's renders and may show optional upgrades.</p>}
     </div>
   </section>
 )}

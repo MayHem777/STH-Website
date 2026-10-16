@@ -93,11 +93,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
                   <option value="$125k – $150k">$125k – $150k</option>
                   <option value="$150k – $175k">$150k – $175k</option>
                   <option value="$175k – $200k">$175k – $200k</option>
-                  <option value="$200k – $225k">$200k – $225k</option>
-                  <option value="$225k – $250k">$225k – $250k</option>
-                  <option value="$250k – $275k">$250k – $275k</option>
-                  <option value="$275k – $300k">$275k – $300k</option>
-                  <option value="$300k+">$300k+</option>
+                  <!-- Must match the HubSpot property's options exactly (same 8 as the landing pages), or HubSpot silently drops the value -->
+                  <option value="$200k – $250k">$200k – $250k</option>
+                  <option value="$250k+">$250k+</option>
                   <option value="Not sure yet">Not sure yet</option>
                 </select>
               </div>
@@ -332,9 +330,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         }
       });
 
-      var hutkMatch = document.cookie.match(/hubspotutk=([^;]+)/);
-      var payload = { fields: fields, context: { pageUri: window.location.href, pageName: document.title } };
-      if (hutkMatch) payload.context.hutk = hutkMatch[1];
+      // Attribution (UTM / gclid / fbclid kept from the landing URL) via LeadTracking in BaseLayout.
+      // The contact form never sets the 'sth_conv' ad-conversion flag: enquiries here are not ad conversions.
+      var ctx = (window.STHLead && window.STHLead.hubspotContext()) || { pageUri: window.location.href, pageName: document.title };
+      var payload = { fields: fields, context: ctx };
 
       fetch(HS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) {
