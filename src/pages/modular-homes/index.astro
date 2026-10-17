@@ -1,4 +1,5 @@
 ---
+import { listed } from '../../lib/visible';
 import TurnKey from '../../components/TurnKey.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
@@ -6,7 +7,7 @@ import ProductCard from '../../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
 import { formatPrice, EX_FACTORY_NOTE } from '../../lib/price';
 
-const allProducts = (await getCollection('products-modular', ({ data }) => !data.draft))
+const allProducts = (await getCollection('products-modular', ({ data }) => listed(data)))
   .sort((a, b) => a.data.order - b.data.order);
 
 const standaloneCards = allProducts
@@ -25,6 +26,7 @@ const standaloneCards = allProducts
     priceNum: p.data.priceFrom ?? Infinity,
     meta: p.data.area,
     rooms: roomsLine(p.id, p.data.specs),
+    comingSoon: p.data.comingSoon,
   }));
 
 const bedroomCounts = [...new Set(allProducts.filter((p) => p.data.bedrooms).map((p) => p.data.bedrooms))].sort();
@@ -81,6 +83,7 @@ import { roomsLine } from '../../lib/rooms';
             price={p.price}
             meta={p.meta}
             rooms={p.rooms}
+            comingSoon={p.comingSoon}
           />
         ))}
       </div>

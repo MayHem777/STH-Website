@@ -1,4 +1,6 @@
 ---
+import ComingSoonNote from '../../components/ComingSoonNote.astro';
+import { listed } from '../../lib/visible';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import CTAButton from '../../components/CTAButton.astro';
@@ -7,7 +9,7 @@ import ModelExtras from '../../components/ModelExtras.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const products = await getCollection('products-modular', ({ data }) => !data.draft && !data.bedrooms);
+  const products = await getCollection('products-modular', ({ data }) => listed(data) && !data.bedrooms);
   return products.map((p) => ({ params: { slug: p.id }, props: { product: p } }));
 }
 
@@ -58,6 +60,7 @@ import { photo } from '../../lib/photos';
     secondaryCtaText="View All Models"
     secondaryCtaHref="/modular-homes/"
   />
+  <ComingSoonNote show={product.data.comingSoon} />
 
   <ModelPrice
     priceFrom={product.data.priceFrom}

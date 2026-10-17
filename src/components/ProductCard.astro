@@ -9,10 +9,11 @@ export interface Props {
   price?: string;
   meta?: string;
   rooms?: string;   // e.g. '1 bed · 1 bath'
+  comingSoon?: boolean;  // preview-only new design
   spotKey?: string;
 }
 import { photo, SHOW_SPOT_NUMBERS } from '../lib/photos';
-const { title, description, href, image, imageAlt, badge, price, meta, rooms, spotKey } = Astro.props;
+const { title, description, href, image, imageAlt, badge, price, meta, rooms, spotKey, comingSoon } = Astro.props;
 const pic = photo(image, spotKey);
 ---
 
@@ -24,6 +25,7 @@ const pic = photo(image, spotKey);
       <div class="product-card__placeholder" aria-hidden="true" data-spot={SHOW_SPOT_NUMBERS ? pic.n : undefined} data-spot-empty={SHOW_SPOT_NUMBERS && pic.n ? '' : undefined}></div>
     )}
     {badge && <span class="product-card__badge">{badge}</span>}
+    {comingSoon && <span class="product-card__soon">New · preview only</span>}
   </div>
   <div class="product-card__body">
     <h3 class="product-card__title">{title}</h3>
@@ -40,6 +42,7 @@ const pic = photo(image, spotKey);
 </a>
 
 <style>
+.product-card__soon { position: absolute; right: .75rem; bottom: .75rem; background: #E8372C; color: #fff; font-size: var(--font-size-xs); font-weight: 700; padding: .25rem .6rem; border-radius: 99px; }
 .product-card__rooms { font-weight: 700; color: var(--color-primary); font-size: var(--font-size-sm); margin: -0.15rem 0 0.4rem; }
 .product-card__facts { display: flex; flex-wrap: wrap; gap: 0.125rem 0.75rem; align-items: baseline; font-size: var(--font-size-sm); margin-bottom: 0.5rem; }
 .product-card__facts strong { color: var(--color-text); }

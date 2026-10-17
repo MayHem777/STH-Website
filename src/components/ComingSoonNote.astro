@@ -1,0 +1,13 @@
+---
+// Shown on preview builds for a new design that isn't on the live site yet.
+export interface Props { show?: boolean; }
+const { show } = Astro.props;
+---
+{show && (
+  <div class="soon-note">
+    <div class="container"><strong>New design, preview only.</strong> This page isn't on the live site. It goes live once its name, details, prices and photos are in.</div>
+  </div>
+)}
+<style>
+.soon-note { background: #FDECEA; color: #7c1a12; border-bottom: 1px solid #f3c2bd; padding: .8rem 0; font-size: var(--font-size-sm); }
+</style>

@@ -1,4 +1,5 @@
 ---
+import { listed } from '../lib/visible';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 import CTAButton from '../components/CTAButton.astro';
@@ -8,11 +9,11 @@ import { formatPrice, EX_FACTORY_NOTE } from '../lib/price';
 import { spot, photo } from '../lib/photos';
 import { roomsLine } from '../lib/rooms';
 
-const thowProducts = (await getCollection('products-thow', ({ data }) => !data.draft))
+const thowProducts = (await getCollection('products-thow', ({ data }) => listed(data)))
   .sort((a, b) => a.data.order - b.data.order)
   .slice(0, 4);
 
-const allModularProducts = (await getCollection('products-modular', ({ data }) => !data.draft))
+const allModularProducts = (await getCollection('products-modular', ({ data }) => listed(data)))
   .sort((a, b) => a.data.order - b.data.order);
 
 const modularStandalone = allModularProducts
@@ -63,14 +64,14 @@ const processSteps = [
 const doorThow = spot('home/door-thow', '/images/thow-dark-on-site.webp');
 const doorModular = spot('home/door-modular', '/images/models/rio-ext.webp');
 
-const thowStrip = (await getCollection('products-thow', ({ data }) => !data.draft))
+const thowStrip = (await getCollection('products-thow', ({ data }) => listed(data)))
   .sort((a, b) => a.data.order - b.data.order)
   .map((p) => {
     const r = photo(p.data.heroImage || undefined, `thow/${p.id}/main`);
     return { href: `/tiny-houses-on-wheels/${p.id}/`, title: p.data.title, len: p.data.specs?.Length, src: r.src, n: r.n, alt: p.data.heroImageAlt ?? p.data.title };
   });
 
-const class10aProducts = (await getCollection('products-class10a', ({ data }) => !data.draft))
+const class10aProducts = (await getCollection('products-class10a', ({ data }) => listed(data)))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 

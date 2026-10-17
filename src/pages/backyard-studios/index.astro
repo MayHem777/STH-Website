@@ -1,10 +1,11 @@
 ---
+import { listed } from '../../lib/visible';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
 
-const products = (await getCollection('products-class10a', ({ data }) => !data.draft))
+const products = (await getCollection('products-class10a', ({ data }) => listed(data)))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 

@@ -1,11 +1,12 @@
 ---
+import { listed } from '../../lib/visible';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import ProductCard from '../../components/ProductCard.astro';
 import CTAButton from '../../components/CTAButton.astro';
 import { getCollection } from 'astro:content';
 
-const products = (await getCollection('products-thow', ({ data }) => !data.draft))
+const products = (await getCollection('products-thow', ({ data }) => listed(data)))
   .sort((a, b) => a.data.order - b.data.order);
 ---
 
@@ -28,6 +29,7 @@ const products = (await getCollection('products-thow', ({ data }) => !data.draft
       <div class="products-grid">
         {products.map((p) => (
           <ProductCard
+            comingSoon={p.data.comingSoon}
             title={p.data.title}
             description={p.data.description}
             href={`/tiny-houses-on-wheels/${p.id}/`}

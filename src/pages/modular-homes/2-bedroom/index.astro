@@ -1,11 +1,12 @@
 ---
+import { listed } from '../../../lib/visible';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Hero from '../../../components/Hero.astro';
 import ProductCard from '../../../components/ProductCard.astro';
 import { getCollection } from 'astro:content';
 import { formatPrice } from '../../../lib/price';
 
-const products = (await getCollection('products-modular', ({ data }) => !data.draft && data.bedrooms === 2))
+const products = (await getCollection('products-modular', ({ data }) => listed(data) && data.bedrooms === 2))
   // Cheapest first (Mitch 2026-10-17)
   .sort((a, b) => (a.data.priceFrom ?? Infinity) - (b.data.priceFrom ?? Infinity) || a.data.order - b.data.order);
 import { roomsLine } from '../../../lib/rooms';
@@ -30,6 +31,7 @@ import { roomsLine } from '../../../lib/rooms';
       <div class="products-grid">
         {products.map((p) => (
           <ProductCard
+            comingSoon={p.data.comingSoon}
             title={p.data.title}
             description={p.data.description}
             href={`/modular-homes/2-bedroom/${p.id}/`}

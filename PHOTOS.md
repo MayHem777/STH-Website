@@ -11,31 +11,30 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 |---|---|---|---|---|
 | 001 | [Home, top: left panel "Tiny houses on wheels"](/) | Best exterior of a finished tiny house on wheels on its trailer | Landscape | `/images/thow-dark-on-site.webp` |
 | 002 | [Home, top: right panel "Modular homes & granny flats"](/) | Best exterior of a finished modular home on site, ideally with a deck | Landscape | `/images/models/rio-ext.webp` |
-| 003 | [1770: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/1770/) | Best exterior of a 1770 we built | Landscape | `/images/bondi-02a.jpg` |
-| 004 | [1770: photo gallery 1](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/01.webp` |
-| 005 | [1770: photo gallery 2](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/02.webp` |
-| 006 | [1770: photo gallery 3](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/03.webp` |
-| 007 | [1770: photo gallery 4](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/04.webp` |
-| 008 | [1770: photo gallery 5](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/05.webp` |
-| 009 | [1770: photo gallery 6](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/06.webp` |
-| 010 | [1770: photo gallery 7](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/07.webp` |
-| 011 | [1770: photo gallery 8](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/08.webp` |
-| 012 | [1770: photo gallery 9](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/09.webp` |
-| 013 | [1770: photo gallery 10](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/10.webp` |
-| 014 | [1770: photo gallery 11](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/11.webp` |
-| 015 | [1770: photo gallery 12](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/12.webp` |
-| 016 | [1770: photo gallery 13](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/13.webp` |
-| 017 | [1770: photo gallery 14](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/14.webp` |
-| 018 | [1770: photo gallery 15](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/15.webp` |
-| 019 | [1770: photo gallery 16](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/16.webp` |
-| 020 | [1770: photo gallery 17](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/17.webp` |
-| 021 | [1770: photo gallery 18](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/18.webp` |
-| 022 | [1770: photo gallery 19](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/19.webp` |
-| 023 | [1770: photo gallery 20](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/20.webp` |
-| 024 | [1770: photo gallery 21](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/21.webp` |
-| 025 | [1770: photo gallery 22](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/22.webp` |
-| 026 | [1770: photo gallery 23](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/23.webp` |
-| 027 | [1770: photo gallery 24](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/24.webp` |
+| 003 | [1770: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/1770/) | Best exterior of a 1770 we built | Landscape | `/images/old/1770/01.webp` |
+| 004 | [1770: photo gallery 1](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/02.webp` |
+| 005 | [1770: photo gallery 2](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/03.webp` |
+| 006 | [1770: photo gallery 3](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/04.webp` |
+| 007 | [1770: photo gallery 4](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/05.webp` |
+| 008 | [1770: photo gallery 5](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/06.webp` |
+| 009 | [1770: photo gallery 6](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/07.webp` |
+| 010 | [1770: photo gallery 7](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/08.webp` |
+| 011 | [1770: photo gallery 8](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/09.webp` |
+| 012 | [1770: photo gallery 9](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/10.webp` |
+| 013 | [1770: photo gallery 10](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/11.webp` |
+| 014 | [1770: photo gallery 11](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/12.webp` |
+| 015 | [1770: photo gallery 12](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/13.webp` |
+| 016 | [1770: photo gallery 13](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/14.webp` |
+| 017 | [1770: photo gallery 14](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/15.webp` |
+| 018 | [1770: photo gallery 15](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/16.webp` |
+| 019 | [1770: photo gallery 16](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/17.webp` |
+| 020 | [1770: photo gallery 17](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/18.webp` |
+| 021 | [1770: photo gallery 18](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/19.webp` |
+| 022 | [1770: photo gallery 19](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/20.webp` |
+| 023 | [1770: photo gallery 20](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/21.webp` |
+| 024 | [1770: photo gallery 21](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/22.webp` |
+| 025 | [1770: photo gallery 22](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/23.webp` |
+| 026 | [1770: photo gallery 23](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/24.webp` |
 | 028 | [Little Cove: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/little-cove/) | Best exterior of a Little Cove we built | Landscape | `/images/dsc04846.jpeg` |
 | 029 | [Little Cove: photo gallery 1](/tiny-houses-on-wheels/little-cove/) | Little Cove, inside or out (today's photo is from the old website) | Landscape | `/images/old/little-cove/01.webp` |
 | 030 | [Little Cove: photo gallery 2](/tiny-houses-on-wheels/little-cove/) | Little Cove, inside or out (today's photo is from the old website) | Landscape | `/images/old/little-cove/02.webp` |
@@ -381,3 +380,10 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 371 | [Blog: "Noosa Council Abolishes $7,000 Infrastructure Charge for Secondary Dwellings — Here's What That Means for You" top photo](/blog/noosa-council-abolishes-infrastructure-charge/) | Photo that fits the article | Wide, landscape | `/images/jacaranda-house.jpg` |
 | 372 | [Blog: "The Rise of Modern Modular: Why a Granny Flat is the Ultimate Property Upgrade" top photo](/blog/the-rise-of-modern-modular/) | Photo that fits the article | Wide, landscape | `/images/jacaranda-house.jpg` |
 | 373 | [Picture shown when someone shares the website on Facebook or in a text](/) | One strong wide exterior shot | Wide, landscape | `/og-default.jpg` |
+| 374 | [New tiny house A (name to come): main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/new-tiny-house-a/) | Best exterior of a New tiny house A (name to come) we built | Landscape | none (hidden until filled) |
+| 375 | [New tiny house B (name to come): main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/new-tiny-house-b/) | Best exterior of a New tiny house B (name to come) we built | Landscape | none (hidden until filled) |
+| 376 | [New tiny house C (name to come): main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/new-tiny-house-c/) | Best exterior of a New tiny house C (name to come) we built | Landscape | none (hidden until filled) |
+| 377 | [New tiny house D (name to come): main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/new-tiny-house-d/) | Best exterior of a New tiny house D (name to come) we built | Landscape | none (hidden until filled) |
+| 378 | [New 1 bedroom A (name to come): main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/new-1-bedroom-a/) | Best exterior of a New 1 bedroom A (name to come) (real build if we have one) | Landscape | none (hidden until filled) |
+| 379 | [New 1 bedroom B (name to come): main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/new-1-bedroom-b/) | Best exterior of a New 1 bedroom B (name to come) (real build if we have one) | Landscape | none (hidden until filled) |
+| 380 | [Daintree: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/daintree-1-bedroom/) | Best exterior of a Daintree (real build if we have one) | Landscape | none (hidden until filled) |

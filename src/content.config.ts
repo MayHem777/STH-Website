@@ -6,6 +6,8 @@ const productSchema = z.object({
   tagline: z.string().optional(),
   description: z.string(),
   draft: z.boolean().default(false),
+  // New designs waiting on details: shown on preview builds only, never on the live site
+  comingSoon: z.boolean().default(false),
   order: z.number().default(99),
   heroImage: z.string().optional(),
   heroImageAlt: z.string().optional(),
@@ -32,6 +34,7 @@ const productSchema = z.object({
     image: z.string().optional(),
     imageAlt: z.string().optional(),
     floorPlan: z.string().optional(),
+    comingSoon: z.boolean().optional(),
   })).optional(),
 });
 

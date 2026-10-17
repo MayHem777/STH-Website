@@ -47,6 +47,23 @@ gallery:
     alt: "Office, photo 7"
   - src: "/images/old/office/08.webp"
     alt: "Office, photo 8"
+# Office category (Nat 2026-10-17): the current office plus two new office designs (preview only until details are in).
+# Internal design references: B = Shane & Linda's design, C = Daniel's design. Never show client names on the site.
+models:
+  - name: "Office"
+    blurb: "A 19.2 m² modular office (6 × 3.2 m) with tall louvres, wide stacker doors, a kitchenette and restroom."
+    priceFrom: 100000
+    area: "19.2 m²"
+    size: "6 × 3.2 m"
+    image: "/images/banksia-office.jpg"
+    imageAlt: "Modular office exterior"
+    floorPlan: "/images/models/office-plan.webp"
+  - name: "Office B (name to come)"
+    blurb: "A new office design. Details to come."
+    comingSoon: true
+  - name: "Office C (name to come)"
+    blurb: "A new office design. Details to come."
+    comingSoon: true
 ---
 
 ## Office
