@@ -858,9 +858,9 @@
   "key": "lp/google/badge-bg",
   "page": "/google-ads-offer/",
   "where": "Google ads page: background behind the top section",
-  "shows": "Wide exterior shot with space for text",
+  "shows": "Tall or wide exterior shot with space for text",
   "shape": "wide",
-  "current": "/images/badge-1.webp"
+  "current": "/images/lp/lp-hero-google.webp"
  },
  {
   "n": 102,
@@ -869,25 +869,25 @@
   "where": "Google ads page: \"Completed projects\" photo 1",
   "shows": "Finished secondary dwelling exterior",
   "shape": "landscape",
-  "current": "/images/workshop-recent-1.jpeg"
+  "current": "/images/lp/lp-build-1.webp"
  },
  {
   "n": 103,
   "key": "lp/google/gallery-2",
   "page": "/google-ads-offer/",
   "where": "Google ads page: \"Completed projects\" photo 2",
-  "shows": "Interior finish and fit-out",
+  "shows": "Finished secondary dwelling exterior",
   "shape": "landscape",
-  "current": "/images/workshop-recent-2.jpg"
+  "current": "/images/lp/lp-build-2.webp"
  },
  {
   "n": 104,
   "key": "lp/google/gallery-3",
   "page": "/google-ads-offer/",
   "where": "Google ads page: \"Completed projects\" photo 3",
-  "shows": "Kitchen and living area",
+  "shows": "Interior finish and fit-out",
   "shape": "landscape",
-  "current": "/images/workshop-recent-4.jpeg"
+  "current": "/images/lp/lp-build-3.webp"
  },
  {
   "n": 105,
@@ -896,7 +896,7 @@
   "where": "Google ads page: photo beside \"Why us\"",
   "shows": "Finished build, upright framing works best",
   "shape": "portrait",
-  "current": "/images/workshop-recent-3.jpg"
+  "current": "/images/lp/lp-build-4.webp"
  },
  {
   "n": 106,
@@ -905,7 +905,7 @@
   "where": "Meta ads page: background behind the top section",
   "shows": "Wide exterior shot with space for text",
   "shape": "wide",
-  "current": "/images/workshop-recent-1.jpeg"
+  "current": "/images/lp/lp-build-1.webp"
  },
  {
   "n": 107,
@@ -914,7 +914,7 @@
   "where": "Meta ads page: gallery photo 1",
   "shows": "Finished build, inside or out",
   "shape": "landscape",
-  "current": "/images/badge-1.webp"
+  "current": "/images/lp/lp-hero-google.webp"
  },
  {
   "n": 108,
@@ -923,7 +923,7 @@
   "where": "Meta ads page: gallery photo 2",
   "shows": "Finished build, inside or out",
   "shape": "landscape",
-  "current": "/images/workshop-recent-2.jpg"
+  "current": "/images/lp/lp-build-2.webp"
  },
  {
   "n": 109,
@@ -932,7 +932,7 @@
   "where": "Meta ads page: gallery photo 3",
   "shows": "Finished build, inside or out",
   "shape": "landscape",
-  "current": "/images/workshop-recent-4.jpeg"
+  "current": "/images/lp/lp-build-3.webp"
  },
  {
   "n": 110,
@@ -941,198 +941,198 @@
   "where": "Meta ads page: gallery photo 4",
   "shows": "Finished build, inside or out",
   "shape": "landscape",
-  "current": "/images/workshop-recent-3.jpg"
+  "current": "/images/lp/lp-build-4.webp"
  },
  {
   "n": 111,
-  "key": "gallery/1",
+  "key": "gallery/modular-1",
   "page": "/gallery/",
-  "where": "Gallery page photo 1",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 1",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 112,
-  "key": "gallery/2",
+  "key": "gallery/modular-2",
   "page": "/gallery/",
-  "where": "Gallery page photo 2",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 2",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 113,
-  "key": "gallery/3",
+  "key": "gallery/modular-3",
   "page": "/gallery/",
-  "where": "Gallery page photo 3",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 3",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 114,
-  "key": "gallery/4",
+  "key": "gallery/modular-4",
   "page": "/gallery/",
-  "where": "Gallery page photo 4",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 4",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 115,
-  "key": "gallery/5",
+  "key": "gallery/modular-5",
   "page": "/gallery/",
-  "where": "Gallery page photo 5",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 5",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 116,
-  "key": "gallery/6",
+  "key": "gallery/modular-6",
   "page": "/gallery/",
-  "where": "Gallery page photo 6",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 6",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 117,
-  "key": "gallery/7",
+  "key": "gallery/modular-7",
   "page": "/gallery/",
-  "where": "Gallery page photo 7",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 7",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 118,
-  "key": "gallery/8",
+  "key": "gallery/modular-8",
   "page": "/gallery/",
-  "where": "Gallery page photo 8",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 8",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 119,
-  "key": "gallery/9",
+  "key": "gallery/modular-9",
   "page": "/gallery/",
-  "where": "Gallery page photo 9",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 9",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 120,
-  "key": "gallery/10",
+  "key": "gallery/modular-10",
   "page": "/gallery/",
-  "where": "Gallery page photo 10",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 10",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 121,
-  "key": "gallery/11",
+  "key": "gallery/modular-11",
   "page": "/gallery/",
-  "where": "Gallery page photo 11",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 11",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 122,
-  "key": "gallery/12",
+  "key": "gallery/modular-12",
   "page": "/gallery/",
-  "where": "Gallery page photo 12",
-  "shows": "Finished tiny houses on wheels and modular homes, outside and in",
+  "where": "Gallery, Class 1a modular homes: photo 12",
+  "shows": "A finished modular home or granny flat, outside or in (crane lifts and installs welcome)",
   "shape": "landscape"
  },
  {
   "n": 123,
-  "key": "gallery/13",
+  "key": "gallery/thow-1",
   "page": "/gallery/",
-  "where": "Gallery page photo 13",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 1",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 124,
-  "key": "gallery/14",
+  "key": "gallery/thow-2",
   "page": "/gallery/",
-  "where": "Gallery page photo 14",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 2",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 125,
-  "key": "gallery/15",
+  "key": "gallery/thow-3",
   "page": "/gallery/",
-  "where": "Gallery page photo 15",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 3",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 126,
-  "key": "gallery/16",
+  "key": "gallery/thow-4",
   "page": "/gallery/",
-  "where": "Gallery page photo 16",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 4",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 127,
-  "key": "gallery/17",
+  "key": "gallery/thow-5",
   "page": "/gallery/",
-  "where": "Gallery page photo 17",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 5",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 128,
-  "key": "gallery/18",
+  "key": "gallery/thow-6",
   "page": "/gallery/",
-  "where": "Gallery page photo 18",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 6",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 129,
-  "key": "gallery/19",
+  "key": "gallery/thow-7",
   "page": "/gallery/",
-  "where": "Gallery page photo 19",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 7",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 130,
-  "key": "gallery/20",
+  "key": "gallery/thow-8",
   "page": "/gallery/",
-  "where": "Gallery page photo 20",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 8",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 131,
-  "key": "gallery/21",
+  "key": "gallery/thow-9",
   "page": "/gallery/",
-  "where": "Gallery page photo 21",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 9",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 132,
-  "key": "gallery/22",
+  "key": "gallery/thow-10",
   "page": "/gallery/",
-  "where": "Gallery page photo 22",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 10",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 133,
-  "key": "gallery/23",
+  "key": "gallery/thow-11",
   "page": "/gallery/",
-  "where": "Gallery page photo 23",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 11",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {
   "n": 134,
-  "key": "gallery/24",
+  "key": "gallery/thow-12",
   "page": "/gallery/",
-  "where": "Gallery page photo 24",
-  "shows": "Builds in the factory, deliveries, crane lifts and installs",
+  "where": "Gallery, tiny houses on wheels: photo 12",
+  "shows": "A finished tiny house on wheels, outside or in (deliveries welcome)",
   "shape": "landscape"
  },
  {

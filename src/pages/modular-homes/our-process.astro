@@ -1,0 +1,85 @@
+---
+// "Our Class 1a Modular Process": the full turn-key journey, for the many people who ask
+// whether we do the whole job. Steps from the Squarespace modular page (Oct 2026).
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import TurnKey from '../../components/TurnKey.astro';
+import CTAButton from '../../components/CTAButton.astro';
+import { EX_FACTORY_NOTE } from '../../lib/price';
+
+const steps = [
+  { t: 'Survey and soil test', d: 'Once you accept our proposal, we order the survey and soil test for your block. They tell the engineer and certifier exactly what they are working with.' },
+  { t: 'Concept design', d: 'We design the home around how you want to live and what your block allows: one of our layouts as it is, one modified to suit, or a design from scratch.' },
+  { t: 'Material and colour selection', d: 'You come in for a selections consult to choose your finishes, colours and fixtures with us, in person.' },
+  { t: 'Architectural plans', d: 'The architectural plans are refined until they are right. You can make changes along the way and you sign off before we move on.' },
+  { t: 'Detailed plans', d: 'Detailed bathroom, kitchen and electrical plans are drawn, so there are no surprises in the build.' },
+  { t: 'Consultants and authorities', d: 'We engage everyone the project needs: town planner if required, energy assessor, building certifier, structural engineer, civil engineer if required, and the crane and transport companies.' },
+  { t: 'Documentation and approval', d: 'We prepare all the documentation and lodge it with the building certifier. Plumbing applications go to your council. We deal with them until approval is issued.' },
+  { t: 'Factory build and site works', d: 'Your home is built under cover in our Noosaville factory, with the structure inspected and certified by our engineer. Meanwhile we prepare your site: footings and services rough-in, usually about one week on site.' },
+  { t: 'Delivery and installation', d: 'We transport and crane the home onto its footings, then finish the installation and connect water, sewer or septic and power with licensed trades. Usually about one week after delivery.' },
+  { t: 'Certified handover', d: 'Final inspections and certification, a walk-through of your new home, and the keys in your hand.' },
+];
+---
+<BaseLayout
+  title="Our Class 1a Modular Process | Sunshine Tiny Houses"
+  description="We manage your modular home from concept to completion: design, town planning, certifier, engineering, approvals, site works, crane, installation and connections. Turn-key, Class 1a certified."
+>
+  <section class="op-hero">
+    <div class="container">
+      <p class="op-hero__eyebrow">Turn-key modular homes</p>
+      <h1>Our Class 1a modular process</h1>
+      <p class="op-hero__sub">Yes, we do the whole works. From the first look at your block to the day you move in, we manage the design, approvals, engineering, site works, delivery, installation and connections. You make the decisions; we handle everything else.</p>
+      <ul class="op-hero__facts">
+        <li>Every modular home is a certified Class 1a dwelling</li>
+        <li>QBCC licensed &amp; Master Builders Queensland member</li>
+        <li>About two weeks on site, start to finish</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container op-steps">
+      <div class="eyebrow">Step by step</div>
+      <h2>From concept to completion</h2>
+      <ol class="op-steps__list">
+        {steps.map((s, i) => (
+          <li>
+            <span class="op-steps__n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <div><h3>{s.t}</h3><p>{s.d}</p></div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <TurnKey showLink={false} />
+
+  <section class="section">
+    <div class="container op-note">
+      <h2>What your quote covers</h2>
+      <p>The prices on our model pages are for the home itself. {EX_FACTORY_NOTE} Because every block is different, we look at your site first and then quote the whole project: the home, approvals, site works, transport, crane, installation and connections. One builder, one quote, one point of contact.</p>
+      <div class="op-note__btns">
+        <CTAButton href="/contact/">Talk to us about your block</CTAButton>
+        <CTAButton href="/modular-homes/" variant="secondary">See the modular range</CTAButton>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+.op-hero { background: var(--color-surface); padding: 4rem 0 3.25rem; }
+.op-hero__eyebrow { font-size: var(--label-size); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--color-accent-text); margin-bottom: .6rem; }
+.op-hero h1 { font-size: var(--font-size-5xl); max-width: 760px; text-wrap: balance; }
+.op-hero__sub { font-size: var(--font-size-lg); color: var(--color-text-body); max-width: 720px; margin-top: 1rem; }
+.op-hero__facts { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+.op-hero__facts li { background: #fff; border: 1px solid var(--color-border); border-radius: 99px; padding: .45rem 1rem; font-weight: 600; font-size: .92rem; }
+.op-steps h2 { margin: .5rem 0 2rem; }
+.op-steps__list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 3rem; }
+.op-steps__list li { display: flex; gap: 1.1rem; padding: 1.25rem 0; border-top: 1px solid var(--color-border); }
+.op-steps__n { flex: none; font-family: var(--font-heading); font-weight: 800; font-size: 1.4rem; color: var(--color-accent); font-variant-numeric: tabular-nums; min-width: 2.2rem; }
+.op-steps__list h3 { font-size: 1.12rem; margin-bottom: .35rem; }
+.op-steps__list p { color: var(--color-text-body); font-size: .97rem; }
+.op-note { max-width: 780px; }
+.op-note h2 { margin-bottom: 1rem; }
+.op-note p { color: var(--color-text-body); }
+.op-note__btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+@media (max-width: 800px) { .op-steps__list { grid-template-columns: 1fr; } }
+</style>

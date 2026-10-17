@@ -52,18 +52,22 @@ for (const p of items('products-class10a')) {
   add(`studio/${p.id}/main`, `/backyard-studios/${p.id}/`, `${p.title}: main photo (also its card on the studios and home pages)`, `Best photo of a ${p.title.toLowerCase().replace(/s$/, '')} we built`, 'landscape', p.hero);
 }
 add('about/team', '/about/', 'About page, beside "Who we are"', 'Mitch and Nat or the team at work (current staff only)', 'square', '/images/about-workshop.webp');
-add('lp/google/badge-bg', '/google-ads-offer/', 'Google ads page: background behind the top section', 'Wide exterior shot with space for text', 'wide', '/images/badge-1.webp');
-['/images/workshop-recent-1.jpeg', '/images/workshop-recent-2.jpg', '/images/workshop-recent-4.jpeg'].forEach((src, i) => add(`lp/google/gallery-${i + 1}`, '/google-ads-offer/', `Google ads page: "Completed projects" photo ${i + 1}`, ['Finished secondary dwelling exterior', 'Interior finish and fit-out', 'Kitchen and living area'][i], 'landscape', src));
-add('lp/google/why', '/google-ads-offer/', 'Google ads page: photo beside "Why us"', 'Finished build, upright framing works best', 'portrait', '/images/workshop-recent-3.jpg');
-add('lp/meta/hero-bg', '/meta-ads-offer/', 'Meta ads page: background behind the top section', 'Wide exterior shot with space for text', 'wide', '/images/workshop-recent-1.jpeg');
-['/images/badge-1.webp', '/images/workshop-recent-2.jpg', '/images/workshop-recent-4.jpeg', '/images/workshop-recent-3.jpg'].forEach((src, i) => add(`lp/meta/gallery-${i + 1}`, '/meta-ads-offer/', `Meta ads page: gallery photo ${i + 1}`, 'Finished build, inside or out', 'landscape', src));
-for (let i = 1; i <= 24; i++) add(`gallery/${i}`, '/gallery/', `Gallery page photo ${i}`, i <= 12 ? 'Finished tiny houses on wheels and modular homes, outside and in' : 'Builds in the factory, deliveries, crane lifts and installs', 'landscape');
+// Ad landing pages (ported from the live gists 2026-10-17; photos copied into /images/lp/)
+add('lp/google/badge-bg', '/google-ads-offer/', 'Google ads page: background behind the top section', 'Tall or wide exterior shot with space for text', 'wide', '/images/lp/lp-hero-google.webp');
+['/images/lp/lp-build-1.webp', '/images/lp/lp-build-2.webp', '/images/lp/lp-build-3.webp'].forEach((src, i) => add(`lp/google/gallery-${i + 1}`, '/google-ads-offer/', `Google ads page: "Completed projects" photo ${i + 1}`, ['Finished secondary dwelling exterior', 'Finished secondary dwelling exterior', 'Interior finish and fit-out'][i], 'landscape', src));
+add('lp/google/why', '/google-ads-offer/', 'Google ads page: photo beside "Why us"', 'Finished build, upright framing works best', 'portrait', '/images/lp/lp-build-4.webp');
+add('lp/meta/hero-bg', '/meta-ads-offer/', 'Meta ads page: background behind the top section', 'Wide exterior shot with space for text', 'wide', '/images/lp/lp-build-1.webp');
+['/images/lp/lp-hero-google.webp', '/images/lp/lp-build-2.webp', '/images/lp/lp-build-3.webp', '/images/lp/lp-build-4.webp'].forEach((src, i) => add(`lp/meta/gallery-${i + 1}`, '/meta-ads-offer/', `Meta ads page: gallery photo ${i + 1}`, 'Finished build, inside or out', 'landscape', src));
+// Gallery: two sections, modular homes first (Mitch 2026-10-17). Same numbers as the old gallery/1..24 keys.
+const RENAMED = {};
+for (let i = 1; i <= 12; i++) { add(`gallery/modular-${i}`, '/gallery/', `Gallery, Class 1a modular homes: photo ${i}`, 'A finished modular home or granny flat, outside or in (crane lifts and installs welcome)', 'landscape'); RENAMED[`gallery/modular-${i}`] = `gallery/${i}`; }
+for (let i = 1; i <= 12; i++) { add(`gallery/thow-${i}`, '/gallery/', `Gallery, tiny houses on wheels: photo ${i}`, 'A finished tiny house on wheels, outside or in (deliveries welcome)', 'landscape'); RENAMED[`gallery/thow-${i}`] = `gallery/${i + 12}`; }
 for (const p of items('blog')) add(`blog/${p.id}/hero`, `/blog/${p.id}/`, `Blog: "${p.title}" top photo`, 'Photo that fits the article', 'wide', p.hero);
 add('site/share', '/', 'Picture shown when someone shares the website on Facebook or in a text', 'One strong wide exterior shot', 'wide', '/og-default.jpg');
 
 let next = Math.max(0, ...old.map((s) => s.n)) + 1;
-const out = spots.map((s) => ({ n: oldByKey.get(s.key)?.n ?? next++, ...s, alsoOn: s.alsoOn.length ? s.alsoOn : undefined }));
-for (const o of old) if (!out.find((s) => s.key === o.key)) out.push({ ...o, retired: true });
+const out = spots.map((s) => ({ n: oldByKey.get(s.key)?.n ?? oldByKey.get(RENAMED[s.key])?.n ?? next++, ...s, alsoOn: s.alsoOn.length ? s.alsoOn : undefined }));
+for (const o of old) if (!out.find((s) => s.key === o.key) && !Object.values(RENAMED).includes(o.key)) out.push({ ...o, retired: true });
 out.sort((a, b) => a.n - b.n);
 fs.writeFileSync(FILE, JSON.stringify(out, null, 1) + '\n');
 console.log(`${out.length} spots (${out.filter((s) => s.current).length} have a photo today, ${out.filter((s) => !s.current).length} empty)`);

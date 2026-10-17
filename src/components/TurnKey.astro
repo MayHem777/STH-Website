@@ -1,0 +1,60 @@
+---
+// "We don't just build the box": everything we manage on a Class 1a modular project.
+// Used on /modular-homes/ and /modular-homes/our-process/. List from the Squarespace
+// modular page ("Step by step: from concept to completion"), Oct 2026.
+export interface Props { showLink?: boolean; dark?: boolean; }
+const { showLink = true, dark = true } = Astro.props;
+const TURNKEY_ITEMS = [
+  { t: 'Town planning', d: 'Where your site needs it' },
+  { t: 'Building certifier', d: 'Engaged and briefed by us' },
+  { t: 'Energy assessment', d: 'Energy efficiency report' },
+  { t: 'Soil test and survey', d: 'Ordered as soon as you accept the proposal' },
+  { t: 'Structural engineering', d: 'Form 15 for footings, floor, wall and roof framing' },
+  { t: 'Plumbing application', d: 'Lodged with your council' },
+  { t: 'Council approvals and fees', d: 'Managed from lodgement to approval' },
+  { t: 'Site works', d: 'Engineered footings, services and earthworks if required' },
+  { t: 'Termite barrier', d: 'Installed to suit your site' },
+  { t: 'Transport and crane', d: 'Booked and coordinated by us' },
+  { t: 'Installation and handover', d: 'Set down, fitted off and walked through with you' },
+  { t: 'Connection of all services', d: 'Water, sewer or septic, power, by licensed trades' },
+];
+---
+<section class:list={['section', 'turnkey', { 'turnkey--dark': dark }]}>
+  <div class="container">
+    <div class="turnkey__head">
+      <div class="eyebrow">Turn-key, from concept to completion</div>
+      <h2>We don't just build the module and leave you to sort out the rest</h2>
+      <p class="turnkey__lead">Some modular builders supply the building only. You're left to find a town planner, certifier and engineer, organise footings, services, a crane and the trades, and make it all line up. With us, one team manages every step below, and your quote covers the finished, connected home on your block.</p>
+    </div>
+    <ul class="turnkey__grid">
+      {TURNKEY_ITEMS.map((item) => (
+        <li>
+          <span class="turnkey__tick" aria-hidden="true"></span>
+          <div><strong>{item.t}</strong><span>{item.d}</span></div>
+        </li>
+      ))}
+    </ul>
+    {showLink && <a class="turnkey__link" href="/modular-homes/our-process/">See our Class 1a modular process, step by step &rarr;</a>}
+  </div>
+</section>
+<style>
+.turnkey--dark { background: var(--color-surface-dark); color: #fff; }
+.turnkey--dark h2 { color: #fff; }
+.turnkey--dark .eyebrow { color: var(--color-accent); border-color: rgba(200,169,110,.5); background: rgba(200,169,110,.12); }
+.turnkey__head { max-width: 760px; margin-bottom: 2.25rem; }
+.turnkey__head h2 { margin: .5rem 0 1rem; text-wrap: balance; }
+.turnkey__lead { font-size: var(--font-size-lg); color: var(--color-text-body); }
+.turnkey--dark .turnkey__lead { color: rgba(255,255,255,.78); }
+.turnkey__grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem 2rem; }
+.turnkey__grid li { display: flex; gap: .85rem; align-items: flex-start; padding: 1rem 0; border-top: 1px solid var(--color-border); }
+.turnkey--dark .turnkey__grid li { border-top-color: rgba(255,255,255,.14); }
+.turnkey__grid strong { display: block; font-family: var(--font-heading); font-size: 1.02rem; }
+.turnkey__grid span { font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.turnkey--dark .turnkey__grid span { color: rgba(255,255,255,.65); }
+.turnkey__tick { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--color-accent); position: relative; margin-top: 2px; }
+.turnkey__tick::after { content: ""; position: absolute; left: 8px; top: 6px; width: 7px; height: 11px; border: solid var(--color-text); border-width: 0 2.5px 2.5px 0; transform: rotate(45deg); }
+.turnkey__link { display: inline-block; margin-top: 2rem; font-weight: 700; color: var(--color-accent); border-bottom: 2px solid var(--color-accent); }
+.turnkey:not(.turnkey--dark) .turnkey__link { color: var(--color-primary); }
+@media (max-width: 900px) { .turnkey__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 600px) { .turnkey__grid { grid-template-columns: 1fr; } }
+</style>

@@ -31,14 +31,14 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             <div class="product-choice-grid" role="radiogroup" aria-label="What are you interested in?">
               <label class="product-choice">
-                <input type="radio" name="product_interest" value="Tiny House on Wheels" required />
-                <span class="product-choice__label">Tiny House on Wheels</span>
-                <span class="product-choice__sub">Fully liveable, road-registerable</span>
-              </label>
-              <label class="product-choice">
-                <input type="radio" name="product_interest" value="Modular Home or Granny Flat (Class 1a)" />
+                <input type="radio" name="product_interest" value="Modular Home or Granny Flat (Class 1a)" required />
                 <span class="product-choice__label">Modular Home or Granny Flat</span>
                 <span class="product-choice__sub">Permanent Class 1a structure</span>
+              </label>
+              <label class="product-choice">
+                <input type="radio" name="product_interest" value="Tiny House on Wheels" />
+                <span class="product-choice__label">Tiny House on Wheels</span>
+                <span class="product-choice__sub">Fully liveable, road-registerable</span>
               </label>
               <label class="product-choice">
                 <input type="radio" name="product_interest" value="Not Sure Yet" />
@@ -231,6 +231,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="contact-credentials">
           <p><strong>QBCC License:</strong> #15205110</p>
           <p><strong>ABN:</strong> 40 270 427 080</p>
+          <p><strong>Proud member</strong> of Master Builders Queensland</p>
+          <img class="contact-mbq" src="/images/badges/mbq-proud-member.png" alt="Master Builders Queensland Proud Member" width="150" height="94" loading="lazy" />
         </div>
       </aside>
 
@@ -604,4 +606,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     gap: 3rem;
   }
 }
+.contact-mbq { width: 150px; height: auto; margin-top: 1rem; padding: 6px 0; display: block; }
 </style>

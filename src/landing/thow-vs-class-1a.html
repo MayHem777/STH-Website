@@ -1,0 +1,442 @@
+<!-- Copied from the live Squarespace "THOW vs Class 1a Modular" page (code block) on 2026-10-17. This file is now the source: edit here. Has its own H1; styles scoped to .sth-page. -->
+
+  
+    <!-- ============================================================
+     Sunshine Tiny Houses — "Things to Know" page
+     THOW vs Class 1a Modular Home
+     Paste into a Squarespace CODE BLOCK on the new page.
+     Includes its own H1, so the page doesn't need a title block.
+     All styles scoped to .sth-page — nothing leaks site-wide.
+     ============================================================ -->
+
+<div class="sth-page">
+
+<style>
+.sth-page{
+  --sth-ink:#17211F;
+  --sth-muted:#5E6A66;
+  --sth-rule:#DDD9D0;
+  --sth-rule-soft:#EDEAE3;
+  --sth-thow:#C79340;
+  --sth-thow-ink:#7A5410;
+  --sth-thow-wash:#FAF3E6;
+  --sth-mod:#2F7A72;
+  --sth-mod-ink:#17423F;
+  --sth-mod-wash:#EBF3F1;
+
+  color:var(--sth-ink);
+  line-height:1.65;
+  font-size:1.05rem;
+}
+.sth-page *{box-sizing:border-box}
+.sth-page p{margin:0 0 1.1em}
+.sth-page > *:last-child{margin-bottom:0}
+
+/* page head */
+.sth-page h1{
+  font-size:2.4em;
+  line-height:1.06;
+  letter-spacing:-.02em;
+  margin:0 0 .35em;
+  max-width:19ch;
+}
+.sth-page .sth-kicker{
+  font-size:.72em;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--sth-muted);
+  margin:0 0 1.4em;
+}
+.sth-page .sth-standfirst{
+  font-size:1.18em;
+  line-height:1.5;
+  margin-bottom:1.3em;
+  max-width:62ch;
+}
+
+/* section headings — offset for Squarespace's sticky header */
+.sth-page h2{
+  font-size:1.5em;
+  line-height:1.2;
+  letter-spacing:-.01em;
+  margin:2.5em 0 .1em;
+  scroll-margin-top:110px;
+}
+.sth-page h3{font-size:1.12em;line-height:1.3;margin:0 0 .4em}
+.sth-page h2 + .sth-lede{margin-top:.7em}
+.sth-page .sth-lede{color:#2C3A37;max-width:66ch}
+
+/* contents */
+.sth-toc{
+  margin:2em 0 0;padding:20px 22px;
+  border-top:3px solid var(--sth-ink);
+  background:#fff;
+  border-bottom:1px solid var(--sth-rule);
+}
+.sth-toc p{
+  font-size:.72em;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--sth-muted);margin:0 0 .9em;
+}
+.sth-toc ol{list-style:none;margin:0;padding:0;counter-reset:sthtoc}
+.sth-toc li{counter-increment:sthtoc;margin:0 0 .5em;font-size:.95em;line-height:1.4}
+.sth-toc li:last-child{margin-bottom:0}
+.sth-toc li::before{
+  content:counter(sthtoc,decimal-leading-zero);
+  font-size:.8em;color:var(--sth-muted);margin-right:12px;
+}
+.sth-toc a{color:var(--sth-ink);text-decoration:none;border-bottom:1px solid var(--sth-rule)}
+.sth-toc a:hover{border-bottom-color:var(--sth-mod)}
+
+/* two product cards */
+.sth-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:1.6em 0 0}
+.sth-card{background:#fff;border:1px solid var(--sth-rule);padding:0 20px 20px}
+.sth-card .sth-key{display:block;height:5px;margin:0 -20px 18px}
+.sth-card.thow .sth-key{background:var(--sth-thow)}
+.sth-card.mod .sth-key{background:var(--sth-mod)}
+.sth-card.thow h3{color:var(--sth-thow-ink)}
+.sth-card.mod h3{color:var(--sth-mod-ink)}
+.sth-card .sth-tag{
+  display:block;font-size:.72em;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--sth-muted);margin:0 0 1em;
+}
+.sth-card p{font-size:.95em}
+.sth-card .sth-verdict{
+  font-weight:600;font-size:.92em;line-height:1.5;
+  margin:1.1em 0 0;padding-top:.9em;border-top:1px solid var(--sth-rule-soft);
+}
+.sth-card.thow .sth-verdict{color:var(--sth-thow-ink)}
+.sth-card.mod .sth-verdict{color:var(--sth-mod-ink)}
+
+/* comparison table */
+.sth-table{width:100%;border-collapse:collapse;margin:1.6em 0 0;font-size:.94em}
+.sth-table th,.sth-table td{text-align:left;vertical-align:top;padding:13px 15px}
+.sth-table thead th{font-weight:700;padding-bottom:9px;border-bottom:2px solid var(--sth-ink)}
+.sth-table thead th:nth-child(2){color:var(--sth-thow-ink);border-bottom-color:var(--sth-thow)}
+.sth-table thead th:nth-child(3){color:var(--sth-mod-ink);border-bottom-color:var(--sth-mod)}
+.sth-table thead th:first-child{width:19%}
+.sth-table tbody th{
+  width:19%;font-weight:600;font-size:.82em;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--sth-muted);line-height:1.5;padding-top:16px;
+}
+.sth-table tbody tr{border-bottom:1px solid var(--sth-rule-soft)}
+.sth-table tbody tr:last-child{border-bottom:1px solid var(--sth-rule)}
+.sth-table td:nth-child(2){background:var(--sth-thow-wash);box-shadow:inset 3px 0 0 var(--sth-thow)}
+.sth-table td:nth-child(3){background:var(--sth-mod-wash);box-shadow:inset 3px 0 0 var(--sth-mod)}
+
+/* numbered process */
+.sth-steps{list-style:none;margin:1.5em 0 0;padding:0;counter-reset:sthstep}
+.sth-steps li{
+  counter-increment:sthstep;position:relative;
+  padding:0 0 18px 50px;margin:0 0 18px;border-bottom:1px solid var(--sth-rule-soft);
+}
+.sth-steps li:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.sth-steps li::before{
+  content:counter(sthstep,decimal-leading-zero);
+  position:absolute;left:0;top:.15em;
+  font-size:.8em;letter-spacing:.04em;color:var(--sth-mod);font-weight:600;
+}
+.sth-steps strong{display:block;margin-bottom:.15em;font-size:1em}
+.sth-steps span{display:block;font-size:.95em;color:#2C3A37}
+
+/* fit lists */
+.sth-fit{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:1.6em 0 0}
+.sth-fit h3{padding-bottom:.55em;border-bottom:1px solid var(--sth-rule);margin-bottom:0}
+.sth-fit .thow h3{color:var(--sth-thow-ink);border-bottom-color:var(--sth-thow)}
+.sth-fit .mod h3{color:var(--sth-mod-ink);border-bottom-color:var(--sth-mod)}
+.sth-fit ul{list-style:none;margin:.9em 0 0;padding:0}
+.sth-fit li{position:relative;padding-left:19px;margin:0 0 .6em;font-size:.95em;line-height:1.5}
+.sth-fit li::before{content:"";position:absolute;left:0;top:.62em;width:9px;height:2px}
+.sth-fit .thow li::before{background:var(--sth-thow)}
+.sth-fit .mod li::before{background:var(--sth-mod)}
+
+/* checklist */
+.sth-check{list-style:none;margin:1.4em 0 0;padding:0;columns:2;column-gap:32px}
+.sth-check li{
+  break-inside:avoid;position:relative;padding-left:25px;margin:0 0 .75em;
+  font-size:.95em;line-height:1.5;
+}
+.sth-check li::before{
+  content:"";position:absolute;left:0;top:.42em;width:11px;height:11px;
+  border:1.5px solid var(--sth-muted);
+}
+
+/* callout */
+.sth-callout{border-left:3px solid var(--sth-ink);padding:2px 0 2px 18px;margin:1.7em 0 0;max-width:64ch}
+.sth-callout p{margin:0;font-size:.98em}
+
+/* CTA */
+.sth-cta{margin:2.8em 0 0;padding:26px;background:var(--sth-mod-wash);border-top:4px solid var(--sth-mod)}
+.sth-cta h3{color:var(--sth-mod-ink);margin-bottom:.5em}
+.sth-cta p{font-size:.97em}
+.sth-cta p:last-child{margin-bottom:0}
+.sth-cta a{color:var(--sth-mod-ink);font-weight:600}
+
+/* disclaimer */
+.sth-disclaimer{
+  margin:2.4em 0 0;padding-top:1.2em;border-top:1px solid var(--sth-rule);
+  font-size:.86em;line-height:1.6;color:var(--sth-muted);max-width:76ch;
+}
+
+/* mobile */
+@media (max-width:719px){
+  .sth-page{font-size:1rem}
+  .sth-page h1{font-size:1.95em;max-width:none}
+  .sth-pair,.sth-fit{grid-template-columns:1fr}
+  .sth-check{columns:1}
+  .sth-toc{padding:18px}
+  .sth-table,.sth-table thead,.sth-table tbody,.sth-table tr,.sth-table th,.sth-table td{
+    display:block;width:auto;
+  }
+  .sth-table thead{display:none}
+  .sth-table tbody tr{border-bottom:none;margin-bottom:24px}
+  .sth-table tbody th{width:auto;padding:0 0 7px;border-bottom:1px solid var(--sth-rule)}
+  .sth-table td{padding:11px 13px;margin-top:8px}
+  .sth-table td::before{
+    display:block;font-size:.75em;letter-spacing:.12em;text-transform:uppercase;
+    margin-bottom:4px;font-weight:600;
+  }
+  .sth-table td:nth-child(2)::before{content:"Tiny house on wheels";color:var(--sth-thow-ink)}
+  .sth-table td:nth-child(3)::before{content:"Class 1a modular home";color:var(--sth-mod-ink)}
+}
+
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
+</style>
+
+
+<p class="sth-kicker">Things to know</p>
+
+<h1>Tiny house on wheels, or Class 1a modular home?</h1>
+
+<p class="sth-standfirst">They can look almost identical parked side by side. One of them is a house. The other is legally a vehicle — and that single distinction drives nearly every practical difference between them.</p>
+
+<p>It's the question we're asked most often, usually in the first phone call. Most people have worked out that one of them can be moved. What's less obvious is how far that difference reaches — into what you're allowed to build, how long it takes, whether a bank will lend against it, what your insurer will cover, and what happens to the money when you sell.</p>
+
+<p>Here's the whole picture in plain terms. This is general information for Australian buyers rather than guidance for any one council, because local rules vary enormously and yours will have the final say.</p>
+
+<nav class="sth-toc" aria-label="On this page">
+  <p>On this page</p>
+  <ol>
+    <li><a href="#sth-short">The short version</a></li>
+    <li><a href="#sth-compare">The comparison in detail</a></li>
+    <li><a href="#sth-approval">What modular approval involves</a></li>
+    <li><a href="#sth-legal">Where a THOW sits legally</a></li>
+    <li><a href="#sth-fit">Which one fits your situation</a></li>
+    <li><a href="#sth-council">Questions to ask your council</a></li>
+  </ol>
+</nav>
+
+
+<h2 id="sth-short">The short version</h2>
+<p class="sth-lede">A tiny house on wheels keeps its trailer, so the law treats it as a caravan. A Class 1a modular home is craned onto permanent footings, so the law treats it as a house. Everything below follows from that.</p>
+
+<div class="sth-pair">
+  <div class="sth-card thow">
+    <span class="sth-key"></span>
+    <h3>Tiny house on wheels</h3>
+    <span class="sth-tag">Classified as a caravan</span>
+    <p>A dwelling built on a purpose-built, road-legal trailer. Because it keeps its wheels and chassis, it's regulated as a registrable vehicle rather than as a building.</p>
+    <p>There's no building approval process to go through — and in most places, no way to have it approved as a permanent dwelling either. What you get instead is speed and freedom of movement.</p>
+    <p class="sth-verdict">Choose it for flexibility. Don't choose it expecting a permanent, approved address.</p>
+  </div>
+
+  <div class="sth-card mod">
+    <span class="sth-key"></span>
+    <h3>Class 1a modular home</h3>
+    <span class="sth-tag">A house, built off site</span>
+    <p>A standard dwelling under the National Construction Code, manufactured in a factory and craned onto permanent footings. Class 1a covers detached houses and attached dwellings like townhouses.</p>
+    <p>It's designed, certified and inspected to exactly the same standards as anything built on site, and it goes through the same approvals. The construction method is different; the legal status isn't.</p>
+    <p class="sth-verdict">Choose it for permanence. Expect an approvals process and a timeline to match.</p>
+  </div>
+</div>
+
+
+<h2 id="sth-compare">The comparison in detail</h2>
+<p class="sth-lede">Rules differ between states, territories and local governments, so read the entries below as the general position rather than a guarantee for your address.</p>
+
+<table class="sth-table">
+  <thead>
+    <tr>
+      <th scope="col">Consideration</th>
+      <th scope="col">Tiny house on wheels</th>
+      <th scope="col">Class 1a modular home</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Legal classification</th>
+      <td>A vehicle. Registered or classified as a caravan or trailer under road transport law.</td>
+      <td>A building. Class 1a dwelling under the National Construction Code.</td>
+    </tr>
+    <tr>
+      <th scope="row">Building approval</th>
+      <td>Not required, and generally not available — there's no pathway to approve it as a permanent house.</td>
+      <td>Required. Building approval, plus planning approval where the local scheme calls for it.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permanent occupation</th>
+      <td>Generally not permitted as a permanent dwelling. Many councils allow occupation for limited periods, or by visitors, sometimes under permit.</td>
+      <td>Permitted once approved, inspected and certified. It becomes a lawful dwelling on the title.</td>
+    </tr>
+    <tr>
+      <th scope="row">Foundation</th>
+      <td>Stays on its trailer chassis. Levelled on jacks or stands; wheels remain in place.</td>
+      <td>Permanent footings — steel or concrete stumps or piers, engineered to the site classification.</td>
+    </tr>
+    <tr>
+      <th scope="row">Moving it later</th>
+      <td>Straightforward. Disconnect services, hitch up and tow with a suitably rated vehicle.</td>
+      <td>Possible, but a significant exercise — disconnection, crane, transport permits and re-approval at the new site.</td>
+    </tr>
+    <tr>
+      <th scope="row">Getting it on site</th>
+      <td>Towed or winched into position. Needs a clear path wide enough for the unit and reasonably firm ground.</td>
+      <td>Craned into position. Needs truck access, hardstand for the crane, clear airspace and adequate reach.</td>
+    </tr>
+    <tr>
+      <th scope="row">Size limits</th>
+      <td>Capped by towing dimensions and weight — typically up to 2.5 m wide and 4.3 m high overall, with length and mass limited by what your licence and tow vehicle allow.</td>
+      <td>Individual modules are capped by transport, but modules join together on site, so far larger floor areas are achievable.</td>
+    </tr>
+    <tr>
+      <th scope="row">Services</th>
+      <td>Flexible connections — lead, hose and a managed wastewater arrangement. Suits sites without permanent infrastructure.</td>
+      <td>Permanent connections — mains power, water, sewer or an approved on-site treatment system, plus stormwater.</td>
+    </tr>
+    <tr>
+      <th scope="row">Standards it's built to</th>
+      <td>Roadworthiness, trailer engineering, and electrical certification for the installation.</td>
+      <td>Full NCC compliance — structure, wind, energy efficiency, waterproofing, plumbing, and bushfire or flood provisions where they apply.</td>
+    </tr>
+    <tr>
+      <th scope="row">Paperwork on handover</th>
+      <td>Trailer compliance plate, registration and an electrical certificate.</td>
+      <td>Certifier inspections through the build and a final certificate of occupancy or its state equivalent.</td>
+    </tr>
+    <tr>
+      <th scope="row">Insurance</th>
+      <td>Insured as a caravan or trailer.</td>
+      <td>Insured as a building. Construction works cover applies during the build.</td>
+    </tr>
+    <tr>
+      <th scope="row">Finance</th>
+      <td>Usually a personal, caravan or chattel loan. Lenders won't secure a mortgage against it.</td>
+      <td>Usually eligible for a home or construction loan, subject to the lender and to progress-payment staging.</td>
+    </tr>
+    <tr>
+      <th scope="row">Consumer protection</th>
+      <td>Australian Consumer Law and the terms of your supply contract.</td>
+      <td>A domestic building contract with a licensed builder, plus the statutory home warranty scheme where your state operates one.</td>
+    </tr>
+    <tr>
+      <th scope="row">Effect on the property</th>
+      <td>Treated as a chattel. It travels with you rather than with the land, and depreciates like a vehicle.</td>
+      <td>An improvement to the land. Generally adds to property value, and may create a lawful secondary dwelling.</td>
+    </tr>
+    <tr>
+      <th scope="row">Rates and charges</th>
+      <td>Generally not rated as a dwelling, though local rules on occupation still apply.</td>
+      <td>May affect rates and valuation, and infrastructure charges commonly apply to a new dwelling.</td>
+    </tr>
+    <tr>
+      <th scope="row">Lead time</th>
+      <td>Manufacturing time only. No approvals to wait on.</td>
+      <td>Manufacturing runs alongside approvals, but approvals and site works set the overall program.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h2 id="sth-approval">If you go modular: what approval actually involves</h2>
+<p class="sth-lede">The sequence varies by state and council, and several steps run in parallel, but the shape of it is consistent across the country.</p>
+
+<ol class="sth-steps">
+  <li><strong>Confirm what your land allows</strong><span>Zoning, minimum lot size, setbacks, height and site cover, plus any overlay — bushfire, flood, character, vegetation, heritage. This determines whether a second dwelling is possible at all.</span></li>
+  <li><strong>Planning approval, if required</strong><span>Some proposals are accepted development and need no planning application. Others require one, and that's the step most likely to add months.</span></li>
+  <li><strong>Site investigation and design</strong><span>Soil classification, footing design, wind and bushfire ratings, energy efficiency assessment and stormwater. These feed the working drawings.</span></li>
+  <li><strong>Building approval</strong><span>Issued by a private certifier or the council. Plumbing and drainage approval is usually a separate application.</span></li>
+  <li><strong>Manufacture and site works</strong><span>The home is built in the factory while footings, services and access are prepared on site. This overlap is where modular buys back time.</span></li>
+  <li><strong>Delivery, crane and connection</strong><span>Modules are transported, craned onto the footings, fixed down, joined and connected to services.</span></li>
+  <li><strong>Final inspection and certificate</strong><span>The certifier inspects and issues the final certificate. Only at that point is the home lawfully occupiable.</span></li>
+</ol>
+
+<div class="sth-callout">
+  <p><strong>The bottleneck is rarely the house.</strong> It's approvals, service connections and site access. Start those conversations before you commit to a design.</p>
+</div>
+
+
+<h2 id="sth-legal">If you go with a THOW: where it sits legally</h2>
+<p class="sth-lede">A tiny house on wheels isn't a loophole into an approved dwelling, and it's worth being clear-eyed about that before you buy.</p>
+
+<p>Because it's a vehicle, no building approval applies to it and none can be obtained for it. What governs it instead is your local government's rules about occupying a caravan on private land — and those rules are genuinely local. Some councils allow occupation for a set number of days each year. Some allow it only for visitors. Some require a permit. Some prohibit it outright. A handful have started writing tiny homes into their planning schemes explicitly.</p>
+
+<p>The consequences are worth understanding. A THOW generally can't be counted as a secondary dwelling, won't satisfy a condition requiring an approved dwelling on the land, and can't be financed or insured as a house. Its value sits with you rather than with the land.</p>
+
+<p>None of that makes it the wrong choice. It makes it a different product — suited to people who value mobility, speed and independence from the approvals system over permanence.</p>
+
+
+<h2 id="sth-fit">Which one fits your situation</h2>
+
+<div class="sth-fit">
+  <div class="thow">
+    <h3>A THOW tends to suit you if</h3>
+    <ul>
+      <li>You don't own the land, or don't intend to keep it long term</li>
+      <li>You may need to relocate the home within a few years</li>
+      <li>The site has no sewer, or connecting services would be costly</li>
+      <li>You need somewhere to live quickly and can't wait on approvals</li>
+      <li>Access is tight and craning would be difficult or expensive</li>
+      <li>You're comfortable working within your council's rules on occupying a caravan</li>
+    </ul>
+  </div>
+  <div class="mod">
+    <h3>A modular home tends to suit you if</h3>
+    <ul>
+      <li>This is a permanent home, a rental, or accommodation for family</li>
+      <li>You want the build to add value to the property</li>
+      <li>You need mortgage or construction finance</li>
+      <li>You want a lawful, certified dwelling with warranty protection</li>
+      <li>You need more space than towing dimensions allow</li>
+      <li>The site has, or can reasonably get, permanent services and crane access</li>
+    </ul>
+  </div>
+</div>
+
+
+<h2 id="sth-council">Questions worth asking your council</h2>
+<p class="sth-lede">One phone call to your local planning counter usually resolves more than a week of reading. These are the questions that matter most.</p>
+
+<ul class="sth-check">
+  <li>Is a secondary dwelling permitted on my lot, and what minimum lot size applies?</li>
+  <li>Does my proposal need planning approval, or is it accepted development?</li>
+  <li>Which overlays apply to my property, and what do they require?</li>
+  <li>What setbacks, height limits and site cover apply?</li>
+  <li>Are there additional parking requirements for a second dwelling?</li>
+  <li>Can the site connect to sewer, or is on-site treatment required?</li>
+  <li>What infrastructure charges apply to a new dwelling?</li>
+  <li>What are the local rules for occupying a caravan on private land?</li>
+  <li>Is a permit needed for that, and are there time limits?</li>
+  <li>Does the scheme mention tiny homes or movable dwellings specifically?</li>
+  <li>Are there restrictions on renting out a second dwelling separately?</li>
+  <li>Is vehicle and crane access to the rear of the property achievable?</li>
+</ul>
+
+
+<div class="sth-cta">
+  <h3>Still weighing it up?</h3>
+  <p>We build both, so we've got no reason to push you toward one over the other. Send us your address and a rough idea of what you're after, and we'll tell you honestly which one suits the site.</p>
+  <p>Browse the <a href="/tiny-houses-on-wheels/">tiny house on wheels range and pricing</a>, or download the <a href="https://files.sunshinetinyhouses.com.au/downloads/sth-brochure.pdf">Class 1a modular home brochure</a> with indicative pricing.</p>
+</div>
+
+<p class="sth-disclaimer">This page is general information only. It is not legal, planning or financial advice, and it does not take account of your particular property or circumstances. Planning schemes, local laws, building requirements and lending policies vary between states, territories and local governments, and change over time. Confirm the requirements for your site with your local council, a certifier and your lender before making any commitment.</p>
+
+</div>
+<!-- ============================================================
+     End Sunshine Tiny Houses page block
+     ============================================================ -->
+  
+  
+
+
+

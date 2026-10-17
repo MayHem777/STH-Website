@@ -1,7 +1,8 @@
 ---
 const PRODUCT_LINKS = [
-  { label: 'Tiny Houses on Wheels', href: '/tiny-houses-on-wheels/' },
   { label: 'Modular Homes & Granny Flats', href: '/modular-homes/' },
+  { label: 'Our Modular Process', href: '/modular-homes/our-process/' },
+  { label: 'Tiny Houses on Wheels', href: '/tiny-houses-on-wheels/' },
   { label: 'Backyard Studios', href: '/backyard-studios/' },
   { label: 'Custom Design & Build', href: '/tiny-houses-on-wheels/custom-design-build/' },
   { label: 'Trailers', href: 'https://www.tinytrailers.com.au/' },
@@ -14,6 +15,7 @@ const INFO_LINKS = [
   { label: 'Delivery', href: '/delivery/' },
   { label: 'Off Grid', href: '/off-grid/' },
   { label: 'Council Regulations', href: '/council-regulations/' },
+  { label: 'Modular vs Tiny House', href: '/thow-vs-class-1a-modular/' },
   { label: 'Blog', href: '/blog/' },
   { label: 'Gallery', href: '/gallery/' },
 ];
@@ -81,10 +83,19 @@ const year = new Date().getFullYear();
         <a href="/contact/" class="btn-footer-cta">Contact Now</a>
         <div class="footer-badges">
           <img
+            class="footer-badge--qbcc"
             src="/images/qbcc-open.png"
             alt="QBCC Licensed Builder #15205110"
-            width="80"
-            height="80"
+            width="230"
+            height="61"
+            loading="lazy"
+          />
+          <img
+            class="footer-badge--mbq"
+            src="/images/badges/mbq-proud-member-white.png"
+            alt="Master Builders Queensland Proud Member"
+            width="130"
+            height="82"
             loading="lazy"
           />
         </div>
@@ -201,14 +212,20 @@ const year = new Date().getFullYear();
 
 .footer-badges {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
   margin-top: 1.5rem;
   align-items: center;
 }
-.footer-badges img {
-  opacity: 0.9;
+.footer-badge--qbcc {
+  width: 230px;
+  max-width: 100%;
+  height: auto;
+  opacity: 0.95;
   filter: brightness(0) invert(1);
 }
+/* Master Builders logo: the supplied white version on dark, never recoloured; clear space kept by the gap (style guide 2025) */
+.footer-badge--mbq { width: 130px; height: auto; }
 
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.1);

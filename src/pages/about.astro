@@ -52,9 +52,10 @@ const teamPic = spot('about/team', '/images/about-workshop.webp');
     <div class="container">
       <p class="eyebrow eyebrow--dark">About Sunshine Tiny Houses</p>
       <h1>A Queensland licensed builder that handles your project <em>from concept to completion</em></h1>
-      <p class="page-hero__sub">We design, approve, build and deliver tiny houses on wheels, modular homes and granny flats from our factory in Noosaville. One builder, one contract and one point of contact, from the first sketch to handing you the keys.</p>
+      <p class="page-hero__sub">We design, approve, build and deliver modular homes, granny flats and tiny houses on wheels from our factory in Noosaville. One builder, one contract and one point of contact, from the first sketch to handing you the keys.</p>
       <ul class="hero-badges">
         <li><b>QBCC</b> Licence 15205110</li>
+        <li>Master Builders Queensland member</li>
         <li>Fully licensed &amp; insured</li>
         <li>20+ years building in Queensland</li>
       </ul>
@@ -125,6 +126,7 @@ const teamPic = spot('about/team', '/images/about-workshop.webp');
       <h2>Built by a licensed Queensland building company</h2>
       <div class="about-pillars">
         <div class="pillar"><h3>QBCC licensed</h3><p>We hold a Queensland Building and Construction Commission licence (15205110). You are dealing with a builder who is accountable for the work, not a middleman.</p></div>
+        <div class="pillar pillar--mbq"><h3>Master Builders member</h3><p>We are a proud member of Master Builders Queensland, the industry body that holds its members to a code of ethics and keeps them up to date with building standards and contracts.</p><img src="/images/badges/mbq-proud-member-white.png" alt="Master Builders Queensland Proud Member" width="150" height="94" loading="lazy" /></div>
         <div class="pillar"><h3>Built to the code</h3><p>Our modular homes are designed and certified as Class 1a dwellings under the Building Code of Australia, and every home is built by skilled, licensed tradespeople.</p></div>
         <div class="pillar"><h3>Quality over quantity</h3><p>We are not a production line. Each home is built to last a lifetime, with the care and attention to detail our clients keep mentioning in their reviews.</p></div>
       </div>
@@ -204,7 +206,8 @@ h2 { margin-bottom: 1rem; }
 /* Licensed */
 .licensed { background: var(--color-primary); color: #fff; }
 .licensed h2, .licensed h3 { color: #fff; }
-.about-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2rem; }
+.about-pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 2rem; }
+.pillar--mbq img { width: 140px; height: auto; margin-top: 1.25rem; padding: 4px 0; } /* white version on the dark band (MBQ style guide) */
 .pillar h3 { margin-bottom: .6rem; }
 .pillar p { color: rgba(255,255,255,.85); }
 

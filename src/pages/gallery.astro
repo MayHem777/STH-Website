@@ -15,11 +15,13 @@ const hasPhotos = SHOW_SPOT_NUMBERS || spotsWithPrefix('gallery/').some((s) => s
     <div class="container">
       <p class="eyebrow">Gallery</p>
       <h1>Our Builds</h1>
-      <p class="page-hero__sub">A look at some of our favourite completed tiny homes and modular builds.</p>
+      <p class="page-hero__sub">A look at some of our favourite completed Class 1a modular homes and tiny houses on wheels.</p>
     </div>
   </section>
 
-  <SpotGallery prefix="gallery/" alt="Sunshine Tiny Houses build, photo" />
+  <!-- Two sections, modular homes first (Mitch 2026-10-17). Each shows only once it has photos. -->
+  <SpotGallery prefix="gallery/modular-" title="Class 1a modular homes" alt="Sunshine Tiny Houses Class 1a modular home, photo" />
+  <SpotGallery prefix="gallery/thow-" title="Tiny houses on wheels" alt="Sunshine Tiny Houses tiny house on wheels, photo" />
 
   {!hasPhotos && (
   <section class="section">
