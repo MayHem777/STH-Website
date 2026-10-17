@@ -8,6 +8,7 @@ import { formatPrice } from '../../../lib/price';
 const products = (await getCollection('products-modular', ({ data }) => !data.draft && data.bedrooms === 1))
   // Cheapest first (Mitch 2026-10-17)
   .sort((a, b) => (a.data.priceFrom ?? Infinity) - (b.data.priceFrom ?? Infinity) || a.data.order - b.data.order);
+import { roomsLine } from '../../../lib/rooms';
 ---
 
 <BaseLayout
@@ -38,6 +39,7 @@ const products = (await getCollection('products-modular', ({ data }) => !data.dr
             badge={p.data.badge}
             price={p.data.priceFrom ? `From ${formatPrice(p.data.priceFrom)}` : undefined}
             meta={[p.data.area, p.data.size].filter(Boolean).join(' · ') || undefined}
+            rooms={roomsLine(p.id, p.data.specs)}
           />
         ))}
       </div>

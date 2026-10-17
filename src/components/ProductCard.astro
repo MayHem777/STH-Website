@@ -8,10 +8,11 @@ export interface Props {
   badge?: string;
   price?: string;
   meta?: string;
+  rooms?: string;   // e.g. '1 bed · 1 bath'
   spotKey?: string;
 }
 import { photo, SHOW_SPOT_NUMBERS } from '../lib/photos';
-const { title, description, href, image, imageAlt, badge, price, meta, spotKey } = Astro.props;
+const { title, description, href, image, imageAlt, badge, price, meta, rooms, spotKey } = Astro.props;
 const pic = photo(image, spotKey);
 ---
 
@@ -26,6 +27,7 @@ const pic = photo(image, spotKey);
   </div>
   <div class="product-card__body">
     <h3 class="product-card__title">{title}</h3>
+    {rooms && <p class="product-card__rooms">{rooms}</p>}
     {(price || meta) && (
       <p class="product-card__facts">
         {price && <strong>{price}</strong>}
@@ -38,6 +40,7 @@ const pic = photo(image, spotKey);
 </a>
 
 <style>
+.product-card__rooms { font-weight: 700; color: var(--color-primary); font-size: var(--font-size-sm); margin: -0.15rem 0 0.4rem; }
 .product-card__facts { display: flex; flex-wrap: wrap; gap: 0.125rem 0.75rem; align-items: baseline; font-size: var(--font-size-sm); margin-bottom: 0.5rem; }
 .product-card__facts strong { color: var(--color-text); }
 .product-card__facts span { color: var(--color-text-muted); }

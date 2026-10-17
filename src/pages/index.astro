@@ -6,6 +6,7 @@ import { getCollection } from 'astro:content';
 import { FOUNDED_YEAR } from '../config/site';
 import { formatPrice, EX_FACTORY_NOTE } from '../lib/price';
 import { spot, photo } from '../lib/photos';
+import { roomsLine } from '../lib/rooms';
 
 const thowProducts = (await getCollection('products-thow', ({ data }) => !data.draft))
   .sort((a, b) => a.data.order - b.data.order)
@@ -40,9 +41,8 @@ const pricedModular = allModularProducts
   .filter((p) => p.data.priceFrom)
   .sort((a, b) => (a.data.priceFrom ?? 0) - (b.data.priceFrom ?? 0))
   .map((p) => ({
-    title: p.data.bedrooms && allModularProducts.filter((o) => o.data.title === p.data.title).length > 1
-      ? `${p.data.title} ${p.data.bedrooms} Bedroom`
-      : p.data.title,
+    title: p.data.title,
+    rooms: roomsLine(p.id, p.data.specs),
     description: p.data.tagline ?? p.data.description,
     href: p.data.bedrooms ? `/modular-homes/${p.data.bedrooms}-bedroom/${p.id}/` : `/modular-homes/${p.id}/`,
     image: p.data.heroImage,

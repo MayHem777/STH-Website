@@ -24,6 +24,7 @@ const standaloneCards = allProducts
     price: p.data.priceFrom ? `From ${formatPrice(p.data.priceFrom)}` : undefined,
     priceNum: p.data.priceFrom ?? Infinity,
     meta: p.data.area,
+    rooms: roomsLine(p.id, p.data.specs),
   }));
 
 const bedroomCounts = [...new Set(allProducts.filter((p) => p.data.bedrooms).map((p) => p.data.bedrooms))].sort();
@@ -42,11 +43,13 @@ const bedroomCards = bedroomCounts.map((count) => {
     price: `From ${formatPrice(Math.min(...variants.map((p) => p.data.priceFrom ?? Infinity)))}`,
     priceNum: Math.min(...variants.map((p) => p.data.priceFrom ?? Infinity)),
     meta: undefined,
+    rooms: (() => { const baths = [...new Set(variants.map((v) => ((v.data.specs?.Bathrooms ?? '').match(/\d+/) ?? [''])[0]).filter(Boolean))].sort(); return `${count} bed · ${baths.join('–')} bath`; })(),
   };
 });
 
 // Cheapest first (Mitch 2026-10-17); models without a price go last
 const products = [...standaloneCards, ...bedroomCards].sort((a, b) => a.priceNum - b.priceNum || a.order - b.order);
+import { roomsLine } from '../../lib/rooms';
 ---
 
 <BaseLayout
@@ -77,6 +80,7 @@ const products = [...standaloneCards, ...bedroomCards].sort((a, b) => a.priceNum
             badge={p.badge}
             price={p.price}
             meta={p.meta}
+            rooms={p.rooms}
           />
         ))}
       </div>
