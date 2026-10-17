@@ -119,30 +119,30 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 108 | [Meta ads page: gallery photo 2](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/lp/lp-build-2.webp` |
 | 109 | [Meta ads page: gallery photo 3](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/lp/lp-build-3.webp` |
 | 110 | [Meta ads page: gallery photo 4](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/lp/lp-build-4.webp` |
-| 111 | [Gallery page photo 1](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 112 | [Gallery page photo 2](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 113 | [Gallery page photo 3](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 114 | [Gallery page photo 4](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 115 | [Gallery page photo 5](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 116 | [Gallery page photo 6](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 117 | [Gallery page photo 7](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 118 | [Gallery page photo 8](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 119 | [Gallery page photo 9](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 120 | [Gallery page photo 10](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 121 | [Gallery page photo 11](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 122 | [Gallery page photo 12](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
-| 123 | [Gallery page photo 13](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 124 | [Gallery page photo 14](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 125 | [Gallery page photo 15](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 126 | [Gallery page photo 16](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 127 | [Gallery page photo 17](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 128 | [Gallery page photo 18](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 129 | [Gallery page photo 19](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 130 | [Gallery page photo 20](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 131 | [Gallery page photo 21](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 132 | [Gallery page photo 22](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 133 | [Gallery page photo 23](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
-| 134 | [Gallery page photo 24](/gallery/) | Builds in the factory, deliveries, crane lifts and installs | Landscape | none (hidden until filled) |
+| 111 | [Gallery, Class 1a modular homes: photo 1](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 112 | [Gallery, Class 1a modular homes: photo 2](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 113 | [Gallery, Class 1a modular homes: photo 3](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 114 | [Gallery, Class 1a modular homes: photo 4](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 115 | [Gallery, Class 1a modular homes: photo 5](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 116 | [Gallery, Class 1a modular homes: photo 6](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 117 | [Gallery, Class 1a modular homes: photo 7](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 118 | [Gallery, Class 1a modular homes: photo 8](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 119 | [Gallery, Class 1a modular homes: photo 9](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 120 | [Gallery, Class 1a modular homes: photo 10](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 121 | [Gallery, Class 1a modular homes: photo 11](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 122 | [Gallery, Class 1a modular homes: photo 12](/gallery/) | A finished modular home or granny flat, outside or in (crane lifts and installs welcome) | Landscape | none (hidden until filled) |
+| 123 | [Gallery, tiny houses on wheels: photo 1](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 124 | [Gallery, tiny houses on wheels: photo 2](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 125 | [Gallery, tiny houses on wheels: photo 3](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 126 | [Gallery, tiny houses on wheels: photo 4](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 127 | [Gallery, tiny houses on wheels: photo 5](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 128 | [Gallery, tiny houses on wheels: photo 6](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 129 | [Gallery, tiny houses on wheels: photo 7](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 130 | [Gallery, tiny houses on wheels: photo 8](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 131 | [Gallery, tiny houses on wheels: photo 9](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 132 | [Gallery, tiny houses on wheels: photo 10](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 133 | [Gallery, tiny houses on wheels: photo 11](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
+| 134 | [Gallery, tiny houses on wheels: photo 12](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
 | 135 | [Blog: "Foundations for Modular Homes: What Sits Under Your Sunshine Tiny Houses Build" top photo](/blog/how-foundations-work-for-modular-homes/) | Photo that fits the article | Wide, landscape | `/images/jacaranda-house.jpg` |
 | 136 | [Blog: "Noosa Council Abolishes $7,000 Infrastructure Charge for Secondary Dwellings — Here's What That Means for You" top photo](/blog/noosa-council-abolishes-infrastructure-charge/) | Photo that fits the article | Wide, landscape | `/images/jacaranda-house.jpg` |
 | 137 | [Blog: "The Rise of Modern Modular: Why a Granny Flat is the Ultimate Property Upgrade" top photo](/blog/the-rise-of-modern-modular/) | Photo that fits the article | Wide, landscape | `/images/jacaranda-house.jpg` |
