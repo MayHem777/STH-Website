@@ -16,7 +16,7 @@ function fm(file) {
   const y = m[1], get = (k) => (y.match(new RegExp(`^${k}:\\s*"?([^"\\n]*)"?`, 'm')) || [])[1];
   const list = (k) => { const b = y.match(new RegExp(`^${k}:\\n((?:  .*\\n?)*)`, 'm')); if (!b) return [];
     return b[1].split(/\n  - /).map((x) => ({ src: (x.match(/src:\s*"?([^"\n]+)"?/) || [])[1], name: (x.match(/name:\s*"?([^"\n]+)"?/) || [])[1], image: (x.match(/image:\s*"?([^"\n]+)"?/) || [])[1] })).filter((x) => x.src || x.image); };
-  return { title: get('title'), draft: get('draft') === 'true', order: Number(get('order') || 99), hero: get('heroImage') || undefined, gallery: list('gallery'), models: list('models'), bedrooms: get('bedrooms') };
+  return { title: get('title'), draft: /^true\b/.test(get('draft') ?? ''), order: Number(get('order') || 99), hero: get('heroImage') || undefined, gallery: list('gallery'), models: list('models'), bedrooms: get('bedrooms') };
 }
 function items(dir) {
   const d = path.join(ROOT, 'src/content', dir); if (!fs.existsSync(d)) return [];

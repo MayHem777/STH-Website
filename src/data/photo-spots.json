@@ -1616,7 +1616,8 @@
   "page": "/tiny-houses-on-wheels/trailers/",
   "where": "Trailers: main photo (also its card on the tiny houses page and home page)",
   "shows": "Best exterior of a Trailers we built",
-  "shape": "landscape"
+  "shape": "landscape",
+  "retired": true
  },
  {
   "n": 181,

@@ -188,7 +188,6 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 177 | [Lennox: photo gallery 29](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/29.webp` |
 | 178 | [Custom Design & Build: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/custom-design-build/) | Best exterior of a Custom Design & Build we built | Landscape | `/images/workshop-recent-1.jpeg` |
 | 179 | [Custom Design & Build: photo gallery 1](/tiny-houses-on-wheels/custom-design-build/) | Custom Design & Build, inside or out (today's photo is from the old website) | Landscape | `/images/old/custom-design-build/01.webp` |
-| 180 | [Trailers: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/trailers/) | Best exterior of a Trailers we built | Landscape | none (hidden until filled) |
 | 181 | [Cabin: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/) | Best exterior of a Cabin (real build if we have one) | Landscape | `/images/models/dahlia-ext.webp` |
 | 182 | [Cabin page: Banksia photo](/modular-homes/cabin/) | Banksia exterior | Landscape | `/images/models/banksia-int-2.webp` |
 | 183 | [Cabin page: Raglan photo](/modular-homes/cabin/) | Raglan exterior | Landscape | `/images/models/raglan-ext.webp` |
