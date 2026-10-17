@@ -19,7 +19,7 @@ const standaloneCards = allProducts
     heroImage: p.data.heroImage,
     spotKey: `modular/${p.id}/main`,
     heroImageAlt: p.data.heroImageAlt ?? p.data.title,
-    badge: p.data.badge,
+    badge: ['office', 'ensuite'].includes(p.id) ? 'Utility room' : p.data.badge,  // Office + Ensuite are utility rooms, not studios (Mitch 2026-10-17)
     price: p.data.priceFrom ? `From ${formatPrice(p.data.priceFrom)}` : undefined,
     meta: p.data.area,
   }));

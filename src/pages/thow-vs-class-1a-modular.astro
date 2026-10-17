@@ -1,0 +1,21 @@
+---
+// "Tiny house on wheels, or Class 1a modular home?" — the Things to Know guide Mitch built
+// on Squarespace, kept at the same address. Content lives in src/landing/thow-vs-class-1a.html.
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../layouts/BaseLayout.astro';
+const html = fs.readFileSync(path.resolve('src/landing/thow-vs-class-1a.html'), 'utf8');
+---
+<BaseLayout
+  title="Tiny House on Wheels vs Class 1a Modular Home | Sunshine Tiny Houses"
+  description="A tiny house on wheels is legally a caravan; a Class 1a modular home is a house. How that changes approvals, timelines, finance, insurance and resale, in plain terms."
+>
+  <section class="section">
+    <div class="container thow-vs">
+      <Fragment set:html={html} />
+    </div>
+  </section>
+</BaseLayout>
+<style>
+.thow-vs { max-width: 960px; }
+</style>

@@ -32,6 +32,9 @@ const modularProducts = [...modularStandalone, ...modularBedroomLinks]
   .sort((a, b) => a.order - b.order)
   .slice(0, 4);
 
+// Office and Ensuite are utility rooms, not studios (Mitch, 2026-10-17)
+const UTILITY_ROOMS = ['office', 'ensuite'];
+
 // Every priced modular model, cheapest first, linking to its own page
 const pricedModular = allModularProducts
   .filter((p) => p.data.priceFrom)
@@ -44,6 +47,7 @@ const pricedModular = allModularProducts
     href: p.data.bedrooms ? `/modular-homes/${p.data.bedrooms}-bedroom/${p.id}/` : `/modular-homes/${p.id}/`,
     image: p.data.heroImage,
     spotKey: `modular/${p.id}/main`,
+    badge: UTILITY_ROOMS.includes(p.id) ? 'Utility room' : undefined,
     imageAlt: p.data.heroImageAlt,
     price: `From ${formatPrice(p.data.priceFrom!)}`,
     meta: p.data.area,
@@ -72,28 +76,17 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
 
 <BaseLayout
   title="Sunshine Tiny Houses | Queensland Modular Home Builders"
-  description="Sunshine Tiny Houses builds modular homes, granny flats, and tiny houses on wheels across Queensland. QBCC licensed. Free quote available."
+  description="Sunshine Tiny Houses builds modular homes, granny flats, and tiny houses on wheels across Queensland. QBCC licensed, Master Builders Queensland member. Free quote available."
 >
 
-  <!-- Hero: two equal doors, tiny houses on wheels first (same layout as the Squarespace home page, Oct 2026) -->
+  <!-- Hero: two doors, modular homes first (Mitch 2026-10-17: modular homes lead throughout) -->
   <section class="home-hero">
     <div class="container">
       <p class="home-hero__eyebrow">Sunshine Tiny Houses · Noosaville, Queensland</p>
-      <h1 class="home-hero__title">Tiny houses on wheels and modular homes, <em>built by a licensed Queensland builder</em></h1>
+      <h1 class="home-hero__title">Modular homes and tiny houses on wheels, <em>built by a licensed Queensland builder</em></h1>
       <p class="home-hero__sub">Designed with you, built in our Noosaville factory and delivered anywhere in Australia. We handle the whole project, from the first sketch to handing you the keys.</p>
       <p class="home-hero__ask">What are you looking for?</p>
       <div class="doors">
-        <a class="door" href="/tiny-houses-on-wheels/">
-          <div class="door__ph">
-            <img src={doorThow.src} data-spot={doorThow.n} alt="A Sunshine Tiny Houses tiny house on wheels on its trailer" width="1400" height="1050" loading="eager" fetchpriority="high" />
-            <span class="door__tag">6 m to 10 m</span>
-          </div>
-          <div class="door__body">
-            <h2>Tiny houses on wheels</h2>
-            <p>A complete home on a road-registrable trailer we build ourselves. Live in it, rent it out or take it with you when you move.</p>
-            <span class="door__cta">Explore tiny houses <span aria-hidden="true">&rarr;</span></span>
-          </div>
-        </a>
         <a class="door" href="/modular-homes/">
           <div class="door__ph">
             <img src={doorModular.src} data-spot={doorModular.n} alt="A Sunshine Tiny Houses modular home with a timber deck" width="1400" height="1050" loading="eager" />
@@ -105,13 +98,58 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
             <span class="door__cta">Explore modular homes <span aria-hidden="true">&rarr;</span></span>
           </div>
         </a>
+        <a class="door" href="/tiny-houses-on-wheels/">
+          <div class="door__ph">
+            <img src={doorThow.src} data-spot={doorThow.n} alt="A Sunshine Tiny Houses tiny house on wheels on its trailer" width="1400" height="1050" loading="eager" fetchpriority="high" />
+            <span class="door__tag">6 m to 10 m</span>
+          </div>
+          <div class="door__body">
+            <h2>Tiny houses on wheels</h2>
+            <p>A complete home on a road-registrable trailer we build ourselves. Live in it, rent it out or take it with you when you move.</p>
+            <span class="door__cta">Explore tiny houses <span aria-hidden="true">&rarr;</span></span>
+          </div>
+        </a>
       </div>
       <ul class="home-hero__trust">
         <li>QBCC Licence 15205110</li>
+        <li>Master Builders Queensland member</li>
         <li>5-star Google reviews</li>
         <li>Building on the Sunshine Coast for 20+ years</li>
         <li>Australia-wide delivery</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Modular range with prices -->
+  <section class="section priced-range">
+    <div class="container">
+      <div class="eyebrow">Modular range</div>
+      <h2>Every model, with its price</h2>
+      <p class="priced-range__intro">From compact utility rooms, like an office or ensuite, to two-bedroom homes. Each page has the floor plan and the full inclusions list.</p>
+      <div class="priced-range__grid">
+        {pricedModular.map((p) => (
+          <ProductCard {...p} />
+        ))}
+      </div>
+      <p class="priced-range__note">Prices include GST. {EX_FACTORY_NOTE}</p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section section--surface process">
+    <div class="container">
+      <div class="eyebrow">How it works</div>
+      <h2>Your journey to a modular house</h2>
+      <ol class="process__steps">
+        {processSteps.map((step, i) => (
+          <li>
+            <span class="process__num" aria-hidden="true">{i + 1}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </li>
+        ))}
+      </ol>
+      <CTAButton href="/delivery/" variant="secondary">Delivery and installation</CTAButton>
     </div>
   </section>
 
@@ -140,38 +178,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
     </div>
   </section>
 
-  <!-- Modular range with prices -->
-  <section class="section priced-range">
-    <div class="container">
-      <div class="eyebrow">Modular range</div>
-      <h2>Every model, with its price</h2>
-      <p class="priced-range__intro">From compact studios and offices to two-bedroom homes. Each page has the floor plan and the full inclusions list.</p>
-      <div class="priced-range__grid">
-        {pricedModular.map((p) => (
-          <ProductCard {...p} />
-        ))}
-      </div>
-      <p class="priced-range__note">Prices include GST. {EX_FACTORY_NOTE}</p>
-    </div>
-  </section>
 
-  <!-- How it works -->
-  <section class="section section--surface process">
-    <div class="container">
-      <div class="eyebrow">How it works</div>
-      <h2>Your journey to a modular house</h2>
-      <ol class="process__steps">
-        {processSteps.map((step, i) => (
-          <li>
-            <span class="process__num" aria-hidden="true">{i + 1}</span>
-            <h3>{step.title}</h3>
-            <p>{step.text}</p>
-          </li>
-        ))}
-      </ol>
-      <CTAButton href="/delivery/" variant="secondary">Delivery and installation</CTAButton>
-    </div>
-  </section>
 
   <!-- Class 10a promo section -->
   <section class="section class10a-promo">
@@ -203,6 +210,9 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
   <section class="section--sm trust-bar">
     <div class="container">
       <ul class="trust-list" role="list">
+        <li class="trust-list__logo">
+          <img src="/images/badges/mbq-proud-member.png" alt="Master Builders Queensland Proud Member" width="150" height="94" loading="lazy" />
+        </li>
         <li>
           <strong>QBCC Licensed</strong>
           <span>#15205110</span>
@@ -347,6 +357,8 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
   text-align: center;
 }
 .trust-list li { display: flex; flex-direction: column; gap: 0.25rem; }
+.trust-list { align-items: center; }
+.trust-list__logo img { width: 150px; height: auto; padding: 6px; } /* full-colour logo on white, clear space kept (MBQ style guide) */
 .trust-list strong { font-size: var(--font-size-base); font-family: var(--font-heading); }
 .trust-list span { font-size: var(--font-size-sm); color: var(--color-text-muted); }
 

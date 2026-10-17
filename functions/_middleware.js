@@ -70,7 +70,6 @@ const REDIRECTS = {
   '/entertainment': '/backyard-studios/',
   '/custom-sauna': '/backyard-studios/saunas/',
   '/tiny-house-trailers': 'https://www.tinytrailers.com.au/',
-  '/thow-vs-class-1a-modular': '/council-regulations/',
   '/sunshine-coast-tiny-homes': '/',
   '/brisbane-tiny-homes': '/',
   '/gold-coast-tiny-homes': '/',
