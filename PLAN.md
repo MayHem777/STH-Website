@@ -4,6 +4,7 @@
 Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS site on Cloudflare Pages, then grow organic traffic with useful, STH-specific guides.
 
 ## Next steps
+- **Ad landing pages (2026-10-17):** /google-ads-offer and /meta-ads-offer are now the live gists' pages, copied into `src/landing/google.html` and `meta.html` (photos local, thank-you links same-site). Until the DNS cutover the GIST is still what's live: any change to a gist must be copied into `src/landing/` too (and after cutover, edit only `src/landing/`).
 - **Branch `launch-prep` (2026-10-17) = everything ready for launch in one place**: merged about-page, site-content-upgrade, redirect-gaps and blog-foundations-guide, plus: two-door home page (from the Squarespace home), numbered photo spots (PHOTOS.md, /photo-spots/, red labels on preview builds only), contact form attribution, audit fixes. Preview: launch-prep.sth-website.pages.dev. Mitch merges it into main via GitHub when happy (the box can't push to main).
 - Nat fills a folder of numbered photos → `node scripts/import-photos.mjs "<folder>"` → build → check preview → commit to launch-prep.
 - DNS cutover (items in the global projects list; all with Mitch).

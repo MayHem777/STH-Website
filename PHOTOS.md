@@ -109,16 +109,16 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 098 | [Backyard Saunas: main photo (also its card on the studios and home pages)](/backyard-studios/saunas/) | Best photo of a backyard sauna we built | Landscape | `/images/custom-sauna-2.jpg` |
 | 099 | [Utility Rooms: main photo (also its card on the studios and home pages)](/backyard-studios/utility-rooms/) | Best photo of a utility room we built | Landscape | `/images/banksia-office.jpg` |
 | 100 | [About page, beside "Who we are"](/about/) | Mitch and Nat or the team at work (current staff only) | Square-ish | `/images/about-workshop.webp` |
-| 101 | [Google ads page: background behind the top section](/google-ads-offer/) | Wide exterior shot with space for text | Wide, landscape | `/images/badge-1.webp` |
-| 102 | [Google ads page: "Completed projects" photo 1](/google-ads-offer/) | Finished secondary dwelling exterior | Landscape | `/images/workshop-recent-1.jpeg` |
-| 103 | [Google ads page: "Completed projects" photo 2](/google-ads-offer/) | Interior finish and fit-out | Landscape | `/images/workshop-recent-2.jpg` |
-| 104 | [Google ads page: "Completed projects" photo 3](/google-ads-offer/) | Kitchen and living area | Landscape | `/images/workshop-recent-4.jpeg` |
-| 105 | [Google ads page: photo beside "Why us"](/google-ads-offer/) | Finished build, upright framing works best | Portrait (upright) | `/images/workshop-recent-3.jpg` |
-| 106 | [Meta ads page: background behind the top section](/meta-ads-offer/) | Wide exterior shot with space for text | Wide, landscape | `/images/workshop-recent-1.jpeg` |
-| 107 | [Meta ads page: gallery photo 1](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/badge-1.webp` |
-| 108 | [Meta ads page: gallery photo 2](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/workshop-recent-2.jpg` |
-| 109 | [Meta ads page: gallery photo 3](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/workshop-recent-4.jpeg` |
-| 110 | [Meta ads page: gallery photo 4](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/workshop-recent-3.jpg` |
+| 101 | [Google ads page: background behind the top section](/google-ads-offer/) | Tall or wide exterior shot with space for text | Wide, landscape | `/images/lp/lp-hero-google.webp` |
+| 102 | [Google ads page: "Completed projects" photo 1](/google-ads-offer/) | Finished secondary dwelling exterior | Landscape | `/images/lp/lp-build-1.webp` |
+| 103 | [Google ads page: "Completed projects" photo 2](/google-ads-offer/) | Finished secondary dwelling exterior | Landscape | `/images/lp/lp-build-2.webp` |
+| 104 | [Google ads page: "Completed projects" photo 3](/google-ads-offer/) | Interior finish and fit-out | Landscape | `/images/lp/lp-build-3.webp` |
+| 105 | [Google ads page: photo beside "Why us"](/google-ads-offer/) | Finished build, upright framing works best | Portrait (upright) | `/images/lp/lp-build-4.webp` |
+| 106 | [Meta ads page: background behind the top section](/meta-ads-offer/) | Wide exterior shot with space for text | Wide, landscape | `/images/lp/lp-build-1.webp` |
+| 107 | [Meta ads page: gallery photo 1](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/lp/lp-hero-google.webp` |
+| 108 | [Meta ads page: gallery photo 2](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/lp/lp-build-2.webp` |
+| 109 | [Meta ads page: gallery photo 3](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/lp/lp-build-3.webp` |
+| 110 | [Meta ads page: gallery photo 4](/meta-ads-offer/) | Finished build, inside or out | Landscape | `/images/lp/lp-build-4.webp` |
 | 111 | [Gallery page photo 1](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
 | 112 | [Gallery page photo 2](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |
 | 113 | [Gallery page photo 3](/gallery/) | Finished tiny houses on wheels and modular homes, outside and in | Landscape | none (hidden until filled) |

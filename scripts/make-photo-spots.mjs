@@ -52,11 +52,12 @@ for (const p of items('products-class10a')) {
   add(`studio/${p.id}/main`, `/backyard-studios/${p.id}/`, `${p.title}: main photo (also its card on the studios and home pages)`, `Best photo of a ${p.title.toLowerCase().replace(/s$/, '')} we built`, 'landscape', p.hero);
 }
 add('about/team', '/about/', 'About page, beside "Who we are"', 'Mitch and Nat or the team at work (current staff only)', 'square', '/images/about-workshop.webp');
-add('lp/google/badge-bg', '/google-ads-offer/', 'Google ads page: background behind the top section', 'Wide exterior shot with space for text', 'wide', '/images/badge-1.webp');
-['/images/workshop-recent-1.jpeg', '/images/workshop-recent-2.jpg', '/images/workshop-recent-4.jpeg'].forEach((src, i) => add(`lp/google/gallery-${i + 1}`, '/google-ads-offer/', `Google ads page: "Completed projects" photo ${i + 1}`, ['Finished secondary dwelling exterior', 'Interior finish and fit-out', 'Kitchen and living area'][i], 'landscape', src));
-add('lp/google/why', '/google-ads-offer/', 'Google ads page: photo beside "Why us"', 'Finished build, upright framing works best', 'portrait', '/images/workshop-recent-3.jpg');
-add('lp/meta/hero-bg', '/meta-ads-offer/', 'Meta ads page: background behind the top section', 'Wide exterior shot with space for text', 'wide', '/images/workshop-recent-1.jpeg');
-['/images/badge-1.webp', '/images/workshop-recent-2.jpg', '/images/workshop-recent-4.jpeg', '/images/workshop-recent-3.jpg'].forEach((src, i) => add(`lp/meta/gallery-${i + 1}`, '/meta-ads-offer/', `Meta ads page: gallery photo ${i + 1}`, 'Finished build, inside or out', 'landscape', src));
+// Ad landing pages (ported from the live gists 2026-10-17; photos copied into /images/lp/)
+add('lp/google/badge-bg', '/google-ads-offer/', 'Google ads page: background behind the top section', 'Tall or wide exterior shot with space for text', 'wide', '/images/lp/lp-hero-google.webp');
+['/images/lp/lp-build-1.webp', '/images/lp/lp-build-2.webp', '/images/lp/lp-build-3.webp'].forEach((src, i) => add(`lp/google/gallery-${i + 1}`, '/google-ads-offer/', `Google ads page: "Completed projects" photo ${i + 1}`, ['Finished secondary dwelling exterior', 'Finished secondary dwelling exterior', 'Interior finish and fit-out'][i], 'landscape', src));
+add('lp/google/why', '/google-ads-offer/', 'Google ads page: photo beside "Why us"', 'Finished build, upright framing works best', 'portrait', '/images/lp/lp-build-4.webp');
+add('lp/meta/hero-bg', '/meta-ads-offer/', 'Meta ads page: background behind the top section', 'Wide exterior shot with space for text', 'wide', '/images/lp/lp-build-1.webp');
+['/images/lp/lp-hero-google.webp', '/images/lp/lp-build-2.webp', '/images/lp/lp-build-3.webp', '/images/lp/lp-build-4.webp'].forEach((src, i) => add(`lp/meta/gallery-${i + 1}`, '/meta-ads-offer/', `Meta ads page: gallery photo ${i + 1}`, 'Finished build, inside or out', 'landscape', src));
 for (let i = 1; i <= 24; i++) add(`gallery/${i}`, '/gallery/', `Gallery page photo ${i}`, i <= 12 ? 'Finished tiny houses on wheels and modular homes, outside and in' : 'Builds in the factory, deliveries, crane lifts and installs', 'landscape');
 for (const p of items('blog')) add(`blog/${p.id}/hero`, `/blog/${p.id}/`, `Blog: "${p.title}" top photo`, 'Photo that fits the article', 'wide', p.hero);
 add('site/share', '/', 'Picture shown when someone shares the website on Facebook or in a text', 'One strong wide exterior shot', 'wide', '/og-default.jpg');

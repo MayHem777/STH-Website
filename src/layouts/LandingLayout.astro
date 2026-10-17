@@ -9,9 +9,10 @@ interface Props {
   description: string;
   noindex?: boolean;
   canonical?: string;
+  ownHeader?: boolean;   // page content brings its own logo header (the ported Squarespace ad pages)
 }
 
-const { title, description, noindex = true, canonical } = Astro.props;
+const { title, description, noindex = true, canonical, ownHeader = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -48,6 +49,7 @@ const { title, description, noindex = true, canonical } = Astro.props;
   <body>
     <a href="#main" class="skip-link">Skip to main content</a>
 
+    {!ownHeader && (
     <header class="lp-header">
       <div class="lp-header__inner">
         <a href="/" aria-label="Sunshine Tiny Houses — home">
@@ -64,6 +66,7 @@ const { title, description, noindex = true, canonical } = Astro.props;
         </a>
       </div>
     </header>
+    )}
 
     <main id="main">
       <slot />

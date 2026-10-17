@@ -1,0 +1,1701 @@
+<!-- Copied from the live Squarespace ad page gist on 2026-10-17 (July pricing overhaul + Sept tracking fix).
+     After the DNS cutover this file is the source: edit HERE, not the gist.
+     __SPOT_key__ / __SPOTURL_key__ become numbered photo spots (see src/pages/*-ads-offer.astro). -->
+<!--
+  ═══════════════════════════════════════════════════════════════════
+  SUNSHINE TINY HOUSES — Google Ads Landing Page
+  Squarespace Code Block Version — Production
+
+  2026-07-29 PRICING TRANSPARENCY OVERHAUL (deployed this date — expect
+  form volume to DROP from here; that is intentional, not campaign decay):
+  - Transactional hero: leads with from-pricing + delivery certainty
+  - From-pricing + delivery area block above the form; brochure ungated
+  - Form reframed as personalised quote request
+  - "Within 24 hours" reply promises removed (couldn't be met)
+  - Budget dropdown standardised to the 8-option $100k-anchored set
+
+  LIVE AT: https://www.sunshinetinyhouses.com.au/google-ads-offer
+  DEPLOYMENT: This page's Squarespace code block does NOT contain this
+  HTML directly — it contains a small loader script that fetches this
+  file's contents at runtime from a GitHub Gist and injects it into
+  the page. To deploy changes, update the gist content (this repo file
+  is not read by Squarespace directly). See project deployment notes.
+
+  FONT NOTE:
+  This file does NOT include a Google Fonts link — Squarespace
+  already loads the Outfit font via Adobe Typekit for this site.
+  The CSS font-family declaration references it directly.
+
+  NAVIGATION NOTE:
+  The Squarespace header/nav will still appear above this content.
+  For maximum CRO (no nav leakage), add this to your Squarespace
+  Page Settings > Advanced > Page Header Code Injection:
+    <style>
+      header.site-header { display: none !important; }
+    </style>
+
+  FORM:
+  Submits to HubSpot Forms API (portal 442170069) — same form GUID
+  as the Meta landing page.
+
+  TRACKING (2026-09-23 — see ~/sth-tracking-fix/README.md):
+  - Qualified budgets ($125k – $150k and above) set sessionStorage 'sth_conv'
+    {event_id, budget, source, ts} before redirecting to /thank-you. The
+    /thank-you code block fires Meta Lead + Google Ads conversion ONLY from
+    that flag (once, <30 min old). Everything else fires nothing.
+  - Redirects: <$100k -> /thank-you-pricing-guide · $125k+ -> /thank-you ·
+    $100k – $125k, Not sure yet, blank -> /thank-you?notag=1
+  - No fbq init here: Squarespace's built-in Meta integration owns the pixel.
+  - UTM + fbclid/gclid captured to sessionStorage 'sth_attr' on load and
+    re-attached to the HubSpot pageUri.
+  ═══════════════════════════════════════════════════════════════════
+-->
+
+<style>
+  /* ── Body padding for sticky mobile CTA (global — must be unscoped) ── */
+  @media (max-width: 640px) {
+    body { padding-bottom: calc(130px + env(safe-area-inset-bottom)) !important; }
+  }
+
+  /* ════════════════════════════════════════════════════
+     ALL REMAINING STYLES SCOPED TO #sth-lp
+     ════════════════════════════════════════════════════ */
+
+  #sth-lp {
+    scroll-behavior: smooth;
+    font-family: 'Outfit', system-ui, sans-serif;
+    color: #1A1A1A;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  #sth-lp *, #sth-lp *::before, #sth-lp *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  #sth-lp img   { display: block; max-width: 100%; height: auto; }
+  #sth-lp a     { color: inherit; text-decoration: none; }
+
+  /* ── Utilities ── */
+  #sth-lp .sth-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  #sth-lp .sth-label {
+    display: block;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #5C6A5B;
+    margin-bottom: .75rem;
+  }
+
+  /* ── Buttons ── */
+  #sth-lp .sth-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: background .2s, transform .15s, box-shadow .2s;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: .1px;
+  }
+  #sth-lp .sth-btn-primary {
+    background: #5C6A5B;
+    color: #FFFFFF;
+    box-shadow: 0 4px 16px rgba(92,106,91,.4);
+  }
+  #sth-lp .sth-btn-primary:hover { background: #4A574A; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(92,106,91,.45); }
+  #sth-lp .sth-btn-outline {
+    background: transparent;
+    color: #FFFFFF;
+    border: 2px solid rgba(255,255,255,.55);
+  }
+  #sth-lp .sth-btn-outline:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.8); }
+  #sth-lp .sth-btn-lg   { padding: 1.15rem 2.5rem; font-size: 1.05rem; }
+  #sth-lp .sth-btn-full { display: block; width: 100%; }
+
+  /* ── Shared Form ── */
+  #sth-lp .sth-form-row { margin-bottom: .75rem; }
+  #sth-lp .sth-form-row label {
+    display: block;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .6px;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: .3rem;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-form-row input,
+  #sth-lp .sth-form-row select,
+  #sth-lp .sth-form-row textarea {
+    width: 100%;
+    padding: .85rem 1rem;
+    border: 1.5px solid #DDD8D0;
+    border-radius: 8px;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-size: 1rem;
+    color: #1A1A1A;
+    background: #FAFAF8;
+    transition: border-color .18s, background .18s, box-shadow .18s;
+    -webkit-appearance: none;
+    appearance: none;
+    line-height: 1.4;
+  }
+  #sth-lp .sth-form-row input:focus,
+  #sth-lp .sth-form-row select:focus,
+  #sth-lp .sth-form-row textarea:focus {
+    outline: none;
+    border-color: #5C6A5B;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(92,106,91,.12);
+  }
+  #sth-lp .sth-form-row textarea { resize: vertical; min-height: 80px; }
+  #sth-lp .sth-form-row input.sth-invalid,
+  #sth-lp .sth-form-row textarea.sth-invalid {
+    border-color: #C0392B;
+    background: #FFF8F7;
+    box-shadow: 0 0 0 3px rgba(192,57,43,.1);
+  }
+  #sth-lp .sth-field-error {
+    display: none;
+    font-size: .72rem;
+    color: #C0392B;
+    margin-top: .3rem;
+    font-family: 'Outfit', system-ui, sans-serif;
+    font-weight: 600;
+  }
+  #sth-lp .sth-field-error.sth-visible { display: block; }
+  #sth-lp .sth-field-hint { font-size: .76rem; color: #999; margin-top: .1rem; margin-bottom: .35rem; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-form-privacy {
+    font-size: .7rem;
+    color: #BBBBBB;
+    text-align: center;
+    margin-top: .6rem;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-form-success { display: none; text-align: center; padding: 2rem 1rem; }
+  #sth-lp .sth-form-success .fs-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+  #sth-lp .sth-form-success h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: .45rem; color: #1A1A1A; }
+  #sth-lp .sth-form-success p  { font-size: .9rem; color: #666; line-height: 1.6; }
+
+  /* ── 1. Urgency Bar ── */
+  #sth-lp .sth-logo-header {
+    background: #fff;
+    border-bottom: 1px solid #EDE8E1;
+    padding: .85rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #sth-lp .sth-logo-header img { height: 120px; width: auto; display: block; }
+  @media (max-width: 640px) { #sth-lp .sth-logo-header img { height: 50px; } }
+
+  #sth-lp .sth-urgency {
+    background: #1A1A1A;
+    color: #FFFFFF;
+    text-align: center;
+    padding: .65rem 1.5rem;
+    font-size: .82rem;
+    font-weight: 500;
+    font-family: 'Outfit', system-ui, sans-serif;
+    line-height: 1.5;
+  }
+  #sth-lp .sth-urgency strong { color: #C8A96E; }
+  #sth-lp .sth-urgency a {
+    color: #C8A96E;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    white-space: nowrap;
+  }
+
+  /* ── 2. Hero ── */
+  #sth-lp .sth-hero {
+    position: relative;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  #sth-lp .sth-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('__SPOTURL_lp/google/badge-bg__');
+    background-size: cover;
+    background-position: center 40%;
+  }
+  #sth-lp .sth-hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(115deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.54) 50%, rgba(0,0,0,.22) 100%);
+  }
+  #sth-lp .sth-hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 3rem;
+    align-items: center;
+  }
+  #sth-lp .sth-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(200,169,110,.2);
+    border: 1px solid rgba(200,169,110,.55);
+    color: #C8A96E;
+    font-size: .73rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: .35rem .95rem;
+    border-radius: 999px;
+    margin-bottom: 1.1rem;
+  }
+  #sth-lp .sth-hero h1 {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -.5px;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-hero h1 em { font-style: normal; color: #C8A96E; }
+  #sth-lp .sth-hero-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,.84);
+    line-height: 1.7;
+    margin-bottom: 1.6rem;
+    max-width: 500px;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-hero-checks {
+    list-style: none;
+    margin-bottom: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  #sth-lp .sth-hero-checks li {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    font-size: .9rem;
+    color: rgba(255,255,255,.88);
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-hero-checks li::before {
+    content: '';
+    display: inline-block;
+    width: 18px; height: 18px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #5C6A5B
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E")
+      center / 11px no-repeat;
+  }
+  #sth-lp .sth-hero-phone {
+    font-size: .88rem;
+    font-weight: 500;
+    color: rgba(255,255,255,.6);
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-hero-phone a { color: #F4F0EB; font-weight: 700; }
+
+  /* Hero form card */
+  #sth-lp .sth-hero-form-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  }
+  #sth-lp .sth-hfc-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #1A1A1A;
+    margin-bottom: .25rem;
+    line-height: 1.2;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-hfc-sub {
+    font-size: .82rem;
+    color: #666;
+    margin-bottom: 1.2rem;
+    line-height: 1.55;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+
+  /* ── 3. Trust Bar ── */
+  #sth-lp .sth-trust {
+    background: #F4F0EB;
+    border-top: 3px solid #5C6A5B;
+    border-bottom: 1px solid #DDE2DB;
+    padding: 1.3rem 1.5rem;
+  }
+  #sth-lp .sth-trust-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    align-items: center;
+  }
+  #sth-lp .sth-ti { display: flex; align-items: center; justify-content: center; gap: .55rem; padding: .25rem 1rem; border-right: 1px solid #CCC8C0; }
+  #sth-lp .sth-ti:last-child { border-right: none; }
+  #sth-lp .sth-ti img { height: 34px; width: auto; flex-shrink: 0; }
+  #sth-lp .sth-logo-white { filter: brightness(0) opacity(.75) !important; }
+  #sth-lp .sth-ti .ti-label { font-size: .83rem; font-weight: 700; display: block; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-ti .ti-sub   { font-size: .7rem; color: #666; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-tdiv { display: none; }
+
+  /* ── 4. Hook ── */
+  #sth-lp .sth-hook { padding: 5.5rem 1.5rem; background: #FFFFFF; text-align: center; }
+  #sth-lp .sth-hook h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 800;
+    margin-bottom: 1.25rem;
+    letter-spacing: -.3px;
+    color: #1A1A1A;
+    font-family: 'Outfit', system-ui, sans-serif;
+    line-height: 1.15;
+  }
+  #sth-lp .sth-hook p {
+    font-size: 1.02rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 680px;
+    margin: 0 auto .9rem;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-hook p strong { color: #1A1A1A; }
+  #sth-lp .sth-hook-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2.75rem auto;
+    max-width: 900px;
+  }
+  #sth-lp .sth-hf {
+    background: #F4F0EB;
+    border: 1px solid #DDE2DB;
+    border-radius: 12px;
+    padding: 1.5rem 1.6rem;
+    flex: 1 1 220px;
+    text-align: left;
+  }
+  #sth-lp .sth-hf .hf-icon  { font-size: 1.5rem; margin-bottom: .65rem; display: block; }
+  #sth-lp .sth-hf .hf-title { font-size: .93rem; font-weight: 700; color: #1A1A1A; margin-bottom: .35rem; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-hf .hf-desc  { font-size: .83rem; color: #666; line-height: 1.6; font-family: 'Outfit', system-ui, sans-serif; }
+
+  /* ── 5. Benefits ── */
+  #sth-lp .sth-benefits { padding: 5.5rem 1.5rem; background: #F4F0EB; }
+  #sth-lp .sth-benefits-hdr { text-align: center; margin-bottom: 3rem; }
+  #sth-lp .sth-benefits-hdr h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 800; margin-bottom: .5rem; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; line-height: 1.2; }
+  #sth-lp .sth-benefits-hdr p  { font-size: .95rem; color: #666; max-width: 540px; margin: 0 auto; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  #sth-lp .sth-bc {
+    background: #FFFFFF;
+    border: 1px solid #DDE2DB;
+    border-radius: 14px;
+    padding: 1.75rem;
+    position: relative;
+  }
+  #sth-lp .sth-bc-icon {
+    width: 44px; height: 44px;
+    background: rgba(92,106,91,.1);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
+  }
+  #sth-lp .sth-bc h3 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; line-height: 1.3; }
+  #sth-lp .sth-bc p  { font-size: .88rem; color: #666; line-height: 1.7; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-pill {
+    display: inline-block;
+    background: #EAF1EA;
+    color: #3A4A3A;
+    font-size: .63rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    padding: .22rem .6rem;
+    border-radius: 999px;
+    margin-top: .75rem;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+
+  /* ── 6. Social Proof ── */
+  #sth-lp .sth-proof { padding: 5.5rem 1.5rem; background: #5C6A5B; color: #FFFFFF; text-align: center; }
+  #sth-lp .sth-proof .sth-label { color: rgba(255,255,255,.45); margin-bottom: .6rem; }
+  #sth-lp .sth-proof h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 2rem; color: #FFFFFF; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-t-featured {
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.16);
+    border-left: 4px solid #C8A96E;
+    border-radius: 14px;
+    padding: 2.5rem 2.75rem;
+    max-width: 1080px;
+    margin: 0 auto 1.25rem;
+    text-align: left;
+  }
+  #sth-lp .sth-stars { color: #C8A96E; font-size: 1rem; letter-spacing: 2px; margin-bottom: .9rem; display: block; }
+  #sth-lp .sth-t-featured .sth-stars { font-size: 1.15rem; letter-spacing: 3px; margin-bottom: 1.15rem; }
+  #sth-lp .sth-t-featured blockquote {
+    font-size: 1.08rem;
+    font-style: italic;
+    line-height: 1.82;
+    color: rgba(255,255,255,.93);
+    margin-bottom: 1.6rem;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-t-supporting-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.1rem;
+    max-width: 1080px;
+    margin: 0 auto 2rem;
+    text-align: left;
+  }
+  #sth-lp .sth-t-card {
+    background: rgba(255,255,255,.09);
+    border: 1px solid rgba(255,255,255,.14);
+    border-radius: 12px;
+    padding: 1.75rem;
+  }
+  #sth-lp .sth-t-card blockquote {
+    font-size: .95rem;
+    font-style: italic;
+    line-height: 1.74;
+    color: rgba(255,255,255,.88);
+    margin-bottom: 1.25rem;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-t-meta { display: flex; align-items: center; gap: .7rem; }
+  #sth-lp .sth-t-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: rgba(255,255,255,.15);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: .88rem; flex-shrink: 0;
+    color: #FFFFFF; font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-t-name   { font-weight: 700; font-size: .88rem; display: block; color: #FFFFFF; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-t-detail { font-size: .73rem; color: rgba(255,255,255,.45); display: block; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-proof-credibility {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-top: 1.75rem;
+    border-top: 1px solid rgba(255,255,255,.12);
+    font-size: .78rem;
+    color: rgba(255,255,255,.38);
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+
+  /* ── 7. Process ── */
+  #sth-lp .sth-process { padding: 5.5rem 1.5rem; background: #FFFFFF; }
+  #sth-lp .sth-process-hdr { text-align: center; margin-bottom: 3.5rem; }
+  #sth-lp .sth-process-hdr h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 800; margin-bottom: .5rem; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; line-height: 1.2; }
+  #sth-lp .sth-process-hdr p  { font-size: .95rem; color: #666; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 1080px;
+    margin: 0 auto;
+    position: relative;
+  }
+  #sth-lp .sth-process-grid::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: calc(12.5% + 25px);
+    right: calc(12.5% + 25px);
+    height: 2px;
+    background: #E0DBD4;
+  }
+  #sth-lp .sth-pc { text-align: center; padding: 0 .75rem; position: relative; z-index: 1; }
+  #sth-lp .sth-step-num {
+    width: 50px; height: 50px; border-radius: 50%;
+    background: #5C6A5B; color: #FFFFFF;
+    font-size: 1.2rem; font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 1.1rem;
+    font-family: 'Outfit', system-ui, sans-serif;
+    box-shadow: 0 4px 12px rgba(92,106,91,.35);
+  }
+  #sth-lp .sth-pc h3 { font-size: .95rem; font-weight: 700; margin-bottom: .5rem; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-pc p  { font-size: .84rem; color: #666; line-height: 1.65; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-step-time { font-size: .68rem; font-weight: 700; color: #5C6A5B; text-transform: uppercase; letter-spacing: .6px; margin-top: .6rem; display: block; font-family: 'Outfit', system-ui, sans-serif; }
+
+  /* ── 8. Gallery ── */
+  #sth-lp .sth-gallery { padding: 5rem 1.5rem; background: #FFFFFF; }
+  #sth-lp .sth-gallery-hdr { text-align: center; margin-bottom: 2.25rem; }
+  #sth-lp .sth-gallery-hdr h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 800; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; line-height: 1.2; }
+  #sth-lp .sth-gallery-grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.1rem;
+  }
+  #sth-lp figure.sth-gi {
+    display: block;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #DDE2DB;
+    border: 1px solid #E4E0DA;
+  }
+  #sth-lp .sth-gi img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    transition: transform .45s ease;
+  }
+  #sth-lp .sth-gi:hover img { transform: scale(1.05); }
+
+  /* ── 9. Mid CTA ── */
+  #sth-lp .sth-midcta { background: #1A1A1A; padding: 4.5rem 1.5rem; text-align: center; color: #FFFFFF; }
+  #sth-lp .sth-midcta h2 { font-size: clamp(1.65rem, 3.5vw, 2.4rem); font-weight: 800; margin-bottom: .75rem; color: #FFFFFF; font-family: 'Outfit', system-ui, sans-serif; line-height: 1.15; }
+  #sth-lp .sth-midcta p  { font-size: 1rem; color: rgba(255,255,255,.65); max-width: 520px; margin: 0 auto 2rem; line-height: 1.72; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-midcta-btns { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+
+  /* ── 10. Why Us ── */
+  #sth-lp .sth-why { padding: 5.5rem 1.5rem; background: #F4F0EB; }
+  #sth-lp .sth-why-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  #sth-lp .sth-why h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 800; margin-bottom: 1rem; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; line-height: 1.2; }
+  #sth-lp .sth-why .sth-lead { font-size: 1rem; color: #555; line-height: 1.78; margin-bottom: 1.75rem; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-why-list { list-style: none; }
+  #sth-lp .sth-why-list li {
+    font-size: .9rem;
+    padding: .8rem 0;
+    border-bottom: 1px solid #DDE2DB;
+    display: flex;
+    gap: .75rem;
+    align-items: flex-start;
+    color: #444;
+    line-height: 1.58;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-why-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  #sth-lp .sth-why-check {
+    width: 20px; height: 20px; border-radius: 50%;
+    background: #5C6A5B; flex-shrink: 0; margin-top: .12rem;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  #sth-lp .sth-why-check::after { content: '✓'; color: white; font-size: .68rem; font-weight: 700; }
+  #sth-lp .sth-why-list li strong { color: #1A1A1A; }
+  #sth-lp .sth-why-visual { position: relative; border-radius: 16px; overflow: hidden; }
+  #sth-lp .sth-why-visual img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; }
+  #sth-lp .sth-why-badge {
+    position: absolute; bottom: 1.25rem; left: 1.25rem;
+    background: #FFFFFF; border-radius: 10px;
+    padding: .9rem 1.1rem;
+    box-shadow: 0 6px 24px rgba(0,0,0,.12);
+    display: flex; align-items: center; gap: .7rem;
+  }
+  #sth-lp .sth-why-badge .wb-icon  { font-size: 1.6rem; }
+  #sth-lp .sth-why-badge .wb-label { font-size: .8rem; font-weight: 700; display: block; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-why-badge .wb-sub   { font-size: .68rem; color: #666; font-family: 'Outfit', system-ui, sans-serif; }
+
+  /* ── 11. FAQ ── */
+  #sth-lp .sth-faq { padding: 5.5rem 1.5rem; background: #FFFFFF; }
+  #sth-lp .sth-faq-hdr { text-align: center; margin-bottom: 3rem; }
+  #sth-lp .sth-faq-hdr h2 { font-size: clamp(1.65rem, 3vw, 2.25rem); font-weight: 800; margin-bottom: .5rem; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; line-height: 1.2; }
+  #sth-lp .sth-faq-hdr p  { font-size: .95rem; color: #666; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-faq-grid {
+    max-width: 920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+  }
+  #sth-lp .sth-faq-card {
+    background: #F4F0EB;
+    border: 1px solid #DDE2DB;
+    border-radius: 12px;
+    padding: 1.5rem;
+  }
+  #sth-lp .sth-faq-card h3 { font-size: .95rem; font-weight: 700; margin-bottom: .6rem; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; line-height: 1.35; }
+  #sth-lp .sth-faq-card p  { font-size: .86rem; color: #666; line-height: 1.72; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-faq-card p strong { color: #1A1A1A; }
+
+  /* ── 12. Final CTA ── */
+  #sth-lp .sth-final { padding: 5.5rem 1.5rem; background: #1A1A1A; color: #FFFFFF; }
+  #sth-lp .sth-final-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 4rem;
+    align-items: start;
+  }
+  #sth-lp .sth-final .sth-label { color: rgba(255,255,255,.35); }
+  #sth-lp .sth-final h2 { font-size: clamp(1.75rem, 3.5vw, 2.75rem); font-weight: 800; line-height: 1.1; margin-bottom: .9rem; color: #FFFFFF; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-final h2 em { font-style: normal; color: #C8A96E; }
+  #sth-lp .sth-fc-body { font-size: 1rem; color: rgba(255,255,255,.66); line-height: 1.8; margin-bottom: 1.75rem; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-promise {
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px;
+    padding: 1.3rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+  #sth-lp .sth-promise h3 { font-size: .85rem; font-weight: 700; color: #C8A96E; margin-bottom: .75rem; font-family: 'Outfit', system-ui, sans-serif; text-transform: uppercase; letter-spacing: .8px; }
+  #sth-lp .sth-promise ul { list-style: none; }
+  #sth-lp .sth-promise ul li {
+    font-size: .88rem;
+    color: rgba(255,255,255,.74);
+    padding: .3rem 0;
+    display: flex;
+    gap: .6rem;
+    line-height: 1.5;
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-promise ul li::before { content: '✓'; color: #a3c9a3; font-weight: 700; flex-shrink: 0; }
+  #sth-lp .sth-fc-phone { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+  #sth-lp .sth-fc-phone a { font-size: 1.35rem; font-weight: 800; color: #FFFFFF; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-fc-phone-detail { font-size: .78rem; color: rgba(255,255,255,.4); line-height: 1.6; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-final-form-card {
+    background: #FFFFFF;
+    color: #1A1A1A;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 16px 56px rgba(0,0,0,.4);
+  }
+  #sth-lp .sth-ffc-title { font-size: 1.2rem; font-weight: 800; margin-bottom: .25rem; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-ffc-sub   { font-size: .82rem; color: #666; margin-bottom: 1.25rem; line-height: 1.55; font-family: 'Outfit', system-ui, sans-serif; }
+
+  /* ── Sticky CTA ── */
+  #sth-lp .sth-sticky {
+    display: none;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+    background: #1A1A1A;
+    padding: .75rem 1rem;
+    padding-bottom: calc(.75rem + env(safe-area-inset-bottom));
+    gap: .6rem;
+    box-shadow: 0 -4px 24px rgba(0,0,0,.3);
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+  #sth-lp .sth-sticky a {
+    display: block;
+    text-align: center;
+    padding: .9rem 1rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-family: 'Outfit', system-ui, sans-serif;
+    line-height: 1.2;
+  }
+  #sth-lp .sth-sc-call { background: #5C6A5B; }
+  #sth-lp .sth-sc-form { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); }
+
+  /* ═══════════════════════════════
+     RESPONSIVE — Tablet ≤900px
+  ═══════════════════════════════ */
+  @media (max-width: 900px) {
+    #sth-lp .sth-hero-inner       { grid-template-columns: 1fr; gap: 2rem; }
+    #sth-lp .sth-hero-form-card   { max-width: 520px; }
+    #sth-lp .sth-why-inner        { grid-template-columns: 1fr; gap: 2.5rem; }
+    #sth-lp .sth-final-inner      { grid-template-columns: 1fr; gap: 3rem; }
+    #sth-lp .sth-process-grid     { grid-template-columns: 1fr 1fr; gap: 1.75rem; }
+    #sth-lp .sth-process-grid::before { display: none; }
+    #sth-lp .sth-gallery-grid     { grid-template-columns: 1fr 1fr; }
+    #sth-lp .sth-t-supporting-grid { grid-template-columns: 1fr 1fr; }
+    #sth-lp .sth-faq-grid         { max-width: 100%; }
+  }
+
+  /* ═══════════════════════════════════════════════
+     RESPONSIVE — Mobile ≤640px (primary audience)
+  ═══════════════════════════════════════════════ */
+  @media (max-width: 640px) {
+    /* Layout */
+    #sth-lp .sth-hero             { min-height: 100svh; }
+    #sth-lp .sth-hero-inner       { padding: 56vw 1.25rem 2rem; gap: 1.75rem; }
+    #sth-lp .sth-container        { padding: 0 1.25rem; }
+
+    /* Show image at natural proportions on mobile — no zoom */
+    #sth-lp .sth-hero             { background: #1A1A1A; }
+    #sth-lp .sth-hero-bg          { background-size: 100% auto; background-repeat: no-repeat; background-position: center top; }
+
+    /* Hero overlay — transparent at top so photo shows, fades dark behind text */
+    #sth-lp .sth-hero-bg::after   {
+      background: linear-gradient(to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0) 18%,
+        rgba(0,0,0,.6)  32%,
+        rgba(0,0,0,.82) 50%,
+        rgba(0,0,0,.92) 100%);
+    }
+    #sth-lp .sth-hero h1,
+    #sth-lp .sth-eyebrow          { text-shadow: 0 1px 10px rgba(0,0,0,.7); }
+
+    /* Hero typography */
+    #sth-lp .sth-hero h1          { font-size: 1.9rem; line-height: 1.1; margin-bottom: .85rem; }
+    #sth-lp .sth-eyebrow          { font-size: .7rem; margin-bottom: .85rem; }
+    #sth-lp .sth-hero-sub         { font-size: .98rem; line-height: 1.68; margin-bottom: 1rem; }
+
+    /* Hide checklist and phone on mobile — form is primary CTA */
+    #sth-lp .sth-hero-checks      { display: none; }
+    #sth-lp .sth-hero-phone       { display: none; }
+
+    /* Hero form */
+    #sth-lp .sth-hero-form-card   { padding: 1.25rem; border-radius: 12px; }
+    #sth-lp .sth-hfc-title        { font-size: 1.1rem; }
+    #sth-lp .sth-hfc-sub          { font-size: .78rem; margin-bottom: 1rem; }
+
+    /* Forms */
+    #sth-lp .sth-form-row         { margin-bottom: .6rem; }
+    #sth-lp .sth-form-row label   { font-size: .68rem; }
+    #sth-lp .sth-form-row input,
+    #sth-lp .sth-form-row select,
+    #sth-lp .sth-form-row textarea { padding: .8rem .9rem; border-radius: 7px; }
+
+    /* Buttons */
+    #sth-lp .sth-btn-lg            { font-size: 1.02rem; padding: 1rem 1.5rem; }
+    #sth-lp .sth-hook .sth-btn     { display: block; width: 100%; }
+    #sth-lp .sth-midcta-btns       { flex-direction: column; }
+    #sth-lp .sth-midcta-btns .sth-btn { display: block; width: 100%; }
+
+    /* Trust bar — single column on mobile */
+    #sth-lp .sth-trust-inner      { grid-template-columns: 1fr; gap: 0; }
+    #sth-lp .sth-ti               { border-right: none; border-bottom: 1px solid #DDE2DB; padding: .65rem .75rem; justify-content: flex-start; }
+    #sth-lp .sth-ti:last-child    { border-bottom: none; }
+    #sth-lp .sth-ti img           { height: 28px; }
+    #sth-lp .sth-ti .ti-label,
+    #sth-lp .sth-ti .ti-sub       { white-space: nowrap; }
+
+    /* Hook */
+    #sth-lp .sth-hook-features    { flex-direction: column; gap: .85rem; }
+    #sth-lp .sth-hf               { flex: none; }
+
+    /* Benefits — single column */
+    #sth-lp .sth-benefits-grid    { grid-template-columns: 1fr; }
+
+    /* Testimonials */
+    #sth-lp .sth-t-featured       { padding: 1.5rem 1.25rem; }
+    #sth-lp .sth-t-featured blockquote { font-size: .97rem; }
+    #sth-lp .sth-t-supporting-grid { grid-template-columns: 1fr; }
+
+    /* Process */
+    #sth-lp .sth-process-grid     { grid-template-columns: 1fr; gap: 1.5rem; }
+
+    /* Gallery */
+    #sth-lp .sth-gallery-grid     { grid-template-columns: 1fr; }
+
+    /* FAQ */
+    #sth-lp .sth-faq-grid         { grid-template-columns: 1fr; }
+
+    /* Why Us badge — smaller and tighter on mobile */
+    #sth-lp .sth-why-badge        { padding: .6rem .75rem; left: .75rem; bottom: .75rem; gap: .5rem; }
+    #sth-lp .sth-why-badge .wb-icon  { font-size: 1.2rem; }
+    #sth-lp .sth-why-badge .wb-label { font-size: .72rem; }
+    #sth-lp .sth-why-badge .wb-sub   { font-size: .6rem; }
+
+    /* Urgency bar — tighter text on small screens */
+    #sth-lp .sth-urgency          { font-size: .78rem; padding: .6rem 1rem; }
+
+    /* Section padding */
+    #sth-lp .sth-hook,
+    #sth-lp .sth-benefits,
+    #sth-lp .sth-proof,
+    #sth-lp .sth-process,
+    #sth-lp .sth-gallery,
+    #sth-lp .sth-midcta,
+    #sth-lp .sth-why,
+    #sth-lp .sth-faq,
+    #sth-lp .sth-final            { padding-top: 3.75rem; padding-bottom: 3.75rem; }
+
+    /* Sticky CTA */
+    #sth-lp .sth-sticky           { display: flex; flex-direction: column; }
+  }
+
+  @media (max-width: 380px) {
+    #sth-lp .sth-hero h1          { font-size: 1.7rem; }
+    #sth-lp .sth-hero-form-card   { padding: 1.1rem; }
+    #sth-lp .sth-hfc-title        { font-size: 1rem; }
+  }
+
+  /* ── 3b. Pricing + delivery + brochure (2026-07-29 transparency overhaul) ── */
+  #sth-lp .sth-hero-brochure {
+    margin-top: .8rem;
+    font-size: .88rem;
+    color: rgba(255,255,255,.6);
+    font-family: 'Outfit', system-ui, sans-serif;
+  }
+  #sth-lp .sth-hero-brochure a { color: #C8A96E; font-weight: 700; text-decoration: underline; }
+  #sth-lp .sth-pricing { background: #fff; padding: 4rem 1.5rem; border-bottom: 1px solid #EDE8E1; }
+  #sth-lp .sth-pricing-inner { max-width: 880px; margin: 0 auto; text-align: center; }
+  #sth-lp .sth-pricing-inner > .sth-label { display: block; margin-bottom: .4rem; }
+  #sth-lp .sth-pricing-inner h2 { font-size: clamp(1.5rem, 3.2vw, 2.1rem); font-weight: 800; color: #1A1A1A; line-height: 1.2; margin-bottom: 1.5rem; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  #sth-lp .sth-price-card { background: #F4F0EB; border: 1px solid #DDE2DB; border-radius: 14px; padding: 1.5rem 1rem; }
+  #sth-lp .sth-price-card .pc-model { display: block; font-size: .8rem; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; color: #555; margin-bottom: .3rem; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-price-card .pc-price { display: block; font-size: 1.6rem; font-weight: 800; color: #1A1A1A; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-price-card .pc-exf { display: block; font-size: .72rem; color: #777; margin-top: .3rem; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-price-note { font-size: .85rem; color: #555; margin-top: 1rem; line-height: 1.65; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-delivery-band { margin-top: 1.75rem; background: #F4F0EB; border-radius: 14px; padding: 1.5rem 1.75rem; text-align: left; }
+  #sth-lp .sth-delivery-band p { font-size: .95rem; color: #444; line-height: 1.72; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-brochure-cta { margin-top: 1.75rem; }
+  #sth-lp .sth-brochure-cta h3 { font-size: 1.1rem; font-weight: 800; color: #1A1A1A; margin-bottom: .4rem; font-family: 'Outfit', system-ui, sans-serif; }
+  #sth-lp .sth-brochure-cta p { font-size: .9rem; color: #666; line-height: 1.65; max-width: 520px; margin: 0 auto 1.1rem; font-family: 'Outfit', system-ui, sans-serif; }
+  @media (max-width: 640px) {
+    #sth-lp .sth-pricing { padding: 3rem 1.25rem; }
+    #sth-lp .sth-price-grid { gap: .6rem; }
+    #sth-lp .sth-price-card { padding: 1rem .5rem; }
+    #sth-lp .sth-price-card .pc-price { font-size: 1.15rem; }
+  }
+</style>
+
+<div id="sth-lp">
+
+  <!-- 0. LOGO HEADER -->
+  <header class="sth-logo-header">
+    <img src="/images/logo.png"
+         alt="Sunshine Tiny Houses" />
+  </header>
+
+  <!-- 1. URGENCY BAR -->
+  <div class="sth-urgency">
+    <strong>Limited build slots available this quarter.</strong>
+    We cap new projects to maintain build quality.
+    <a href="#sth-assessment">Check your property now →</a>
+  </div>
+
+  <!-- 2. HERO -->
+  <section class="sth-hero">
+    <div class="sth-hero-bg" data-spot="__SPOTN_lp/google/badge-bg__" role="img" aria-label="Completed secondary dwelling — Sunshine Tiny Houses, Queensland"></div>
+    <div class="sth-hero-inner">
+
+      <div>
+        <span class="sth-eyebrow">Queensland's Premium Secondary Dwelling Builder</span>
+
+        <h1>
+          Granny Flats &amp; Modular<br>
+          Homes From <em>$110k.</em><br>
+          Delivered Across Queensland.
+        </h1>
+
+        <p class="sth-hero-sub">
+          Studios from $110k, one-bedroom from $140k, two-bedroom from $195k — incl. GST,
+          ex factory. Factory-built in Noosaville and delivered within 1,250km, with design,
+          council approvals, engineering, delivery and installation all managed for you and
+          quoted separately for your site. Turn-key.
+        </p>
+
+        <ul class="sth-hero-checks">
+          <li>Transparent pricing — full brochure below, no form required</li>
+          <li>Delivered within 1,250km of Noosaville — SEQ to Townsville, incl. Northern NSW</li>
+          <li>Council approvals managed end-to-end</li>
+          <li>Turn-key delivery — move-in ready from handover day</li>
+          <li>QBCC Licensed Builder #15205110</li>
+          <li>Mitch and Nat manage your project personally</li>
+        </ul>
+
+        <p class="sth-hero-phone">
+          Prefer to call?&nbsp;
+          <a href="tel:0753158365">(07) 5315 8365</a>
+          &nbsp;· Mon–Fri 7am–4pm
+        </p>
+        <p class="sth-hero-brochure">
+          <a href="https://files.sunshinetinyhouses.com.au/downloads/sth-brochure.pdf" target="_blank" rel="noopener">Download the full brochure (PDF)</a>
+          — pricing, floor plans &amp; inclusions. No form required.
+        </p>
+      </div>
+
+      <div class="sth-hero-form-card" id="sth-hero-form-card">
+        <p class="sth-hfc-title">Want a Quote for Your Block?</p>
+        <p class="sth-hfc-sub">Tell us a bit about your site and what you're after, and we'll come back to you with model recommendations and pricing tailored to your location.</p>
+
+        <form class="sth-lp-form" data-form-id="sth-hero-form">
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_subject" value="New Lead: Modular Assessment Enquiry!" />
+          <input type="text"   name="_honey"   style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="sth-form-row">
+            <label for="sth-hf-name">Full Name</label>
+            <input type="text"  id="sth-hf-name"     name="name"     placeholder="e.g. Sarah Johnson" required autocomplete="name" />
+          </div>
+          <div class="sth-form-row">
+            <label for="sth-hf-email">Email Address</label>
+            <input type="email" id="sth-hf-email"    name="email"    placeholder="e.g. sarah@email.com" required autocomplete="email" />
+          </div>
+          <div class="sth-form-row">
+            <label for="sth-hf-phone">Phone Number</label>
+            <input type="tel"   id="sth-hf-phone"    name="phone"    placeholder="e.g. 0412 345 678" autocomplete="tel" />
+          </div>
+          <div class="sth-form-row">
+            <label for="sth-hf-location">Suburb, Postcode or Address</label>
+            <input type="text"  id="sth-hf-location" name="location" placeholder="e.g. Cooroy QLD 4563 or 12 Smith St" required autocomplete="address-level2" />
+          </div>
+
+          <div class="sth-form-row">
+            <label for="sth-hf-ideal">What's your ideal home/project?</label>
+            <select id="sth-hf-ideal" name="ideal_home" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="1 Bed, 1 Bath">1 Bed, 1 Bath</option>
+              <option value="2 Bed, 1 Bath">2 Bed, 1 Bath</option>
+              <option value="2 Bed, 2 Bath">2 Bed, 2 Bath</option>
+              <option value="Utility Room">Utility Room</option>
+              <option value="Office Space">Office Space</option>
+              <option value="Something larger or custom">Something larger or custom</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+
+          <div class="sth-form-row">
+            <label for="sth-hf-budget">What's your approximate budget?</label>
+            <select id="sth-hf-budget" name="approximate_budget" required>
+              <option value="" disabled selected>Select a range</option>
+              <option value="<$100k">&lt;$100k</option>
+              <option value="$100k – $125k">$100k – $125k</option>
+              <option value="$125k – $150k">$125k – $150k</option>
+              <option value="$150k – $175k">$150k – $175k</option>
+              <option value="$175k – $200k">$175k – $200k</option>
+              <option value="$200k – $250k">$200k – $250k</option>
+              <option value="$250k+">$250k+</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+
+          <button type="submit" class="sth-btn sth-btn-primary sth-btn-lg sth-btn-full" style="margin-top:.25rem;">
+            Request My Personalised Quote
+          </button>
+          <p class="sth-form-privacy">🔒 No spam. No obligation. Mitch or Nat will be in touch personally.</p>
+        </form>
+
+        <div class="sth-form-success" id="sth-hero-form-success" aria-live="polite">
+          <span class="fs-icon">✅</span>
+          <h3>Request received.</h3>
+          <p>Mitch or Nat will personally put together model recommendations and pricing to suit what you're after, and reply by email — usually within a couple of business days.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. TRUST BAR -->
+  <section class="sth-trust" aria-label="Credentials and accreditations">
+    <div class="sth-trust-inner">
+      <div class="sth-ti">
+        <img src="/images/qbcc-open.png"
+             alt="QBCC Licensed Builder" class="sth-logo-white" onerror="this.style.display='none'" loading="eager" />
+        <div>
+          <strong class="ti-label">QBCC Licensed</strong>
+          <span class="ti-sub">Builder Lic. #15205110</span>
+        </div>
+      </div>
+      <div class="sth-tdiv" aria-hidden="true"></div>
+      <div class="sth-ti">
+        <div>
+          <strong class="ti-label">ABN Registered</strong>
+          <span class="ti-sub">ABN 40 270 427 080</span>
+        </div>
+      </div>
+      <div class="sth-tdiv" aria-hidden="true"></div>
+      <div class="sth-ti">
+        <div>
+          <strong class="ti-label">Factory-Built in QLD</strong>
+          <span class="ti-sub">24 Venture Dr, Noosaville</span>
+        </div>
+      </div>
+      <div class="sth-tdiv" aria-hidden="true"></div>
+      <div class="sth-ti">
+        <div>
+          <strong class="ti-label">Personal Response</strong>
+          <span class="ti-sub">Mitch or Nat — never a call centre</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3b. PRICING + DELIVERY + BROCHURE -->
+  <section class="sth-pricing" id="sth-pricing">
+    <div class="sth-pricing-inner">
+      <span class="sth-label">Transparent Pricing</span>
+      <h2>Straight Prices, Before You Fill In Anything.</h2>
+      <div class="sth-price-grid">
+        <div class="sth-price-card">
+          <span class="pc-model">Studios</span>
+          <span class="pc-price">from $110k</span>
+          <span class="pc-exf">ex factory</span>
+        </div>
+        <div class="sth-price-card">
+          <span class="pc-model">1-Bedroom</span>
+          <span class="pc-price">from $140k</span>
+          <span class="pc-exf">ex factory</span>
+        </div>
+        <div class="sth-price-card">
+          <span class="pc-model">2-Bedroom</span>
+          <span class="pc-price">from $195k</span>
+          <span class="pc-exf">ex factory</span>
+        </div>
+      </div>
+      <p class="sth-price-note">All prices incl. GST, <strong>ex factory</strong>. Transport &amp; delivery, council approvals, cranes, installation and site works are <strong>not included</strong> — we quote these separately for your block.</p>
+      <div class="sth-delivery-band">
+        <p><strong>Built in our Noosaville factory and delivered within 1,250km</strong> — covering South East Queensland, Northern NSW, Wide Bay, Central Queensland and as far north as Townsville. Further afield? Get in touch and we'll let you know what's possible.</p>
+      </div>
+      <div class="sth-brochure-cta">
+        <h3>Download the Full Brochure</h3>
+        <p>Floor plans, dimensions, standard inclusions, finishes and the complete 13-model range. No form required.</p>
+        <a class="sth-btn sth-btn-primary sth-btn-lg" href="https://files.sunshinetinyhouses.com.au/downloads/sth-brochure.pdf" target="_blank" rel="noopener">Download the Brochure (PDF) →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. HOOK -->
+  <section class="sth-hook">
+    <div class="sth-container">
+      <span class="sth-label">One Team. One Process. One Outcome.</span>
+      <h2>Your Property May Already Qualify.<br>Most Homeowners Never Check.</h2>
+
+      <p>
+        Many Queensland property owners could add a compliant granny flat or secondary dwelling to their block —
+        but never pursue it because the process sounds complicated.
+        <strong>Council approvals, engineering, design, construction, certification — we manage all of it.</strong>
+      </p>
+      <p>
+        Whether you're looking to accommodate family, generate rental income, or make better use of your land,
+        the first step is a free conversation. We assess every block and every enquiry on its merits.
+      </p>
+
+      <div class="sth-hook-features">
+        <div class="sth-hf">
+          <span class="hf-icon">🏘</span>
+          <p class="hf-title">Granny Flats &amp; Secondary Dwellings</p>
+          <p class="hf-desc">Built for Queensland property owners who want more from their land — rental income, family accommodation, or additional space, fully managed and delivered.</p>
+        </div>
+        <div class="sth-hf">
+          <span class="hf-icon">📋</span>
+          <p class="hf-title">Council Approval Managed for You</p>
+          <p class="hf-desc">Permits, engineering reports, certifiers — handled across Noosa, Sunshine Coast and wider South East Queensland. You don't touch the paperwork.</p>
+        </div>
+        <div class="sth-hf">
+          <span class="hf-icon">💬</span>
+          <p class="hf-title">A Straight Answer, Personally</p>
+          <p class="hf-desc">Mitch or Nat will be in touch personally. An honest assessment of your property — what's possible, what council requires, and what it involves.</p>
+        </div>
+      </div>
+
+      <a href="#sth-assessment" class="sth-btn sth-btn-primary sth-btn-lg">Find Out What's Possible on My Property →</a>
+    </div>
+  </section>
+
+  <!-- 5. BENEFITS -->
+  <section class="sth-benefits">
+    <div class="sth-container">
+      <div class="sth-benefits-hdr">
+        <span class="sth-label">What You Get</span>
+        <h2>Everything Managed.<br>Nothing Left for You to Figure Out.</h2>
+        <p>One team handles every step — from your first enquiry to move-in day.</p>
+      </div>
+      <div class="sth-benefits-grid">
+        <div class="sth-bc">
+          <div class="sth-bc-icon">📐</div>
+          <h3>Custom Design for Your Property</h3>
+          <p>Architectural plans and 3D models built around your specific block, orientation, and setbacks. You see exactly what will be built before anything is approved or committed.</p>
+        </div>
+        <div class="sth-bc">
+          <div class="sth-bc-icon">🏛</div>
+          <h3>Council Approval Managed for You</h3>
+          <p>Development applications, secondary dwelling permits, engineering reports, certifier engagement. We manage every requirement across Noosa, Sunshine Coast, and wider SEQ councils.</p>
+          <span class="sth-pill">Top Reason Clients Choose Us</span>
+        </div>
+        <div class="sth-bc">
+          <div class="sth-bc-icon">🏭</div>
+          <h3>Factory-Built in Noosaville, QLD</h3>
+          <p>Your dwelling is built in our controlled Noosaville facility — not exposed to site conditions. Consistent quality, faster build times, and minimal disruption to your property throughout.</p>
+        </div>
+        <div class="sth-bc">
+          <div class="sth-bc-icon">🚚</div>
+          <h3>Turn-Key Delivery &amp; Handover</h3>
+          <p>We deliver, install, connect utilities, and hand you the keys. Move-in ready means exactly that — no outstanding trades, no surprises, no follow-up calls required after handover.</p>
+        </div>
+        <div class="sth-bc">
+          <div class="sth-bc-icon">👨‍👩‍👧</div>
+          <h3>Built for Family or Rental Income</h3>
+          <p>Ageing parents who want independence nearby, adult children who need their own space, or tenants — our layouts are designed around how people actually live in secondary dwellings.</p>
+        </div>
+        <div class="sth-bc">
+          <div class="sth-bc-icon">🔍</div>
+          <h3>Honest Property Feasibility Advice</h3>
+          <p>We assess every enquiry on its merits — standard blocks, corner lots, narrow properties, and sites where access or council requirements need extra consideration. You get a straight answer before you commit to anything.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. SOCIAL PROOF — genuine Google reviews -->
+  <section class="sth-proof">
+    <div class="sth-container">
+      <span class="sth-label">Genuine Google Reviews</span>
+      <h2>What Our Customers Say</h2>
+
+      <div class="sth-t-featured">
+        <span class="sth-stars">★★★★★</span>
+        <blockquote>
+          "I cannot sing enough praise for Sunshine Tiny Houses. Their product is excellent, their service
+          and attention to detail was extraordinary, and we trusted them completely. Such a pleasure
+          to do business with and a beautiful home as a final result. They went over and above.
+          Highly recommended."
+        </blockquote>
+        <div class="sth-t-meta">
+          <div class="sth-t-avatar">KL</div>
+          <div>
+            <span class="sth-t-name">Katia L.</span>
+            <span class="sth-t-detail">Queensland · Google Review</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sth-t-supporting-grid">
+
+        <div class="sth-t-card">
+          <span class="sth-stars">★★★★★</span>
+          <blockquote>
+            "We had a really positive experience working with the team at Sunshine Tiny Houses.
+            Communication was excellent throughout the entire process. They were quick to respond,
+            open to ideas and genuinely invested in making sure everything aligned with what we wanted.
+            The build itself ran smoothly and professionally. The final result met our expectations
+            and we're very happy with how it all turned out."
+          </blockquote>
+          <div class="sth-t-meta">
+            <div class="sth-t-avatar">LW</div>
+            <div>
+              <span class="sth-t-name">Linda W.</span>
+              <span class="sth-t-detail">Google Review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sth-t-card">
+          <span class="sth-stars">★★★★★</span>
+          <blockquote>
+            "It was an absolute pleasure working with the team. Nothing was a problem for them.
+            Their attention to detail, input and after-sales service was fantastic.
+            I would highly recommend engaging Sunshine Tiny Houses."
+          </blockquote>
+          <div class="sth-t-meta">
+            <div class="sth-t-avatar">JS</div>
+            <div>
+              <span class="sth-t-name">James S.</span>
+              <span class="sth-t-detail">Google Review</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sth-t-card">
+          <span class="sth-stars">★★★★★</span>
+          <blockquote>
+            "Absolutely loved working with Mitch and his team. Communication was always on point,
+            incredibly responsive and full of knowledge. Big thanks to the team for the wonderful
+            workmanship. We wouldn't hesitate to have them complete another project for us."
+          </blockquote>
+          <div class="sth-t-meta">
+            <div class="sth-t-avatar">TC</div>
+            <div>
+              <span class="sth-t-name">Taleah C.</span>
+              <span class="sth-t-detail">Google Review</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="sth-proof-credibility">Genuine Google reviews from Sunshine Tiny Houses customers.</p>
+    </div>
+  </section>
+
+  <!-- 7. PROCESS -->
+  <section class="sth-process">
+    <div class="sth-container">
+      <div class="sth-process-hdr">
+        <span class="sth-label">How It Works</span>
+        <h2>From First Call to Keys in Your Hand</h2>
+        <p>A clear four-step process. You always know what happens next.</p>
+      </div>
+      <div class="sth-process-grid">
+        <div class="sth-pc">
+          <div class="sth-step-num">1</div>
+          <h3>Personalised Quote Request</h3>
+          <p>Submit your details and Mitch or Nat will personally come back with model recommendations and pricing to suit what you're after — an honest picture of what's possible and what a project like yours involves.</p>
+          <span class="sth-step-time">⏱ Free &amp; No Obligation</span>
+        </div>
+        <div class="sth-pc">
+          <div class="sth-step-num">2</div>
+          <h3>Design &amp; Quote</h3>
+          <p>Architectural plans and 3D models tailored to your block and goals. You review and approve everything before any costs are committed.</p>
+          <span class="sth-step-time">⏱ Design &amp; Quote Stage</span>
+        </div>
+        <div class="sth-pc">
+          <div class="sth-step-num">3</div>
+          <h3>Council Approvals</h3>
+          <p>We manage all permits, engineering reports, and certifier coordination. No paperwork for you to chase — we handle the entire approval process.</p>
+          <span class="sth-step-time">⏱ Timeline Varies by Council</span>
+        </div>
+        <div class="sth-pc">
+          <div class="sth-step-num">4</div>
+          <h3>Build, Deliver &amp; Handover</h3>
+          <p>Factory-built in Noosaville, delivered and installed on your property, certified and connected. Keys in your hand, move-in ready.</p>
+          <span class="sth-step-time">⏱ Move-In Ready</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. GALLERY -->
+  <section class="sth-gallery" aria-label="Completed projects">
+    <div class="sth-container">
+      <div class="sth-gallery-hdr">
+        <span class="sth-label">Completed Projects</span>
+        <h2>The Standard of Finish You Can Expect</h2>
+      </div>
+      <div class="sth-gallery-grid">
+        <figure class="sth-gi">
+          <img src="__SPOT_lp/google/gallery-1__" alt="Completed secondary dwelling exterior — Sunshine Tiny Houses" loading="lazy" />
+        </figure>
+        <figure class="sth-gi">
+          <img src="__SPOT_lp/google/gallery-2__" alt="Interior finish and fitout" loading="lazy" />
+        </figure>
+        <figure class="sth-gi">
+          <img src="__SPOT_lp/google/gallery-3__" alt="Kitchen and living fitout" loading="lazy" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. MID-PAGE CTA -->
+  <section class="sth-midcta">
+    <div class="sth-container">
+      <h2>Not Sure What's Possible on Your Property?</h2>
+      <p>
+        We'll give you a straight answer —
+        what's feasible, what council requires, and what a project like yours typically involves.
+        No obligation to proceed.
+      </p>
+      <div class="sth-midcta-btns">
+        <a href="#sth-assessment" class="sth-btn sth-btn-primary sth-btn-lg">Get My Free Assessment →</a>
+        <a href="tel:0753158365"   class="sth-btn sth-btn-outline sth-btn-lg">☎ (07) 5315 8365</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. WHY US -->
+  <section class="sth-why">
+    <div class="sth-why-inner sth-container">
+      <div>
+        <span class="sth-label">Why Sunshine Tiny Houses</span>
+        <h2>We Manage the Whole Process.<br>You Don't Have to Figure It Out.</h2>
+        <p class="sth-lead">
+          Most builders hand you a floor plan and leave council to you.
+          We start with your property and your goals, and manage every step
+          from first enquiry to the day you get the keys.
+          One local Queensland team, accountable start to finish.
+        </p>
+        <ul class="sth-why-list">
+          <li>
+            <span class="sth-why-check" aria-hidden="true"></span>
+            <span><strong>Council approvals are our speciality.</strong> We manage secondary dwelling permits, DA requirements, engineering sign-offs, and certifier engagement across Noosa, Sunshine Coast, and wider SEQ.</span>
+          </li>
+          <li>
+            <span class="sth-why-check" aria-hidden="true"></span>
+            <span><strong>Factory-built means consistent quality.</strong> Your dwelling is built in our Noosaville facility — no weather delays, no scope creep, same standard on every project.</span>
+          </li>
+          <li>
+            <span class="sth-why-check" aria-hidden="true"></span>
+            <span><strong>We assess every enquiry on its merits.</strong> No block is dismissed without a proper look. We'll give you an honest answer on feasibility before you commit to anything.</span>
+          </li>
+          <li>
+            <span class="sth-why-check" aria-hidden="true"></span>
+            <span><strong>Mitch and Nat manage your project personally.</strong> The people you speak to at the start are the people who hand you the keys. No account managers, no handoffs.</span>
+          </li>
+          <li>
+            <span class="sth-why-check" aria-hidden="true"></span>
+            <span><strong>Turn-key means turn-key.</strong> Flooring, joinery, appliances, connections — all included. You receive a finished dwelling, not a shell that needs six more trades.</span>
+          </li>
+          <li>
+            <span class="sth-why-check" aria-hidden="true"></span>
+            <span><strong>QBCC licensed and fully insured.</strong> Your investment is protected under Queensland's building framework. Licence #15205110.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="sth-why-visual">
+        <img
+          src="__SPOT_lp/google/why__"
+          alt="Sunshine Tiny Houses — completed project"
+          loading="lazy"
+        />
+        <div class="sth-why-badge">
+          <span class="wb-icon">🏆</span>
+          <div>
+            <span class="wb-label">Proudly QLD Built</span>
+            <span class="wb-sub">Noosaville Factory · QBCC Lic. #15205110</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FAQ -->
+  <section class="sth-faq">
+    <div class="sth-container">
+      <div class="sth-faq-hdr">
+        <span class="sth-label">Common Questions</span>
+        <h2>Answered Before You Have to Ask</h2>
+        <p>The questions we hear most from Queensland homeowners — straight answers.</p>
+      </div>
+      <div class="sth-faq-grid">
+        <div class="sth-faq-card">
+          <h3>What can I build on my property?</h3>
+          <p>A granny flat, secondary dwelling, family accommodation unit, or modular home — depending on your block size, zoning, and council requirements. <strong>The quickest way to know is to request a personalised quote</strong> — we'll review your block and give you a straight answer.</p>
+        </div>
+        <div class="sth-faq-card">
+          <h3>Do you manage council approval?</h3>
+          <p>Yes. We manage the full approval process — development applications, secondary dwelling permits, engineering reports, and certifier engagement. <strong>Your only role is to sign where we ask you to.</strong> We handle everything else.</p>
+        </div>
+        <div class="sth-faq-card">
+          <h3>What does "turn-key" mean in practice?</h3>
+          <p>Flooring, joinery, kitchen, bathroom, appliances (where specified), and utility connections. <strong>You receive keys to a dwelling someone can move into on the same day.</strong> Everything is specified clearly in your quote before you sign anything.</p>
+        </div>
+        <div class="sth-faq-card">
+          <h3>How long does the whole process take?</h3>
+          <p>Approval timelines differ across Queensland councils, and project scope affects build duration. <strong>We'll give you a realistic timeline specific to your project</strong> during your initial assessment call — no generic estimates.</p>
+        </div>
+        <div class="sth-faq-card">
+          <h3>How much does a secondary dwelling cost?</h3>
+          <p>Studios start from $110k, one-bedroom homes from $140k, and two-bedroom homes from $195k — all incl. GST, ex-factory. Delivery, site works and council approvals are quoted separately for your block. <strong>The full brochure with every model's price is available above, no form required,</strong> and a personalised quote is free with no obligation.</p>
+        </div>
+        <div class="sth-faq-card">
+          <h3>Can I rent it out straight after handover?</h3>
+          <p>Yes — once the certificate of occupancy is issued, you can lease it immediately. <strong>We'll advise on the documentation</strong> required for a compliant tenancy arrangement as part of the handover process.</p>
+        </div>
+        <div class="sth-faq-card">
+          <h3>What areas do you service?</h3>
+          <p>We deliver within 1,250km of our Noosaville factory — <strong>South East Queensland, Northern NSW, Wide Bay, Central Queensland and as far north as Townsville.</strong> That comfortably covers Gympie, Bundaberg, Hervey Bay, Gladstone, Rockhampton and Mackay. Further afield? Get in touch and we'll let you know what's possible.</p>
+        </div>
+        <div class="sth-faq-card">
+          <h3>What happens after I submit the form?</h3>
+          <p>Mitch or Nat will personally review your details and reply by email with model recommendations and pricing to suit what you're after — usually within a couple of business days. <strong>It's a straightforward, personal reply</strong> — no call centre, no sales pitch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. FINAL CTA -->
+  <section class="sth-final" id="sth-assessment">
+    <div class="sth-final-inner sth-container">
+
+      <div>
+        <span class="sth-label">Ready to Find Out?</span>
+        <h2>Check Your Block.<br><em>It Costs Nothing.</em></h2>
+        <p class="sth-fc-body">
+          Fill in the form and Mitch or Nat will come back to you with model recommendations
+          and pricing to suit what you're after — what's possible, and what a project like yours
+          would involve. No sales script. No pressure. Just honest information from the people
+          who will actually build it.
+        </p>
+        <div class="sth-promise">
+          <h3>Our Promise</h3>
+          <ul>
+            <li>Model recommendations and pricing to suit what you're after</li>
+            <li>No obligation — ever — to proceed</li>
+            <li>Mitch or Nat contact you personally, not a call centre</li>
+            <li>If your block doesn't qualify, we'll tell you honestly</li>
+            <li>Your details are never shared with third parties</li>
+          </ul>
+        </div>
+        <div class="sth-fc-phone">
+          <a href="tel:0753158365">(07) 5315 8365</a>
+          <p class="sth-fc-phone-detail">
+            Mon–Fri 7am–4pm · Sat by appointment<br>
+            Outside hours? Leave a message — we'll call back first thing.
+          </p>
+        </div>
+      </div>
+
+      <div class="sth-final-form-card">
+        <p class="sth-ffc-title">Want a Quote for Your Block?</p>
+        <p class="sth-ffc-sub">Tell us a bit about your site and what you're after, and we'll come back to you with model recommendations and pricing tailored to your location.</p>
+
+        <form class="sth-lp-form" data-form-id="sth-final-form">
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_subject" value="New Lead: Modular Assessment Enquiry!" />
+          <input type="text"   name="_honey"   style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="sth-form-row">
+            <label for="sth-ff-name">Full Name</label>
+            <input type="text"  id="sth-ff-name"     name="name"     placeholder="e.g. Sarah Johnson" required autocomplete="name" />
+          </div>
+          <div class="sth-form-row">
+            <label for="sth-ff-email">Email Address</label>
+            <input type="email" id="sth-ff-email"    name="email"    placeholder="e.g. sarah@email.com" required autocomplete="email" />
+          </div>
+          <div class="sth-form-row">
+            <label for="sth-ff-phone">Phone Number</label>
+            <input type="tel"   id="sth-ff-phone"    name="phone"    placeholder="e.g. 0412 345 678" autocomplete="tel" />
+          </div>
+          <div class="sth-form-row">
+            <label for="sth-ff-location">Suburb, Postcode or Address</label>
+            <input type="text"  id="sth-ff-location" name="location" placeholder="e.g. Cooroy QLD 4563 or 12 Smith St" required autocomplete="address-level2" />
+          </div>
+          <div class="sth-form-row">
+            <label for="sth-ff-ideal">What's your ideal home/project?</label>
+            <select id="sth-ff-ideal" name="ideal_home" required>
+              <option value="" disabled selected>Select an option</option>
+              <option value="1 Bed, 1 Bath">1 Bed, 1 Bath</option>
+              <option value="2 Bed, 1 Bath">2 Bed, 1 Bath</option>
+              <option value="2 Bed, 2 Bath">2 Bed, 2 Bath</option>
+              <option value="Utility Room">Utility Room</option>
+              <option value="Office Space">Office Space</option>
+              <option value="Something larger or custom">Something larger or custom</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="sth-form-row">
+            <label for="sth-ff-budget">What's your approximate budget?</label>
+            <select id="sth-ff-budget" name="approximate_budget" required>
+              <option value="" disabled selected>Select a range</option>
+              <option value="<$100k">&lt;$100k</option>
+              <option value="$100k – $125k">$100k – $125k</option>
+              <option value="$125k – $150k">$125k – $150k</option>
+              <option value="$150k – $175k">$150k – $175k</option>
+              <option value="$175k – $200k">$175k – $200k</option>
+              <option value="$200k – $250k">$200k – $250k</option>
+              <option value="$250k+">$250k+</option>
+              <option value="Not sure yet">Not sure yet</option>
+            </select>
+          </div>
+          <div class="sth-form-row">
+            <label for="sth-ff-details">Tell Us About Your Project</label>
+            <textarea id="sth-ff-details" name="project_details" rows="3"
+              placeholder="e.g. Looking to add a 1-bed granny flat for a family member. Want to understand what's possible."></textarea>
+          </div>
+
+          <button type="submit" class="sth-btn sth-btn-primary sth-btn-lg sth-btn-full">
+            Request My Personalised Quote →
+          </button>
+          <p class="sth-form-privacy" style="margin-top:.65rem;">🔒 No spam. No obligation. Ever.</p>
+        </form>
+
+        <div class="sth-form-success" id="sth-final-form-success" aria-live="polite">
+          <span class="fs-icon">✅</span>
+          <h3>Request received.</h3>
+          <p>Mitch or Nat will personally put together model recommendations and pricing to suit what you're after, and reply by email — usually within a couple of business days.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STICKY MOBILE CTA -->
+  <div class="sth-sticky" id="sth-sticky-cta" aria-label="Quick contact">
+    <a href="tel:0753158365" class="sth-sc-call">☎ Call Mitch or Nat Now</a>
+    <a href="#sth-assessment" class="sth-sc-form">Get My Free Assessment</a>
+  </div>
+
+</div><!-- /#sth-lp -->
+
+<script>
+(function () {
+  'use strict';
+  var HS_ENDPOINT = 'https://api.hsforms.com/submissions/v3/integration/submit/442170069/abcc6489-5270-4b70-8e18-b5477c19f227';
+  var THANK_YOU   = '/thank-you/';  // new site: same-origin (was the Squarespace URL)
+  var STH_SOURCE  = 'google';  // written into the sth_conv flag
+
+  /* ── Attribution capture (same block in meta / google / contact gists — keep in sync) ──
+     Saves UTM + click IDs from the landing URL into sessionStorage so they survive
+     if the visitor browses around before submitting. Newest click wins. */
+  var STH_ATTR_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'fbclid', 'gclid'];
+  function sthCaptureAttribution() {
+    try {
+      var qs = new URLSearchParams(window.location.search), found = {}, any = false;
+      STH_ATTR_KEYS.forEach(function (k) { var v = qs.get(k); if (v) { found[k] = v; any = true; } });
+      if (any) { found.landing_url = window.location.href; found.ts = Date.now(); sessionStorage.setItem('sth_attr', JSON.stringify(found)); }
+    } catch (e) {}
+  }
+  function sthGetAttribution() {
+    try { return JSON.parse(sessionStorage.getItem('sth_attr')) || {}; } catch (e) { return {}; }
+  }
+  /* Current URL, plus any stored UTM/click IDs it's missing — HubSpot reads the source from this. */
+  function sthPageUri(attr) {
+    try {
+      var u = new URL(window.location.href);
+      STH_ATTR_KEYS.forEach(function (k) { if (attr[k] && !u.searchParams.has(k)) u.searchParams.set(k, attr[k]); });
+      return u.toString();
+    } catch (e) { return window.location.href; }
+  }
+  function sthHubspotContext(attr) {
+    var ctx = { pageUri: sthPageUri(attr), pageName: document.title };
+    var hutkMatch = document.cookie.match(/hubspotutk=([^;]+)/);
+    if (hutkMatch) { ctx.hutk = hutkMatch[1]; }  // only present once the HubSpot tracking code is on the site (see README)
+    return ctx;
+  }
+  /* Only add these once matching contact properties exist in HubSpot (none do as of 2026-09-23 — see README):
+  function sthAttributionFields(attr) {
+    return STH_ATTR_KEYS.filter(function (k) { return attr[k]; }).map(function (k) { return { name: k, value: attr[k] }; });
+  }
+  */
+  sthCaptureAttribution();
+
+  /* ── Ad conversion flag — read (once) by the /thank-you code block ──
+     Qualified = $125k – $150k and above. Values must match the budget <option>s exactly (en dashes). */
+  var QUALIFIED_BUDGETS = ['$125k – $150k', '$150k – $175k', '$175k – $200k', '$200k – $250k', '$250k+'];
+  function sthUuid() {
+    if (window.crypto && typeof crypto.randomUUID === 'function') { return crypto.randomUUID(); }
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+      var r = Math.random() * 16 | 0; return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+  }
+  /* Returns the redirect path. Sets sessionStorage 'sth_conv' only for qualified budgets. */
+  function sthConversionRedirect(budget) {
+    var qualified = QUALIFIED_BUDGETS.indexOf(budget) !== -1;
+    try {
+      if (qualified) {
+        sessionStorage.setItem('sth_conv', JSON.stringify({ event_id: sthUuid(), budget: budget, source: STH_SOURCE, ts: Date.now() }));
+      } else {
+        sessionStorage.removeItem('sth_conv');  // never leave an older flag lying around for an unqualified submit
+      }
+    } catch (e) {}
+    if (budget === '<$100k') { return '/thank-you-pricing-guide/'; }
+    return qualified ? '/thank-you' : '/thank-you?notag=1';  // $100k – $125k, Not sure yet, blank
+  }
+
+  function isValidEmail(v) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim());
+  }
+  function isValidPhone(v) {
+    return v.replace(/[\s\-().+]/g, '').length >= 10;
+  }
+  function showError(input, msg) {
+    input.classList.add('sth-invalid');
+    var err = input.parentNode.querySelector('.sth-field-error');
+    if (!err) {
+      err = document.createElement('span');
+      err.className = 'sth-field-error';
+      input.parentNode.appendChild(err);
+    }
+    err.textContent = msg;
+    err.classList.add('sth-visible');
+  }
+  function clearError(input) {
+    input.classList.remove('sth-invalid');
+    var err = input.parentNode.querySelector('.sth-field-error');
+    if (err) err.classList.remove('sth-visible');
+  }
+  function validateField(input) {
+    var name = input.getAttribute('name');
+    var val  = input.value;
+    if (name === 'email' && val) {
+      if (!isValidEmail(val)) { showError(input, 'Please enter a valid email address.'); return false; }
+      else clearError(input);
+    }
+    if (name === 'phone' && val) {
+      if (!isValidPhone(val)) { showError(input, 'Please enter a valid phone number (at least 10 digits).'); return false; }
+      else clearError(input);
+    }
+    return true;
+  }
+
+  document.querySelectorAll('.sth-lp-form').forEach(function (form) {
+    var submitBtn = form.querySelector('[type="submit"]');
+
+    form.querySelectorAll('input[name="email"], input[name="phone"]').forEach(function (input) {
+      input.addEventListener('blur', function () { validateField(input); });
+      input.addEventListener('input', function () { if (input.classList.contains('sth-invalid')) validateField(input); });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var valid = true;
+      form.querySelectorAll('input[name="email"], input[name="phone"]').forEach(function (input) {
+        if (!validateField(input)) valid = false;
+      });
+      if (!valid) return;
+      var orig = submitBtn.textContent;
+      submitBtn.textContent = 'Sending…';
+      submitBtn.disabled = true;
+
+      var attr = sthGetAttribution();
+      var payload = {
+        fields: [
+          { name: 'firstname', value: (form.querySelector('input[name="name"]')     || {}).value || '' },
+          { name: 'phone',             value: (form.querySelector('input[name="phone"]') || {}).value || '' },
+          { name: 'email',     value: (form.querySelector('input[name="email"]')    || {}).value || '' },
+          { name: 'city',        value: (form.querySelector('input[name="location"]')  || {}).value || '' },
+          { name: 'message',            value: 'Ideal home: ' + ((form.querySelector('select[name="ideal_home"]') || {}).value || '') },
+          { name: 'approximate_budget', value: (form.querySelector('select[name="approximate_budget"]') || {}).value || '' }
+        ],
+        context: sthHubspotContext(attr)
+      };
+      // payload.fields = payload.fields.concat(sthAttributionFields(attr));  // see README before enabling
+
+      fetch(HS_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then(function (r) {
+          if (r.ok) {
+            var budget = (form.querySelector('select[name="approximate_budget"]') || {}).value || '';
+            var redirect = sthConversionRedirect(budget);
+            console.log('[STH] budget:', budget, '| redirect:', redirect);
+            window.location.href = redirect;
+          } else {
+            submitBtn.textContent = 'Error — please try again';
+            submitBtn.disabled = false;
+          }
+        })
+        .catch(function () {
+          submitBtn.textContent = 'Error — please try again';
+          submitBtn.disabled = false;
+        });
+    });
+  });
+
+  /* Hide sticky CTA while hero form is visible */
+  var heroCard  = document.getElementById('sth-hero-form-card');
+  var stickyCta = document.getElementById('sth-sticky-cta');
+  if (heroCard && stickyCta && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      stickyCta.style.display = entries[0].isIntersecting ? 'none' : '';
+    }, { threshold: 0.05 }).observe(heroCard);
+  }
+})();
+</script>
+

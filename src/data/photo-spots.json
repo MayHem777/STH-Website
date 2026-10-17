@@ -858,9 +858,9 @@
   "key": "lp/google/badge-bg",
   "page": "/google-ads-offer/",
   "where": "Google ads page: background behind the top section",
-  "shows": "Wide exterior shot with space for text",
+  "shows": "Tall or wide exterior shot with space for text",
   "shape": "wide",
-  "current": "/images/badge-1.webp"
+  "current": "/images/lp/lp-hero-google.webp"
  },
  {
   "n": 102,
@@ -869,25 +869,25 @@
   "where": "Google ads page: \"Completed projects\" photo 1",
   "shows": "Finished secondary dwelling exterior",
   "shape": "landscape",
-  "current": "/images/workshop-recent-1.jpeg"
+  "current": "/images/lp/lp-build-1.webp"
  },
  {
   "n": 103,
   "key": "lp/google/gallery-2",
   "page": "/google-ads-offer/",
   "where": "Google ads page: \"Completed projects\" photo 2",
-  "shows": "Interior finish and fit-out",
+  "shows": "Finished secondary dwelling exterior",
   "shape": "landscape",
-  "current": "/images/workshop-recent-2.jpg"
+  "current": "/images/lp/lp-build-2.webp"
  },
  {
   "n": 104,
   "key": "lp/google/gallery-3",
   "page": "/google-ads-offer/",
   "where": "Google ads page: \"Completed projects\" photo 3",
-  "shows": "Kitchen and living area",
+  "shows": "Interior finish and fit-out",
   "shape": "landscape",
-  "current": "/images/workshop-recent-4.jpeg"
+  "current": "/images/lp/lp-build-3.webp"
  },
  {
   "n": 105,
@@ -896,7 +896,7 @@
   "where": "Google ads page: photo beside \"Why us\"",
   "shows": "Finished build, upright framing works best",
   "shape": "portrait",
-  "current": "/images/workshop-recent-3.jpg"
+  "current": "/images/lp/lp-build-4.webp"
  },
  {
   "n": 106,
@@ -905,7 +905,7 @@
   "where": "Meta ads page: background behind the top section",
   "shows": "Wide exterior shot with space for text",
   "shape": "wide",
-  "current": "/images/workshop-recent-1.jpeg"
+  "current": "/images/lp/lp-build-1.webp"
  },
  {
   "n": 107,
@@ -914,7 +914,7 @@
   "where": "Meta ads page: gallery photo 1",
   "shows": "Finished build, inside or out",
   "shape": "landscape",
-  "current": "/images/badge-1.webp"
+  "current": "/images/lp/lp-hero-google.webp"
  },
  {
   "n": 108,
@@ -923,7 +923,7 @@
   "where": "Meta ads page: gallery photo 2",
   "shows": "Finished build, inside or out",
   "shape": "landscape",
-  "current": "/images/workshop-recent-2.jpg"
+  "current": "/images/lp/lp-build-2.webp"
  },
  {
   "n": 109,
@@ -932,7 +932,7 @@
   "where": "Meta ads page: gallery photo 3",
   "shows": "Finished build, inside or out",
   "shape": "landscape",
-  "current": "/images/workshop-recent-4.jpeg"
+  "current": "/images/lp/lp-build-3.webp"
  },
  {
   "n": 110,
@@ -941,7 +941,7 @@
   "where": "Meta ads page: gallery photo 4",
   "shows": "Finished build, inside or out",
   "shape": "landscape",
-  "current": "/images/workshop-recent-3.jpg"
+  "current": "/images/lp/lp-build-4.webp"
  },
  {
   "n": 111,
