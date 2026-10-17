@@ -22,6 +22,7 @@ const standaloneCards = allProducts
     heroImageAlt: p.data.heroImageAlt ?? p.data.title,
     badge: ['office', 'ensuite'].includes(p.id) ? 'Utility room' : (p.data.badge ?? 'Class 1a'),  // Office + Ensuite are utility rooms, not studios (Mitch 2026-10-17)
     price: p.data.priceFrom ? `From ${formatPrice(p.data.priceFrom)}` : undefined,
+    priceNum: p.data.priceFrom ?? Infinity,
     meta: p.data.area,
   }));
 
@@ -39,11 +40,13 @@ const bedroomCards = bedroomCounts.map((count) => {
     heroImageAlt: variants[0].data.heroImageAlt ?? `${count} bedroom modular home`,
     badge: 'Class 1a',
     price: `From ${formatPrice(Math.min(...variants.map((p) => p.data.priceFrom ?? Infinity)))}`,
+    priceNum: Math.min(...variants.map((p) => p.data.priceFrom ?? Infinity)),
     meta: undefined,
   };
 });
 
-const products = [...standaloneCards, ...bedroomCards].sort((a, b) => a.order - b.order);
+// Cheapest first (Mitch 2026-10-17); models without a price go last
+const products = [...standaloneCards, ...bedroomCards].sort((a, b) => a.priceNum - b.priceNum || a.order - b.order);
 ---
 
 <BaseLayout
