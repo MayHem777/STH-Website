@@ -22,6 +22,8 @@ gallery:
     alt: "Ensuite modular home interior render 2"
   - src: "/images/models/ensuite-int-3.webp"
     alt: "Ensuite modular home interior render 3"
+  - src: "/images/old/ensuite/01.webp"
+    alt: "Ensuite, photo 5"
 features:
   - "Light-filled bedroom"
   - "Sleek modern bathroom"

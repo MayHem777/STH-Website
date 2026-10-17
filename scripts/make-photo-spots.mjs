@@ -36,17 +36,16 @@ function add(key, page, where, shows, shape, current) {
 add('home/door-thow', '/', 'Home, top: left panel "Tiny houses on wheels"', 'Best exterior of a finished tiny house on wheels on its trailer', 'landscape', '/images/thow-dark-on-site.webp');
 add('home/door-modular', '/', 'Home, top: right panel "Modular homes & granny flats"', 'Best exterior of a finished modular home on site, ideally with a deck', 'landscape', '/images/models/rio-ext.webp');
 
-const ROOM = ['Exterior from another angle', 'Kitchen', 'Living area', 'Bathroom', 'Bedroom or loft'];
 for (const p of items('products-thow')) {
   const page = `/tiny-houses-on-wheels/${p.id}/`;
   add(`thow/${p.id}/main`, page, `${p.title}: main photo (also its card on the tiny houses page and home page)`, `Best exterior of a ${p.title} we built`, 'landscape', p.hero);
-  ROOM.forEach((r, i) => add(`thow/${p.id}/g${i + 1}`, page, `${p.title}: photo gallery ${i + 1}`, `${p.title}: ${r.toLowerCase()}`, 'landscape'));
+  p.gallery.forEach((g, i) => add(`thow/${p.id}/gallery-${i + 1}`, page, `${p.title}: photo gallery ${i + 1}`, `${p.title}, inside or out (today's photo is from the old website)`, 'landscape', g.src));
 }
 for (const p of items('products-modular')) {
   const page = p.bedrooms ? `/modular-homes/${p.bedrooms}-bedroom/${p.id}/` : `/modular-homes/${p.id}/`;
   add(`modular/${p.id}/main`, page, `${p.title}: main photo (also its card on the modular pages and home page)`, `Best exterior of a ${p.title} (real build if we have one)`, 'landscape', p.hero);
   p.models.forEach((m) => m.image && add(`modular/${p.id}/model-${(m.name || '').toLowerCase()}`, page, `${p.title} page: ${m.name} photo`, `${m.name} exterior`, 'landscape', m.image));
-  p.gallery.forEach((g, i) => add(`modular/${p.id}/gallery-${i + 1}`, page, `${p.title}: photo gallery ${i + 1}`, /ext/.test(g.src) ? `${p.title} exterior` : `${p.title} interior`, 'landscape', g.src));
+  p.gallery.forEach((g, i) => add(`modular/${p.id}/gallery-${i + 1}`, page, `${p.title}: photo gallery ${i + 1}`, /ext/.test(g.src) ? `${p.title} exterior` : `${p.title}, inside or out`, 'landscape', g.src));
 }
 for (const p of items('products-class10a')) {
   add(`studio/${p.id}/main`, `/backyard-studios/${p.id}/`, `${p.title}: main photo (also its card on the studios and home pages)`, `Best photo of a ${p.title.toLowerCase().replace(/s$/, '')} we built`, 'landscape', p.hero);

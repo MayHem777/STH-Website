@@ -12,6 +12,7 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - Gallery page still "Photos Coming Soon".
 
 ## Assumptions
+- 2026-10-17: model galleries pre-filled with the old Squarespace page photos (public/images/old/<model>/, 261 photos, floor plans and duplicates skipped). Spots renumbered once (373 total) before Nat started; numbers permanent from here.
 - 2026-10-17 (Mitch): hours Mon–Fri 7am–4pm, Saturday by appointment; every direct email address on the site is hello@.
 - 2026-10-17: photo spots keep today's photo until Nat supplies one; empty spots (THOW galleries, gallery page) stay hidden on production until filled. Spot numbers are permanent once Nat has the list.
 - 2026-10-17: merge conflicts in modular model files resolved to the October brochure versions (site-content-upgrade).

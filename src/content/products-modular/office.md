@@ -29,6 +29,24 @@ specs:
   Builder: "QBCC #15205110"
   Class: "Class 1a"
   Installation: "~2 weeks on site"
+# Photos copied from the old Squarespace page as placeholders (2026-10-17); numbered photo spots, replace any via PHOTOS.md
+gallery:
+  - src: "/images/old/office/01.webp"
+    alt: "Office, photo 1"
+  - src: "/images/old/office/02.webp"
+    alt: "Office, photo 2"
+  - src: "/images/old/office/03.webp"
+    alt: "Office, photo 3"
+  - src: "/images/old/office/04.webp"
+    alt: "Office, photo 4"
+  - src: "/images/old/office/05.webp"
+    alt: "Office, photo 5"
+  - src: "/images/old/office/06.webp"
+    alt: "Office, photo 6"
+  - src: "/images/old/office/07.webp"
+    alt: "Office, photo 7"
+  - src: "/images/old/office/08.webp"
+    alt: "Office, photo 8"
 ---
 
 ## Office
