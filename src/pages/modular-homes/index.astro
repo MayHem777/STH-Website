@@ -1,4 +1,5 @@
 ---
+import TurnKey from '../../components/TurnKey.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import ProductCard from '../../components/ProductCard.astro';
@@ -19,7 +20,7 @@ const standaloneCards = allProducts
     heroImage: p.data.heroImage,
     spotKey: `modular/${p.id}/main`,
     heroImageAlt: p.data.heroImageAlt ?? p.data.title,
-    badge: ['office', 'ensuite'].includes(p.id) ? 'Utility room' : p.data.badge,  // Office + Ensuite are utility rooms, not studios (Mitch 2026-10-17)
+    badge: ['office', 'ensuite'].includes(p.id) ? 'Utility room' : (p.data.badge ?? 'Class 1a'),  // Office + Ensuite are utility rooms, not studios (Mitch 2026-10-17)
     price: p.data.priceFrom ? `From ${formatPrice(p.data.priceFrom)}` : undefined,
     meta: p.data.area,
   }));
@@ -36,7 +37,7 @@ const bedroomCards = bedroomCounts.map((count) => {
     heroImage: variants[0].data.heroImage,
     spotKey: `modular/${variants[0].id}/main`,
     heroImageAlt: variants[0].data.heroImageAlt ?? `${count} bedroom modular home`,
-    badge: undefined,
+    badge: 'Class 1a',
     price: `From ${formatPrice(Math.min(...variants.map((p) => p.data.priceFrom ?? Infinity)))}`,
     meta: undefined,
   };
@@ -52,7 +53,7 @@ const products = [...standaloneCards, ...bedroomCards].sort((a, b) => a.order - 
 
   <Hero
     title="Modular Homes & Granny Flats"
-    subtitle="Permanent Class 1a modular homes with about two weeks on site, start to finish. Perfect as a granny flat, secondary dwelling, or standalone home."
+    subtitle="Every modular home we build is a certified Class 1a dwelling, the same building class as a standard house, with about two weeks on site, start to finish. Perfect as a granny flat, secondary dwelling or standalone home."
     ctaText="Contact Now"
     ctaHref="/contact/"
     secondaryCtaText="Finance Options"
@@ -79,6 +80,8 @@ const products = [...standaloneCards, ...bedroomCards].sort((a, b) => a.order - 
       <p class="price-note">Prices include GST. {EX_FACTORY_NOTE}</p>
     </div>
   </section>
+
+  <TurnKey />
 
 </BaseLayout>
 

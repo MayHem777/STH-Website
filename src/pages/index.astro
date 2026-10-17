@@ -47,7 +47,7 @@ const pricedModular = allModularProducts
     href: p.data.bedrooms ? `/modular-homes/${p.data.bedrooms}-bedroom/${p.id}/` : `/modular-homes/${p.id}/`,
     image: p.data.heroImage,
     spotKey: `modular/${p.id}/main`,
-    badge: UTILITY_ROOMS.includes(p.id) ? 'Utility room' : undefined,
+    badge: UTILITY_ROOMS.includes(p.id) ? 'Utility room' : 'Class 1a',
     imageAlt: p.data.heroImageAlt,
     price: `From ${formatPrice(p.data.priceFrom!)}`,
     meta: p.data.area,
@@ -94,7 +94,8 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
           </div>
           <div class="door__body">
             <h2>Modular homes &amp; granny flats</h2>
-            <p>A permanent, certified home for your block. Built in our factory, then craned in, installed and connected to services.</p>
+            <p class="door__c1a">Every modular home is Class 1a</p>
+            <p>Certified as a <strong>Class 1a dwelling</strong>, the same building class as a standard house. A permanent home for your block, built in our factory, then craned in, installed and connected to services.</p>
             <span class="door__cta">Explore modular homes <span aria-hidden="true">&rarr;</span></span>
           </div>
         </a>
@@ -125,7 +126,7 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
     <div class="container">
       <div class="eyebrow">Modular range</div>
       <h2>Every model, with its price</h2>
-      <p class="priced-range__intro">From compact utility rooms, like an office or ensuite, to two-bedroom homes. Each page has the floor plan and the full inclusions list.</p>
+      <p class="priced-range__intro"><strong>Every modular home is a certified Class 1a dwelling</strong>, the same building class as a standard house. The range runs from compact utility rooms, like an office or ensuite, to two-bedroom homes. Each page has the floor plan and the full inclusions list.</p>
       <div class="priced-range__grid">
         {pricedModular.map((p) => (
           <ProductCard {...p} />
@@ -149,7 +150,10 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
           </li>
         ))}
       </ol>
-      <CTAButton href="/delivery/" variant="secondary">Delivery and installation</CTAButton>
+      <div class="process__btns">
+        <CTAButton href="/modular-homes/our-process/">Our full Class 1a modular process</CTAButton>
+        <CTAButton href="/delivery/" variant="secondary">Delivery and installation</CTAButton>
+      </div>
     </div>
   </section>
 
@@ -404,7 +408,9 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
 .door__ph { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: #2a2a2a; }
 .door__ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 .door:hover .door__ph img { transform: scale(1.04); }
-.door__tag { position: absolute; right: 1.1rem; top: 1.1rem; background: var(--color-accent); color: var(--color-text); font-weight: 800; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 99px; }
+.door__body p.door__c1a { flex: none; margin: 0 0 .6rem; color: var(--color-accent); font-weight: 800; font-size: .85rem; letter-spacing: .06em; text-transform: uppercase; }
+.door__body p strong { color: #fff; }
+.door__tag { position: absolute; right: 1.1rem; top: 1.1rem; background: var(--color-accent); color: var(--color-text); font-weight: 800; font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .7rem; border-radius: 99px; }
 .door__body { padding: 1.5rem 1.6rem 1.6rem; display: flex; flex-direction: column; align-items: flex-start; flex: 1; }
 .door__body h2 { color: #fff; font-size: clamp(1.45rem, 2.6vw, 2rem); margin-bottom: .5rem; }
 .door__body p { color: rgba(255,255,255,.8); max-width: 460px; flex: 1; }
@@ -438,4 +444,5 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
   .door, .door__ph img, .thow-card { transition: none; }
   .door:hover, .door:hover .door__ph img, .thow-card:hover { transform: none; }
 }
+.process__btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 </style>
