@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import BookCall from '../../components/BookCall.astro';
 ---
 
 <BaseLayout
@@ -25,6 +26,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       </div>
     </div>
   </section>
+
+  <BookCall
+    heading="Want to talk it through? Book a 15-minute call"
+    intro="Pick a time that suits you and Mitch or Nat will ring you on the number you just gave us. Times are Brisbane time, weekdays only."
+    prefill={true}
+  />
 </BaseLayout>
 
 <style>

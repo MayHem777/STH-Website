@@ -1,0 +1,105 @@
+---
+// "Book a 15-minute call" block: the HubSpot Meetings scheduler for the
+// "Chat with Mitch or Nat" link (free HubSpot plan = one link, on Mitch's calendar).
+//
+// - The free plan's booking form only asks name + email, so a phone number comes
+//   from the visitor's HubSpot contact (matched by email). Thank-you pages are the
+//   best place for it: the enquiry form has just taken their number.
+// - prefill: reads sessionStorage 'sth_book' {firstName, lastName, email} left by
+//   the contact form, so the scheduler opens with their details already in.
+// - HubSpot's embed script only loads when the block nears the screen, so pages
+//   that show it below the fold keep their load speed.
+interface Props {
+  heading?: string;
+  intro?: string;
+  prefill?: boolean;
+}
+const {
+  heading = 'Prefer to talk? Book a 15-minute call',
+  intro = 'Pick a time that suits you and Mitch or Nat will ring you. Times are Brisbane time, weekdays only.',
+  prefill = false,
+} = Astro.props;
+const BOOKING_URL = 'https://meetings-ap1.hubspot.com/mitchell-croft';
+---
+
+<section class="book-call" aria-labelledby="book-call-h">
+  <div class="book-call__inner">
+    <h2 id="book-call-h">{heading}</h2>
+    <p class="book-call__intro">{intro}</p>
+    <slot />
+    <div class="meetings-iframe-container book-call__frame" data-src={`${BOOKING_URL}?embed=true`} data-prefill={prefill ? '1' : undefined}></div>
+    <noscript>
+      <p><a href={BOOKING_URL}>Open the booking page</a></p>
+    </noscript>
+  </div>
+</section>
+
+<script is:inline>
+(function () {
+  'use strict';
+  var box = document.querySelector('.book-call__frame');
+  if (!box || box.dataset.loaded) return;
+
+  if (box.dataset.prefill) {
+    try {
+      var p = JSON.parse(sessionStorage.getItem('sth_book') || 'null');
+      if (p && p.email) {
+        var q = [];
+        if (p.firstName) q.push('firstName=' + encodeURIComponent(p.firstName));
+        if (p.lastName) q.push('lastName=' + encodeURIComponent(p.lastName));
+        q.push('email=' + encodeURIComponent(p.email));
+        box.setAttribute('data-src', box.getAttribute('data-src') + '&' + q.join('&'));
+      }
+    } catch (e) { /* no stored details: the visitor types them in */ }
+  }
+
+  function load() {
+    if (box.dataset.loaded) return;
+    box.dataset.loaded = '1';
+    var s = document.createElement('script');
+    s.src = 'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js';
+    s.async = true;
+    document.body.appendChild(s);
+  }
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      if (entries[0].isIntersecting) { io.disconnect(); load(); }
+    }, { rootMargin: '600px 0px' });
+    io.observe(box);
+  } else {
+    load();
+  }
+})();
+</script>
+
+<style>
+.book-call {
+  padding: var(--spacing-section-sm, 3rem) var(--spacing-container, 16px);
+  background: var(--color-bg, #fff);
+}
+.book-call__inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+.book-call h2 {
+  margin: 0 0 0.75rem;
+  color: var(--color-text, #1a1a1a);
+  font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+}
+.book-call__intro {
+  margin: 0 auto 1rem;
+  max-width: 600px;
+  color: var(--color-text-body, #555);
+}
+.book-call :global(.book-call__note) {
+  margin: 0 auto 1.5rem;
+  max-width: 600px;
+  font-size: 0.95rem;
+  color: var(--color-text-muted, #666);
+}
+.book-call__frame {
+  min-height: 640px;
+}
+</style>

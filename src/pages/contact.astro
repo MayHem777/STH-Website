@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BookCall from '../components/BookCall.astro';
 ---
 
 <BaseLayout
@@ -239,6 +240,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
+  <BookCall>
+    <p class="book-call__note">Already sent the form above? We'll ring the number on it. Otherwise, reply to your booking confirmation email with your best phone number.</p>
+  </BookCall>
+
   <script is:inline>
   (function () {
     var HS = 'https://api.hsforms.com/submissions/v3/integration/submit/442170069/a2d006e2-82f7-4577-b4af-23fc9e248c20';
@@ -341,6 +346,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       fetch(HS, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
         .then(function (r) {
           if (r.ok) {
+            // Lets the thank-you page open the call booker with their details already in.
+            try {
+              sessionStorage.setItem('sth_book', JSON.stringify({
+                firstName: firstname.value.trim(), lastName: lastname.value.trim(), email: email.value.trim()
+              }));
+            } catch (e) { /* storage blocked: they type their details in */ }
             window.location.href = '/contact/thank-you/';
           } else {
             btn.disabled = false; btn.textContent = orig;

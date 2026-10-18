@@ -12,6 +12,7 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - Gallery page still "Photos Coming Soon".
 
 ## Assumptions
+- 2026-10-18: "Book a 15-minute call" block (src/components/BookCall.astro, HubSpot Meetings link meetings-ap1.hubspot.com/mitchell-croft, "Chat with Mitch or Nat") on /contact/, /contact/thank-you/ (pre-filled from the form via sessionStorage 'sth_book') and the ad /thank-you/. Not on /thank-you-pricing-guide (budget under $100k). Ad landing pages untouched (gist copies). Free plan form has no phone field, so the thank-you pages carry it best; the contact page asks them to reply to the confirmation email with a number. HubSpot script loads only when the block is near the screen.
 - 2026-10-17: new designs use 'comingSoon' (preview only; production build verified clean). Client names stay in frontmatter comments only, never on pages.
 - 2026-10-17: 1770 main photo = the 1770 render from the old 1770 page until Nat's Drive photo arrives.
 - 2026-10-17: model galleries pre-filled with the old Squarespace page photos (public/images/old/<model>/, 261 photos, floor plans and duplicates skipped). Spots renumbered once (373 total) before Nat started; numbers permanent from here.
