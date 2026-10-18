@@ -21,6 +21,12 @@ specs:
   Builder: "QBCC #15205110"
   Class: "Class 1a"
   Installation: "~2 weeks on site"
+# Photos copied from the old Squarespace page as placeholders (2026-10-17); numbered photo spots, replace any via PHOTOS.md
+gallery:
+  - src: "/images/old/retreat/01.webp"
+    alt: "Retreat, photo 1"
+  - src: "/images/old/retreat/02.webp"
+    alt: "Retreat, photo 2"
 ---
 
 ## Vitalis Retreat

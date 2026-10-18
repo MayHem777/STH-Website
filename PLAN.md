@@ -12,17 +12,22 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - Gallery page still "Photos Coming Soon".
 
 ## Assumptions
+- 2026-10-17: new designs use 'comingSoon' (preview only; production build verified clean). Client names stay in frontmatter comments only, never on pages.
+- 2026-10-17: 1770 main photo = the 1770 render from the old 1770 page until Nat's Drive photo arrives.
+- 2026-10-17: model galleries pre-filled with the old Squarespace page photos (public/images/old/<model>/, 261 photos, floor plans and duplicates skipped). Spots renumbered once (373 total) before Nat started; numbers permanent from here.
 - 2026-10-17 (Mitch): hours Mon–Fri 7am–4pm, Saturday by appointment; every direct email address on the site is hello@.
 - 2026-10-17: photo spots keep today's photo until Nat supplies one; empty spots (THOW galleries, gallery page) stay hidden on production until filled. Spot numbers are permanent once Nat has the list.
 - 2026-10-17: merge conflicts in modular model files resolved to the October brochure versions (site-content-upgrade).
 - 2026-10-17: contact form budget options cut to the same 8 as the landing pages (HubSpot drops values it doesn't know).
-- 2026-10-17: FAQ tiny house prices changed to match the model pages ($59,500 lock-up / $115,000 turn-key, 1770). Needs Mitch's OK before launch.
+- 2026-10-17: FAQ tiny house prices changed to match the model pages ($59,500 lock-up / $115,000 turn-key, 1770). Approved by Mitch 2026-10-18.
+- 2026-10-18 (Mitch): studios / modular range "from $100k" everywhere; Pandanus shown as 10.5 × 3.8 m, 39.9 m² enclosed, deck 3.0 × 3.8 m as an upgrade; no star ratings on model pages, "Energy assessment required for your site" instead. The live ad page gists still say $110k until cutover (gist push needs Mitch's OK).
 - 2026-10-02: Foundations post covers modular homes only (Mitch); FAQ + delivery page wording aligned to "screw piles or concrete bored piers".
 - 2026-10-02: Foundations piece is a blog post (matches the existing blog collection), written from scratch in our own words, inspired by ach.net.au's foundations article but copying none of its text or its build-specific numbers.
 - 2026-10-02: STH-specific facts not already on the site are marked [CONFIRM] rather than guessed.
 
 ## Waiting on Mitch
-- OK the FAQ price wording; pricing-guide page says "from $110k / studios from $110k" but Ensuite and Office are listed at $100,000: which is right?
-- Merge `launch-prep` into main on GitHub.
+- Nat's report 2026-10-17: names + details (size, layout, beds/baths, inclusions, lock-up/turn-key prices, floor plan, photos) for 4 new tiny houses (pages new-tiny-house-a..d), Jarrod's and Jenny's 1-bed designs (new-1-bedroom-a/b), Daintree 1-bed (price, plan), Office B (Shane & Linda) and Office C (Daniel). All are comingSoon = preview only.
+- Castaways + Boiling Pot: realistic 3D renders needed (who renders? Kiara / the renders designer?). Not something to fake.
+- Look at the preview, then OK the merge of launch-prep to main (Mitch said yes to merging after a look, 2026-10-18).
 - Foundations guide: photos, then OK to merge to main.
 - DNS cutover checklist items.

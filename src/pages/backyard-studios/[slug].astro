@@ -1,11 +1,12 @@
 ---
+import { listed } from '../../lib/visible';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import CTAButton from '../../components/CTAButton.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const products = await getCollection('products-class10a', ({ data }) => !data.draft);
+  const products = await getCollection('products-class10a', ({ data }) => listed(data));
   return products.map((p) => ({ params: { slug: p.id }, props: { product: p } }));
 }
 

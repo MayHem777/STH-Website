@@ -9,14 +9,27 @@ import { SHOW_SPOT_NUMBERS } from '../lib/photos';
       .sth-spot-label { position: absolute; z-index: 9999; pointer-events: none; background: #E8372C; color: #fff; font: 800 15px/1 system-ui, sans-serif; padding: 6px 9px; border-radius: 0 0 8px 0; box-shadow: 0 2px 8px rgba(0,0,0,.35); }
       .sth-spot-banner { position: fixed; z-index: 10000; left: 12px; bottom: 12px; background: #E8372C; color: #fff; font: 700 13px/1.3 system-ui, sans-serif; padding: 8px 12px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.3); }
       .sth-spot-banner a { color: #fff; text-decoration: underline; }
+      .sth-spots-hidden [data-spot-empty], .sth-spots-hidden .spot-gallery:not(:has(img)) { display: none !important; }
       [data-spot-empty] { background: repeating-linear-gradient(45deg, #ece6dc 0 14px, #e3dccf 14px 28px) !important; }
     </style>
-    <div class="sth-spot-banner">Preview: red numbers are photo spots · <a href="/photo-spots/">full list</a></div>
+    <div class="sth-spot-banner" id="sth-spot-banner">Preview: red numbers are photo spots · <a href="/photo-spots/">full list</a> · <a href="#" id="sth-spot-toggle">hide numbers</a></div>
     <script is:inline>
     (function () {
+      // Mitch can hide the numbers to see the site as customers will; remembered on this device.
+      var KEY = 'sth-hide-spot-numbers', hidden = false;
+      try { hidden = localStorage.getItem(KEY) === '1'; } catch (e) {}
+      var banner = document.getElementById('sth-spot-banner'), toggle = document.getElementById('sth-spot-toggle');
+      function setHidden(h) {
+        hidden = h; try { localStorage.setItem(KEY, h ? '1' : '0'); } catch (e) {}
+        toggle.textContent = h ? 'show photo numbers' : 'hide numbers';
+        banner.firstChild.textContent = h ? 'Preview · ' : 'Preview: red numbers are photo spots · ';
+        document.documentElement.classList.toggle('sth-spots-hidden', h); draw();
+      }
+      toggle.addEventListener('click', function (e) { e.preventDefault(); setHidden(!hidden); });
       var labels = [];
       function draw() {
         labels.forEach(function (l) { l.remove(); }); labels = [];
+        if (hidden) return;
         document.querySelectorAll('[data-spot]').forEach(function (el) {
           var n = el.getAttribute('data-spot'); if (!n) return;
           var r = el.getBoundingClientRect(); if (r.width < 20 || r.height < 20) return;
@@ -31,6 +44,7 @@ import { SHOW_SPOT_NUMBERS } from '../lib/photos';
       window.addEventListener('load', draw); window.addEventListener('resize', later);
       document.addEventListener('scroll', later, true);
       document.addEventListener('DOMContentLoaded', draw);
+      setHidden(hidden);
     })();
     </script>
   </>

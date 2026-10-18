@@ -23,6 +23,10 @@ specs:
   "Build time": "Varies by complexity — typically 20–30 weeks"
   Certification: "QBCC licensed, engineer-certified trailer"
   "Design process": "Consultation → concept → drawings → build"
+# Photos copied from the old Squarespace page as placeholders (2026-10-17); numbered photo spots, replace any via PHOTOS.md
+gallery:
+  - src: "/images/old/custom-design-build/01.webp"
+    alt: "Custom Design & Build, photo 1"
 ---
 
 ## No Two Are the Same

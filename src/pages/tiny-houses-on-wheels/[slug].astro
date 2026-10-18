@@ -1,4 +1,6 @@
 ---
+import ComingSoonNote from '../../components/ComingSoonNote.astro';
+import { listed } from '../../lib/visible';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Hero from '../../components/Hero.astro';
 import CTAButton from '../../components/CTAButton.astro';
@@ -6,7 +8,7 @@ import SpotGallery from '../../components/SpotGallery.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const products = await getCollection('products-thow', ({ data }) => !data.draft);
+  const products = await getCollection('products-thow', ({ data }) => listed(data));
   return products.map((p) => ({ params: { slug: p.id }, props: { product: p } }));
 }
 
@@ -56,6 +58,7 @@ import { photo } from '../../lib/photos';
     secondaryCtaText="View All Models"
     secondaryCtaHref="/tiny-houses-on-wheels/"
   />
+  <ComingSoonNote show={product.data.comingSoon} />
 
   <section class="section">
     <div class="container product-layout">
@@ -98,7 +101,7 @@ import { photo } from '../../lib/photos';
     </div>
   </section>
 
-  <SpotGallery prefix={`thow/${product.id}/g`} title={`${product.data.title} photos`} alt={`${product.data.title} tiny house on wheels, photo`} />
+  <SpotGallery prefix={`thow/${product.id}/gallery-`} title={`${product.data.title} photos`} alt={`${product.data.title} tiny house on wheels, photo`} />
 
 </BaseLayout>
 

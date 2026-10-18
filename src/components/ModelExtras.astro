@@ -2,6 +2,7 @@
 import Inclusions from './Inclusions.astro';
 import { formatPrice } from '../lib/price';
 import { photo } from '../lib/photos';
+import { IS_PREVIEW } from '../lib/visible';
 
 export interface Props {
   title: string;
@@ -14,12 +15,13 @@ export interface Props {
   }[];
   spotPrefix?: string;   // e.g. 'modular/ensuite' (numbered photo spots)
 }
-const { title, upgrades, floorPlans = [], gallery = [], models = [], spotPrefix } = Astro.props;
+const { title, upgrades, floorPlans = [], gallery = [], models: allModels = [], spotPrefix } = Astro.props;
+const models = allModels.filter((m) => !(m as { comingSoon?: boolean }).comingSoon || IS_PREVIEW);
 const pics = gallery.map((g, i) => ({ ...g, pic: photo(g.src, spotPrefix && `${spotPrefix}/gallery-${i + 1}`) }));
 const modelPic = (m: { name: string; image?: string }) => photo(m.image, spotPrefix && `${spotPrefix}/model-${m.name.toLowerCase()}`);
 ---
 
-{models.length > 0 && (
+{models.length > 1 && (
   <section class="section model-list">
     <div class="container">
       <h2>The {title.toLowerCase()} models</h2>
@@ -29,7 +31,7 @@ const modelPic = (m: { name: string; image?: string }) => photo(m.image, spotPre
             {m.image && <img src={modelPic(m).src} data-spot={modelPic(m).n} alt={m.imageAlt ?? m.name} width="614" height="389" loading="lazy" />}
           </div>
           <div class="model-row__body">
-            <h3>{m.name}</h3>
+            <h3>{m.name}{(m as { comingSoon?: boolean }).comingSoon && <span class="model-row__soon"> New · preview only</span>}</h3>
             <p class="model-row__facts">
               {m.priceFrom && <strong>From {formatPrice(m.priceFrom)} incl. GST</strong>}
               {m.area && <span>{m.area}</span>}
@@ -106,4 +108,5 @@ const modelPic = (m: { name: string; image?: string }) => photo(m.image, spotPre
 .floor-plans__upgrades, .floor-plans__custom { line-height: 1.6; margin-top: 0.75rem; }
 .floor-plans__custom a { color: var(--color-primary); font-weight: 600; text-decoration: underline; }
 @media (max-width: 800px) { .model-row { grid-template-columns: 1fr; } }
+.model-row__soon { font-size: var(--font-size-xs); background: #E8372C; color: #fff; padding: .2rem .55rem; border-radius: 99px; vertical-align: middle; margin-left: .4rem; }
 </style>

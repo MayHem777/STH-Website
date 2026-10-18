@@ -104,8 +104,8 @@ Rebuild of sunshinetinyhouses.com.au replacing Squarespace.
 ## Product lines
 | Line | Class | URL prefix |
 |------|-------|-----------|
-| Tiny Houses on Wheels | 1a | `/tiny-houses-on-wheels/` |
-| Modular Homes & Granny Flats | 1a | `/modular-homes/` |
+| Modular Homes & Granny Flats (lead with these, Mitch 2026-10-17) | 1a | `/modular-homes/` (process page: `/modular-homes/our-process/`) |
+| Tiny Houses on Wheels (legally a caravan; never call them Class 1a) | — | `/tiny-houses-on-wheels/` |
 | Backyard Studios | 10a | `/backyard-studios/` |
 
 ## Dev commands
@@ -129,12 +129,19 @@ src/content/
 ## Draft system
 Every content file has `draft: true/false` in frontmatter.
 `draft: true` = hidden from build, nav, and sitemap.
-In Decap CMS this appears as a "Published" toggle — flip to publish.
+In Decap CMS this is the "Hidden (draft)" switch: ON = hidden, OFF = published.
 
 ## Design tokens
 All design tokens live in `src/styles/tokens.css`.
 ⚠️ Colour palette + fonts are PLACEHOLDER — update from brand screenshots.
 Send screenshots of /google-ads-offer and /meta-ads-offer to extract exact values.
+
+## Photos, ported pages, branding (2026-10-17)
+- Every photo is a numbered spot: `src/data/photo-spots.json` (made by `scripts/make-photo-spots.mjs`, numbers permanent), `src/lib/photos.ts`, list at `/photo-spots/` and `PHOTOS.md`. Load Nat's numbered folder with `node scripts/import-photos.mjs "<folder>"`.
+- `src/landing/` holds pages ported from Squarespace code blocks (Google/Meta ad pages, THOW vs Class 1a guide). Until the DNS cutover the ad page GISTS are what's live: copy any gist change here too.
+- Master Builders Queensland Proud Member logos in `public/images/badges/` (style guide 2025: full colour on light, white on dark, clear space = half the wordmark height, never smaller than 10 mm).
+- Tab icon = the STH "tiny" mark (`public/favicon.ico`, `favicon-32.png`, `apple-touch-icon.png`).
+- Office and Ensuite are utility rooms, not studios.
 
 ## Key files
 - `src/styles/tokens.css` — all design tokens (update colours here)

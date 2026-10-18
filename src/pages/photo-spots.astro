@@ -10,7 +10,7 @@ const SHAPE: Record<string, string> = {
   square: 'Square-ish, 1200 px+',
   portrait: 'Portrait (upright), 1200 px+ tall',
 };
-const rows = SPOTS.slice().sort((a, b) => a.n - b.n).map((s) => ({ ...s, num: String(s.n).padStart(3, '0'), now: resolve(s.key) }));
+const rows = SPOTS.filter((s) => !(s as { retired?: boolean }).retired).sort((a, b) => a.n - b.n).map((s) => ({ ...s, num: String(s.n).padStart(3, '0'), now: resolve(s.key) }));
 const done = rows.filter((r) => r.now.replaced).length;
 ---
 <BaseLayout title="Photo spots | Sunshine Tiny Houses" description="Checklist of numbered photo spots for the website." noindex={true}>
