@@ -12,7 +12,7 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - Gallery page still "Photos Coming Soon".
 
 ## Assumptions
-- 2026-10-18 (branch `offgrid-partner`, NOT in launch-prep): off-grid page gets an OFFGRID NOW power-partner section (logo, system-by-model table from their 7 Oct proposal) plus Ecoflo (composting toilets, greywater) and Cinderella (incinerating toilets) with logos, at Mitch's request. Kept off launch-prep until the OFFGRID NOW partnership is agreed. Logos downloaded from each brand's public website.
+- 2026-10-18: off-grid page gets an OFFGRID NOW power-partner section (logo, system-by-model table from their 7 Oct proposal) plus Ecoflo (composting toilets, greywater) and Cinderella (incinerating toilets) with logos, at Mitch's request. Merged into launch-prep 2026-10-18 on Mitch's say-so (he waived reading the T&Cs first). Logos downloaded from each brand's public website.
 - 2026-10-18: "Book a 15-minute call" block (src/components/BookCall.astro, HubSpot Meetings link meetings-ap1.hubspot.com/mitchell-croft) only on /contact/thank-you/ (pre-filled from the form) and the ad /thank-you/, so every website booking comes after the visitor has given a phone number (free plan form has no phone field). /contact/ just says "send the form and you can book a call straight after". The HubSpot "Create your free meeting booking page" footer stays: clipping it also hides the booking Confirm button (tested); removing it needs a paid plan.
 - 2026-10-18: paragraph spacing for content-file text (product pages, blog) now lives in global.css (`.prose`): page-scoped styles never reached `<Content />`, so product pages had none.
 - 2026-10-18: backyard studio CTA tile: white text, light button (same as the other product pages), heading "Interested in backyard offices?".
@@ -33,7 +33,7 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - 2026-10-02: STH-specific facts not already on the site are marked [CONFIRM] rather than guessed.
 
 ## Waiting on Mitch
-- OFFGRID NOW partnership: read their T&Cs (referenced in the proposal, not attached), decide, reply to Darren (he asked for our logo). Then merge `offgrid-partner` into launch-prep. Also check Ecoflo / Cinderella are happy for us to show their logos.
+- OFFGRID NOW: reply to Darren with our logo (he asked 7 Oct). Ecoflo / Cinderella: OK to show their logos.
 - Nat's report 2026-10-17: names + details (size, layout, beds/baths, inclusions, lock-up/turn-key prices, floor plan, photos) for 4 new tiny houses (pages new-tiny-house-a..d), Jarrod's and Jenny's 1-bed designs (new-1-bedroom-a/b), Daintree 1-bed (price, plan), Office B (Shane & Linda) and Office C (Daniel). All are comingSoon = preview only.
 - Castaways + Boiling Pot: realistic 3D renders needed (who renders? Kiara / the renders designer?). Not something to fake.
 - Look at the preview, then OK the merge of launch-prep to main (Mitch said yes to merging after a look, 2026-10-18).
