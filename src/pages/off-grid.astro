@@ -39,6 +39,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <li>Inverter/charger system for AC power throughout the home</li>
             <li>Compatible with grid tie-in if desired</li>
           </ul>
+          <div class="og-card__brands">
+            <a class="og-card__brand-dark" href="#og-partner-h" aria-label="OFFGRID NOW, our power partner (see below)">
+              <img src="/images/partners/offgrid-now-logo-reverse.png" alt="OFFGRID NOW" width="750" height="351" loading="lazy" />
+            </a>
+          </div>
         </div>
 
         <div class="og-card">
@@ -209,6 +214,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 .og-card ul li strong { color: var(--color-text); }
 .og-card__brands { display: flex; align-items: center; gap: 1.75rem; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); }
 .og-card__brands img { height: 40px; width: auto; }
+.og-card__brand-dark { display: inline-flex; background: var(--color-primary); border-radius: 8px; padding: .5rem .9rem; }
+.og-card__brand-dark img { height: 34px; }
 .og-card ul li::before {
   content: '✓';
   position: absolute;
