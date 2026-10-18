@@ -29,7 +29,7 @@ specs:
 
 Cold plunge, sweat session, reset. A backyard sauna isn't a luxury — it's one of the best investments you can make in your health and your property value. Recovery after training, stress relief after work, time with family — the sauna earns its place every day.
 
-Our custom saunas are built in our Noosaville factory and delivered fully fitted. Choose from traditional Finnish wood-fired or electric, or infrared panels for a lower-temperature, deeply penetrating heat. We line the interior in Western red cedar or thermory ash — the timbers of choice for premium saunas worldwide.
+Our custom saunas are built off site in our Noosaville factory, the same way we build our [modular homes](/modular-homes/our-process/). Each one is finished and fitted out under cover, then trucked to your property and craned into place. Choose from traditional Finnish wood-fired or electric, or infrared panels for a lower-temperature, deeply penetrating heat. We line the interior in Western red cedar or thermory ash — the timbers of choice for premium saunas worldwide.
 
 ### Finnish or Infrared?
 

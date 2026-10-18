@@ -7,6 +7,9 @@
 //   best place for it: the enquiry form has just taken their number.
 // - prefill: reads sessionStorage 'sth_book' {firstName, lastName, email} left by
 //   the contact form, so the scheduler opens with their details already in.
+// - The free plan adds a "Create your free meeting booking page" footer. Do NOT clip it:
+//   HubSpot puts the Back / Confirm bar of the booking form in the same spot, so any trim
+//   that hides the footer hides Confirm too (tested 2026-10-18). Removing it = paid plan.
 // - HubSpot's embed script only loads when the block nears the screen, so pages
 //   that show it below the fold keep their load speed.
 interface Props {

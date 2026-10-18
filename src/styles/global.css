@@ -46,6 +46,19 @@ h4 { font-size: var(--font-size-base); font-weight: var(--font-weight-bold); }
 
 p { color: var(--color-text-body); line-height: 1.7; }
 
+/* Text from content files (product pages, blog) rendered inside .prose. Must be global:
+   a page's own <style> is scoped and never reaches <Content /> output. :where() keeps
+   these at zero specificity so a page can still override them. */
+:where(.prose) > * + * { margin-top: 1rem; }
+:where(.prose) :where(h2) { margin-top: 2.5rem; margin-bottom: 0.75rem; }
+:where(.prose) :where(h3, h4) { margin-top: 2rem; margin-bottom: 0.5rem; }
+:where(.prose) :where(h2, h3, h4) + * { margin-top: 0; }
+:where(.prose) > :first-child { margin-top: 0; }
+:where(.prose) :where(ul, ol) { padding-left: 1.5rem; }
+:where(.prose) :where(li + li) { margin-top: 0.4rem; }
+:where(.prose) :where(strong) { color: var(--color-text); }
+.prose a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 2px; }
+
 /* Label / eyebrow caps */
 .label {
   font-size: var(--label-size);
