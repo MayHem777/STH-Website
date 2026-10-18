@@ -38,4 +38,4 @@ From our Boiling Pot inspiration to the Noosa aesthetic, our modular designs are
 
 If you have the space and you're looking for a permanent addition to your property that feels like a high-end architectural home rather than a "cabin," modular is the answer. Whether you need a dedicated [Retreat](/modular-homes/retreat/), a functional [Office](/backyard-studios/offices/), or a full [2-Bedroom Secondary Dwelling](/modular-homes/2-bedroom/) — we're here to help you navigate the process from design to council approval.
 
-[Explore our Modular Home Range](/modular-homes/) or [contact us](/contact/) to visit our Noosaville showroom and see the quality first-hand.
+[Explore our Modular Home Range](/modular-homes/) or [contact us](/contact/) to book a visit to our Noosaville showroom (by appointment only) and see the quality first-hand.
