@@ -95,6 +95,8 @@ const { class: className, ...seoProps } = Astro.props;
           s.src = "https://sth-chat-widget.mitchjcroft.workers.dev/widget.js";
           s.setAttribute("data-turnstile-sitekey", "0x4AAAAAAFNF_p5_z0A1jMCJ");
           s.setAttribute("data-enquiry-url", "/contact/");
+          s.setAttribute("data-avatar-url", "/images/chat/mitch-avatar.png");
+          s.setAttribute("data-assistant-name", "Mitch's assistant");
           s.async = false;
           document.body.appendChild(s);
         }
