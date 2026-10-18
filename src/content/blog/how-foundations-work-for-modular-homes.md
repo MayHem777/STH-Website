@@ -25,7 +25,7 @@ Both do the same job: they carry the home's weight down to firm ground at a set 
 
 ## How high will my home sit?
 
-The piers stand at least 400 mm above the ground, which puts the finished floor at around 700 to 750 mm, depending on the subfloor system we use. On a sloping block the piers are taller at the low side, so the floor stays level without levelling the whole site.
+The piers stand at least 400 mm above the ground, and the subfloor including flooring is about 370 mm thick, which puts the finished floor about 770 mm above the highest ground under the home. On a sloping block the piers are taller at the low side, so the floor stays level without levelling the whole site.
 
 When piers are taller, the engineer may add steel cross-bracing between them to stop the subfloor moving sideways.
 

@@ -16,6 +16,7 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - 2026-10-18: paragraph spacing for content-file text (product pages, blog) now lives in global.css (`.prose`): page-scoped styles never reached `<Content />`, so product pages had none.
 - 2026-10-18: backyard studio CTA tile: white text, light button (same as the other product pages), heading "Interested in backyard offices?".
 - 2026-10-18 (Mitch): factory visits are by appointment only and must be booked ahead: FAQ answer (page + FAQ schema), contact page, foundations-era blog post. Contact page "Hours" renamed "Office hours". Google ad landing page left as is (phone hours, gist copy).
+- 2026-10-18 (Mitch): floor height on the site = 400 mm clear + subfloor incl. flooring about 370 mm (369) = finished floor about 770 mm (769) above the highest ground; rounded numbers on the website (FAQ page + schema, foundations blog post).
 - 2026-10-18 (Mitch): saunas page says they are built off site in the factory and craned in, same method as the modular homes.
 - 2026-10-17: new designs use 'comingSoon' (preview only; production build verified clean). Client names stay in frontmatter comments only, never on pages.
 - 2026-10-17: 1770 main photo = the 1770 render from the old 1770 page until Nat's Drive photo arrives.
