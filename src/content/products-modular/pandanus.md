@@ -9,7 +9,7 @@ priceFrom: 195000
 area: "39.9 m²"
 size: "10.5 × 3.8 m"
 upgrades: "Deck (3.0 × 3.8 m, about 12 m²)."
-heroImage: "/images/modular-scene-3.webp"
+heroImage: "/photos/243.webp"
 heroImageAlt: "Pandanus 1 bedroom modular home exterior"
 floorPlans:
   - src: "/images/models/pandanus-plan.webp"
