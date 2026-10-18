@@ -97,7 +97,9 @@ const { class: className, ...seoProps } = Astro.props;
           s.setAttribute("data-enquiry-url", "/contact/");
           s.setAttribute("data-avatar-url", "/images/chat/mitch-avatar.png");
           s.setAttribute("data-avatar-full-url", "/images/chat/mitch-full.png");
-          s.setAttribute("data-assistant-name", "Mitch's assistant");
+          s.setAttribute("data-assistant-name", "AI Assistant");
+          s.setAttribute("data-launcher-label", "Chat with Sunshine Tiny Houses' AI Assistant");
+          s.setAttribute("data-booking-url", "https://meetings-ap1.hubspot.com/mitchell-croft");
           s.async = false;
           document.body.appendChild(s);
         }
