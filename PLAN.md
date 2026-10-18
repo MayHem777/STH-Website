@@ -21,10 +21,8 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 
 ## Waiting on Mitch
 - AutoDraft catalogue (`sth-enquiry-autodraft/prompts/reply_system.md`) still has the old tiny house turn-key prices (e.g. 1770 $109,000, Boiling Pot $170,000, Lennox $140,000): OK to update it to the new ones?
-- Our trailers page has no prices; the live one lists 14 trailer prices. Copy them across?
 - Site content upgrade review (preview link above), then OK to merge. Questions: Pandanus 51.3 m² looks like it includes the 12 m² deck (plan shows 10.5 × 3.8 m enclosed) though the deck is listed as an upgrade; pages still claim a "7-star energy rating" while the brochure says "energy assessment required"; FAQ says lock-up tiny houses from $45,000–$50,000 and turn-key from $85,000–$95,000 but the 1770 page says $59,500 / $109,000; full-size renders and floor plans; 3–5 real reviews + Google rating; site-cost ranges for a "What it costs" page.
-- Foundations guide: photos, then OK to merge to main.
-- DNS cutover checklist items.
+- _Cleanup 2026-10-18: removed 3 (stale: trailer prices, the trailers page is now hidden and trailers live on tinytrailers.com.au; duplicates of STH-Website-launch PLAN.md: foundations photos, DNS cutover). Ranked list: ~/repos/claude-monitor/waiting/queue.md_
 
 ## Cutover pre-flight check, 2026-10-03 (read-only, run from Claudio)
 - **BLOCKER (checklist items 1/2): 25 of the 59 URLs in the live Squarespace sitemap return 404 on sth-website.pages.dev** and are not in `public/_redirects` (39 rules, last touched 2026-07-06). All 25 still return 200 on the old site: /1-bedroom, /2-bedroom, /brisbane-tiny-homes, /cabin, /custom-sauna, /ensuite, /entertainment, /gold-coast-tiny-homes, /home, /office, /our-modular-homes, /pod-homes/overview-1, /portfolio-2 (+ 6 project pages), /queensland-tiny-houses, /retreat, /sunshine-coast-tiny-homes, /thank-you-pricing-guide, /thow-vs-class-1a-modular, /tiny-house-trailers. The other 34 resolve in one 301/308 hop to a 200 (no chains).
