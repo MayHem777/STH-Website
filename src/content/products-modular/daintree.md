@@ -52,7 +52,7 @@ features:
   - "Light-filled open-plan living"
   - "Stylish kitchen"
   - "Separate laundry"
-  - "Energy-efficient — 7-star rating minimum"
+  - "Energy assessment required for your site"
   - "About 2 weeks on site, start to finish"
   - "QBCC licensed build — Class 1a"
 specs:

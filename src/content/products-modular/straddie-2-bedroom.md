@@ -44,7 +44,7 @@ features:
   - "Raked ceilings and skylights"
   - "Designer kitchen with integrated dining island"
   - "Full bathroom with laundry"
-  - "Energy-efficient — 7-star rating minimum"
+  - "Energy assessment required for your site"
   - "About 2 weeks on site, start to finish"
   - "QBCC licensed build — Class 1a"
 specs:

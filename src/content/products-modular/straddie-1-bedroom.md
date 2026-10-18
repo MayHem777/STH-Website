@@ -38,7 +38,7 @@ features:
   - "Integrated storage solutions"
   - "Functional layout for compact living"
   - "Energy-efficient and eco-friendly materials"
-  - "7-star energy efficiency rating"
+  - "Energy assessment required for your site"
   - "About 2 weeks on site, start to finish"
   - "QBCC licensed build — Class 1a"
 specs:
