@@ -75,12 +75,48 @@ Checklist — verify against real repo state, don't assume:
     still resolves with a valid cert after cutover, same as item 9 for the
     main domain.
 
+15. [ ] **Paid-lead pages accounted for and working** (Mitch, 2026-10-19). These
+    pages take the leads Mitch pays Google and Meta for, so a silent failure
+    here costs money every hour. Today they are GISTS in Squarespace code
+    blocks; after cutover they are the new site's own pages at the SAME
+    addresses, so the ads need no change. Check each one ON THE REAL DOMAIN
+    (not just *.pages.dev):
+    - Pages exist and load fast on a phone: `/google-ads-offer/`,
+      `/meta-ads-offer/`, `/thank-you/`, `/thank-you/?notag=1`,
+      `/thank-you-pricing-guide/`, `/contact/`, `/contact/thank-you/`.
+      Also confirm the ad accounts' final URLs (Google Ads + Meta) point at
+      these addresses and none at an old Squarespace-only URL.
+    - Content is current: diff each live gist against `src/landing/google.html`
+      and `meta.html` the day before cutover. Anything changed in a gist since
+      2026-10-17 must already be copied across, or it is lost at the switch.
+      (Known: the gists still say $110k; the new pages say "from $100k".)
+    - One real test enquiry through EACH ad page and the contact form lands in
+      HubSpot as a contact (ad pages: form `abcc6489-5270-4b70-8e18-b5477c19f227`;
+      contact page: `a2d006e2-82f7-4577-b4af-23fc9e248c20`), the HubSpot
+      notification reaches info@, and AutoDraft drafts a reply within ~5 min.
+      Then delete the test contact and the test draft.
+    - Budget routing: under $100k goes to `/thank-you-pricing-guide/`, $125k+
+      to `/thank-you/` (fires the conversion), $100k–$125k / not sure / blank
+      to `/thank-you/?notag=1` (no conversion).
+    - Tracking fires from the real domain: Meta Pixel `1050187050868855`
+      PageView on both ad pages and `Lead` on a qualified `/thank-you/`; Google
+      Ads conversion `AW-10788445574/JV8tCNiOgMscEIa7qpgo` on a qualified
+      `/thank-you/` only; GA4 page views. Check with Meta Events Manager "Test
+      events" and Google Tag Assistant; nothing should fire twice.
+    - UTM / gclid / fbclid survive from the ad click to HubSpot (attribution).
+    - The 15-minute call booker shows on `/thank-you/` and `/contact/thank-you/`,
+      and the AI chat answers on the real domain (its Worker already allows
+      `www.sunshinetinyhouses.com.au`; HubSpot's site-domain list must include it
+      too or chat leads land in Spam).
+    - Watch the first real paid lead after cutover end to end (HubSpot →
+      AutoDraft draft → dashboard) before calling the cutover done.
+
 After reporting checklist status: if anything is incomplete, say so plainly
 and do not proceed with DNS/launch actions or advice on how to do them until
 Mitch has seen the gap and explicitly said he wants to proceed anyway despite
-it. Items 1/2 (redirect completeness), 7 (Mitch sign-off), and 8 (MX
-records) are treated with equal severity — a broken MX record is a silent
-business-critical failure, not just an SEO risk. Only once all 14 items are
+it. Items 1/2 (redirect completeness), 7 (Mitch sign-off), 8 (MX
+records) and 15 (paid-lead pages) are treated with equal severity — a broken MX record is a silent
+business-critical failure, not just an SEO risk. Only once all 15 items are
 checked off (or explicitly overridden by Mitch) should you engage normally
 with DNS cutover questions.
 
