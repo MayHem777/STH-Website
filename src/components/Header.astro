@@ -1,7 +1,15 @@
 ---
 const NAV = [
   { label: 'Modular Homes', href: '/modular-homes/' },
-  { label: 'Tiny Houses on Wheels', href: '/tiny-houses-on-wheels/' },
+  {
+    label: 'Tiny Houses on Wheels',
+    children: [
+      { label: 'All Tiny Houses on Wheels', href: '/tiny-houses-on-wheels/' },
+      { label: 'Custom Design & Build', href: '/tiny-houses-on-wheels/custom-design-build/' },
+      // Sister business (Mitch 2026-10-19, mirrors the Squarespace menu). Opens in a new tab.
+      { label: 'Trailers (Tiny Trailers)', href: 'https://www.tinytrailers.com.au/', external: true },
+    ],
+  },
   { label: 'Backyard Studios', href: '/backyard-studios/' },
   {
     label: 'Things to Know',
@@ -43,7 +51,7 @@ const currentPath = Astro.url.pathname;
         {NAV.map((item) => (
           item.children ? (
             <li class="nav-item nav-item--dropdown">
-              <button class="nav-link nav-dropdown-toggle" aria-expanded="false">
+              <button class:list={['nav-link', 'nav-dropdown-toggle', { 'is-active': item.children.some((c) => !c.external && currentPath.startsWith(c.href)) }]} aria-expanded="false">
                 {item.label}
                 <svg class="chevron" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
                   <path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
@@ -55,8 +63,10 @@ const currentPath = Astro.url.pathname;
                     <a
                       href={child.href}
                       class:list={['dropdown-link', { 'is-active': currentPath === child.href }]}
+                      {...(child.external ? { target: '_blank', rel: 'noopener' } : {})}
                     >
-                      {child.label}
+                      {child.label}{child.external && <span aria-hidden="true"> ↗</span>}
+                      {child.external && <span class="sr-only"> (opens in a new tab)</span>}
                     </a>
                   </li>
                 ))}
@@ -244,7 +254,9 @@ const currentPath = Astro.url.pathname;
   background-color: var(--color-primary-hover);
 }
 
-@media (max-width: 960px) {
+/* The full menu needs about 1,200 px; below that it collapses to the menu button
+   (it overflowed at 1024 px and, after the Tiny Houses dropdown, at 1280 px). */
+@media (max-width: 1200px) {
   .nav-toggle {
     display: flex;
   }
@@ -290,5 +302,12 @@ const currentPath = Astro.url.pathname;
     margin-left: 0;
     margin-top: 1rem;
   }
+}
+
+/* 1201-1360 px: tighten the full menu so it fits on one line. */
+@media (min-width: 1201px) and (max-width: 1360px) {
+  .header-inner { gap: 1rem; }
+  .nav-link { padding: 0.5rem 0.5rem; }
+  .nav-cta { padding-left: 1rem; padding-right: 1rem; }
 }
 </style>
