@@ -5,7 +5,7 @@ description: "The Castaways is an 8m tiny house on wheels with dual lofts for 4.
 draft: false
 order: 5
 heroImage: "/images/models/castaways-main.webp"
-heroImageAlt: "Castaways tiny house on wheels exterior"
+heroImageAlt: "Castaways tiny house on wheels: white cladding with timber deck and outdoor dining"
 features:
   - "Dual lofts sleeping 4 (plus sofa lounge)"
   - "Cedar shiplap ceiling feature"
@@ -29,23 +29,23 @@ specs:
 # Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/castaways/01.webp"
-    alt: "Castaways, photo 1"
+    alt: "Castaways tiny house on wheels: lounge with sofa, loft ladder and timber ceiling"
   - src: "/images/old/castaways/02.webp"
-    alt: "Castaways, photo 2"
+    alt: "Castaways tiny house on wheels: sofa and timber bench looking to kitchen"
   - src: "/images/old/castaways/03.webp"
-    alt: "Castaways, photo 3"
+    alt: "Castaways tiny house on wheels: TV wall with built-in desk and kitchen"
   - src: "/images/old/castaways/04.webp"
-    alt: "Castaways, photo 4"
+    alt: "Castaways tiny house on wheels: overhead view of stairs, kitchen and loft"
   - src: "/images/old/castaways/05.webp"
-    alt: "Castaways, photo 5"
+    alt: "Castaways tiny house on wheels: loft bedroom with skylight and green bedding"
   - src: "/images/old/castaways/06.webp"
-    alt: "Castaways, photo 6"
+    alt: "Castaways tiny house on wheels: loft bed with open storage shelves"
   - src: "/images/old/castaways/07.webp"
-    alt: "Castaways, photo 7"
+    alt: "Castaways tiny house on wheels: laundry with front loader and timber benchtop"
   - src: "/images/old/castaways/08.webp"
-    alt: "Castaways, photo 8"
+    alt: "Castaways tiny house on wheels: bathroom with shower and laundry tub"
   - src: "/images/old/castaways/09.webp"
-    alt: "Castaways, photo 9"
+    alt: "Castaways tiny house on wheels: washing machine under timber bench with sink"
 ---
 
 ## Castaways

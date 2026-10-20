@@ -275,22 +275,21 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 299 | [Jacaranda: photo gallery 16](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/16.webp` |
 | 300 | [Jacaranda: photo gallery 17](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/17.webp` |
 | 303 | [Sunrise Beach House: main photo (also its card on the modular pages and home page)](/modular-homes/2-bedroom/sunrise-beach-house/) | Best exterior of a Sunrise Beach House (real build if we have one) | Landscape | `/images/models/sunrise-beach-house-ext.webp` |
-| 304 | [Sunrise Beach House: photo gallery 2](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/02.webp` |
-| 305 | [Sunrise Beach House: photo gallery 3](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/03.webp` |
-| 306 | [Sunrise Beach House: photo gallery 4](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/04.webp` |
-| 307 | [Sunrise Beach House: photo gallery 5](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/05.webp` |
-| 308 | [Sunrise Beach House: photo gallery 6](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/06.webp` |
-| 309 | [Sunrise Beach House: photo gallery 7](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/07.webp` |
-| 310 | [Sunrise Beach House: photo gallery 8](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/08.webp` |
-| 311 | [Sunrise Beach House: photo gallery 9](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/09.webp` |
-| 312 | [Sunrise Beach House: photo gallery 10](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/10.webp` |
-| 313 | [Sunrise Beach House: photo gallery 11](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/11.webp` |
-| 314 | [Sunrise Beach House: photo gallery 12](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/12.webp` |
-| 315 | [Sunrise Beach House: photo gallery 13](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/13.webp` |
-| 316 | [Sunrise Beach House: photo gallery 14](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/14.webp` |
-| 317 | [Sunrise Beach House: photo gallery 15](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/15.webp` |
-| 318 | [Sunrise Beach House: photo gallery 16](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/16.webp` |
-| 319 | [Sunrise Beach House: photo gallery 17](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/17.webp` |
+| 304 | [Sunrise Beach House: photo gallery 2](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/03.webp` |
+| 305 | [Sunrise Beach House: photo gallery 3](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/04.webp` |
+| 306 | [Sunrise Beach House: photo gallery 4](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/05.webp` |
+| 307 | [Sunrise Beach House: photo gallery 5](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/06.webp` |
+| 308 | [Sunrise Beach House: photo gallery 6](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/07.webp` |
+| 309 | [Sunrise Beach House: photo gallery 7](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/08.webp` |
+| 310 | [Sunrise Beach House: photo gallery 8](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/09.webp` |
+| 311 | [Sunrise Beach House: photo gallery 9](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/10.webp` |
+| 312 | [Sunrise Beach House: photo gallery 10](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/11.webp` |
+| 313 | [Sunrise Beach House: photo gallery 11](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/12.webp` |
+| 314 | [Sunrise Beach House: photo gallery 12](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/13.webp` |
+| 315 | [Sunrise Beach House: photo gallery 13](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/14.webp` |
+| 316 | [Sunrise Beach House: photo gallery 14](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/15.webp` |
+| 317 | [Sunrise Beach House: photo gallery 15](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/16.webp` |
+| 318 | [Sunrise Beach House: photo gallery 16](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/17.webp` |
 | 320 | [Office: main photo (also its card on the modular pages and home page)](/modular-homes/office/) | Best exterior of a Office (real build if we have one) | Landscape | `/images/banksia-office.jpg` |
 | 321 | [Banksia Office: photo gallery 1](/modular-homes/office/banksia-office/) | Banksia Office, inside or out | Landscape | `/images/old/office/01.webp` |
 | 322 | [Banksia Office: photo gallery 2](/modular-homes/office/banksia-office/) | Banksia Office, inside or out | Landscape | `/images/old/office/02.webp` |
@@ -381,7 +380,7 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 407 | [Daintree: photo gallery 1](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/01.webp` |
 | 408 | [Straddie: photo gallery 1](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/01.webp` |
 | 409 | [Jacaranda: photo gallery 1](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/01.webp` |
-| 410 | [Sunrise Beach House: photo gallery 1](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/01.webp` |
+| 410 | [Sunrise Beach House: photo gallery 1](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/02.webp` |
 | 411 | [Retreat: photo gallery 3](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/03.webp` |
 | 412 | [Retreat: photo gallery 4](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/04.webp` |
 | 413 | [Retreat: photo gallery 5](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/05.webp` |

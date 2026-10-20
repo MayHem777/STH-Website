@@ -7,7 +7,7 @@ order: 5
 priceFrom: 100000
 area: "19.2 m²"
 heroImage: "/images/banksia-office.jpg"
-heroImageAlt: "Modular office exterior"
+heroImageAlt: "Banksia Office: black exterior with glass doors onto timber deck"
 specs:
   Builder: "QBCC #15205110"
   Class: "Class 1a"

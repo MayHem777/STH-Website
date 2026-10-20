@@ -7,7 +7,7 @@ order: 1
 priceFrom: 125000
 area: "19.8 to 39.6 m²"
 heroImage: "/images/models/dahlia-ext.webp"
-heroImageAlt: "Dahlia modular cabin exterior render"
+heroImageAlt: "Dahlia cabin: dark timber exterior with covered front deck"
 features:
   - "Three models: Banksia, Dahlia, Raglan"
   - "Studio layouts from 19.8 to 39.6 m²"

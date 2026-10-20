@@ -10,7 +10,7 @@ area: "39.6 m²"
 size: "11 × 3.6 m"
 upgrades: "Shaped window, and timber feature walls and ceiling."
 heroImage: "/images/models/raglan-main.webp"
-heroImageAlt: "Raglan modular cabin exterior render"
+heroImageAlt: "Raglan cabin: black cladding, glazed front and timber steps"
 floorPlans:
   - src: "/images/models/raglan-plan.webp"
     label: "Raglan floor plan, 11 × 3.6 m"
@@ -30,21 +30,21 @@ specs:
 # Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/raglan/01.webp"
-    alt: "Raglan, photo 1"
+    alt: "Raglan cabin: row of black-clad cabins with timber-lined entries"
   - src: "/images/old/raglan/02.webp"
-    alt: "Raglan, photo 2"
+    alt: "Raglan cabin: bedroom with timber wall panelling and sliding robe"
   - src: "/images/old/raglan/03.webp"
-    alt: "Raglan, photo 3"
+    alt: "Raglan cabin: wall TV, bar fridge and timber display shelving"
   - src: "/images/old/raglan/04.webp"
-    alt: "Raglan, photo 4"
+    alt: "Raglan cabin: built-in desk with floating shelf and ceiling fan"
   - src: "/images/old/raglan/05.webp"
-    alt: "Raglan, photo 5"
+    alt: "Raglan cabin: bedroom with sheer curtains opening to the verandah"
   - src: "/images/old/raglan/06.webp"
-    alt: "Raglan, photo 6"
+    alt: "Raglan cabin: bathroom with freestanding bath and brass rain shower"
   - src: "/images/old/raglan/07.webp"
-    alt: "Raglan, photo 7"
+    alt: "Raglan cabin: floating vanity with brass mirror and vessel basin"
   - src: "/images/old/raglan/08.webp"
-    alt: "Raglan, photo 8"
+    alt: "Raglan cabin: bathroom with freestanding bath, toilet and large tiles"
 ---
 
 ## Raglan

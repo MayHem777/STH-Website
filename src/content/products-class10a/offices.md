@@ -5,7 +5,7 @@ description: "A purpose-built backyard office from Sunshine Tiny Houses — full
 draft: false
 order: 1
 heroImage: "/images/banksia-office.jpg"
-heroImageAlt: "Sunshine Tiny Houses Banksia backyard office — black exterior with pitched roof"
+heroImageAlt: "Banksia Office: black exterior with glass doors onto timber deck"
 features:
   - "Fully insulated walls, floor and ceiling"
   - "Electrical fit-out — power, data, lighting"

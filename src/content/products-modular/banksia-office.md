@@ -10,7 +10,7 @@ area: "19.2 m²"
 size: "6 × 3.2 m"
 upgrades: "Deck."
 heroImage: "/images/banksia-office.jpg"
-heroImageAlt: "Modular office exterior"
+heroImageAlt: "Banksia Office: black exterior with glass doors onto timber deck"
 floorPlans:
   - src: "/images/models/office-plan.webp"
     label: "Office floor plan, 6 × 3.2 m"
@@ -33,21 +33,21 @@ specs:
 # Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/office/01.webp"
-    alt: "Banksia Office, photo 1"
+    alt: "Banksia Office: black cladding, gable glazing and timber deck"
   - src: "/images/old/office/02.webp"
-    alt: "Banksia Office, photo 2"
+    alt: "Banksia Office: desks for four with plywood walls and split system"
   - src: "/images/old/office/03.webp"
-    alt: "Banksia Office, photo 3"
+    alt: "Banksia Office: shared desk under gable clerestory windows"
   - src: "/images/old/office/04.webp"
-    alt: "Banksia Office, photo 4"
+    alt: "Banksia Office: kitchenette with black sink and open shelving"
   - src: "/images/old/office/05.webp"
-    alt: "Banksia Office, photo 5"
+    alt: "Banksia Office: restroom with toilet and black wall basin"
   - src: "/images/old/office/06.webp"
-    alt: "Banksia Office, photo 6"
+    alt: "Banksia Office: restroom basin, towel ring and highlight window"
   - src: "/images/old/office/07.webp"
-    alt: "Banksia Office, photo 7"
+    alt: "Banksia Office: workspace with glass doors and wall-mounted screen"
   - src: "/images/old/office/08.webp"
-    alt: "Banksia Office, photo 8"
+    alt: "Banksia Office: dark standing-seam exterior with sliding glass doors open"
 ---
 
 ## Banksia Office

@@ -5,7 +5,7 @@ description: "The Bondi is a 7.2m tiny house on wheels built to maximise outdoor
 draft: false
 order: 3
 heroImage: "/images/models/bondi-main.webp"
-heroImageAlt: "Bondi tiny house on wheels exterior"
+heroImageAlt: "Bondi tiny house on wheels: black exterior with timber gable end and deck"
 features:
   - "Single loft sleeping for 2 (plus sofa for guests)"
   - "Custom triple axle trailer (4.5T ATM)"
@@ -29,21 +29,21 @@ specs:
 # Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/bondi/01.webp"
-    alt: "Bondi, photo 1"
+    alt: "Bondi tiny house on wheels: window seat under gable window beside kitchen"
   - src: "/images/old/bondi/02.webp"
-    alt: "Bondi, photo 2"
+    alt: "Bondi tiny house on wheels: blue kitchen, breakfast bench and stairs to loft"
   - src: "/images/old/bondi/03.webp"
-    alt: "Bondi, photo 3"
+    alt: "Bondi tiny house on wheels: blue cabinetry, steel fridge and stair handrail"
   - src: "/images/old/bondi/04.webp"
-    alt: "Bondi, photo 4"
+    alt: "Bondi tiny house on wheels: loft bedroom with skylight and bookshelf"
   - src: "/images/old/bondi/05.webp"
-    alt: "Bondi, photo 5"
+    alt: "Bondi tiny house on wheels: loft bed with rust throw and long window"
   - src: "/images/old/bondi/06.webp"
-    alt: "Bondi, photo 6"
+    alt: "Bondi tiny house on wheels: bathroom with black shower frame and timber benchtop"
   - src: "/images/old/bondi/07.webp"
-    alt: "Bondi, photo 7"
+    alt: "Bondi tiny house on wheels: bathroom with washing machine and black tapware"
   - src: "/images/old/bondi/08.webp"
-    alt: "Bondi, photo 8"
+    alt: "Bondi tiny house on wheels: black cladding, gable window and timber deck"
 ---
 
 ## Bondi

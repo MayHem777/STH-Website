@@ -5,7 +5,7 @@ description: "We specialise in custom tiny house on wheels designs tailored to y
 draft: false
 order: 8
 heroImage: "/images/workshop-recent-1.jpeg"
-heroImageAlt: "Sunshine Tiny Houses workshop — custom build in progress"
+heroImageAlt: "Custom Design & Build tiny house on wheels: white weatherboards and timber verandah"
 features:
   - "Full custom floor plan — designed around your life"
   - "Choice of cladding, roofing, windows and joinery"
@@ -26,7 +26,7 @@ specs:
 # Photos copied from the old Squarespace page as placeholders (2026-10-17); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/custom-design-build/01.webp"
-    alt: "Custom Design & Build, photo 1"
+    alt: "Custom Design & Build tiny house on wheels: living area with glass sliders"
 ---
 
 ## No Two Are the Same

@@ -5,7 +5,7 @@ description: "The Vitalis — a complete wellness retreat with 4–6 person saun
 draft: false
 order: 6
 heroImage: "/images/models/retreat-main.webp"
-heroImageAlt: "Vitalis wellness retreat exterior"
+heroImageAlt: "Vitalis wellness retreat: timber-clad exterior with outdoor sofa on deck"
 features:
   - "Model: Vitalis"
   - "Sauna — seats 4–6 people"
@@ -24,21 +24,21 @@ specs:
 # Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/retreat/01.webp"
-    alt: "Retreat, photo 1"
+    alt: "Vitalis wellness retreat: timber cold plunge tub under large picture window"
   - src: "/images/old/retreat/02.webp"
-    alt: "Retreat, photo 2"
+    alt: "Vitalis wellness retreat: sauna with timber benches and heater"
   - src: "/images/old/retreat/03.webp"
-    alt: "Retreat, photo 3"
+    alt: "Vitalis wellness retreat: sauna with lit tiered benches and high window"
   - src: "/images/old/retreat/04.webp"
-    alt: "Retreat, photo 4"
+    alt: "Vitalis wellness retreat: stone vanity, round mirror and robe hooks"
   - src: "/images/old/retreat/05.webp"
-    alt: "Retreat, photo 5"
+    alt: "Vitalis wellness retreat: shower with copper tapware and fluted glass door"
   - src: "/images/old/retreat/06.webp"
-    alt: "Retreat, photo 6"
+    alt: "Vitalis wellness retreat: tiled shower ledge with copper mixer"
   - src: "/images/old/retreat/07.webp"
-    alt: "Retreat, photo 7"
+    alt: "Vitalis wellness retreat: toilet with copper roll holder and timber shelf"
   - src: "/images/old/retreat/08.webp"
-    alt: "Retreat, photo 8"
+    alt: "Vitalis wellness retreat: overhead layout of plunge pool, sauna and deck"
 ---
 
 ## Vitalis Retreat

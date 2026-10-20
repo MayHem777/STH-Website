@@ -10,15 +10,15 @@ area: "29.75 m²"
 size: "8.5 × 3.5 m"
 upgrades: "Exterior timber feature wall and deck."
 heroImage: "/images/models/fingal-ext.webp"
-heroImageAlt: "Fingal 1 bedroom modular granny flat exterior render"
+heroImageAlt: "Fingal modular home: timber and white cladding with skillion roof and deck"
 floorPlans:
   - src: "/images/models/fingal-plan.webp"
     label: "Fingal floor plan, 8.5 × 3.5 m"
 gallery:
   - src: "/images/models/fingal-ext.webp"
-    alt: "Fingal modular home exterior render"
+    alt: "Fingal modular home: timber and white cladding with skillion roof and deck"
   - src: "/images/models/fingal-int-1.webp"
-    alt: "Fingal modular home interior render 1"
+    alt: "Fingal modular home: kitchen with dining nook and wall-mounted TV"
 features:
   - "Bedroom with queen bed space and sliding-door wardrobe"
   - "Fully equipped kitchen"

@@ -5,7 +5,7 @@ description: "Purpose-built utility rooms for laundry, storage, workshop or hobb
 draft: false
 order: 3
 heroImage: "/images/banksia-office.jpg"
-heroImageAlt: "Sunshine Tiny Houses modular utility room exterior"
+heroImageAlt: "Banksia Office: black exterior with glass doors onto timber deck"
 features:
   - "Laundry fit-out — trough, plumbing, cabinetry"
   - "Workshop wiring — 15A outlets, RCD protection"

@@ -10,7 +10,7 @@ area: "19.8 m²"
 size: "6.2 × 3.2 m"
 upgrades: "Shaped window, plywood walls and deck."
 heroImage: "/images/models/banksia-main.webp"
-heroImageAlt: "Banksia modular cabin exterior render"
+heroImageAlt: "Banksia cabin: flat-roof exterior with black and timber cladding"
 floorPlans:
   - src: "/images/models/banksia-plan.webp"
     label: "Banksia floor plan, 6.2 × 3.2 m"
@@ -30,19 +30,19 @@ specs:
 # Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/banksia/01.webp"
-    alt: "Banksia, photo 1"
+    alt: "Banksia cabin: black cladding, gable roof and sliding doors to deck"
   - src: "/images/old/banksia/02.webp"
-    alt: "Banksia, photo 2"
+    alt: "Banksia cabin: kitchenette with patterned splashback and round dining table"
   - src: "/images/old/banksia/03.webp"
-    alt: "Banksia, photo 3"
+    alt: "Banksia cabin: studio kitchenette, open shelves and black dining chairs"
   - src: "/images/old/banksia/04.webp"
-    alt: "Banksia, photo 4"
+    alt: "Banksia cabin: bedroom with gable windows and ceiling fan"
   - src: "/images/old/banksia/05.webp"
-    alt: "Banksia, photo 5"
+    alt: "Banksia cabin: queen bed, plywood walls and highlight window"
   - src: "/images/old/banksia/06.webp"
-    alt: "Banksia, photo 6"
+    alt: "Banksia cabin: bathroom with walk-in shower and green tiles"
   - src: "/images/old/banksia/07.webp"
-    alt: "Banksia, photo 7"
+    alt: "Banksia cabin: timber slab vanity, round mirror and green tiles"
 ---
 
 ## Banksia
