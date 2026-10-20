@@ -66,11 +66,26 @@ const processSteps = [
 const doorThow = spot('home/door-thow', '/images/thow-dark-on-site.webp');
 const doorModular = spot('home/door-modular', '/images/models/rio-ext.webp');
 
-const thowStrip = (await getCollection('products-thow', ({ data }) => listed(data)))
-  .sort((a, b) => a.data.order - b.data.order)
+// Tiny houses: same cards as the modular range, cheapest turn-key first, custom build last
+// (Mitch 2026-10-21: the side-scrolling strip hid most designs and showed no prices).
+const turnKey = (v?: string) => Number((v ?? '').replace(/[^0-9]/g, '')) || Infinity;
+const thowCards = (await getCollection('products-thow', ({ data }) => listed(data)))
+  .sort((a, b) => turnKey(a.data.specs?.['Turn Key from']) - turnKey(b.data.specs?.['Turn Key from']) || a.data.order - b.data.order)
   .map((p) => {
-    const r = photo(p.data.heroImage || undefined, `thow/${p.id}/main`);
-    return { href: `/tiny-houses-on-wheels/${p.id}/`, title: p.data.title, len: p.data.specs?.Length, src: r.src, n: r.n, alt: p.data.heroImageAlt ?? p.data.title };
+    const sp = p.data.specs ?? {};
+    return {
+      title: p.data.title,
+      rooms: sp.Sleeps ? `Sleeps ${sp.Sleeps}${sp.Bedroom ? ` · ${({ 'Ground floor': 'ground-floor bedroom', 'Ground floor + loft': 'bedroom + loft' } as Record<string, string>)[sp.Bedroom] ?? sp.Bedroom.toLowerCase()}` : ''}` : undefined,
+      description: p.data.tagline ?? p.data.description,
+      href: `/tiny-houses-on-wheels/${p.id}/`,
+      image: p.data.heroImage,
+      spotKey: `thow/${p.id}/main`,
+      badge: p.data.badge,
+      imageAlt: p.data.heroImageAlt,
+      price: sp['Turn Key from'] ? `Turn key from ${sp['Turn Key from'].replace(' incl. GST', '')}` : undefined,
+      meta: sp.Length ?? sp['Build length'],
+      comingSoon: p.data.comingSoon,
+    };
   });
 
 const class10aProducts = (await getCollection('products-class10a', ({ data }) => listed(data)))
@@ -160,32 +175,25 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
     </div>
   </section>
 
-  <!-- Tiny houses on wheels: every design with its photo -->
-  <section class="section thow-strip">
+  <!-- Tiny houses on wheels: same cards as the modular range -->
+  <section class="section priced-range thow-range">
     <div class="container">
-      <div class="thow-strip__head">
+      <div class="thow-range__head">
         <div>
           <div class="eyebrow">Tiny houses on wheels</div>
           <h2>Find your tiny house</h2>
-          <p class="thow-strip__intro">Proven designs from 6 m to 10 m long, each one customised to suit you, or a custom design from a blank page.</p>
+          <p class="priced-range__intro">Proven designs from 6 m to 10 m long, each one customised to suit you, or a custom design from a blank page.</p>
         </div>
-        <a class="thow-strip__more" href="/tiny-houses-on-wheels/">See all tiny houses &rarr;</a>
+        <a class="thow-range__more" href="/tiny-houses-on-wheels/">See all tiny houses &rarr;</a>
       </div>
-      <div class="thow-strip__row">
-        {thowStrip.map((p) => (
-          <a class="thow-card" href={p.href}>
-            <div class="thow-card__ph">
-              {p.src ? <img src={p.src} data-spot={p.n} alt={p.alt} width="480" height="360" loading="lazy" /> : <div class="thow-card__empty" data-spot={p.n}></div>}
-            </div>
-            <div class="thow-card__body"><h3>{p.title}</h3>{p.len && <span>{p.len}</span>}</div>
-          </a>
+      <div class="priced-range__grid">
+        {thowCards.map((p) => (
+          <ProductCard {...p} />
         ))}
       </div>
-      <p class="thow-strip__hint">Scroll sideways to see every design &rarr;</p>
+      <p class="priced-range__note">Prices include GST.</p>
     </div>
   </section>
-
-
 
   <!-- Class 10a promo section -->
   <section class="section class10a-promo">
@@ -423,29 +431,18 @@ const class10aProducts = (await getCollection('products-class10a', ({ data }) =>
 .home-hero__trust li { display: flex; align-items: center; gap: .5rem; }
 .home-hero__trust li::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--color-accent); flex: none; }
 
-/* ── Tiny house strip ─────────────────────────────────── */
-.thow-strip__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 1.75rem; }
-.thow-strip__intro { color: var(--color-text-body); max-width: 640px; }
-.thow-strip__more { font-weight: 700; color: var(--color-primary); border-bottom: 2px solid var(--color-accent); white-space: nowrap; }
-.thow-strip__row { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(230px, 1fr); gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .6rem; }
-.thow-card { scroll-snap-align: start; display: block; border-radius: 14px; overflow: hidden; background: var(--color-bg); border: 1px solid var(--color-border); color: inherit; text-decoration: none; transition: transform .2s, box-shadow .2s; }
-.thow-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card-hover); }
-.thow-card__ph { aspect-ratio: 4 / 3; background: var(--color-surface); overflow: hidden; }
-.thow-card__ph img, .thow-card__empty { width: 100%; height: 100%; object-fit: cover; display: block; }
-.thow-card__body { padding: .85rem 1rem 1rem; display: flex; justify-content: space-between; align-items: baseline; gap: .6rem; }
-.thow-card__body h3 { font-size: 1.05rem; margin: 0; }
-.thow-card__body span { font-weight: 700; color: var(--color-primary); font-size: .95rem; white-space: nowrap; }
-.thow-strip__hint { font-size: var(--font-size-sm); color: var(--color-text-muted); margin-top: .5rem; }
+/* ── Tiny house range (same grid as the modular range) ── */
+.thow-range__head { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.25rem; flex-wrap: wrap; }
+.thow-range__more { font-weight: 700; color: var(--color-primary); border-bottom: 2px solid var(--color-accent); white-space: nowrap; margin-bottom: 2rem; }
 
 @media (max-width: 720px) {
   .home-hero { padding: 2.5rem 0 2.25rem; }
   .doors { grid-template-columns: 1fr; }
   .door__body { padding: 1.25rem; }
-  .thow-strip__row { grid-auto-columns: 72%; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .door, .door__ph img, .thow-card { transition: none; }
-  .door:hover, .door:hover .door__ph img, .thow-card:hover { transform: none; }
+  .door, .door__ph img { transition: none; }
+  .door:hover, .door:hover .door__ph img { transform: none; }
 }
 .process__btns { display: flex; gap: 1rem; flex-wrap: wrap; }
 </style>
