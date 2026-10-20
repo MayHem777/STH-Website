@@ -11,6 +11,9 @@ export interface Props {
   overlay?: boolean;
   centered?: boolean;
   spotKey?: string;
+  // 'split': text left, the whole photo right, not cropped or darkened (model pages, Mitch 2026-10-20).
+  // The full-width banner crops a 3:2 photo to about 4:1 on a wide screen and shades it.
+  variant?: 'banner' | 'split';
 }
 
 const {
@@ -25,11 +28,32 @@ const {
   overlay = true,
   centered = false,
   spotKey,
+  variant = 'banner',
 } = Astro.props;
 import { photo } from '../lib/photos';
 const pic = photo(image, spotKey);
+const split = variant === 'split' && !!pic.src;
 ---
 
+{split ? (
+<section class="hero hero--split">
+  <div class="container hero__split">
+    <div class="hero__content">
+      <h1 class="hero__title">{title}</h1>
+      {subtitle && <p class="hero__subtitle">{subtitle}</p>}
+      <div class="hero__actions">
+        <a href={ctaHref} class="btn btn--primary">{ctaText}</a>
+        {secondaryCtaText && secondaryCtaHref && (
+          <a href={secondaryCtaHref} class="btn btn--outline">{secondaryCtaText}</a>
+        )}
+      </div>
+    </div>
+    <a class="hero__media" href={pic.src} data-lightbox="gallery">
+      <img src={pic.src} data-spot={pic.n} alt={imageAlt} width="1200" height="800" loading="eager" fetchpriority="high" />
+    </a>
+  </div>
+</section>
+) : (
 <section class:list={['hero', { 'hero--has-image': pic.src, 'hero--centered': centered }]}>
   {pic.src && (
     <div class="hero__bg" aria-hidden="true">
@@ -48,6 +72,7 @@ const pic = photo(image, spotKey);
     </div>
   </div>
 </section>
+)}
 
 <style>
 .hero {
@@ -153,6 +178,22 @@ const pic = photo(image, spotKey);
 }
 .btn--ghost:hover {
   background-color: rgba(255,255,255,0.15);
+}
+
+.hero--split { min-height: 0; padding-block: 2.5rem 3rem; }
+.hero__split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 3rem; align-items: center; }
+.hero--split .hero__content { padding-block: 0; max-width: none; }
+.hero--split .hero__subtitle { color: var(--color-text-muted); opacity: 1; }
+.hero__media { display: block; border-radius: var(--radius-card); overflow: hidden; background: var(--color-border); }
+.hero__media img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.3s; }
+.hero__media:hover img { transform: scale(1.02); }
+.btn--outline { background-color: transparent; color: var(--color-primary); border-color: var(--color-primary); }
+.btn--outline:hover { background-color: var(--color-primary); color: #fff; }
+@media (max-width: 900px) {
+  .hero--split { padding-block: 0 2rem; }
+  .hero__split { grid-template-columns: 1fr; gap: 1.5rem; padding-inline: 0; }
+  .hero--split .hero__content { padding-inline: var(--container-padding); }
+  .hero__media { order: -1; border-radius: 0; }
 }
 
 @media (max-width: 600px) {
