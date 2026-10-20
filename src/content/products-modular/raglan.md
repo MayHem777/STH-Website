@@ -52,3 +52,9 @@ gallery:
 The Raglan proves that exceptional design doesn't require a large footprint. This beautifully appointed studio features a luxurious ensuite, integrated workspace, generous storage and a private entertaining deck, ideal for resorts, short-term rental accommodation, secondary dwellings or guest retreats.
 
 *Note: Access stairs not included in standard package.*
+
+The Raglan is the largest of our three cabins at 11 × 3.6 m, and it's the one where the bathroom is the feature. The bathroom fills one end of the plan with a freestanding bath, a rain shower, vanity and toilet, closer to a hotel ensuite than a standard cabin bathroom.
+
+Next to it, a storage cupboard with two sliding doors, about 2.1 × 1.6 m, keeps luggage and linen out of sight. The main room is drawn with a king bed facing a long built-in bench that runs most of the opposite wall, giving a work nook and joinery in one line, and a sofa beside the entry. The entry opens onto a verandah at the end, with room for a small outdoor table and chairs.
+
+Compared with the Dahlia, the Raglan puts its space into the workspace, the storage and the bath. That makes it a good fit for resorts, short-term rental and guest retreats, where the bed and bathroom are what guests remember. Access stairs are not included.

@@ -41,3 +41,9 @@ specs:
 This charming granny flat offers a warm and inviting home that's simple yet functional. This cosy abode exudes charm and comfort in equal measure. It has a fully equipped kitchen and a combined bathroom/laundry.
 
 Everything you need, in one modern granny flat.
+
+At 8.5 × 3.5 m, the Fingal is the smallest of our one-bedroom granny flats, and its layout is planned around that. Rather than giving the laundry a room of its own, the washing machine space sits inside the bathroom, which takes the full width of one end and includes a 1100 × 1850 mm shower.
+
+Step in through the sliding entry door and you're in the kitchen and living room. The kitchen bench, sink and a storage cupboard run along the back wall, with room for a sofa and a small dining table opposite. The bedroom closes off the far end, with space for a queen bed and a wall of sliding-door wardrobe, plus windows on two sides.
+
+The Fingal suits someone who wants a fully self-contained granny flat with a proper kitchen, on a block where the footprint matters. If you'd like a king bed, a study corner or a laundry outside the bathroom, the Bunya does that at 10 × 3.5 m.

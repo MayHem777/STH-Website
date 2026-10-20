@@ -52,3 +52,9 @@ Whether you're a professional athlete, a wellness enthusiast, or simply someone 
 Optional deck upgrade available.
 
 [Contact us](/contact/) for pricing and dimensions on the Vitalis.
+
+The Vitalis is built around contrast therapy: moving between heat and cold, then resting. Rather than buying a sauna, a plunge tub and an outdoor shower as separate pieces and finding room for each, the Vitalis puts them in one modular building with its own bathroom.
+
+The sauna is sized for 4 to 6 people, so it works for a group session as well as on your own. The cold plunge is designed for 1 to 2 people. A vanity, shower and toilet are part of the fit-out, so you can rinse off between rounds and use the space without walking back through the house.
+
+Like our modular homes, the Vitalis is built off site in our Noosaville factory and delivered to your property, and it can be installed almost anywhere you have room and access. A deck is available as an upgrade. Our Retreat range covers saunas, ice baths, gyms and recovery rooms, so if you have a different mix in mind, ask us about a custom design.

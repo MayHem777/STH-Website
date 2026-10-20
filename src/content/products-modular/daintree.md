@@ -58,3 +58,9 @@ specs:
 The Daintree has been designed to make everyday living feel effortless. With two generous bedrooms, a light-filled open-plan living space, a stylish kitchen, separate laundry and quality finishes throughout, it offers the perfect balance of comfort and functionality.
 
 Whether it's your forever home, a weekend escape or a premium secondary dwelling, the Daintree is designed to feel spacious, welcoming and truly liveable.
+
+At 14 × 3.8 m and 53.2 m², the Daintree is planned so the second bedroom can double as an office. On the floor plan that room is labelled Office/Bedroom 02: it has a built-in study desk and storage under the window, with space for either a sofa or a queen bed. A study in place of the second bedroom is also offered as an option.
+
+From the entry on the long side, the living room opens to one side with room for a large corner sofa, and the kitchen to the other. The kitchen wraps around a peninsula bench with the sink and stool seating, while the fridge, extra storage and the laundry with its own tub line the opposite wall. The bathroom sits between the kitchen and the main bedroom, which has a king bed, bedside space and a full-width sliding-door wardrobe.
+
+Compared with the 2-bedroom Straddie, the Daintree is 0.5 m longer, fits a king bed in the main bedroom instead of a queen, and puts the laundry in the kitchen line rather than beside the vanity. It suits people who work from home and still want a spare bed for visitors.

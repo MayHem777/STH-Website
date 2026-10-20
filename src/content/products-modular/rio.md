@@ -62,3 +62,9 @@ Rio is a thoughtfully designed 12 × 3.5 m, one-bedroom modular home that brings
 The clever layout features a kitchen with breakfast bar, an integrated entertainment unit, a comfortable lounge, and a separate bedroom with room for a king-size bed and built-in wardrobe. A modern bathroom and dedicated laundry space complete this practical home.
 
 Whether you're downsizing or creating a private retreat, the Rio makes every space count.
+
+At 12 × 3.5 m, the Rio uses its length to separate the quiet end of the home from the busy end. The bedroom takes one end, with a king-size bed between two bedside spaces and windows on both long walls. A built-in wardrobe and the bathroom sit between the bedroom and the living area, so sound and foot traffic from the kitchen don't carry straight through.
+
+The entry door on the long side opens to a walkway along the wall, with the bedroom and bathroom doors off it at one end and the living room at the other. The kitchen sits at the far end around an island breakfast bar that faces the lounge, and the laundry tucks into the corner beside the kitchen joinery rather than taking up a room of its own.
+
+The Rio is the same 3.5 m width as the Bunya but 2 m longer, which moves the bathroom to the middle of the home and gives the laundry its own space. It suits singles, couples, downsizers or guest accommodation.

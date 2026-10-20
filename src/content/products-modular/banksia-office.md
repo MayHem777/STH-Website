@@ -55,3 +55,9 @@ gallery:
 This modern modular office provides a flexible, comfortable and productive workspace. It was designed to be accessible, accommodating different needs and ensuring ease of use for everyone.
 
 The tall louvres and wide stacker doors provide good ventilation and plenty of light, which are crucial for comfort and productivity.
+
+The Banksia Office is laid out as a working room first. Of its 6 × 3.2 m footprint, about 11.6 m² is open office space, drawn with a table for four that can be two workstations or a small meeting table. A wide stacker door on the long side and a large window at the end bring in light, while tall louvre windows on the back wall let air move through without opening up the whole room.
+
+At the other end, the support spaces are kept small and behind doors: a kitchenette of about 2.8 m² with a sink and bar fridge, and a restroom of about 2.6 m² with a toilet and basin. That keeps the office itself clear of plumbing and clutter. High vaulted ceilings add volume to a compact room.
+
+It was designed to be accessible, so it suits a home business or an on-site office where clients and staff with different needs will visit. Access stairs are not included, and a deck is available as an upgrade.

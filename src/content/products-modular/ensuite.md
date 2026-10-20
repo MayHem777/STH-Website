@@ -50,3 +50,9 @@ specs:
 This ensuite modular provides a comfortable and private living space with the convenience of an attached bathroom, suitable for installations where space is limited or where additional living accommodation is needed.
 
 It is particularly useful where temporary housing or additional accommodation is needed without extensive construction timelines or noise disruption.
+
+The Ensuite modular is one bedroom and one bathroom with no kitchen, so it works alongside an existing home rather than replacing one. The 6 × 3.4 m plan gives most of the space to the bedroom, which fits a king-size bed under a row of three windows, with a full-height sliding-door wardrobe across the end wall. A sliding glass door on the long side is the entry.
+
+The bathroom takes the other end and is roomier than you might expect, with a 1900 × 1000 mm shower, a toilet and a vanity, and it's separated from the bedroom by a sliding door.
+
+It's a similar size to the Banksia cabin, but where the Banksia fits a kitchenette and a queen bed, the Ensuite gives that space to a king bed and a full wall of wardrobe. That suits a guest suite, a detached extension or extra family accommodation that shares the main house's kitchen.

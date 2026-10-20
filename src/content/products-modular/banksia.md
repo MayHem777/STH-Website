@@ -46,3 +46,9 @@ gallery:
 In this cosy living studio, every detail has been thoughtfully crafted to create a harmonious retreat where you can relax, recharge, and savour life's simple pleasures. Perfect for a guest house or short-term rental.
 
 *Note: Access stairs not included in standard package.*
+
+The Banksia is the smallest of our three cabins at 6.2 × 3.2 m, and the plan keeps it to two spaces. The studio room, about 12 m², holds a queen bed, a small table for two and a kitchenette bench with a sink along the bathroom wall. A wide sliding door on the long side is the entry and opens the room to the outdoors.
+
+The bathroom takes the full width of one end at about 5.4 m², with a shower, toilet and vanity. For a building this size that's a generous share of the floor area, and it's what lets the Banksia work as a self-contained guest room or short-stay rental rather than just a spare bedroom.
+
+The Banksia comes with two roof options. Of our cabins it's the entry point: the Dahlia adds length, a lounge area and its own deck, while the Raglan adds a freestanding bath, a workspace and more storage. It was designed to help with the housing shortage and for families who need extra space for relatives and friends.

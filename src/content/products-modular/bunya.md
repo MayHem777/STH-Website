@@ -57,3 +57,9 @@ specs:
 ## Bunya
 
 Step into your own sanctuary, where every corner is designed to embrace you in warmth and comfort. This intimate granny flat is a harmonious blend of functionality and charm, carefully curated to cater to your every need while enveloping you in a sense of tranquillity.
+
+The Bunya fits a one-bedroom home into a 10 × 3.5 m footprint by keeping the laundry out of the bathroom and out of the floor space. The laundry and a storage cupboard are built into the same run of joinery as the kitchen along the back wall, so the bathroom at the far end can be given over to a toilet, vanity and a fully enclosed 1200 × 1000 mm shower.
+
+Come in through the sliding entry door and you're in one long kitchen and living room, with space for a round dining table and a 2 m sofa. A wall then closes off the bedroom, which is drawn with a king-size bed, a full-length sliding-door wardrobe and a small study desk tucked into the corner.
+
+Compared with the Fingal, the Bunya is 1.5 m longer and uses that length for a king bed instead of a queen, a study nook and a separate laundry space. It suits a single person or couple who want a granny flat that feels like a small home rather than a studio.

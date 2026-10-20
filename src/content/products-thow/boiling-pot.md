@@ -94,6 +94,12 @@ Named after the legendary Noosa surf break, the Boiling Pot is a force to be rec
 
 Available in 2.4m or 2.8m width, the Boiling Pot is ideal for those who want a full family home experience without being tied to a permanent location.
 
+The Boiling Pot is the only design in our tiny house range with a separate TV room, giving you a second living space away from the main lounge and kitchen. It comes in 9 m or 10 m lengths, on a triple axle trailer rated to 4.5 tonnes ATM.
+
+Sleeping is in two lofts for four people, plus a sofa lounge. The upper level includes walkways as well as the lofts, all with plywood subfloors, so it's more than two separate sleeping platforms.
+
+The standard exterior is Colorbond Trimdek in Basalt with a cedar weatherboard feature wall. Inside, the joinery mixes the Polytec matt and Ravine ranges with Xenolith benchtops, over Pisces vinyl plank flooring. For a family that wants children or guests to have their own room to watch TV while the main living area stays quiet, the Boiling Pot is the one to look at. If a ground-floor bedroom matters more than a second living space, compare it with the Lennox, which comes in the same lengths.
+
 ### Inclusions
 
 Custom triple axle trailer (4.5T ATM), Bluescope steel frame, Colorbond roof, Basalt Trimdek cladding with cedar feature wall, full kitchen with Westinghouse appliances and Xenolith benchtops, Mitsubishi split-system air conditioning, Rinnai B16 instantaneous gas hot water, and polymarble bathroom with semi-frameless screen.

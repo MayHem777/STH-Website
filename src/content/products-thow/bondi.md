@@ -52,6 +52,12 @@ The Bondi is designed for those who love the indoors but can't get enough of the
 
 A step up from our 6m models, the Bondi gives you more living space without sacrificing road-readiness. Perfect for couples, short-stay investment, or anyone who wants a beautiful base to come home to.
 
+The Bondi is the longest of our single-loft tiny houses at 7.2 m. That extra 50 cm runs the full length of the floor, which is worth considering if the Bondi will be a full-time home rather than a getaway.
+
+Sleeping is in one loft for two, with a sofa lounge downstairs for guests. The Bondi sits on a triple axle trailer rated to 4.5 tonnes ATM, which we build ourselves, with a VIN plate, jack legs and electric brakes with a breakaway system.
+
+Its standard exterior mixes Colorbond Trimdek in Monument Matt with a cedar feature, a darker look than the corrugated Little Cove. Inside, joinery and benchtops are from the Polytec matt range and the floor is Scorpio vinyl plank from Clever Choice. Choose the Bondi over the Little Cove if you want the same loft layout with more room downstairs, or look at the Granite Bay and Castaways if you need a second loft.
+
 ### Inclusions
 
 Custom triple axle trailer (4.5T ATM), Bluescope steel frame, Colorbond trimdeck roof, cedar feature cladding, full kitchen with Westinghouse appliances, Mitsubishi split-system air conditioning, Rinnai instantaneous gas hot water, and semi-frameless bathroom with white subway tile sheeting.

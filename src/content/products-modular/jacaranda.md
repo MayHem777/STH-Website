@@ -71,3 +71,9 @@ specs:
 ## Jacaranda
 
 The Jacaranda redefines modular living with a beautifully balanced design that combines modern luxury with everyday functionality. Offering two generous bedrooms, two stylish bathrooms, a separate laundry and expansive open-plan living, this home embraces natural light and seamless indoor-outdoor living.
+
+The Jacaranda is built as two modules, one 14 × 3.4 m and one 8 × 3.4 m, joined at right angles to form an L. The shape does two jobs. It puts the two bedrooms in different wings, and it wraps the home around an outdoor area, which the plan shows as a main deck with steps and a second deck beside a plunge pool (the deck and pool are upgrades).
+
+The long module holds the kitchen, with an island bench, a round dining table and a living room with a large corner sofa. At its far end is bedroom two, with a queen bed, a sliding-door wardrobe and its own bathroom at the end of the wing. A short hall leads into the shorter module, which has the laundry, the main bathroom with an 1100 × 1100 mm shower, and bedroom one with a king bed and a full-width sliding-door wardrobe.
+
+With a bathroom for each bedroom and the bedrooms in separate wings, the Jacaranda suits two couples, adult children or long-stay guests who want their own space. If one bathroom is enough, compare the Sunrise Beach House.

@@ -80,6 +80,12 @@ Named after one of Queensland's best-kept coastal secrets, the Granite Bay is ou
 
 At 8 metres, with two separate sleeping lofts, the Granite Bay gives everyone their own space while sharing a beautifully finished kitchen and living area below. Whether it's a family home, an Airbnb, or a retreat for mates — this is the one.
 
+The Granite Bay fits two lofts into an 8 × 2.5 m tiny house, taking sleeping space to four people, plus a sofa lounge downstairs. Two lofts means two couples, or parents and children, have separate sleeping areas instead of sharing one platform, while the whole ground floor stays free for the kitchen, bathroom and living area.
+
+It's built on a triple axle trailer rated to 4.5 tonnes ATM. The standard exterior pairs Colorbond Trimdek in Monument with a cedar weatherboard feature wall, under a Colorbond Trimdek roof. Inside are Polytec matt joinery, Amber Oak vinyl plank flooring from the Springbrooke range, and a shower with a semi-frameless screen.
+
+The Granite Bay and the Castaways share the same 8 m length and dual-loft sleeping. The Granite Bay is the more straightforward finish in a darker colourway, while the Castaways adds a cedar shiplap ceiling in the lounge, a timber and Xenolith benchtop, and a lighter exterior. If you'd like a separate TV room or a ground-floor bedroom, look at the Boiling Pot or the Lennox.
+
 ### Inclusions
 
 Custom triple axle trailer with VIN plate (4.5T ATM), Bluescope steel frame, Colorbond trimdeck roof with R2.5 insulation, full kitchen with Westinghouse appliances, Mitsubishi split-system air conditioning, Rinnai instantaneous gas hot water, and 900mm shower with semi-frameless screen and subway tile sheeting.

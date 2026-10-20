@@ -74,3 +74,9 @@ specs:
 Designed to feel light, spacious and welcoming, the Sunrise Beach House combines contemporary design with the relaxed charm of coastal living. Two generous bedrooms, one bathroom, separate laundry, open-plan entertaining and a large covered deck create the perfect balance between luxury and practicality.
 
 Built with premium finishes and crafted for everyday comfort, it's a home designed to be enjoyed for years to come.
+
+The Sunrise Beach House is planned as a front half for living and a back half for sleeping. The front is one open room across the full width: lounge at the deck end, dining table in the middle and a kitchen with an island bench and stool seating at the other end. An opening from the living room leads to a central hall with a bedroom at each end, so the two bedrooms don't share a wall. Bedroom one fits a king bed, bedroom two a queen, each with a sliding-door wardrobe, and the bathroom and laundry sit between them.
+
+There are three versions of the plan. The 12 × 6.8 m version has eaves; the 12 × 7.4 m version has no eaves and rooms 300 mm deeper. Both have two decks across the 2.5 m end, one off the living room and one alongside the main bedroom. The spa bathroom version, also 12 × 7.4 m, has a larger bathroom with a freestanding bath and a 950 × 2000 mm shower, a separate laundry room off the hall and one 3.3 m deck off the living room.
+
+The design takes its cues from Hampton-style coastal homes and suits a family home, holiday retreat or secondary dwelling.

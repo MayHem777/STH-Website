@@ -54,6 +54,12 @@ The Castaways is where simplicity meets luxury. Same footprint as the Granite Ba
 
 With dual sleeping lofts for four and a beautifully designed living area below, the Castaways is just as comfortable as a permanent home — just with the freedom to move.
 
+The Castaways is our dual-loft tiny house with the extra finishing touches. It sleeps four across two lofts, plus a sofa lounge, on an 8 m triple axle trailer rated to 4.5 tonnes ATM.
+
+What sets it apart is the living area. It has a feature ceiling lined in cedar shiplap, and the kitchen benchtop combines Xenolith with Parawood timber over Polytec matt joinery. Floors are Pisces vinyl plank from the Clever Choice EIR collection. Outside, the standard finish is Colorbond Trimdek in Surfmist with a cedar weatherboard feature wall, a lighter, beach-house look next to the darker Granite Bay.
+
+Choosing between the two comes down to finish. Both have the same length and dual-loft sleeping; the Castaways adds the timber details. It works as a permanent home for a small family, a weekend escape or a holiday rental.
+
 ### Inclusions
 
 Custom triple axle trailer with 4 jack legs and electric brakes (4.5T ATM), Bluescope steel frame, Colorbond roof, cedar shiplap ceiling feature, full kitchen with Westinghouse appliances, Mitsubishi split-system air conditioning, Rinnai B16 instantaneous gas hot water, and polymarble bathroom with semi-frameless screen.

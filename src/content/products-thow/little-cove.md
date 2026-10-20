@@ -92,6 +92,12 @@ The Little Cove proves that great things come in small packages. At 6.2 metres, 
 
 Whether you're downsizing, looking for an investment short-stay, or chasing a simpler lifestyle, the Little Cove delivers a comfortable, sustainable home that's ready to go wherever you go.
 
+The Little Cove is only 20 cm longer than the 1770, but it changes how the space is used by moving the bed up into a single loft. With sleeping off the floor, the whole 6.2 × 2.5 m ground level is free for the kitchen, bathroom and a living area, and a sofa lounge can take extra guests.
+
+Like the 1770, it can be built on a dual axle trailer rated to 3.5 tonnes ATM, with a 4.5 tonne triple axle trailer as the alternative. The standard exterior is Colorbond corrugated cladding in Windspray, with a Colorbond Trimdek roof in Dover White or Surfmist.
+
+Inside, the Little Cove pairs Polytec matt joinery with Parawood timber benchtops, Springbrook vinyl plank flooring and a full-size Westinghouse electric oven. If you like the single-loft layout but want more room downstairs, the Bondi adds another metre of length.
+
 ### Inclusions
 
 Custom-built dual or triple axle trailer, Bluescope steel frame, Colorbond trimdeck roof with R2.5 insulation and thermal break wall wrap, full kitchen with Westinghouse appliances, bathroom with polymarble shower, Mitsubishi split-system air conditioning, and Rinnai instantaneous gas hot water.

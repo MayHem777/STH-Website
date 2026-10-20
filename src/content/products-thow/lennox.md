@@ -112,6 +112,12 @@ The Lennox is Sunshine Tiny Houses' flagship model — and it shows. At 9 to 10 
 
 What sets the Lennox apart is the layout: a proper ground-floor bedroom means no more climbing a ladder to get to bed, while the loft above provides a second sleeping area for guests or kids. The extra height makes the whole home feel open and airy in a way that smaller models can't match.
 
+The Lennox combines the two sleeping styles in our range: a bedroom on the ground floor, like the 1770, and a loft above, like our dual-loft models. The main bedroom needs no ladder, while the loft takes children or guests, for four or more people in total with the sofa lounge.
+
+It's one of our two longest designs, at 9 m or 10 m, on a triple axle trailer rated to 4.5 tonnes ATM. The Lennox is designed with extra height.
+
+The standard exterior is Weathertex Weathergroove 300 Smooth painted in Deep Ocean, and inside it has Polytec matt and Ravine joinery with Pisces vinyl plank floors. Choose the Lennox over the Boiling Pot if a ground-floor bedroom matters more than a separate TV room. It suits a couple living in it full-time who want a proper bedroom, with room upstairs for visitors.
+
 ### Inclusions
 
 Custom triple axle trailer with VIN plate (4.5T ATM), Bluescope steel frame, Colorbond trimdeck roof with R2.5 insulation, thermal break wall wrap, full kitchen with Westinghouse appliances, Mitsubishi split-system air conditioning, Rinnai B16 instantaneous gas hot water, 820×820mm polymarble shower with semi-frameless screen, and custom Polytec matt and ravine joinery.

@@ -50,3 +50,9 @@ gallery:
 An open, airy cabin/studio filled with natural light from large windows, with an open layout that creates a seamless flow between the different areas. Outside, a private balcony offers a tranquil outdoor space. Dahlia was designed to help with the housing shortage and for those who need extra living space for family and friends.
 
 *Note: Access stairs not included in standard package.*
+
+The Dahlia is one long studio room with the bathroom at one end and a deck at the other. Walk in from the deck and the kitchen bench runs along one wall, with a small breakfast bar for two and a storage cupboard beside the entry. Further in, a sofa faces into the room and a queen bed sits against the bathroom wall, which makes the sleeping area the most private part of the plan.
+
+The bathroom spans the full width of the end, with a vanity, toilet and a 950 × 1900 mm shower. At the other end, the covered deck sits inside the 10 × 3.4 m outline, so outdoor space is part of the design from the start. Access stairs are not included.
+
+Among our cabins, the Dahlia sits in the middle: it adds a lounge area and its own deck to the Banksia's studio-and-bathroom layout, without the Raglan's freestanding bath and workspace. It suits guest accommodation, short-stay rental, caravan parks or a compact home.

@@ -52,3 +52,9 @@ specs:
 ## Straddie — 1 Bedroom
 
 While exuding an air of cosy charm, this granny flat is also designed with practicality. Clever storage solutions maximise space efficiency, ensuring every item has its place without compromising style. Whether you're a minimalist at heart or a collector of cherished mementos, there's ample room to organise your belongings and create a clutter-free environment.
+
+The one-bedroom Straddie is 10.5 × 3.8 m, a little wider than the 3.5 m Bunya and Rio, and the extra width shows in the kitchen. Instead of a single bench run, it has a full wall of cabinetry at one end, including a tall storage cupboard, plus an island bench with the sink and stool seating on one side. The living room sits between the island and the sliding entry door, with room for a full-length sofa.
+
+The middle of the home holds the wet areas: a laundry with its own vanity basin, and the bathroom behind it with a toilet and an 850 × 1850 mm shower. Because the basin sits outside the bathroom, one person can use the shower while another uses the vanity. The bedroom fills the far end with a queen bed and a wall-length sliding-door wardrobe.
+
+The 2-bedroom Straddie keeps this same kitchen, living and wet-area arrangement and adds a second bedroom at the kitchen end, taking the length to 13.5 m. If you're unsure whether you'll need the second room, compare the two plans side by side.
