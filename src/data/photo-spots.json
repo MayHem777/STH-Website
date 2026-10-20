@@ -2882,8 +2882,8 @@
  },
  {
   "n": 321,
-  "key": "modular/office/gallery-1",
-  "page": "/modular-homes/office/",
+  "key": "modular/office-a/gallery-1",
+  "page": "/modular-homes/office/office-a/",
   "where": "Office: photo gallery 1",
   "shows": "Office, inside or out",
   "shape": "landscape",
@@ -2891,8 +2891,8 @@
  },
  {
   "n": 322,
-  "key": "modular/office/gallery-2",
-  "page": "/modular-homes/office/",
+  "key": "modular/office-a/gallery-2",
+  "page": "/modular-homes/office/office-a/",
   "where": "Office: photo gallery 2",
   "shows": "Office, inside or out",
   "shape": "landscape",
@@ -2900,8 +2900,8 @@
  },
  {
   "n": 323,
-  "key": "modular/office/gallery-3",
-  "page": "/modular-homes/office/",
+  "key": "modular/office-a/gallery-3",
+  "page": "/modular-homes/office/office-a/",
   "where": "Office: photo gallery 3",
   "shows": "Office, inside or out",
   "shape": "landscape",
@@ -2909,8 +2909,8 @@
  },
  {
   "n": 324,
-  "key": "modular/office/gallery-4",
-  "page": "/modular-homes/office/",
+  "key": "modular/office-a/gallery-4",
+  "page": "/modular-homes/office/office-a/",
   "where": "Office: photo gallery 4",
   "shows": "Office, inside or out",
   "shape": "landscape",
@@ -2918,8 +2918,8 @@
  },
  {
   "n": 325,
-  "key": "modular/office/gallery-5",
-  "page": "/modular-homes/office/",
+  "key": "modular/office-a/gallery-5",
+  "page": "/modular-homes/office/office-a/",
   "where": "Office: photo gallery 5",
   "shows": "Office, inside or out",
   "shape": "landscape",
@@ -2927,8 +2927,8 @@
  },
  {
   "n": 326,
-  "key": "modular/office/gallery-6",
-  "page": "/modular-homes/office/",
+  "key": "modular/office-a/gallery-6",
+  "page": "/modular-homes/office/office-a/",
   "where": "Office: photo gallery 6",
   "shows": "Office, inside or out",
   "shape": "landscape",
@@ -2936,8 +2936,8 @@
  },
  {
   "n": 327,
-  "key": "modular/office/gallery-7",
-  "page": "/modular-homes/office/",
+  "key": "modular/office-a/gallery-7",
+  "page": "/modular-homes/office/office-a/",
   "where": "Office: photo gallery 7",
   "shows": "Office, inside or out",
   "shape": "landscape",
@@ -2945,8 +2945,8 @@
  },
  {
   "n": 328,
-  "key": "modular/office/gallery-8",
-  "page": "/modular-homes/office/",
+  "key": "modular/office-a/gallery-8",
+  "page": "/modular-homes/office/office-a/",
   "where": "Office: photo gallery 8",
   "shows": "Office, inside or out",
   "shape": "landscape",
@@ -3397,5 +3397,30 @@
   "shows": "Best exterior of a Dahlia (real build if we have one)",
   "shape": "landscape",
   "current": "/images/models/dahlia-ext.webp"
+ },
+ {
+  "n": 382,
+  "key": "modular/office-a/main",
+  "page": "/modular-homes/office/office-a/",
+  "where": "Office: main photo (also its card on the modular pages and home page)",
+  "shows": "Best exterior of a Office (real build if we have one)",
+  "shape": "landscape",
+  "current": "/images/banksia-office.jpg"
+ },
+ {
+  "n": 383,
+  "key": "modular/office-b/main",
+  "page": "/modular-homes/office/office-b/",
+  "where": "Office B (name to come): main photo (also its card on the modular pages and home page)",
+  "shows": "Best exterior of a Office B (name to come) (real build if we have one)",
+  "shape": "landscape"
+ },
+ {
+  "n": 384,
+  "key": "modular/office-c/main",
+  "page": "/modular-homes/office/office-c/",
+  "where": "Office C (name to come): main photo (also its card on the modular pages and home page)",
+  "shows": "Best exterior of a Office C (name to come) (real build if we have one)",
+  "shape": "landscape"
  }
 ]

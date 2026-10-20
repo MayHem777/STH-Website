@@ -327,14 +327,14 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 318 | [Sunrise Beach House: photo gallery 16](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/11.webp` |
 | 319 | [Sunrise Beach House: photo gallery 17](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/12.webp` |
 | 320 | [Office: main photo (also its card on the modular pages and home page)](/modular-homes/office/) | Best exterior of a Office (real build if we have one) | Landscape | `/images/banksia-office.jpg` |
-| 321 | [Office: photo gallery 1](/modular-homes/office/) | Office, inside or out | Landscape | `/images/old/office/01.webp` |
-| 322 | [Office: photo gallery 2](/modular-homes/office/) | Office, inside or out | Landscape | `/images/old/office/02.webp` |
-| 323 | [Office: photo gallery 3](/modular-homes/office/) | Office, inside or out | Landscape | `/images/old/office/03.webp` |
-| 324 | [Office: photo gallery 4](/modular-homes/office/) | Office, inside or out | Landscape | `/images/old/office/04.webp` |
-| 325 | [Office: photo gallery 5](/modular-homes/office/) | Office, inside or out | Landscape | `/images/old/office/05.webp` |
-| 326 | [Office: photo gallery 6](/modular-homes/office/) | Office, inside or out | Landscape | `/images/old/office/06.webp` |
-| 327 | [Office: photo gallery 7](/modular-homes/office/) | Office, inside or out | Landscape | `/images/old/office/07.webp` |
-| 328 | [Office: photo gallery 8](/modular-homes/office/) | Office, inside or out | Landscape | `/images/old/office/08.webp` |
+| 321 | [Office: photo gallery 1](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/01.webp` |
+| 322 | [Office: photo gallery 2](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/02.webp` |
+| 323 | [Office: photo gallery 3](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/03.webp` |
+| 324 | [Office: photo gallery 4](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/04.webp` |
+| 325 | [Office: photo gallery 5](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/05.webp` |
+| 326 | [Office: photo gallery 6](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/06.webp` |
+| 327 | [Office: photo gallery 7](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/07.webp` |
+| 328 | [Office: photo gallery 8](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/08.webp` |
 | 329 | [Retreat: main photo (also its card on the modular pages and home page)](/modular-homes/retreat/) | Best exterior of a Retreat (real build if we have one) | Landscape | `/images/modular-scene-2.webp` |
 | 330 | [Retreat: photo gallery 1](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/01.webp` |
 | 331 | [Retreat: photo gallery 2](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/02.webp` |
@@ -388,3 +388,6 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 379 | [New 1 bedroom B (name to come): main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/new-1-bedroom-b/) | Best exterior of a New 1 bedroom B (name to come) (real build if we have one) | Landscape | none (hidden until filled) |
 | 380 | [Daintree: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/daintree-1-bedroom/) | Best exterior of a Daintree (real build if we have one) | Landscape | none (hidden until filled) |
 | 381 | [Dahlia: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/dahlia/) | Best exterior of a Dahlia (real build if we have one) | Landscape | `/images/models/dahlia-ext.webp` |
+| 382 | [Office: main photo (also its card on the modular pages and home page)](/modular-homes/office/office-a/) | Best exterior of a Office (real build if we have one) | Landscape | `/images/banksia-office.jpg` |
+| 383 | [Office B (name to come): main photo (also its card on the modular pages and home page)](/modular-homes/office/office-b/) | Best exterior of a Office B (name to come) (real build if we have one) | Landscape | none (hidden until filled) |
+| 384 | [Office C (name to come): main photo (also its card on the modular pages and home page)](/modular-homes/office/office-c/) | Best exterior of a Office C (name to come) (real build if we have one) | Landscape | none (hidden until filled) |

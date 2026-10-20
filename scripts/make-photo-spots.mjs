@@ -65,8 +65,9 @@ for (const p of items('blog')) add(`blog/${p.id}/hero`, `/blog/${p.id}/`, `Blog:
 add('site/share', '/', 'Picture shown when someone shares the website on Facebook or in a text', 'One strong wide exterior shot', 'wide', '/og-default.jpg');
 
 // Products split off another page keep their photos' numbers: a new spot takes the number of the old
-// page's spot that showed the same photo, if that old spot is gone. (Cabin → Banksia/Dahlia/Raglan, 2026-10-20)
-const MOVED_FROM = { 'modular/banksia': 'modular/cabin', 'modular/dahlia': 'modular/cabin', 'modular/raglan': 'modular/cabin' };
+// page's spot that showed the same photo, if that old spot is gone.
+const MOVED_FROM = { 'modular/banksia': 'modular/cabin', 'modular/dahlia': 'modular/cabin', 'modular/raglan': 'modular/cabin',
+  'modular/office-a': 'modular/office' }; // Office → Office A/B/C, 2026-10-20
 const keysNow = new Set(spots.map((s) => s.key)), moved = new Set();
 function movedN(s) {
   const from = MOVED_FROM[s.key.split('/').slice(0, 2).join('/')]; if (!from || !s.current) return undefined;

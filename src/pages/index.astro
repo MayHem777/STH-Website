@@ -50,7 +50,7 @@ const pricedModular = allModularProducts
     href: modularHref(p.id, p.data),
     image: p.data.heroImage,
     spotKey: `modular/${p.id}/main`,
-    badge: UTILITY_ROOMS.includes(p.id) ? 'Utility room' : 'Class 1a',
+    badge: UTILITY_ROOMS.includes(p.id) || p.data.range === 'office' ? 'Utility room' : 'Class 1a',
     imageAlt: p.data.heroImageAlt,
     price: `From ${formatPrice(p.data.priceFrom!)}`,
     meta: p.data.area,

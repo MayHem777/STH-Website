@@ -1,0 +1,11 @@
+---
+import RangeModelPage from '../../../components/RangeModelPage.astro';
+import { listed } from '../../../lib/visible';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const products = await getCollection('products-modular', ({ data }) => listed(data) && data.range === 'office');
+  return products.map((p) => ({ params: { slug: p.id }, props: { product: p } }));
+}
+---
+<RangeModelPage product={Astro.props.product} />

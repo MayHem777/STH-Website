@@ -7,6 +7,7 @@ const SPECIAL: Record<string, string> = {
   dahlia: 'Studio · 1 bath',
   raglan: 'Studio · 1 ensuite',
   office: 'Workspace · restroom',
+  'office-a': 'Workspace · restroom',
   retreat: 'Wellness · shower & toilet',
 };
 export function roomsLine(id: string, specs: Specs): string | undefined {
