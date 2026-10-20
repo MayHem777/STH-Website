@@ -26,6 +26,7 @@ const products = (await getCollection('products-modular', ({ data }) => listed(d
 >
 
   <Hero
+    variant="split"
     title={R.plural}
     subtitle={products.length > 1 ? `${range.data.tagline} Browse our ${products.length} ${R.plural.toLowerCase()} below.` : range.data.tagline}
     image={range.data.heroImage}
