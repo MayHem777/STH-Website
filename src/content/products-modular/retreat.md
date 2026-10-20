@@ -4,7 +4,7 @@ tagline: "Heat, cold, and rest in one beautifully designed space."
 description: "The Vitalis — a complete wellness retreat with 4–6 person sauna, cold plunge, vanity, shower and toilet. Your personal recovery sanctuary, anywhere."
 draft: false
 order: 6
-heroImage: "/images/modular-scene-2.webp"
+heroImage: "/images/models/retreat-main.webp"
 heroImageAlt: "Vitalis wellness retreat exterior"
 features:
   - "Model: Vitalis"
@@ -21,12 +21,24 @@ specs:
   Builder: "QBCC #15205110"
   Class: "Class 1a"
   Installation: "~2 weeks on site"
-# Photos copied from the old Squarespace page as placeholders (2026-10-17); numbered photo spots, replace any via PHOTOS.md
+# Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/retreat/01.webp"
     alt: "Retreat, photo 1"
   - src: "/images/old/retreat/02.webp"
     alt: "Retreat, photo 2"
+  - src: "/images/old/retreat/03.webp"
+    alt: "Retreat, photo 3"
+  - src: "/images/old/retreat/04.webp"
+    alt: "Retreat, photo 4"
+  - src: "/images/old/retreat/05.webp"
+    alt: "Retreat, photo 5"
+  - src: "/images/old/retreat/06.webp"
+    alt: "Retreat, photo 6"
+  - src: "/images/old/retreat/07.webp"
+    alt: "Retreat, photo 7"
+  - src: "/images/old/retreat/08.webp"
+    alt: "Retreat, photo 8"
 ---
 
 ## Vitalis Retreat

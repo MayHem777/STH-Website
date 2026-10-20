@@ -9,7 +9,7 @@ priceFrom: 125000
 area: "19.8 m²"
 size: "6.2 × 3.2 m"
 upgrades: "Shaped window, plywood walls and deck."
-heroImage: "/images/old/cabin/01.webp"
+heroImage: "/images/models/banksia-main.webp"
 heroImageAlt: "Banksia modular cabin exterior render"
 floorPlans:
   - src: "/images/models/banksia-plan.webp"
@@ -27,24 +27,22 @@ specs:
   Builder: "QBCC #15205110"
   Class: "Class 1a"
   Installation: "~2 weeks on site"
-# Photos from the old Cabin page (2026-10-17 placeholders, sorted by model 2026-10-20); numbered photo spots, replace any via PHOTOS.md
+# Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
-  - src: "/images/old/cabin/01.webp"
-    alt: "Banksia cabin, photo 1"
-  - src: "/images/models/banksia-int-1.webp"
-    alt: "Banksia cabin, photo 2"
-  - src: "/images/models/banksia-int-2.webp"
-    alt: "Banksia cabin, photo 3"
-  - src: "/images/models/banksia-int-3.webp"
-    alt: "Banksia cabin, photo 4"
-  - src: "/images/old/cabin/02.webp"
-    alt: "Banksia cabin, photo 5"
-  - src: "/images/old/cabin/03.webp"
-    alt: "Banksia cabin, photo 6"
-  - src: "/images/old/cabin/04.webp"
-    alt: "Banksia cabin, photo 7"
-  - src: "/images/old/cabin/05.webp"
-    alt: "Banksia cabin, photo 8"
+  - src: "/images/old/banksia/01.webp"
+    alt: "Banksia, photo 1"
+  - src: "/images/old/banksia/02.webp"
+    alt: "Banksia, photo 2"
+  - src: "/images/old/banksia/03.webp"
+    alt: "Banksia, photo 3"
+  - src: "/images/old/banksia/04.webp"
+    alt: "Banksia, photo 4"
+  - src: "/images/old/banksia/05.webp"
+    alt: "Banksia, photo 5"
+  - src: "/images/old/banksia/06.webp"
+    alt: "Banksia, photo 6"
+  - src: "/images/old/banksia/07.webp"
+    alt: "Banksia, photo 7"
 ---
 
 ## Banksia

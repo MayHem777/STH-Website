@@ -11,30 +11,28 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 |---|---|---|---|---|
 | 001 | [Home, top: left panel "Tiny houses on wheels"](/) | Best exterior of a finished tiny house on wheels on its trailer | Landscape | `/images/thow-dark-on-site.webp` |
 | 002 | [Home, top: right panel "Modular homes & granny flats"](/) | Best exterior of a finished modular home on site, ideally with a deck | Landscape | `/images/models/rio-ext.webp` |
-| 003 | [1770: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/1770/) | Best exterior of a 1770 we built | Landscape | `/images/old/1770/01.webp` |
-| 004 | [1770: photo gallery 1](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/02.webp` |
-| 005 | [1770: photo gallery 2](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/03.webp` |
-| 006 | [1770: photo gallery 3](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/04.webp` |
-| 007 | [1770: photo gallery 4](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/05.webp` |
-| 008 | [1770: photo gallery 5](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/06.webp` |
-| 009 | [1770: photo gallery 6](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/07.webp` |
-| 010 | [1770: photo gallery 7](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/08.webp` |
-| 011 | [1770: photo gallery 8](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/09.webp` |
-| 012 | [1770: photo gallery 9](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/10.webp` |
-| 013 | [1770: photo gallery 10](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/11.webp` |
-| 014 | [1770: photo gallery 11](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/12.webp` |
-| 015 | [1770: photo gallery 12](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/13.webp` |
-| 016 | [1770: photo gallery 13](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/14.webp` |
-| 017 | [1770: photo gallery 14](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/15.webp` |
-| 018 | [1770: photo gallery 15](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/16.webp` |
-| 019 | [1770: photo gallery 16](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/17.webp` |
-| 020 | [1770: photo gallery 17](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/18.webp` |
-| 021 | [1770: photo gallery 18](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/19.webp` |
-| 022 | [1770: photo gallery 19](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/20.webp` |
-| 023 | [1770: photo gallery 20](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/21.webp` |
-| 024 | [1770: photo gallery 21](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/22.webp` |
-| 025 | [1770: photo gallery 22](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/23.webp` |
-| 026 | [1770: photo gallery 23](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/24.webp` |
+| 003 | [1770: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/1770/) | Best exterior of a 1770 we built | Landscape | `/images/models/1770-main.webp` |
+| 004 | [1770: photo gallery 1](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/01.webp` |
+| 005 | [1770: photo gallery 2](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/02.webp` |
+| 006 | [1770: photo gallery 3](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/03.webp` |
+| 007 | [1770: photo gallery 4](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/04.webp` |
+| 008 | [1770: photo gallery 5](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/05.webp` |
+| 009 | [1770: photo gallery 6](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/06.webp` |
+| 010 | [1770: photo gallery 7](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/07.webp` |
+| 011 | [1770: photo gallery 8](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/08.webp` |
+| 012 | [1770: photo gallery 9](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/09.webp` |
+| 013 | [1770: photo gallery 10](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/10.webp` |
+| 014 | [1770: photo gallery 11](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/11.webp` |
+| 015 | [1770: photo gallery 12](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/12.webp` |
+| 016 | [1770: photo gallery 13](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/13.webp` |
+| 017 | [1770: photo gallery 14](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/14.webp` |
+| 018 | [1770: photo gallery 15](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/15.webp` |
+| 019 | [1770: photo gallery 16](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/16.webp` |
+| 020 | [1770: photo gallery 17](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/17.webp` |
+| 021 | [1770: photo gallery 18](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/18.webp` |
+| 022 | [1770: photo gallery 19](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/19.webp` |
+| 023 | [1770: photo gallery 20](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/20.webp` |
+| 024 | [1770: photo gallery 21](/tiny-houses-on-wheels/1770/) | 1770, inside or out (today's photo is from the old website) | Landscape | `/images/old/1770/21.webp` |
 | 028 | [Little Cove: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/little-cove/) | Best exterior of a Little Cove we built | Landscape | `/images/dsc04846.jpeg` |
 | 029 | [Little Cove: photo gallery 1](/tiny-houses-on-wheels/little-cove/) | Little Cove, inside or out (today's photo is from the old website) | Landscape | `/images/old/little-cove/01.webp` |
 | 030 | [Little Cove: photo gallery 2](/tiny-houses-on-wheels/little-cove/) | Little Cove, inside or out (today's photo is from the old website) | Landscape | `/images/old/little-cove/02.webp` |
@@ -64,7 +62,7 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 054 | [Little Cove: photo gallery 26](/tiny-houses-on-wheels/little-cove/) | Little Cove, inside or out (today's photo is from the old website) | Landscape | `/images/old/little-cove/26.webp` |
 | 055 | [Little Cove: photo gallery 27](/tiny-houses-on-wheels/little-cove/) | Little Cove, inside or out (today's photo is from the old website) | Landscape | `/images/old/little-cove/27.webp` |
 | 056 | [Little Cove: photo gallery 28](/tiny-houses-on-wheels/little-cove/) | Little Cove, inside or out (today's photo is from the old website) | Landscape | `/images/old/little-cove/28.webp` |
-| 057 | [Bondi: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/bondi/) | Best exterior of a Bondi we built | Landscape | `/images/bondi-02a.jpg` |
+| 057 | [Bondi: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/bondi/) | Best exterior of a Bondi we built | Landscape | `/images/models/bondi-main.webp` |
 | 058 | [Bondi: photo gallery 1](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/01.webp` |
 | 059 | [Bondi: photo gallery 2](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/02.webp` |
 | 060 | [Bondi: photo gallery 3](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/03.webp` |
@@ -73,13 +71,6 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 063 | [Bondi: photo gallery 6](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/06.webp` |
 | 064 | [Bondi: photo gallery 7](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/07.webp` |
 | 065 | [Bondi: photo gallery 8](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/08.webp` |
-| 066 | [Bondi: photo gallery 9](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/09.webp` |
-| 067 | [Bondi: photo gallery 10](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/10.webp` |
-| 068 | [Bondi: photo gallery 11](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/11.webp` |
-| 069 | [Bondi: photo gallery 12](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/12.webp` |
-| 070 | [Bondi: photo gallery 13](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/13.webp` |
-| 071 | [Bondi: photo gallery 14](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/14.webp` |
-| 072 | [Bondi: photo gallery 15](/tiny-houses-on-wheels/bondi/) | Bondi, inside or out (today's photo is from the old website) | Landscape | `/images/old/bondi/15.webp` |
 | 073 | [Granite Bay: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/granite-bay/) | Best exterior of a Granite Bay we built | Landscape | `/images/dsc04714.jpeg` |
 | 074 | [Granite Bay: photo gallery 1](/tiny-houses-on-wheels/granite-bay/) | Granite Bay, inside or out (today's photo is from the old website) | Landscape | `/images/old/granite-bay/01.webp` |
 | 075 | [Granite Bay: photo gallery 2](/tiny-houses-on-wheels/granite-bay/) | Granite Bay, inside or out (today's photo is from the old website) | Landscape | `/images/old/granite-bay/02.webp` |
@@ -103,7 +94,7 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 093 | [Granite Bay: photo gallery 20](/tiny-houses-on-wheels/granite-bay/) | Granite Bay, inside or out (today's photo is from the old website) | Landscape | `/images/old/granite-bay/20.webp` |
 | 094 | [Granite Bay: photo gallery 21](/tiny-houses-on-wheels/granite-bay/) | Granite Bay, inside or out (today's photo is from the old website) | Landscape | `/images/old/granite-bay/21.webp` |
 | 095 | [Granite Bay: photo gallery 22](/tiny-houses-on-wheels/granite-bay/) | Granite Bay, inside or out (today's photo is from the old website) | Landscape | `/images/old/granite-bay/22.webp` |
-| 096 | [Castaways: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/castaways/) | Best exterior of a Castaways we built | Landscape | `/images/castaways-08.jpg` |
+| 096 | [Castaways: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/castaways/) | Best exterior of a Castaways we built | Landscape | `/images/models/castaways-main.webp` |
 | 097 | [Castaways: photo gallery 1](/tiny-houses-on-wheels/castaways/) | Castaways, inside or out (today's photo is from the old website) | Landscape | `/images/old/castaways/01.webp` |
 | 098 | [Castaways: photo gallery 2](/tiny-houses-on-wheels/castaways/) | Castaways, inside or out (today's photo is from the old website) | Landscape | `/images/old/castaways/02.webp` |
 | 099 | [Castaways: photo gallery 3](/tiny-houses-on-wheels/castaways/) | Castaways, inside or out (today's photo is from the old website) | Landscape | `/images/old/castaways/03.webp` |
@@ -113,11 +104,7 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 103 | [Castaways: photo gallery 7](/tiny-houses-on-wheels/castaways/) | Castaways, inside or out (today's photo is from the old website) | Landscape | `/images/old/castaways/07.webp` |
 | 104 | [Castaways: photo gallery 8](/tiny-houses-on-wheels/castaways/) | Castaways, inside or out (today's photo is from the old website) | Landscape | `/images/old/castaways/08.webp` |
 | 105 | [Castaways: photo gallery 9](/tiny-houses-on-wheels/castaways/) | Castaways, inside or out (today's photo is from the old website) | Landscape | `/images/old/castaways/09.webp` |
-| 106 | [Castaways: photo gallery 10](/tiny-houses-on-wheels/castaways/) | Castaways, inside or out (today's photo is from the old website) | Landscape | `/images/old/castaways/10.webp` |
-| 107 | [Castaways: photo gallery 11](/tiny-houses-on-wheels/castaways/) | Castaways, inside or out (today's photo is from the old website) | Landscape | `/images/old/castaways/11.webp` |
-| 108 | [Castaways: photo gallery 12](/tiny-houses-on-wheels/castaways/) | Castaways, inside or out (today's photo is from the old website) | Landscape | `/images/old/castaways/12.webp` |
-| 109 | [Castaways: photo gallery 13](/tiny-houses-on-wheels/castaways/) | Castaways, inside or out (today's photo is from the old website) | Landscape | `/images/old/castaways/13.webp` |
-| 110 | [Boiling Pot: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/boiling-pot/) | Best exterior of a Boiling Pot we built | Landscape | `/images/boiling-pot-01.jpg` |
+| 110 | [Boiling Pot: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/boiling-pot/) | Best exterior of a Boiling Pot we built | Landscape | `/images/models/boiling-pot-main.webp` |
 | 111 | [Boiling Pot: photo gallery 1](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/01.webp` |
 | 112 | [Boiling Pot: photo gallery 2](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/02.webp` |
 | 113 | [Boiling Pot: photo gallery 3](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/03.webp` |
@@ -147,15 +134,7 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 137 | [Boiling Pot: photo gallery 27](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/27.webp` |
 | 138 | [Boiling Pot: photo gallery 28](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/28.webp` |
 | 139 | [Boiling Pot: photo gallery 29](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/29.webp` |
-| 140 | [Boiling Pot: photo gallery 30](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/30.webp` |
-| 141 | [Boiling Pot: photo gallery 31](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/31.webp` |
-| 142 | [Boiling Pot: photo gallery 32](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/32.webp` |
-| 143 | [Boiling Pot: photo gallery 33](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/33.webp` |
-| 144 | [Boiling Pot: photo gallery 34](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/34.webp` |
-| 145 | [Boiling Pot: photo gallery 35](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/35.webp` |
-| 146 | [Boiling Pot: photo gallery 36](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/36.webp` |
-| 147 | [Boiling Pot: photo gallery 37](/tiny-houses-on-wheels/boiling-pot/) | Boiling Pot, inside or out (today's photo is from the old website) | Landscape | `/images/old/boiling-pot/37.webp` |
-| 148 | [Lennox: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/lennox/) | Best exterior of a Lennox we built | Landscape | `/images/lennox-01.jpg` |
+| 148 | [Lennox: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/lennox/) | Best exterior of a Lennox we built | Landscape | `/images/models/lennox-main.webp` |
 | 149 | [Lennox: photo gallery 1](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/01.webp` |
 | 150 | [Lennox: photo gallery 2](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/02.webp` |
 | 151 | [Lennox: photo gallery 3](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/03.webp` |
@@ -188,67 +167,59 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 178 | [Custom Design & Build: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/custom-design-build/) | Best exterior of a Custom Design & Build we built | Landscape | `/images/workshop-recent-1.jpeg` |
 | 179 | [Custom Design & Build: photo gallery 1](/tiny-houses-on-wheels/custom-design-build/) | Custom Design & Build, inside or out (today's photo is from the old website) | Landscape | `/images/old/custom-design-build/01.webp` |
 | 181 | [Cabin: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/) | Best exterior of a Cabin (real build if we have one) | Landscape | `/images/models/dahlia-ext.webp` |
-| 182 | [Banksia: photo gallery 3](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/models/banksia-int-2.webp` |
-| 183 | [Raglan: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/raglan/) | Best exterior of a Raglan (real build if we have one) | Landscape | `/images/models/raglan-ext.webp` |
-| 184 | [Banksia: photo gallery 2](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/models/banksia-int-1.webp` |
-| 185 | [Banksia: photo gallery 4](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/models/banksia-int-3.webp` |
-| 186 | [Dahlia: photo gallery 2](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/models/dahlia-int-1.webp` |
-| 187 | [Dahlia: photo gallery 3](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/models/dahlia-int-2.webp` |
-| 188 | [Raglan: photo gallery 4](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/models/raglan-int-1.webp` |
-| 189 | [Raglan: photo gallery 5](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/models/raglan-int-2.webp` |
-| 190 | [Banksia: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/banksia/) | Best exterior of a Banksia (real build if we have one) | Landscape | `/images/old/cabin/01.webp` |
-| 191 | [Banksia: photo gallery 5](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/cabin/02.webp` |
-| 192 | [Banksia: photo gallery 6](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/cabin/03.webp` |
-| 193 | [Banksia: photo gallery 7](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/cabin/04.webp` |
-| 194 | [Banksia: photo gallery 8](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/cabin/05.webp` |
-| 195 | [Dahlia: photo gallery 4](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/cabin/06.webp` |
-| 196 | [Dahlia: photo gallery 5](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/cabin/07.webp` |
-| 197 | [Dahlia: photo gallery 6](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/cabin/08.webp` |
-| 198 | [Raglan: photo gallery 2](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/09.webp` |
-| 199 | [Raglan: photo gallery 3](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/10.webp` |
-| 200 | [Raglan: photo gallery 6](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/11.webp` |
-| 201 | [Raglan: photo gallery 7](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/12.webp` |
-| 202 | [Raglan: photo gallery 8](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/13.webp` |
-| 203 | [Raglan: photo gallery 9](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/14.webp` |
-| 204 | [Raglan: photo gallery 10](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/15.webp` |
+| 182 | [Banksia: photo gallery 3](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/banksia/03.webp` |
+| 183 | [Raglan: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/raglan/) | Best exterior of a Raglan (real build if we have one) | Landscape | `/images/models/raglan-main.webp` |
+| 184 | [Banksia: photo gallery 2](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/banksia/02.webp` |
+| 185 | [Banksia: photo gallery 4](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/banksia/04.webp` |
+| 186 | [Dahlia: photo gallery 2](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/dahlia/02.webp` |
+| 187 | [Dahlia: photo gallery 3](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/dahlia/03.webp` |
+| 188 | [Raglan: photo gallery 4](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/raglan/04.webp` |
+| 189 | [Raglan: photo gallery 5](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/raglan/05.webp` |
+| 190 | [Banksia: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/banksia/) | Best exterior of a Banksia (real build if we have one) | Landscape | `/images/models/banksia-main.webp` |
+| 191 | [Banksia: photo gallery 5](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/banksia/05.webp` |
+| 192 | [Banksia: photo gallery 6](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/banksia/06.webp` |
+| 193 | [Banksia: photo gallery 7](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/banksia/07.webp` |
+| 195 | [Dahlia: photo gallery 4](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/dahlia/04.webp` |
+| 196 | [Dahlia: photo gallery 5](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/dahlia/05.webp` |
+| 197 | [Dahlia: photo gallery 6](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/dahlia/06.webp` |
+| 198 | [Raglan: photo gallery 2](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/raglan/02.webp` |
+| 199 | [Raglan: photo gallery 3](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/raglan/03.webp` |
+| 200 | [Raglan: photo gallery 6](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/raglan/06.webp` |
+| 201 | [Raglan: photo gallery 7](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/raglan/07.webp` |
+| 202 | [Raglan: photo gallery 8](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/raglan/08.webp` |
 | 205 | [Ensuite: main photo (also its card on the modular pages and home page)](/modular-homes/ensuite/) | Best exterior of a Ensuite (real build if we have one) | Landscape | `/images/models/ensuite-ext.webp` |
-| 206 | [Ensuite: photo gallery 2](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/models/ensuite-int-1.webp` |
-| 207 | [Ensuite: photo gallery 3](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/models/ensuite-int-2.webp` |
-| 208 | [Ensuite: photo gallery 4](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/models/ensuite-int-3.webp` |
-| 209 | [Ensuite: photo gallery 5](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/old/ensuite/01.webp` |
+| 206 | [Ensuite: photo gallery 2](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/old/ensuite/02.webp` |
+| 207 | [Ensuite: photo gallery 3](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/old/ensuite/03.webp` |
+| 208 | [Ensuite: photo gallery 4](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/old/ensuite/04.webp` |
+| 209 | [Ensuite: photo gallery 5](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/old/ensuite/05.webp` |
 | 210 | [Fingal: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/fingal/) | Best exterior of a Fingal (real build if we have one) | Landscape | `/images/models/fingal-ext.webp` |
 | 211 | [Fingal: photo gallery 2](/modular-homes/1-bedroom/fingal/) | Fingal, inside or out | Landscape | `/images/models/fingal-int-1.webp` |
 | 212 | [Bunya: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/bunya/) | Best exterior of a Bunya (real build if we have one) | Landscape | `/images/models/bunya-ext.webp` |
-| 213 | [Bunya: photo gallery 2](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/models/bunya-int-1.webp` |
-| 214 | [Bunya: photo gallery 3](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/models/bunya-int-2.webp` |
-| 215 | [Bunya: photo gallery 4](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/models/bunya-int-3.webp` |
-| 216 | [Bunya: photo gallery 5](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/01.webp` |
-| 217 | [Bunya: photo gallery 6](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/02.webp` |
-| 218 | [Bunya: photo gallery 7](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/03.webp` |
-| 219 | [Bunya: photo gallery 8](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/04.webp` |
-| 220 | [Bunya: photo gallery 9](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/05.webp` |
-| 221 | [Bunya: photo gallery 10](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/06.webp` |
-| 222 | [Bunya: photo gallery 11](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/07.webp` |
-| 223 | [Bunya: photo gallery 12](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/08.webp` |
-| 224 | [Bunya: photo gallery 13](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/09.webp` |
-| 225 | [Bunya: photo gallery 14](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/10.webp` |
-| 226 | [Bunya: photo gallery 15](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/11.webp` |
+| 213 | [Bunya: photo gallery 2](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/02.webp` |
+| 214 | [Bunya: photo gallery 3](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/03.webp` |
+| 215 | [Bunya: photo gallery 4](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/04.webp` |
+| 216 | [Bunya: photo gallery 5](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/05.webp` |
+| 217 | [Bunya: photo gallery 6](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/06.webp` |
+| 218 | [Bunya: photo gallery 7](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/07.webp` |
+| 219 | [Bunya: photo gallery 8](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/08.webp` |
+| 220 | [Bunya: photo gallery 9](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/09.webp` |
+| 221 | [Bunya: photo gallery 10](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/10.webp` |
+| 222 | [Bunya: photo gallery 11](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/11.webp` |
 | 227 | [Straddie: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/straddie-1-bedroom/) | Best exterior of a Straddie (real build if we have one) | Landscape | `/images/models/straddie-1-bedroom-ext.webp` |
-| 228 | [Straddie: photo gallery 2](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/models/straddie-1-bedroom-int-1.webp` |
-| 229 | [Straddie: photo gallery 3](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/01.webp` |
-| 230 | [Straddie: photo gallery 4](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/02.webp` |
-| 231 | [Straddie: photo gallery 5](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/03.webp` |
-| 232 | [Straddie: photo gallery 6](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/04.webp` |
-| 233 | [Straddie: photo gallery 7](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/05.webp` |
-| 234 | [Straddie: photo gallery 8](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/06.webp` |
-| 235 | [Straddie: photo gallery 9](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/07.webp` |
+| 228 | [Straddie: photo gallery 2](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/02.webp` |
+| 229 | [Straddie: photo gallery 3](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/03.webp` |
+| 230 | [Straddie: photo gallery 4](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/04.webp` |
+| 231 | [Straddie: photo gallery 5](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/05.webp` |
+| 232 | [Straddie: photo gallery 6](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/06.webp` |
+| 233 | [Straddie: photo gallery 7](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/07.webp` |
+| 234 | [Straddie: photo gallery 8](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/08.webp` |
 | 236 | [Rio: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/rio/) | Best exterior of a Rio (real build if we have one) | Landscape | `/images/models/rio-ext.webp` |
-| 237 | [Rio: photo gallery 2](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/models/rio-int-1.webp` |
-| 238 | [Rio: photo gallery 3](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/01.webp` |
-| 239 | [Rio: photo gallery 4](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/02.webp` |
-| 240 | [Rio: photo gallery 5](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/03.webp` |
-| 241 | [Rio: photo gallery 6](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/04.webp` |
-| 242 | [Rio: photo gallery 7](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/05.webp` |
+| 237 | [Rio: photo gallery 2](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/02.webp` |
+| 238 | [Rio: photo gallery 3](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/03.webp` |
+| 239 | [Rio: photo gallery 4](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/04.webp` |
+| 240 | [Rio: photo gallery 5](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/05.webp` |
+| 241 | [Rio: photo gallery 6](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/06.webp` |
+| 242 | [Rio: photo gallery 7](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/07.webp` |
 | 243 | [Pandanus: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/pandanus/) | Best exterior of a Pandanus (real build if we have one) | Landscape | `/photos/243.webp` |
 | 244 | [Pandanus: photo gallery 1](/modular-homes/1-bedroom/pandanus/) | Pandanus, inside or out | Landscape | `/images/old/pandanus/01.webp` |
 | 245 | [Pandanus: photo gallery 2](/modular-homes/1-bedroom/pandanus/) | Pandanus, inside or out | Landscape | `/images/old/pandanus/02.webp` |
@@ -263,69 +234,63 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 254 | [Pandanus: photo gallery 11](/modular-homes/1-bedroom/pandanus/) | Pandanus, inside or out | Landscape | `/images/old/pandanus/11.webp` |
 | 255 | [Pandanus: photo gallery 12](/modular-homes/1-bedroom/pandanus/) | Pandanus, inside or out | Landscape | `/images/old/pandanus/12.webp` |
 | 256 | [Daintree: main photo (also its card on the modular pages and home page)](/modular-homes/2-bedroom/daintree/) | Best exterior of a Daintree (real build if we have one) | Landscape | `/images/models/daintree-ext.webp` |
-| 257 | [Daintree: photo gallery 2](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/models/daintree-int-1.webp` |
-| 258 | [Daintree: photo gallery 3](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/01.webp` |
-| 259 | [Daintree: photo gallery 4](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/02.webp` |
-| 260 | [Daintree: photo gallery 5](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/03.webp` |
-| 261 | [Daintree: photo gallery 6](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/04.webp` |
-| 262 | [Daintree: photo gallery 7](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/05.webp` |
-| 263 | [Daintree: photo gallery 8](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/06.webp` |
-| 264 | [Daintree: photo gallery 9](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/07.webp` |
-| 265 | [Daintree: photo gallery 10](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/08.webp` |
-| 266 | [Daintree: photo gallery 11](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/09.webp` |
-| 267 | [Daintree: photo gallery 12](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/10.webp` |
-| 268 | [Daintree: photo gallery 13](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/11.webp` |
-| 269 | [Daintree: photo gallery 14](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/12.webp` |
-| 270 | [Daintree: photo gallery 15](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/13.webp` |
-| 271 | [Daintree: photo gallery 16](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/14.webp` |
+| 257 | [Daintree: photo gallery 2](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/02.webp` |
+| 258 | [Daintree: photo gallery 3](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/03.webp` |
+| 259 | [Daintree: photo gallery 4](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/04.webp` |
+| 260 | [Daintree: photo gallery 5](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/05.webp` |
+| 261 | [Daintree: photo gallery 6](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/06.webp` |
+| 262 | [Daintree: photo gallery 7](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/07.webp` |
+| 263 | [Daintree: photo gallery 8](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/08.webp` |
+| 264 | [Daintree: photo gallery 9](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/09.webp` |
+| 265 | [Daintree: photo gallery 10](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/10.webp` |
+| 266 | [Daintree: photo gallery 11](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/11.webp` |
+| 267 | [Daintree: photo gallery 12](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/12.webp` |
+| 268 | [Daintree: photo gallery 13](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/13.webp` |
 | 272 | [Straddie: main photo (also its card on the modular pages and home page)](/modular-homes/2-bedroom/straddie-2-bedroom/) | Best exterior of a Straddie (real build if we have one) | Landscape | `/images/models/straddie-2-bedroom-ext.webp` |
-| 273 | [Straddie: photo gallery 2](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/models/straddie-2-bedroom-int-1.webp` |
-| 274 | [Straddie: photo gallery 3](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/models/straddie-2-bedroom-int-2.webp` |
-| 275 | [Straddie: photo gallery 4](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/models/straddie-2-bedroom-int-3.webp` |
-| 276 | [Straddie: photo gallery 5](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/models/straddie-2-bedroom-int-4.webp` |
-| 277 | [Straddie: photo gallery 6](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/01.webp` |
-| 278 | [Straddie: photo gallery 7](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/02.webp` |
-| 279 | [Straddie: photo gallery 8](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/03.webp` |
-| 280 | [Straddie: photo gallery 9](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/04.webp` |
-| 281 | [Straddie: photo gallery 10](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/05.webp` |
-| 282 | [Straddie: photo gallery 11](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/06.webp` |
-| 283 | [Straddie: photo gallery 12](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/07.webp` |
+| 273 | [Straddie: photo gallery 2](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/02.webp` |
+| 274 | [Straddie: photo gallery 3](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/03.webp` |
+| 275 | [Straddie: photo gallery 4](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/04.webp` |
+| 276 | [Straddie: photo gallery 5](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/05.webp` |
+| 277 | [Straddie: photo gallery 6](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/06.webp` |
+| 278 | [Straddie: photo gallery 7](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/07.webp` |
+| 279 | [Straddie: photo gallery 8](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/08.webp` |
+| 280 | [Straddie: photo gallery 9](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/09.webp` |
+| 281 | [Straddie: photo gallery 10](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/10.webp` |
+| 282 | [Straddie: photo gallery 11](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/11.webp` |
 | 284 | [Jacaranda: main photo (also its card on the modular pages and home page)](/modular-homes/2-bedroom/jacaranda/) | Best exterior of a Jacaranda (real build if we have one) | Landscape | `/images/models/jacaranda-ext.webp` |
-| 285 | [Jacaranda: photo gallery 2](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/models/jacaranda-int-1.webp` |
-| 286 | [Jacaranda: photo gallery 3](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/01.webp` |
-| 287 | [Jacaranda: photo gallery 4](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/02.webp` |
-| 288 | [Jacaranda: photo gallery 5](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/03.webp` |
-| 289 | [Jacaranda: photo gallery 6](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/04.webp` |
-| 290 | [Jacaranda: photo gallery 7](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/05.webp` |
-| 291 | [Jacaranda: photo gallery 8](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/06.webp` |
-| 292 | [Jacaranda: photo gallery 9](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/07.webp` |
-| 293 | [Jacaranda: photo gallery 10](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/08.webp` |
-| 294 | [Jacaranda: photo gallery 11](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/09.webp` |
-| 295 | [Jacaranda: photo gallery 12](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/10.webp` |
-| 296 | [Jacaranda: photo gallery 13](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/11.webp` |
-| 297 | [Jacaranda: photo gallery 14](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/12.webp` |
-| 298 | [Jacaranda: photo gallery 15](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/13.webp` |
-| 299 | [Jacaranda: photo gallery 16](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/14.webp` |
-| 300 | [Jacaranda: photo gallery 17](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/15.webp` |
-| 301 | [Jacaranda: photo gallery 18](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/16.webp` |
-| 302 | [Jacaranda: photo gallery 19](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/17.webp` |
+| 285 | [Jacaranda: photo gallery 2](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/02.webp` |
+| 286 | [Jacaranda: photo gallery 3](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/03.webp` |
+| 287 | [Jacaranda: photo gallery 4](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/04.webp` |
+| 288 | [Jacaranda: photo gallery 5](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/05.webp` |
+| 289 | [Jacaranda: photo gallery 6](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/06.webp` |
+| 290 | [Jacaranda: photo gallery 7](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/07.webp` |
+| 291 | [Jacaranda: photo gallery 8](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/08.webp` |
+| 292 | [Jacaranda: photo gallery 9](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/09.webp` |
+| 293 | [Jacaranda: photo gallery 10](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/10.webp` |
+| 294 | [Jacaranda: photo gallery 11](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/11.webp` |
+| 295 | [Jacaranda: photo gallery 12](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/12.webp` |
+| 296 | [Jacaranda: photo gallery 13](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/13.webp` |
+| 297 | [Jacaranda: photo gallery 14](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/14.webp` |
+| 298 | [Jacaranda: photo gallery 15](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/15.webp` |
+| 299 | [Jacaranda: photo gallery 16](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/16.webp` |
+| 300 | [Jacaranda: photo gallery 17](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/17.webp` |
 | 303 | [Sunrise Beach House: main photo (also its card on the modular pages and home page)](/modular-homes/2-bedroom/sunrise-beach-house/) | Best exterior of a Sunrise Beach House (real build if we have one) | Landscape | `/images/models/sunrise-beach-house-ext.webp` |
-| 304 | [Sunrise Beach House: photo gallery 2](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/models/sunrise-beach-house-int-1.webp` |
-| 305 | [Sunrise Beach House: photo gallery 3](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/models/sunrise-beach-house-int-2.webp` |
-| 306 | [Sunrise Beach House: photo gallery 4](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/models/sunrise-beach-house-int-3.webp` |
-| 307 | [Sunrise Beach House: photo gallery 5](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/models/sunrise-beach-house-int-4.webp` |
-| 308 | [Sunrise Beach House: photo gallery 6](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/01.webp` |
-| 309 | [Sunrise Beach House: photo gallery 7](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/02.webp` |
-| 310 | [Sunrise Beach House: photo gallery 8](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/03.webp` |
-| 311 | [Sunrise Beach House: photo gallery 9](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/04.webp` |
-| 312 | [Sunrise Beach House: photo gallery 10](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/05.webp` |
-| 313 | [Sunrise Beach House: photo gallery 11](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/06.webp` |
-| 314 | [Sunrise Beach House: photo gallery 12](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/07.webp` |
-| 315 | [Sunrise Beach House: photo gallery 13](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/08.webp` |
-| 316 | [Sunrise Beach House: photo gallery 14](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/09.webp` |
-| 317 | [Sunrise Beach House: photo gallery 15](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/10.webp` |
-| 318 | [Sunrise Beach House: photo gallery 16](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/11.webp` |
-| 319 | [Sunrise Beach House: photo gallery 17](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/12.webp` |
+| 304 | [Sunrise Beach House: photo gallery 2](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/02.webp` |
+| 305 | [Sunrise Beach House: photo gallery 3](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/03.webp` |
+| 306 | [Sunrise Beach House: photo gallery 4](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/04.webp` |
+| 307 | [Sunrise Beach House: photo gallery 5](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/05.webp` |
+| 308 | [Sunrise Beach House: photo gallery 6](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/06.webp` |
+| 309 | [Sunrise Beach House: photo gallery 7](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/07.webp` |
+| 310 | [Sunrise Beach House: photo gallery 8](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/08.webp` |
+| 311 | [Sunrise Beach House: photo gallery 9](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/09.webp` |
+| 312 | [Sunrise Beach House: photo gallery 10](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/10.webp` |
+| 313 | [Sunrise Beach House: photo gallery 11](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/11.webp` |
+| 314 | [Sunrise Beach House: photo gallery 12](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/12.webp` |
+| 315 | [Sunrise Beach House: photo gallery 13](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/13.webp` |
+| 316 | [Sunrise Beach House: photo gallery 14](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/14.webp` |
+| 317 | [Sunrise Beach House: photo gallery 15](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/15.webp` |
+| 318 | [Sunrise Beach House: photo gallery 16](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/16.webp` |
+| 319 | [Sunrise Beach House: photo gallery 17](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/17.webp` |
 | 320 | [Office: main photo (also its card on the modular pages and home page)](/modular-homes/office/) | Best exterior of a Office (real build if we have one) | Landscape | `/images/banksia-office.jpg` |
 | 321 | [Office: photo gallery 1](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/01.webp` |
 | 322 | [Office: photo gallery 2](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/02.webp` |
@@ -335,7 +300,7 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 326 | [Office: photo gallery 6](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/06.webp` |
 | 327 | [Office: photo gallery 7](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/07.webp` |
 | 328 | [Office: photo gallery 8](/modular-homes/office/office-a/) | Office, inside or out | Landscape | `/images/old/office/08.webp` |
-| 329 | [Retreat: main photo (also its card on the modular pages and home page)](/modular-homes/retreat/) | Best exterior of a Retreat (real build if we have one) | Landscape | `/images/modular-scene-2.webp` |
+| 329 | [Retreat: main photo (also its card on the modular pages and home page)](/modular-homes/retreat/) | Best exterior of a Retreat (real build if we have one) | Landscape | `/images/models/retreat-main.webp` |
 | 330 | [Retreat: photo gallery 1](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/01.webp` |
 | 331 | [Retreat: photo gallery 2](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/02.webp` |
 | 332 | [Backyard Offices: main photo (also its card on the studios and home pages)](/backyard-studios/offices/) | Best photo of a backyard office we built | Landscape | `/images/banksia-office.jpg` |
@@ -391,3 +356,35 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 382 | [Office: main photo (also its card on the modular pages and home page)](/modular-homes/office/office-a/) | Best exterior of a Office (real build if we have one) | Landscape | `/images/banksia-office.jpg` |
 | 383 | [Office B (name to come): main photo (also its card on the modular pages and home page)](/modular-homes/office/office-b/) | Best exterior of a Office B (name to come) (real build if we have one) | Landscape | none (hidden until filled) |
 | 384 | [Office C (name to come): main photo (also its card on the modular pages and home page)](/modular-homes/office/office-c/) | Best exterior of a Office C (name to come) (real build if we have one) | Landscape | none (hidden until filled) |
+| 385 | [Lennox: photo gallery 30](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/30.webp` |
+| 386 | [Lennox: photo gallery 31](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/31.webp` |
+| 387 | [Lennox: photo gallery 32](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/32.webp` |
+| 388 | [Lennox: photo gallery 33](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/33.webp` |
+| 389 | [Lennox: photo gallery 34](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/34.webp` |
+| 390 | [Lennox: photo gallery 35](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/35.webp` |
+| 391 | [Lennox: photo gallery 36](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/36.webp` |
+| 392 | [Lennox: photo gallery 37](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/37.webp` |
+| 393 | [Lennox: photo gallery 38](/tiny-houses-on-wheels/lennox/) | Lennox, inside or out (today's photo is from the old website) | Landscape | `/images/old/lennox/38.webp` |
+| 394 | [Banksia: photo gallery 1](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/banksia/01.webp` |
+| 395 | [Dahlia: photo gallery 1](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/dahlia/01.webp` |
+| 396 | [Dahlia: photo gallery 7](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/dahlia/07.webp` |
+| 397 | [Raglan: photo gallery 1](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/raglan/01.webp` |
+| 398 | [Ensuite: photo gallery 1](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/old/ensuite/01.webp` |
+| 399 | [Ensuite: photo gallery 6](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/old/ensuite/06.webp` |
+| 400 | [Bunya: photo gallery 1](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/01.webp` |
+| 401 | [Straddie: photo gallery 1](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/01.webp` |
+| 402 | [Rio: photo gallery 1](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/01.webp` |
+| 403 | [Rio: photo gallery 8](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/08.webp` |
+| 404 | [Rio: photo gallery 9](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/09.webp` |
+| 405 | [Rio: photo gallery 10](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/10.webp` |
+| 406 | [Rio: photo gallery 11](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/11.webp` |
+| 407 | [Daintree: photo gallery 1](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/01.webp` |
+| 408 | [Straddie: photo gallery 1](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/01.webp` |
+| 409 | [Jacaranda: photo gallery 1](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/01.webp` |
+| 410 | [Sunrise Beach House: photo gallery 1](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/01.webp` |
+| 411 | [Retreat: photo gallery 3](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/03.webp` |
+| 412 | [Retreat: photo gallery 4](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/04.webp` |
+| 413 | [Retreat: photo gallery 5](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/05.webp` |
+| 414 | [Retreat: photo gallery 6](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/06.webp` |
+| 415 | [Retreat: photo gallery 7](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/07.webp` |
+| 416 | [Retreat: photo gallery 8](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/08.webp` |

@@ -26,7 +26,7 @@ specs:
   "Turn Key from": "$140,000 incl. GST"
   Trailer: "4.5T ATM triple axle"
   Registration: "Road-registerable"
-# Photos copied from the old Squarespace page as placeholders (2026-10-17); numbered photo spots, replace any via PHOTOS.md
+# Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/granite-bay/01.webp"
     alt: "Granite Bay, photo 1"

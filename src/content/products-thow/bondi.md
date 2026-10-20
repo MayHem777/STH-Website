@@ -4,7 +4,7 @@ tagline: "Bring the outdoors in."
 description: "The Bondi is a 7.2m tiny house on wheels built to maximise outdoor connection — single loft, open layout, beautiful finishes. Sleeps 2."
 draft: false
 order: 3
-heroImage: "/images/bondi-02a.jpg"
+heroImage: "/images/models/bondi-main.webp"
 heroImageAlt: "Bondi tiny house on wheels exterior"
 features:
   - "Single loft sleeping for 2 (plus sofa for guests)"
@@ -26,7 +26,7 @@ specs:
   "Turn Key from": "$145,000 incl. GST"
   Trailer: "4.5T ATM triple axle"
   Registration: "Road-registerable"
-# Photos copied from the old Squarespace page as placeholders (2026-10-17); numbered photo spots, replace any via PHOTOS.md
+# Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/bondi/01.webp"
     alt: "Bondi, photo 1"
@@ -44,20 +44,6 @@ gallery:
     alt: "Bondi, photo 7"
   - src: "/images/old/bondi/08.webp"
     alt: "Bondi, photo 8"
-  - src: "/images/old/bondi/09.webp"
-    alt: "Bondi, photo 9"
-  - src: "/images/old/bondi/10.webp"
-    alt: "Bondi, photo 10"
-  - src: "/images/old/bondi/11.webp"
-    alt: "Bondi, photo 11"
-  - src: "/images/old/bondi/12.webp"
-    alt: "Bondi, photo 12"
-  - src: "/images/old/bondi/13.webp"
-    alt: "Bondi, photo 13"
-  - src: "/images/old/bondi/14.webp"
-    alt: "Bondi, photo 14"
-  - src: "/images/old/bondi/15.webp"
-    alt: "Bondi, photo 15"
 ---
 
 ## Bondi

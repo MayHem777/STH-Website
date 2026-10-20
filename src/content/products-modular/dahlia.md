@@ -27,20 +27,22 @@ specs:
   Builder: "QBCC #15205110"
   Class: "Class 1a"
   Installation: "~2 weeks on site"
-# Photos from the old Cabin page (2026-10-17 placeholders, sorted by model 2026-10-20); numbered photo spots, replace any via PHOTOS.md
+# Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
-  - src: "/images/models/dahlia-ext.webp"
-    alt: "Dahlia cabin, photo 1"
-  - src: "/images/models/dahlia-int-1.webp"
-    alt: "Dahlia cabin, photo 2"
-  - src: "/images/models/dahlia-int-2.webp"
-    alt: "Dahlia cabin, photo 3"
-  - src: "/images/old/cabin/06.webp"
-    alt: "Dahlia cabin, photo 4"
-  - src: "/images/old/cabin/07.webp"
-    alt: "Dahlia cabin, photo 5"
-  - src: "/images/old/cabin/08.webp"
-    alt: "Dahlia cabin, photo 6"
+  - src: "/images/old/dahlia/01.webp"
+    alt: "Dahlia, photo 1"
+  - src: "/images/old/dahlia/02.webp"
+    alt: "Dahlia, photo 2"
+  - src: "/images/old/dahlia/03.webp"
+    alt: "Dahlia, photo 3"
+  - src: "/images/old/dahlia/04.webp"
+    alt: "Dahlia, photo 4"
+  - src: "/images/old/dahlia/05.webp"
+    alt: "Dahlia, photo 5"
+  - src: "/images/old/dahlia/06.webp"
+    alt: "Dahlia, photo 6"
+  - src: "/images/old/dahlia/07.webp"
+    alt: "Dahlia, photo 7"
 ---
 
 ## Dahlia

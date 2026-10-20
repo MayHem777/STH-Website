@@ -4,7 +4,7 @@ tagline: "When simplicity meets luxury."
 description: "The Castaways is an 8m tiny house on wheels with dual lofts for 4. Beautifully finished with a cedar shiplap ceiling feature and premium inclusions throughout."
 draft: false
 order: 5
-heroImage: "/images/castaways-08.jpg"
+heroImage: "/images/models/castaways-main.webp"
 heroImageAlt: "Castaways tiny house on wheels exterior"
 features:
   - "Dual lofts sleeping 4 (plus sofa lounge)"
@@ -26,7 +26,7 @@ specs:
   "Turn Key from": "$145,000 incl. GST"
   Trailer: "4.5T ATM triple axle"
   Registration: "Road-registerable"
-# Photos copied from the old Squarespace page as placeholders (2026-10-17); numbered photo spots, replace any via PHOTOS.md
+# Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/castaways/01.webp"
     alt: "Castaways, photo 1"
@@ -46,14 +46,6 @@ gallery:
     alt: "Castaways, photo 8"
   - src: "/images/old/castaways/09.webp"
     alt: "Castaways, photo 9"
-  - src: "/images/old/castaways/10.webp"
-    alt: "Castaways, photo 10"
-  - src: "/images/old/castaways/11.webp"
-    alt: "Castaways, photo 11"
-  - src: "/images/old/castaways/12.webp"
-    alt: "Castaways, photo 12"
-  - src: "/images/old/castaways/13.webp"
-    alt: "Castaways, photo 13"
 ---
 
 ## Castaways

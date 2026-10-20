@@ -4,7 +4,7 @@ tagline: "Cosy living, big entertainment."
 description: "The Boiling Pot is our 9m model — dual lofts for 4, plus a separate TV room. Named after the iconic Noosa surf break. Available in 2.4m or 2.8m width."
 draft: false
 order: 6
-heroImage: "/images/boiling-pot-01.jpg"
+heroImage: "/images/models/boiling-pot-main.webp"
 heroImageAlt: "Boiling Pot tiny house on wheels exterior"
 features:
   - "Dual lofts sleeping 4 (plus sofa lounge)"
@@ -26,7 +26,7 @@ specs:
   "Turn Key from": "$180,000 incl. GST"
   Trailer: "4.5T ATM triple axle"
   Registration: "Road-registerable"
-# Photos copied from the old Squarespace page as placeholders (2026-10-17); numbered photo spots, replace any via PHOTOS.md
+# Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/boiling-pot/01.webp"
     alt: "Boiling Pot, photo 1"
@@ -86,22 +86,6 @@ gallery:
     alt: "Boiling Pot, photo 28"
   - src: "/images/old/boiling-pot/29.webp"
     alt: "Boiling Pot, photo 29"
-  - src: "/images/old/boiling-pot/30.webp"
-    alt: "Boiling Pot, photo 30"
-  - src: "/images/old/boiling-pot/31.webp"
-    alt: "Boiling Pot, photo 31"
-  - src: "/images/old/boiling-pot/32.webp"
-    alt: "Boiling Pot, photo 32"
-  - src: "/images/old/boiling-pot/33.webp"
-    alt: "Boiling Pot, photo 33"
-  - src: "/images/old/boiling-pot/34.webp"
-    alt: "Boiling Pot, photo 34"
-  - src: "/images/old/boiling-pot/35.webp"
-    alt: "Boiling Pot, photo 35"
-  - src: "/images/old/boiling-pot/36.webp"
-    alt: "Boiling Pot, photo 36"
-  - src: "/images/old/boiling-pot/37.webp"
-    alt: "Boiling Pot, photo 37"
 ---
 
 ## Boiling Pot

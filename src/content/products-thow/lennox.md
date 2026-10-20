@@ -4,7 +4,7 @@ tagline: "Expand your horizons with extra height."
 description: "The Lennox is our flagship 9–10m model — ground-floor master bedroom plus loft, extra ceiling height and our most spacious layout. Sleeps 4+."
 draft: false
 order: 7
-heroImage: "/images/lennox-01.jpg"
+heroImage: "/images/models/lennox-main.webp"
 heroImageAlt: "Lennox tiny house on wheels exterior"
 features:
   - "Ground-floor master bedroom + loft sleeping area"
@@ -26,7 +26,7 @@ specs:
   "Turn Key from": "$145,000 incl. GST"
   Trailer: "4.5T ATM triple axle"
   Registration: "Road-registerable"
-# Photos copied from the old Squarespace page as placeholders (2026-10-17); numbered photo spots, replace any via PHOTOS.md
+# Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/lennox/01.webp"
     alt: "Lennox, photo 1"
@@ -86,6 +86,24 @@ gallery:
     alt: "Lennox, photo 28"
   - src: "/images/old/lennox/29.webp"
     alt: "Lennox, photo 29"
+  - src: "/images/old/lennox/30.webp"
+    alt: "Lennox, photo 30"
+  - src: "/images/old/lennox/31.webp"
+    alt: "Lennox, photo 31"
+  - src: "/images/old/lennox/32.webp"
+    alt: "Lennox, photo 32"
+  - src: "/images/old/lennox/33.webp"
+    alt: "Lennox, photo 33"
+  - src: "/images/old/lennox/34.webp"
+    alt: "Lennox, photo 34"
+  - src: "/images/old/lennox/35.webp"
+    alt: "Lennox, photo 35"
+  - src: "/images/old/lennox/36.webp"
+    alt: "Lennox, photo 36"
+  - src: "/images/old/lennox/37.webp"
+    alt: "Lennox, photo 37"
+  - src: "/images/old/lennox/38.webp"
+    alt: "Lennox, photo 38"
 ---
 
 ## Lennox
