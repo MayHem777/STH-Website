@@ -21,7 +21,6 @@ specs:
   "Common sizes": "2m × 2m to 4m × 3m"
   Foundation: "Concrete slab or screw piles"
   "On-site time": "Approx. 2 weeks"
-  "Build time": "16–22 weeks from design sign-off"
   Heater: "Kiuas wood-fired, electric, or infrared panels"
 ---
 

@@ -1,23 +1,23 @@
 ---
 title: "Sunrise Beach House"
 tagline: "Contemporary design with the relaxed charm of coastal living."
-description: "Two-bedroom modular home in 81.6 m² and 88.8 m² layouts, with open-plan entertaining and a large covered deck. From $290,000 incl. GST, ex factory."
+description: "Two-bedroom modular home in three layouts, 64.6 to 76.5 m² of internal living plus a covered deck. From $290,000 incl. GST, ex factory."
 draft: false
 order: 4.4
 bedrooms: 2
 priceFrom: 290000
-area: "81.6 m² or 88.8 m²"
+area: "64.6 to 76.5 m² internal + deck"
 size: "12 × 6.8 m or 12 × 7.4 m"
 upgrades: "Timber ceiling and exterior timber wall feature."
 heroImage: "/images/models/sunrise-beach-house-ext.webp"
 heroImageAlt: "Sunrise Beach House modular home: front exterior with covered deck among palms"
 floorPlans:
   - src: "/images/models/sunrise-beach-house-plan-1.webp"
-    label: "Sunrise Beach House with eaves, 12 × 6.8 m"
+    label: "With eaves, 12 × 6.8 m: 64.6 m² internal living (9.5 × 6.8 m) + 17 m² deck = 81.6 m² in total"
   - src: "/images/models/sunrise-beach-house-plan-2.webp"
-    label: "Sunrise Beach House no eaves, 12 × 7.4 m"
+    label: "No eaves, 12 × 7.4 m: 70.3 m² internal living (9.5 × 7.4 m) + 18.5 m² deck = 88.8 m² in total"
   - src: "/images/models/sunrise-beach-house-plan-3.webp"
-    label: "Sunrise Beach House spa bathroom layout, 12 × 7.4 m"
+    label: "No eaves with spa bathroom, 12 × 7.4 m: bigger living and laundry, 76.5 m² internal living + 12.21 m² deck = 88.7 m² in total"
 gallery:
   - src: "/images/old/sunrise-beach-house/02.webp"
     alt: "Sunrise Beach House modular home: dining table and timber kitchen with fridge"
@@ -63,7 +63,8 @@ specs:
   Bedrooms: "2"
   Bathrooms: "1"
   Size: "12 × 6.8 m or 12 × 7.4 m"
-  "Floor area": "81.6 m² or 88.8 m²"
+  "Internal living": "64.6, 70.3 or 76.5 m²"
+  "Including deck": "81.6, 88.8 or 88.7 m²"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
   Installation: "~2 weeks on site"

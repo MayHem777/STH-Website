@@ -14,7 +14,7 @@ features:
   - "2-burner gas cooktop + Westinghouse electric oven"
   - "Mitsubishi 2.5kW split-system air conditioner"
   - "Rinnai B16 instantaneous gas hot water"
-  - "Polymarble/Torbex shower base (1060×820mm)"
+  - "Polymarble/Torbex shower base (820 × 820 mm)"
   - "Vinyl plank flooring (Springbrook range)"
   - "Multiple lining options: plywood, VJ sheeting, cedar, pine"
 specs:

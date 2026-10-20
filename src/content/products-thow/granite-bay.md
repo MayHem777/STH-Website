@@ -76,7 +76,7 @@ gallery:
 
 ## Granite Bay
 
-Named after one of Queensland's best-kept coastal secrets, the Granite Bay is our first dual-loft model — designed for families and groups who refuse to compromise on space.
+Named after one of Queensland's best-kept coastal secrets, the Granite Bay is a dual-loft model designed for families and groups who need the space.
 
 At 8 metres, with two separate sleeping lofts, the Granite Bay gives everyone their own space while sharing a beautifully finished kitchen and living area below. Whether it's a family home, an Airbnb, or a retreat for mates — this is the one.
 

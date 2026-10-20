@@ -1,7 +1,7 @@
 ---
 title: "Boiling Pot"
 tagline: "Cosy living, big entertainment."
-description: "The Boiling Pot is our 9m model — dual lofts for 4, plus a separate TV room. Named after the iconic Noosa surf break. Available in 2.4m or 2.8m width."
+description: "The Boiling Pot is our 9–10 m model — dual lofts for 4, plus a separate TV room. Named after the iconic Noosa surf break. Available as 9 × 2.5 m or 10 × 3 m."
 draft: false
 order: 6
 heroImage: "/images/models/boiling-pot-main.webp"
@@ -9,7 +9,7 @@ heroImageAlt: "Boiling Pot tiny house on wheels: dark and timber cladding with l
 features:
   - "Dual lofts sleeping 4 (plus sofa lounge)"
   - "Separate TV/entertainment room"
-  - "Available in 2.4m or 2.8m width"
+  - "Available as 9 × 2.5 m or 10 × 3 m"
   - "Custom triple axle trailer (4.5T ATM)"
   - "Bluescope steel frame with Colorbond roof"
   - "Basalt Trimdek cladding + cedar feature wall"
@@ -18,8 +18,8 @@ features:
   - "Rinnai B16 instantaneous gas hot water"
   - "Custom Polytec matt/ravine joinery with xenolith benchtops"
 specs:
-  Length: "9 m"
-  Width: "2.4 m or 2.8 m"
+  Length: "9 m or 10 m"
+  Width: "2.5 m (9 m model) or 3 m (10 m model)"
   Sleeps: "4"
   Bedroom: "Dual lofts"
   "Lock-Up from": "$90,000 incl. GST"
@@ -92,7 +92,7 @@ gallery:
 
 Named after the legendary Noosa surf break, the Boiling Pot is a force to be reckoned with. At 9 metres, it's our largest dual-loft model — and the only one in our range with a dedicated TV room, giving you a proper separation of living spaces in a tiny home footprint.
 
-Available in 2.4m or 2.8m width, the Boiling Pot is ideal for those who want a full family home experience without being tied to a permanent location.
+Available as 9 × 2.5 m or 10 × 3 m, the Boiling Pot is ideal for those who want a full family home experience without being tied to a permanent location.
 
 The Boiling Pot is the only design in our tiny house range with a separate TV room, giving you a second living space away from the main lounge and kitchen. It comes in 9 m or 10 m lengths, on a triple axle trailer rated to 4.5 tonnes ATM.
 

@@ -19,7 +19,7 @@ features:
   - "Vinyl plank flooring (Clever Choice Scorpio)"
 specs:
   Length: "7.2 m"
-  Width: "2.5 m"
+  Width: "2.5 m or 3 m"
   Sleeps: "2"
   Bedroom: "Single loft"
   "Lock-Up from": "$71,500 incl. GST"

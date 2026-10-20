@@ -1,0 +1,37 @@
+---
+// Short install videos (Nat 2026-10-21). Drop MP4s into public/videos/ with these names; a slot only shows on
+// the live site once its file exists. Preview builds show empty slots so Nat can see where videos go.
+// Keep each clip short (20–60 s) and under 25 MB (Cloudflare Pages file limit); landscape, 1080p is plenty.
+import fs from 'node:fs';
+import path from 'node:path';
+import { IS_PREVIEW } from '../lib/visible';
+export interface Props { slots: { file: string; caption: string }[]; title?: string; }
+const { slots, title } = Astro.props;
+const shown = slots.map((s) => ({ ...s, exists: fs.existsSync(path.resolve('public/videos', s.file)) })).filter((s) => s.exists || IS_PREVIEW);
+---
+{shown.length > 0 && (
+  <div class="install-videos">
+    {title && <h3>{title}</h3>}
+    <div class="install-videos__grid">
+      {shown.map((s) => s.exists ? (
+        <figure>
+          <video src={`/videos/${s.file}`} controls muted playsinline preload="metadata"></video>
+          <figcaption>{s.caption}</figcaption>
+        </figure>
+      ) : (
+        <figure class="install-videos__empty" data-spot-empty="">
+          <div>Video slot: <code>public/videos/{s.file}</code></div>
+          <figcaption>{s.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+)}
+<style>
+.install-videos { margin-top: 2rem; }
+.install-videos h3 { margin-bottom: 1rem; }
+.install-videos__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; }
+.install-videos video { width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: var(--radius-card-sm); display: block; }
+.install-videos figcaption { margin-top: 0.4rem; font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.install-videos__empty > div { aspect-ratio: 16 / 9; display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem; border-radius: var(--radius-card-sm); background: repeating-linear-gradient(45deg, #ece6dc 0 14px, #e3dccf 14px 28px); color: var(--color-text-muted); font-size: var(--font-size-sm); }
+</style>

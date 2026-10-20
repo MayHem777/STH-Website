@@ -3751,5 +3751,104 @@
   "shows": "Retreat, inside or out",
   "shape": "landscape",
   "current": "/images/old/retreat/08.webp"
+ },
+ {
+  "n": 417,
+  "key": "install/modular-1",
+  "page": "/modular-homes/our-process/",
+  "where": "Our Process page, \"Installation day\" photo 1",
+  "shows": "Crane lifting a module off the truck",
+  "shape": "landscape",
+  "current": "/images/workshop-recent-3.jpg"
+ },
+ {
+  "n": 418,
+  "key": "install/modular-2",
+  "page": "/modular-homes/our-process/",
+  "where": "Our Process page, \"Installation day\" photo 2",
+  "shows": "Module being set down onto the footings",
+  "shape": "landscape",
+  "current": "/images/workshop-recent-4.jpeg"
+ },
+ {
+  "n": 419,
+  "key": "install/modular-3",
+  "page": "/modular-homes/our-process/",
+  "where": "Our Process page, \"Installation day\" photo 3",
+  "shows": "Module in place, crew fitting off",
+  "shape": "landscape"
+ },
+ {
+  "n": 420,
+  "key": "install/modular-4",
+  "page": "/modular-homes/our-process/",
+  "where": "Our Process page, \"Installation day\" photo 4",
+  "shows": "Finished home on site with deck",
+  "shape": "landscape"
+ },
+ {
+  "n": 421,
+  "key": "install/modular-5",
+  "page": "/modular-homes/our-process/",
+  "where": "Our Process page, \"Installation day\" photo 5",
+  "shows": "Truck and module on the road or arriving",
+  "shape": "landscape"
+ },
+ {
+  "n": 422,
+  "key": "install/modular-6",
+  "page": "/modular-homes/our-process/",
+  "where": "Our Process page, \"Installation day\" photo 6",
+  "shows": "Connections: plumbing, power or stairs going in",
+  "shape": "landscape"
+ },
+ {
+  "n": 423,
+  "key": "install/thow-1",
+  "page": "/delivery/",
+  "where": "Delivery page, \"Tiny house delivery\" photo 1",
+  "shows": "Tiny house leaving the factory on its trailer",
+  "shape": "landscape",
+  "current": "/images/old/boiling-pot/11.webp"
+ },
+ {
+  "n": 424,
+  "key": "install/thow-2",
+  "page": "/delivery/",
+  "where": "Delivery page, \"Tiny house delivery\" photo 2",
+  "shows": "Tiny house towed on the road",
+  "shape": "landscape"
+ },
+ {
+  "n": 425,
+  "key": "install/thow-3",
+  "page": "/delivery/",
+  "where": "Delivery page, \"Tiny house delivery\" photo 3",
+  "shows": "Tiny house being reversed or positioned on site",
+  "shape": "landscape"
+ },
+ {
+  "n": 426,
+  "key": "install/thow-4",
+  "page": "/delivery/",
+  "where": "Delivery page, \"Tiny house delivery\" photo 4",
+  "shows": "Tiny house set up on site, jack legs down",
+  "shape": "landscape"
+ },
+ {
+  "n": 427,
+  "key": "install/thow-5",
+  "page": "/delivery/",
+  "where": "Delivery page, \"Tiny house delivery\" photo 5",
+  "shows": "Tiny house craned onto a tricky site",
+  "shape": "landscape"
+ },
+ {
+  "n": 428,
+  "key": "install/thow-6",
+  "page": "/delivery/",
+  "where": "Delivery page, \"Tiny house delivery\" photo 6",
+  "shows": "Handover: finished tiny house on site",
+  "shape": "landscape"
  }
 ]

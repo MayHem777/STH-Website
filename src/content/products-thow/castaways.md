@@ -1,14 +1,14 @@
 ---
 title: "Castaways"
 tagline: "When simplicity meets luxury."
-description: "The Castaways is an 8m tiny house on wheels with dual lofts for 4. Beautifully finished with a cedar shiplap ceiling feature and premium inclusions throughout."
+description: "The Castaways is an 8m tiny house on wheels with dual lofts for 4. Beautifully finished with a cedar shiplap lounge ceiling and premium inclusions throughout."
 draft: false
 order: 5
 heroImage: "/images/models/castaways-main.webp"
 heroImageAlt: "Castaways tiny house on wheels: white cladding with timber deck and outdoor dining"
 features:
   - "Dual lofts sleeping 4 (plus sofa lounge)"
-  - "Cedar shiplap ceiling feature"
+  - "Cedar shiplap ceiling in the lounge"
   - "Custom triple axle trailer (4.5T ATM) with 4 jack legs"
   - "Bluescope steel frame with Colorbond roof"
   - "R2.5 insulation throughout"
@@ -19,7 +19,7 @@ features:
   - "Vinyl plank flooring (Clever Choice EIR — Pisces)"
 specs:
   Length: "8 m"
-  Width: "2.5 m"
+  Width: "2.5 m or 3 m"
   Sleeps: "4"
   Bedroom: "Dual lofts"
   "Lock-Up from": "$71,500 incl. GST"
@@ -50,7 +50,7 @@ gallery:
 
 ## Castaways
 
-The Castaways is where simplicity meets luxury. Same footprint as the Granite Bay at 8 metres, but with premium finishes that set it apart — including a stunning cedar shiplap ceiling that runs the full length of the home.
+The Castaways is where simplicity meets luxury. Same footprint as the Granite Bay at 8 metres, but with premium finishes that set it apart — including a cedar shiplap ceiling in the lounge.
 
 With dual sleeping lofts for four and a beautifully designed living area below, the Castaways is just as comfortable as a permanent home — just with the freedom to move.
 

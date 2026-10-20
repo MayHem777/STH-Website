@@ -21,7 +21,6 @@ specs:
   "Common sizes": "3m × 3m to 6m × 6m"
   Foundation: "Concrete slab or screw piles"
   "On-site time": "Approx. 2 weeks"
-  "Build time": "16–22 weeks from design sign-off"
   "Council approval": "Often accepted development — check with your council"
 ---
 

@@ -60,7 +60,7 @@ features:
   - "QBCC licensed build — Class 1a"
 specs:
   Bedrooms: "2"
-  Bathrooms: "2"
+  Bathrooms: "2 (ensuite + bathroom)"
   Size: "14 × 3.4 m + 8 × 3.4 m"
   "Floor area": "74.8 m²"
   Builder: "QBCC #15205110"

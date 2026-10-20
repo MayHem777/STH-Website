@@ -5,6 +5,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import TurnKey from '../../components/TurnKey.astro';
 import CTAButton from '../../components/CTAButton.astro';
 import { EX_FACTORY_NOTE } from '../../lib/price';
+import SpotGallery from '../../components/SpotGallery.astro';
+import InstallVideos from '../../components/InstallVideos.astro';
 
 const steps = [
   { t: 'Survey and soil test', d: 'Once you accept our proposal, we order the survey and soil test for your block. They tell the engineer and certifier exactly what they are working with.' },
@@ -53,7 +55,20 @@ const steps = [
 
   <TurnKey showLink={false} />
 
-  <section class="section">
+    <section class="section install">
+    <div class="container">
+      <h2>Installation day</h2>
+      <p class="install__intro">Your home leaves our Noosaville factory finished, travels to your site by truck and is craned onto its footings, with about two weeks on site from start to finish.</p>
+      <SpotGallery prefix="install/modular-" alt="Sunshine Tiny Houses modular home installation" group="install-modular" />
+      <InstallVideos slots={[
+        { file: 'install-modular-1.mp4', caption: 'Crane lift and set-down' },
+        { file: 'install-modular-2.mp4', caption: 'Truck arriving on site' },
+        { file: 'install-modular-3.mp4', caption: 'Finished home, walk-around' },
+      ]} />
+    </div>
+  </section>
+
+<section class="section">
     <div class="container op-note">
       <h2>What your quote covers</h2>
       <p>The prices on our model pages are for the home itself. {EX_FACTORY_NOTE} Because every block is different, we look at your site first and then quote the whole project: the home, approvals, site works, transport, crane, installation and connections. One builder, one quote, one point of contact.</p>
@@ -82,4 +97,5 @@ const steps = [
 .op-note p { color: var(--color-text-body); }
 .op-note__btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
 @media (max-width: 800px) { .op-steps__list { grid-template-columns: 1fr; } }
+.install__intro { max-width: 70ch; margin-bottom: 1.5rem; color: var(--color-text-muted); }
 </style>

@@ -1,12 +1,12 @@
 ---
 title: "Raglan"
 tagline: "Exceptional design that doesn't need a large footprint."
-description: "The Raglan is a studio cabin (11 × 3.6 m, 39.6 m²) from our Cabin range. From $160,000 incl. GST, ex factory."
+description: "The Raglan is a studio cabin (11 × 3.6 m: 32.4 m² internal + 7.2 m² deck) from our Cabin range. From $160,000 incl. GST, ex factory."
 draft: false
 order: 1.3
 range: "cabin"
 priceFrom: 160000
-area: "39.6 m²"
+area: "32.4 m² + 7.2 m² deck"
 size: "11 × 3.6 m"
 upgrades: "Shaped window, and timber feature walls and ceiling."
 heroImage: "/images/models/raglan-main.webp"
@@ -18,14 +18,16 @@ features:
   - "Studio with a luxurious ensuite"
   - "Integrated workspace and generous storage"
   - "Private entertaining deck"
-  - "QBCC licensed build — Class 1a"
+  - "QBCC licensed build"
 specs:
   Bedrooms: "Studio"
   Bathrooms: "1 (ensuite)"
   Size: "11 × 3.6 m"
-  "Floor area": "39.6 m²"
+  "Internal living": "32.4 m²"
+  Deck: "7.2 m²"
+  Kitchen: "None (studio)"
   Builder: "QBCC #15205110"
-  Class: "Class 1a"
+  Class: "Depends on your council (e.g. a detached extension); confirmed with the certifier"
   Installation: "~2 weeks on site"
 # Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:

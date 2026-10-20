@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import SpotGallery from '../components/SpotGallery.astro';
+import InstallVideos from '../components/InstallVideos.astro';
 ---
 
 <BaseLayout
@@ -69,6 +71,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <p>Our contractor transports and positions your home on-site. For modular homes, the site connection process begins the day after delivery.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section dl-media">
+    <div class="container">
+      <h2>Deliveries and installs</h2>
+      <SpotGallery prefix="install/thow-" alt="Sunshine Tiny Houses tiny house on wheels delivery" group="install-thow" />
+      <InstallVideos slots={[
+        { file: 'delivery-thow-1.mp4', caption: 'Tiny house leaving the factory' },
+        { file: 'delivery-thow-2.mp4', caption: 'Positioning a tiny house on site' },
+      ]} />
+      <p class="dl-media__more">Modular homes are craned into place: see <a href="/modular-homes/our-process/">installation day for modular homes</a>.</p>
     </div>
   </section>
 
@@ -186,4 +200,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .delivery-intro { grid-template-columns: 1fr; gap: 2rem; }
   .steps { grid-template-columns: 1fr; }
 }
+.dl-media__more { margin-top: 1.25rem; }
+.dl-media__more a { color: var(--color-primary); font-weight: 600; text-decoration: underline; }
 </style>

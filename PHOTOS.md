@@ -382,3 +382,15 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 414 | [Retreat: photo gallery 6](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/06.webp` |
 | 415 | [Retreat: photo gallery 7](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/07.webp` |
 | 416 | [Retreat: photo gallery 8](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/08.webp` |
+| 417 | [Our Process page, "Installation day" photo 1](/modular-homes/our-process/) | Crane lifting a module off the truck | Landscape | `/images/workshop-recent-3.jpg` |
+| 418 | [Our Process page, "Installation day" photo 2](/modular-homes/our-process/) | Module being set down onto the footings | Landscape | `/images/workshop-recent-4.jpeg` |
+| 419 | [Our Process page, "Installation day" photo 3](/modular-homes/our-process/) | Module in place, crew fitting off | Landscape | none (hidden until filled) |
+| 420 | [Our Process page, "Installation day" photo 4](/modular-homes/our-process/) | Finished home on site with deck | Landscape | none (hidden until filled) |
+| 421 | [Our Process page, "Installation day" photo 5](/modular-homes/our-process/) | Truck and module on the road or arriving | Landscape | none (hidden until filled) |
+| 422 | [Our Process page, "Installation day" photo 6](/modular-homes/our-process/) | Connections: plumbing, power or stairs going in | Landscape | none (hidden until filled) |
+| 423 | [Delivery page, "Tiny house delivery" photo 1](/delivery/) | Tiny house leaving the factory on its trailer | Landscape | `/images/old/boiling-pot/11.webp` |
+| 424 | [Delivery page, "Tiny house delivery" photo 2](/delivery/) | Tiny house towed on the road | Landscape | none (hidden until filled) |
+| 425 | [Delivery page, "Tiny house delivery" photo 3](/delivery/) | Tiny house being reversed or positioned on site | Landscape | none (hidden until filled) |
+| 426 | [Delivery page, "Tiny house delivery" photo 4](/delivery/) | Tiny house set up on site, jack legs down | Landscape | none (hidden until filled) |
+| 427 | [Delivery page, "Tiny house delivery" photo 5](/delivery/) | Tiny house craned onto a tricky site | Landscape | none (hidden until filled) |
+| 428 | [Delivery page, "Tiny house delivery" photo 6](/delivery/) | Handover: finished tiny house on site | Landscape | none (hidden until filled) |

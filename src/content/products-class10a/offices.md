@@ -10,7 +10,7 @@ features:
   - "Fully insulated walls, floor and ceiling"
   - "Electrical fit-out — power, data, lighting"
   - "Split-system air conditioning"
-  - "Double-glazed windows and sliding door"
+  - "Double glazing available as an upgrade"
   - "Hardwood or composite timber decking"
   - "Colorbond or Zincalume roofing"
   - "Range of cladding options — Scyon, Weathertex, timber"
@@ -21,7 +21,6 @@ specs:
   "Common sizes": "3m × 3m to 6m × 4m"
   Foundation: "Concrete slab or screw piles"
   "On-site time": "Approx. 2 weeks"
-  "Build time": "16–22 weeks from design sign-off"
   "Council approval": "Often accepted development — check with your council"
 ---
 

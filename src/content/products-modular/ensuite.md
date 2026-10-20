@@ -34,14 +34,14 @@ features:
   - "Ideal as guest suite, granny flat, or private retreat"
   - "Fast installation — increases property value"
   - "Optional deck upgrade"
-  - "QBCC licensed build — Class 1a"
+  - "QBCC licensed build"
 specs:
   Bedrooms: "1"
   Bathrooms: "1 ensuite"
   Size: "6 × 3.4 m"
   "Floor area": "20.4 m²"
   Builder: "QBCC #15205110"
-  Class: "Class 1a"
+  Class: "Depends on your council (e.g. a detached extension); confirmed with the certifier"
   Installation: "~2 weeks on site"
 ---
 

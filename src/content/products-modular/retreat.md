@@ -13,13 +13,13 @@ features:
   - "Vanity, shower, and toilet included"
   - "Contrast therapy in one self-contained space"
   - "Optional deck upgrade"
-  - "QBCC licensed build — Class 1a"
+  - "QBCC licensed build"
 specs:
   "Sauna capacity": "4–6 people"
   "Cold plunge": "1–2 people"
   Amenities: "Vanity, shower, toilet"
   Builder: "QBCC #15205110"
-  Class: "Class 1a"
+  Class: "Depends on your council (e.g. a detached extension); confirmed with the certifier"
   Installation: "~2 weeks on site"
 # Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
@@ -47,7 +47,7 @@ The Vitalis combines heat, cold, and rest in one beautifully designed space — 
 
 Designed for serious recovery and daily wellbeing, the Vitalis features a 4–6 person sauna for group sessions or solo relaxation, a cold plunge for contrast therapy, and a full vanity, shower, and toilet for a complete post-session routine.
 
-Whether you're a professional athlete, a wellness enthusiast, or simply someone who wants to invest in recovery at home, the Vitalis delivers a commercial-grade wellness experience in a compact, QBCC-licensed structure.
+Whether you're a professional athlete, a wellness enthusiast, or simply someone who wants to invest in recovery at home, the Vitalis puts heat, cold and rest in one compact building from a QBCC-licensed builder.
 
 Optional deck upgrade available.
 

@@ -61,6 +61,11 @@ add('lp/meta/hero-bg', '/meta-ads-offer/', 'Meta ads page: background behind the
 const RENAMED = {};
 for (let i = 1; i <= 12; i++) { add(`gallery/modular-${i}`, '/gallery/', `Gallery, Class 1a modular homes: photo ${i}`, 'A finished modular home or granny flat, outside or in (crane lifts and installs welcome)', 'landscape'); RENAMED[`gallery/modular-${i}`] = `gallery/${i}`; }
 for (let i = 1; i <= 12; i++) { add(`gallery/thow-${i}`, '/gallery/', `Gallery, tiny houses on wheels: photo ${i}`, 'A finished tiny house on wheels, outside or in (deliveries welcome)', 'landscape'); RENAMED[`gallery/thow-${i}`] = `gallery/${i + 12}`; }
+// Install photos (Nat 2026-10-21: "add pictures and quick videos of the modular and tiny house install")
+const MOD_INSTALL = ['Crane lifting a module off the truck', 'Module being set down onto the footings', 'Module in place, crew fitting off', 'Finished home on site with deck', 'Truck and module on the road or arriving', 'Connections: plumbing, power or stairs going in'];
+const THOW_INSTALL = ['Tiny house leaving the factory on its trailer', 'Tiny house towed on the road', 'Tiny house being reversed or positioned on site', 'Tiny house set up on site, jack legs down', 'Tiny house craned onto a tricky site', 'Handover: finished tiny house on site'];
+MOD_INSTALL.forEach((w, i) => add(`install/modular-${i + 1}`, '/modular-homes/our-process/', `Our Process page, "Installation day" photo ${i + 1}`, w, 'landscape', ['/images/workshop-recent-3.jpg', '/images/workshop-recent-4.jpeg'][i]));
+THOW_INSTALL.forEach((w, i) => add(`install/thow-${i + 1}`, '/delivery/', `Delivery page, "Tiny house delivery" photo ${i + 1}`, w, 'landscape', ['/images/old/boiling-pot/11.webp'][i]));
 for (const p of items('blog')) add(`blog/${p.id}/hero`, `/blog/${p.id}/`, `Blog: "${p.title}" top photo`, 'Photo that fits the article', 'wide', p.hero);
 add('site/share', '/', 'Picture shown when someone shares the website on Facebook or in a text', 'One strong wide exterior shot', 'wide', '/og-default.jpg');
 

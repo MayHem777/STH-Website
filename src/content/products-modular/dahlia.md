@@ -1,12 +1,12 @@
 ---
 title: "Dahlia"
 tagline: "Open, airy and full of natural light."
-description: "The Dahlia is a studio cabin (10 × 3.4 m, 34 m²) from our Cabin range. From $145,000 incl. GST, ex factory."
+description: "The Dahlia is a studio cabin (10 × 3.4 m: 27 m² internal + 6.8 m² deck) from our Cabin range. From $145,000 incl. GST, ex factory."
 draft: false
 order: 1.2
 range: "cabin"
 priceFrom: 145000
-area: "34 m²"
+area: "27 m² + 6.8 m² deck"
 size: "10 × 3.4 m"
 upgrades: "Timber ceiling."
 heroImage: "/images/models/dahlia-ext.webp"
@@ -23,7 +23,8 @@ specs:
   Bedrooms: "Studio"
   Bathrooms: "1"
   Size: "10 × 3.4 m"
-  "Floor area": "34 m²"
+  "Internal living": "27 m²"
+  Deck: "6.8 m²"
   Builder: "QBCC #15205110"
   Class: "Class 1a"
   Installation: "~2 weeks on site"

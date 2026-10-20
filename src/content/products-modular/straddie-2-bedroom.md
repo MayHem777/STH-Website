@@ -43,6 +43,7 @@ features:
   - "Designer kitchen with integrated dining island"
   - "Full bathroom with laundry"
   - "Energy assessment required for your site"
+  - "Raked ceilings and skylights as standard"
   - "About 2 weeks on site, start to finish"
   - "QBCC licensed build — Class 1a"
 specs:
