@@ -1,8 +1,8 @@
 ---
 // Standard inclusions for every modular house, from the October 2026 brochure.
-const inclusions: { item: string; standard: string; upgrades?: string }[] = [
+const inclusions: { item: string; standard: string; upgrades?: string; link?: { text: string; href: string } }[] = [
   { item: 'Structural base floor and frame', standard: 'Engineered structural floor system with engineered 90 mm steel stud frames or 90 mm engineered timber frames.' },
-  { item: 'Structural floor sheeting', standard: '19 mm Yellow Tongue (termite resistant), and 19 mm James Hardie Scyon Secura in wet areas.', upgrades: 'MgO (magnesium oxide) floor sheeting.' },
+  { item: 'Structural floor sheeting', standard: '19 mm Yellow Tongue (termite resistant), and 19 mm James Hardie Scyon Secura in wet areas.', upgrades: 'Platinum "R" Floor insulated floor panels (structural plywood with a built-in insulated core).', link: { text: 'About Platinum "R" Floor', href: 'https://platinumtimber.com.au/platinum-r-floor/' } },
   { item: 'Roofing (colour optional)', standard: '5.0° skillion roof in Colorbond Trimdek, Colorbond gutter and flashings, 90 mm PVC downpipes.', upgrades: 'Roof pitch greater than 5.0°, or a gable roof.' },
   { item: 'Exterior cladding (colour optional)', standard: 'Colorbond Trimdek or Corrugated profile, James Hardie cladding products, or Weathertex.', upgrades: 'Rollsec Lux Collection, Rollsec Horizon, Alpine and standing seam profiles; hardwood timber such as western red cedar, spotted gum, Accoya or blackbutt.' },
   { item: 'Insulation', standard: 'R2.5 batts to walls, R3.0 batts to ceilings, plus 80 mm Anticon blanket under the roof sheets.' },
@@ -40,7 +40,7 @@ const inclusions: { item: string; standard: string; upgrades?: string }[] = [
               <tr>
                 <th scope="row">{row.item}</th>
                 <td data-label="Standard">{row.standard}</td>
-                <td data-label="Upgrades">{row.upgrades ?? '—'}</td>
+                <td data-label="Upgrades">{row.upgrades ?? '—'}{row.link && <> <a class="inclusions__link" href={row.link.href} target="_blank" rel="noopener">{row.link.text} ↗</a></>}</td>
               </tr>
             ))}
           </tbody>
@@ -63,6 +63,7 @@ const inclusions: { item: string; standard: string; upgrades?: string }[] = [
 .inclusions__table tbody th { width: 22%; font-weight: 700; }
 .inclusions__table td { color: var(--color-text-body); }
 .inclusions__table td:last-child { width: 34%; }
+.inclusions__link { color: var(--color-primary); font-weight: 600; text-decoration: underline; white-space: nowrap; }
 .inclusions__brochure { margin-top: 1rem; font-size: var(--font-size-sm); }
 .inclusions__brochure a { color: var(--color-primary); font-weight: 600; text-decoration: underline; }
 @media (max-width: 700px) {
