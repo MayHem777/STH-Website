@@ -5,7 +5,7 @@ Paste one product at a time. Google: your profile → **Products** → **View al
 - **Product category**: type the category name exactly as below; Google groups products by it. Old categories "Pod Homes" and "Tiny House Kit": move their products into the new categories, then delete the empty old ones (a category disappears once nothing is in it).
 - **Price**: "From" prices incl. GST, ex factory (same as the website). Tiny houses: turn key price.
 - **Button**: "Learn more" with the **Link now** address. It works today and keeps working after the DNS cutover (the new site redirects it). After cutover you can swap to the **After cutover** address for a direct link.
-- **Photo**: open the photo link, right-click → Save image, then upload it in the product.
+- **Photo**: JPG copies named after each product are in `docs/gbp-photos/` (Google only takes JPG/PNG; the website photos are mostly .webp). On GitHub: open the file, then the download button.
 
 ## Modular Homes & Granny Flats
 
