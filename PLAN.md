@@ -12,6 +12,8 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - Gallery page still "Photos Coming Soon".
 
 ## Assumptions
+- 2026-10-20 (Mitch): brochure PDF recompressed 13.0 MB → 4.9 MB (Ghostscript, images 150 dpi, JPEG q82; 27 pages, text still real text, side-by-side render showed no visible difference). It is the file AutoDraft links to (files.sunshinetinyhouses.com.au serves this Pages project's production build), so the smaller file reaches emails only once launch-prep is merged. AutoDraft's own copy in its assets/ folder is unchanged (link mode, not attached).
+- 2026-10-20 (Mitch): each blog post has its own photo: foundations = real build on piers on a sloping block (workshop-recent-4), Noosa charge = real granny flat on stumps (workshop-recent-1), modern modular = Sunrise Beach House render.
 - 2026-10-20 (Mitch: more professional): home page label above the two doors "What are you looking for?" → "Explore our two ranges of products".
 - 2026-10-20 (Mitch): green banner everywhere a banner shows: model pages (split hero), listing pages and Contact; Contact Now buttons on green are white with green text. Gold buttons and the contact form's Continue button now have dark text (7.8:1, white was 2.2:1); step numbers on Delivery and Our Process are green instead of gold. Site-wide contrast scan: nothing below 3:1. Straddie titles are "Straddie (1 bed)" / "Straddie (2 bed)" (Mitch).
 - 2026-10-20 (Mitch: Dahlia bathroom photos showing under Banksia): the OLD site itself had mistakes, so mirroring copied them. Its Banksia slideshow holds files named "STH - DAHLIA 07/08" (removed from Banksia), and its Daintree slideshow holds 3 "IMA-JACARANDA Scene 39/47/51" bathroom renders (removed from Daintree; Daintree now has no bathroom photo until Nat supplies one). A file-name scan of every old model page found no other cross-model photos. Nat may want to fix the same two galleries on the old site.
@@ -48,7 +50,7 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - 2026-10-02: STH-specific facts not already on the site are marked [CONFIRM] rather than guessed.
 
 ## Waiting on Mitch
-- SEO (2026-10-20 audit), needs facts or a decision: 2–3 unique paragraphs per model (modular pages are 75–88% shared text; tiny house pages are thin at ~300 words); which page should target "backyard office" (/backyard-studios/offices/ vs /modular-homes/office/); confirm hello@ is a live alias and matches Google Business Profile; each blog post its own photo; brochure PDF is 12.4 MB (slow on phones).
+- SEO (2026-10-20 audit), needs facts or a decision: 2–3 unique paragraphs per model (modular pages are 75–88% shared text; tiny house pages are thin at ~300 words); which page should target "backyard office" (/backyard-studios/offices/ vs /modular-homes/office/); confirm hello@ is a live alias and matches Google Business Profile; 
 - OFFGRID NOW: reply to Darren with our logo (he asked 7 Oct).
 - Nat's report 2026-10-17: names + details (size, layout, beds/baths, inclusions, lock-up/turn-key prices, floor plan, photos) for 4 new tiny houses (pages new-tiny-house-a..d), Jarrod's and Jenny's 1-bed designs (new-1-bedroom-a/b), Daintree 1-bed (price, plan), Office B (Shane & Linda) and Office C (Daniel). All are comingSoon = preview only.
 - Castaways + Boiling Pot: realistic 3D renders needed (who renders? Kiara / the renders designer?). Not something to fake.

@@ -5,8 +5,8 @@ description: "Screw piles or concrete bored piers? How modular home foundations 
 publishDate: 2026-10-02
 author: "Mitch Croft"
 draft: false
-heroImage: "/images/jacaranda-house.jpg"
-heroImageAlt: "Jacaranda modular home by Sunshine Tiny Houses"
+heroImage: "/images/workshop-recent-4.jpeg"
+heroImageAlt: "Modular home by Sunshine Tiny Houses on piers on a sloping block, with a covered deck"
 ---
 
 <!-- Hero image is a placeholder: swap for a real photo of piles/piers or a crane set-down when photos are ready. -->

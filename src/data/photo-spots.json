@@ -1747,7 +1747,8 @@
   "where": "Banksia: photo gallery 6",
   "shows": "Banksia, inside or out",
   "shape": "landscape",
-  "current": "/images/old/banksia/06.webp"
+  "current": "/images/old/banksia/06.webp",
+  "retired": true
  },
  {
   "n": 193,
@@ -1756,7 +1757,8 @@
   "where": "Banksia: photo gallery 7",
   "shows": "Banksia, inside or out",
   "shape": "landscape",
-  "current": "/images/old/banksia/07.webp"
+  "current": "/images/old/banksia/07.webp",
+  "retired": true
  },
  {
   "n": 194,
@@ -2066,8 +2068,8 @@
   "n": 227,
   "key": "modular/straddie-1-bedroom/main",
   "page": "/modular-homes/1-bedroom/straddie-1-bedroom/",
-  "where": "Straddie: main photo (also its card on the modular pages and home page)",
-  "shows": "Best exterior of a Straddie (real build if we have one)",
+  "where": "Straddie (1 bed): main photo (also its card on the modular pages and home page)",
+  "shows": "Best exterior of a Straddie (1 bed) (real build if we have one)",
   "shape": "landscape",
   "current": "/images/models/straddie-1-bedroom-ext.webp"
  },
@@ -2075,8 +2077,8 @@
   "n": 228,
   "key": "modular/straddie-1-bedroom/gallery-2",
   "page": "/modular-homes/1-bedroom/straddie-1-bedroom/",
-  "where": "Straddie: photo gallery 2",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (1 bed): photo gallery 2",
+  "shows": "Straddie (1 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-1-bedroom/02.webp"
  },
@@ -2084,8 +2086,8 @@
   "n": 229,
   "key": "modular/straddie-1-bedroom/gallery-3",
   "page": "/modular-homes/1-bedroom/straddie-1-bedroom/",
-  "where": "Straddie: photo gallery 3",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (1 bed): photo gallery 3",
+  "shows": "Straddie (1 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-1-bedroom/03.webp"
  },
@@ -2093,8 +2095,8 @@
   "n": 230,
   "key": "modular/straddie-1-bedroom/gallery-4",
   "page": "/modular-homes/1-bedroom/straddie-1-bedroom/",
-  "where": "Straddie: photo gallery 4",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (1 bed): photo gallery 4",
+  "shows": "Straddie (1 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-1-bedroom/04.webp"
  },
@@ -2102,8 +2104,8 @@
   "n": 231,
   "key": "modular/straddie-1-bedroom/gallery-5",
   "page": "/modular-homes/1-bedroom/straddie-1-bedroom/",
-  "where": "Straddie: photo gallery 5",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (1 bed): photo gallery 5",
+  "shows": "Straddie (1 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-1-bedroom/05.webp"
  },
@@ -2111,8 +2113,8 @@
   "n": 232,
   "key": "modular/straddie-1-bedroom/gallery-6",
   "page": "/modular-homes/1-bedroom/straddie-1-bedroom/",
-  "where": "Straddie: photo gallery 6",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (1 bed): photo gallery 6",
+  "shows": "Straddie (1 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-1-bedroom/06.webp"
  },
@@ -2120,8 +2122,8 @@
   "n": 233,
   "key": "modular/straddie-1-bedroom/gallery-7",
   "page": "/modular-homes/1-bedroom/straddie-1-bedroom/",
-  "where": "Straddie: photo gallery 7",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (1 bed): photo gallery 7",
+  "shows": "Straddie (1 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-1-bedroom/07.webp"
  },
@@ -2129,8 +2131,8 @@
   "n": 234,
   "key": "modular/straddie-1-bedroom/gallery-8",
   "page": "/modular-homes/1-bedroom/straddie-1-bedroom/",
-  "where": "Straddie: photo gallery 8",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (1 bed): photo gallery 8",
+  "shows": "Straddie (1 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-1-bedroom/08.webp"
  },
@@ -2421,7 +2423,8 @@
   "where": "Daintree: photo gallery 11",
   "shows": "Daintree, inside or out",
   "shape": "landscape",
-  "current": "/images/old/daintree/11.webp"
+  "current": "/images/old/daintree/11.webp",
+  "retired": true
  },
  {
   "n": 267,
@@ -2430,7 +2433,8 @@
   "where": "Daintree: photo gallery 12",
   "shows": "Daintree, inside or out",
   "shape": "landscape",
-  "current": "/images/old/daintree/12.webp"
+  "current": "/images/old/daintree/12.webp",
+  "retired": true
  },
  {
   "n": 268,
@@ -2439,7 +2443,8 @@
   "where": "Daintree: photo gallery 13",
   "shows": "Daintree, inside or out",
   "shape": "landscape",
-  "current": "/images/old/daintree/13.webp"
+  "current": "/images/old/daintree/13.webp",
+  "retired": true
  },
  {
   "n": 269,
@@ -2475,8 +2480,8 @@
   "n": 272,
   "key": "modular/straddie-2-bedroom/main",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: main photo (also its card on the modular pages and home page)",
-  "shows": "Best exterior of a Straddie (real build if we have one)",
+  "where": "Straddie (2 bed): main photo (also its card on the modular pages and home page)",
+  "shows": "Best exterior of a Straddie (2 bed) (real build if we have one)",
   "shape": "landscape",
   "current": "/images/models/straddie-2-bedroom-ext.webp"
  },
@@ -2484,8 +2489,8 @@
   "n": 273,
   "key": "modular/straddie-2-bedroom/gallery-2",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 2",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 2",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/02.webp"
  },
@@ -2493,8 +2498,8 @@
   "n": 274,
   "key": "modular/straddie-2-bedroom/gallery-3",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 3",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 3",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/03.webp"
  },
@@ -2502,8 +2507,8 @@
   "n": 275,
   "key": "modular/straddie-2-bedroom/gallery-4",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 4",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 4",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/04.webp"
  },
@@ -2511,8 +2516,8 @@
   "n": 276,
   "key": "modular/straddie-2-bedroom/gallery-5",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 5",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 5",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/05.webp"
  },
@@ -2520,8 +2525,8 @@
   "n": 277,
   "key": "modular/straddie-2-bedroom/gallery-6",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 6",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 6",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/06.webp"
  },
@@ -2529,8 +2534,8 @@
   "n": 278,
   "key": "modular/straddie-2-bedroom/gallery-7",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 7",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 7",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/07.webp"
  },
@@ -2538,8 +2543,8 @@
   "n": 279,
   "key": "modular/straddie-2-bedroom/gallery-8",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 8",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 8",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/08.webp"
  },
@@ -2547,8 +2552,8 @@
   "n": 280,
   "key": "modular/straddie-2-bedroom/gallery-9",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 9",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 9",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/09.webp"
  },
@@ -2556,8 +2561,8 @@
   "n": 281,
   "key": "modular/straddie-2-bedroom/gallery-10",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 10",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 10",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/10.webp"
  },
@@ -2565,8 +2570,8 @@
   "n": 282,
   "key": "modular/straddie-2-bedroom/gallery-11",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 11",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 11",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/11.webp"
  },
@@ -3340,7 +3345,7 @@
   "where": "Blog: \"Foundations for Modular Homes: What Sits Under Your Sunshine Tiny Houses Build\" top photo",
   "shows": "Photo that fits the article",
   "shape": "wide",
-  "current": "/images/jacaranda-house.jpg"
+  "current": "/images/workshop-recent-4.jpeg"
  },
  {
   "n": 371,
@@ -3349,7 +3354,7 @@
   "where": "Blog: \"Noosa Council Abolishes $7,000 Infrastructure Charge for Secondary Dwellings — Here's What That Means for You\" top photo",
   "shows": "Photo that fits the article",
   "shape": "wide",
-  "current": "/images/jacaranda-house.jpg"
+  "current": "/images/workshop-recent-1.jpeg"
  },
  {
   "n": 372,
@@ -3358,7 +3363,7 @@
   "where": "Blog: \"The Rise of Modern Modular: Why a Granny Flat is the Ultimate Property Upgrade\" top photo",
   "shows": "Photo that fits the article",
   "shape": "wide",
-  "current": "/images/jacaranda-house.jpg"
+  "current": "/images/models/sunrise-beach-house-ext.webp"
  },
  {
   "n": 373,
@@ -3607,8 +3612,8 @@
   "n": 401,
   "key": "modular/straddie-1-bedroom/gallery-1",
   "page": "/modular-homes/1-bedroom/straddie-1-bedroom/",
-  "where": "Straddie: photo gallery 1",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (1 bed): photo gallery 1",
+  "shows": "Straddie (1 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-1-bedroom/01.webp"
  },
@@ -3670,8 +3675,8 @@
   "n": 408,
   "key": "modular/straddie-2-bedroom/gallery-1",
   "page": "/modular-homes/2-bedroom/straddie-2-bedroom/",
-  "where": "Straddie: photo gallery 1",
-  "shows": "Straddie, inside or out",
+  "where": "Straddie (2 bed): photo gallery 1",
+  "shows": "Straddie (2 bed), inside or out",
   "shape": "landscape",
   "current": "/images/old/straddie-2-bedroom/01.webp"
  },

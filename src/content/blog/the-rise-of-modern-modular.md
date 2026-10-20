@@ -5,8 +5,8 @@ description: "Modular granny flats are now the go-to for Sunshine Coast homeowne
 publishDate: 2026-03-06
 author: "Mitch Croft"
 draft: false
-heroImage: "/images/jacaranda-house.jpg"
-heroImageAlt: "Jacaranda modular home exterior by Sunshine Tiny Houses"
+heroImage: "/images/models/sunrise-beach-house-ext.webp"
+heroImageAlt: "Sunrise Beach House modular home with a covered timber deck and glass balustrade"
 ---
 
 For years, the conversation around alternative living has been dominated by tiny houses on wheels. But as more Australians look for long-term solutions to housing shortages, aging in place, or simply generating extra income, a new hero has emerged: the Modular Granny Flat.

@@ -177,8 +177,6 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 189 | [Raglan: photo gallery 5](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/raglan/05.webp` |
 | 190 | [Banksia: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/banksia/) | Best exterior of a Banksia (real build if we have one) | Landscape | `/images/models/banksia-main.webp` |
 | 191 | [Banksia: photo gallery 5](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/banksia/05.webp` |
-| 192 | [Banksia: photo gallery 6](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/banksia/06.webp` |
-| 193 | [Banksia: photo gallery 7](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/banksia/07.webp` |
 | 195 | [Dahlia: photo gallery 4](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/dahlia/04.webp` |
 | 196 | [Dahlia: photo gallery 5](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/dahlia/05.webp` |
 | 197 | [Dahlia: photo gallery 6](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/dahlia/06.webp` |
@@ -205,14 +203,14 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 220 | [Bunya: photo gallery 9](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/09.webp` |
 | 221 | [Bunya: photo gallery 10](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/10.webp` |
 | 222 | [Bunya: photo gallery 11](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/11.webp` |
-| 227 | [Straddie: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/straddie-1-bedroom/) | Best exterior of a Straddie (real build if we have one) | Landscape | `/images/models/straddie-1-bedroom-ext.webp` |
-| 228 | [Straddie: photo gallery 2](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/02.webp` |
-| 229 | [Straddie: photo gallery 3](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/03.webp` |
-| 230 | [Straddie: photo gallery 4](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/04.webp` |
-| 231 | [Straddie: photo gallery 5](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/05.webp` |
-| 232 | [Straddie: photo gallery 6](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/06.webp` |
-| 233 | [Straddie: photo gallery 7](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/07.webp` |
-| 234 | [Straddie: photo gallery 8](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/08.webp` |
+| 227 | [Straddie (1 bed): main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/straddie-1-bedroom/) | Best exterior of a Straddie (1 bed) (real build if we have one) | Landscape | `/images/models/straddie-1-bedroom-ext.webp` |
+| 228 | [Straddie (1 bed): photo gallery 2](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie (1 bed), inside or out | Landscape | `/images/old/straddie-1-bedroom/02.webp` |
+| 229 | [Straddie (1 bed): photo gallery 3](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie (1 bed), inside or out | Landscape | `/images/old/straddie-1-bedroom/03.webp` |
+| 230 | [Straddie (1 bed): photo gallery 4](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie (1 bed), inside or out | Landscape | `/images/old/straddie-1-bedroom/04.webp` |
+| 231 | [Straddie (1 bed): photo gallery 5](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie (1 bed), inside or out | Landscape | `/images/old/straddie-1-bedroom/05.webp` |
+| 232 | [Straddie (1 bed): photo gallery 6](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie (1 bed), inside or out | Landscape | `/images/old/straddie-1-bedroom/06.webp` |
+| 233 | [Straddie (1 bed): photo gallery 7](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie (1 bed), inside or out | Landscape | `/images/old/straddie-1-bedroom/07.webp` |
+| 234 | [Straddie (1 bed): photo gallery 8](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie (1 bed), inside or out | Landscape | `/images/old/straddie-1-bedroom/08.webp` |
 | 236 | [Rio: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/rio/) | Best exterior of a Rio (real build if we have one) | Landscape | `/images/models/rio-ext.webp` |
 | 237 | [Rio: photo gallery 2](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/02.webp` |
 | 238 | [Rio: photo gallery 3](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/03.webp` |
@@ -243,20 +241,17 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 263 | [Daintree: photo gallery 8](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/08.webp` |
 | 264 | [Daintree: photo gallery 9](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/09.webp` |
 | 265 | [Daintree: photo gallery 10](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/10.webp` |
-| 266 | [Daintree: photo gallery 11](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/11.webp` |
-| 267 | [Daintree: photo gallery 12](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/12.webp` |
-| 268 | [Daintree: photo gallery 13](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/13.webp` |
-| 272 | [Straddie: main photo (also its card on the modular pages and home page)](/modular-homes/2-bedroom/straddie-2-bedroom/) | Best exterior of a Straddie (real build if we have one) | Landscape | `/images/models/straddie-2-bedroom-ext.webp` |
-| 273 | [Straddie: photo gallery 2](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/02.webp` |
-| 274 | [Straddie: photo gallery 3](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/03.webp` |
-| 275 | [Straddie: photo gallery 4](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/04.webp` |
-| 276 | [Straddie: photo gallery 5](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/05.webp` |
-| 277 | [Straddie: photo gallery 6](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/06.webp` |
-| 278 | [Straddie: photo gallery 7](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/07.webp` |
-| 279 | [Straddie: photo gallery 8](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/08.webp` |
-| 280 | [Straddie: photo gallery 9](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/09.webp` |
-| 281 | [Straddie: photo gallery 10](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/10.webp` |
-| 282 | [Straddie: photo gallery 11](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/11.webp` |
+| 272 | [Straddie (2 bed): main photo (also its card on the modular pages and home page)](/modular-homes/2-bedroom/straddie-2-bedroom/) | Best exterior of a Straddie (2 bed) (real build if we have one) | Landscape | `/images/models/straddie-2-bedroom-ext.webp` |
+| 273 | [Straddie (2 bed): photo gallery 2](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/02.webp` |
+| 274 | [Straddie (2 bed): photo gallery 3](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/03.webp` |
+| 275 | [Straddie (2 bed): photo gallery 4](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/04.webp` |
+| 276 | [Straddie (2 bed): photo gallery 5](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/05.webp` |
+| 277 | [Straddie (2 bed): photo gallery 6](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/06.webp` |
+| 278 | [Straddie (2 bed): photo gallery 7](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/07.webp` |
+| 279 | [Straddie (2 bed): photo gallery 8](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/08.webp` |
+| 280 | [Straddie (2 bed): photo gallery 9](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/09.webp` |
+| 281 | [Straddie (2 bed): photo gallery 10](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/10.webp` |
+| 282 | [Straddie (2 bed): photo gallery 11](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/11.webp` |
 | 284 | [Jacaranda: main photo (also its card on the modular pages and home page)](/modular-homes/2-bedroom/jacaranda/) | Best exterior of a Jacaranda (real build if we have one) | Landscape | `/images/models/jacaranda-ext.webp` |
 | 285 | [Jacaranda: photo gallery 2](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/02.webp` |
 | 286 | [Jacaranda: photo gallery 3](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/03.webp` |
@@ -340,9 +335,9 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 367 | [Gallery, tiny houses on wheels: photo 10](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
 | 368 | [Gallery, tiny houses on wheels: photo 11](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
 | 369 | [Gallery, tiny houses on wheels: photo 12](/gallery/) | A finished tiny house on wheels, outside or in (deliveries welcome) | Landscape | none (hidden until filled) |
-| 370 | [Blog: "Foundations for Modular Homes: What Sits Under Your Sunshine Tiny Houses Build" top photo](/blog/how-foundations-work-for-modular-homes/) | Photo that fits the article | Wide, landscape | `/images/jacaranda-house.jpg` |
-| 371 | [Blog: "Noosa Council Abolishes $7,000 Infrastructure Charge for Secondary Dwellings — Here's What That Means for You" top photo](/blog/noosa-council-abolishes-infrastructure-charge/) | Photo that fits the article | Wide, landscape | `/images/jacaranda-house.jpg` |
-| 372 | [Blog: "The Rise of Modern Modular: Why a Granny Flat is the Ultimate Property Upgrade" top photo](/blog/the-rise-of-modern-modular/) | Photo that fits the article | Wide, landscape | `/images/jacaranda-house.jpg` |
+| 370 | [Blog: "Foundations for Modular Homes: What Sits Under Your Sunshine Tiny Houses Build" top photo](/blog/how-foundations-work-for-modular-homes/) | Photo that fits the article | Wide, landscape | `/images/workshop-recent-4.jpeg` |
+| 371 | [Blog: "Noosa Council Abolishes $7,000 Infrastructure Charge for Secondary Dwellings — Here's What That Means for You" top photo](/blog/noosa-council-abolishes-infrastructure-charge/) | Photo that fits the article | Wide, landscape | `/images/workshop-recent-1.jpeg` |
+| 372 | [Blog: "The Rise of Modern Modular: Why a Granny Flat is the Ultimate Property Upgrade" top photo](/blog/the-rise-of-modern-modular/) | Photo that fits the article | Wide, landscape | `/images/models/sunrise-beach-house-ext.webp` |
 | 373 | [Picture shown when someone shares the website on Facebook or in a text](/) | One strong wide exterior shot | Wide, landscape | `/og-default.jpg` |
 | 374 | [New tiny house A (name to come): main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/new-tiny-house-a/) | Best exterior of a New tiny house A (name to come) we built | Landscape | none (hidden until filled) |
 | 375 | [New tiny house B (name to come): main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/new-tiny-house-b/) | Best exterior of a New tiny house B (name to come) we built | Landscape | none (hidden until filled) |
@@ -371,14 +366,14 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 398 | [Ensuite: photo gallery 1](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/old/ensuite/01.webp` |
 | 399 | [Ensuite: photo gallery 6](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/old/ensuite/06.webp` |
 | 400 | [Bunya: photo gallery 1](/modular-homes/1-bedroom/bunya/) | Bunya, inside or out | Landscape | `/images/old/bunya/01.webp` |
-| 401 | [Straddie: photo gallery 1](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-1-bedroom/01.webp` |
+| 401 | [Straddie (1 bed): photo gallery 1](/modular-homes/1-bedroom/straddie-1-bedroom/) | Straddie (1 bed), inside or out | Landscape | `/images/old/straddie-1-bedroom/01.webp` |
 | 402 | [Rio: photo gallery 1](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/01.webp` |
 | 403 | [Rio: photo gallery 8](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/08.webp` |
 | 404 | [Rio: photo gallery 9](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/09.webp` |
 | 405 | [Rio: photo gallery 10](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/10.webp` |
 | 406 | [Rio: photo gallery 11](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/11.webp` |
 | 407 | [Daintree: photo gallery 1](/modular-homes/2-bedroom/daintree/) | Daintree, inside or out | Landscape | `/images/old/daintree/01.webp` |
-| 408 | [Straddie: photo gallery 1](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie, inside or out | Landscape | `/images/old/straddie-2-bedroom/01.webp` |
+| 408 | [Straddie (2 bed): photo gallery 1](/modular-homes/2-bedroom/straddie-2-bedroom/) | Straddie (2 bed), inside or out | Landscape | `/images/old/straddie-2-bedroom/01.webp` |
 | 409 | [Jacaranda: photo gallery 1](/modular-homes/2-bedroom/jacaranda/) | Jacaranda, inside or out | Landscape | `/images/old/jacaranda/01.webp` |
 | 410 | [Sunrise Beach House: photo gallery 1](/modular-homes/2-bedroom/sunrise-beach-house/) | Sunrise Beach House, inside or out | Landscape | `/images/old/sunrise-beach-house/02.webp` |
 | 411 | [Retreat: photo gallery 3](/modular-homes/retreat/) | Retreat, inside or out | Landscape | `/images/old/retreat/03.webp` |
