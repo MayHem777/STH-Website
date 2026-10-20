@@ -7,9 +7,12 @@ import CTAButton from '../../components/CTAButton.astro';
 import ModelPrice from '../../components/ModelPrice.astro';
 import ModelExtras from '../../components/ModelExtras.astro';
 import { getCollection, render } from 'astro:content';
+import { rangeIds } from '../../lib/modular';
 
 export async function getStaticPaths() {
-  const products = await getCollection('products-modular', ({ data }) => listed(data) && !data.bedrooms);
+  const all = await getCollection('products-modular', ({ data }) => listed(data));
+  const ranges = rangeIds(all); // e.g. cabin: its own listing page in cabin/index.astro
+  const products = all.filter((p) => !p.data.bedrooms && !p.data.range && !ranges.has(p.id));
   return products.map((p) => ({ params: { slug: p.id }, props: { product: p } }));
 }
 

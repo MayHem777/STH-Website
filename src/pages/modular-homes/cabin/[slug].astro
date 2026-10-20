@@ -1,0 +1,110 @@
+---
+import ComingSoonNote from '../../../components/ComingSoonNote.astro';
+import { listed } from '../../../lib/visible';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
+import CTAButton from '../../../components/CTAButton.astro';
+import ModelPrice from '../../../components/ModelPrice.astro';
+import ModelExtras from '../../../components/ModelExtras.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const products = await getCollection('products-modular', ({ data }) => listed(data) && data.range === 'cabin');
+  return products.map((p) => ({ params: { slug: p.id }, props: { product: p } }));
+}
+
+const { product } = Astro.props;
+const { Content } = await render(product);
+
+const productSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: product.data.title,
+  description: product.data.description,
+  brand: { '@type': 'Brand', name: 'Sunshine Tiny Houses' },
+  offers: {
+    '@type': 'Offer',
+    url: Astro.url.href,
+    ...(product.data.priceFrom && { price: product.data.priceFrom, priceCurrency: 'AUD' }),
+    seller: { '@type': 'Organization', name: 'Sunshine Tiny Houses' },
+  },
+};
+import { photo } from '../../../lib/photos';
+---
+
+<BaseLayout
+  title={`${product.data.title} — Modular Cabin | Sunshine Tiny Houses`}
+  description={product.data.description}
+  ogImage={product.data.ogImage ?? photo(product.data.heroImage, `modular/${product.id}/main`).src}
+  schema={productSchema}
+>
+
+  <Hero
+    title={product.data.title}
+    subtitle={product.data.tagline}
+    image={product.data.heroImage}
+    spotKey={`modular/${product.id}/main`}
+    imageAlt={product.data.heroImageAlt ?? product.data.title}
+    ctaText="Contact Now"
+    ctaHref="/contact/"
+    secondaryCtaText="View All Cabins"
+    secondaryCtaHref="/modular-homes/cabin/"
+  />
+  <ComingSoonNote show={product.data.comingSoon} />
+
+  <ModelPrice
+    priceFrom={product.data.priceFrom}
+    area={product.data.area}
+    size={product.data.size}
+    bedrooms={product.data.bedrooms}
+  />
+
+  <section class="section">
+    <div class="container product-layout">
+      <article class="product-body prose">
+        <Content />
+      </article>
+      <aside class="product-sidebar">
+        {product.data.specs && Object.keys(product.data.specs).length > 0 && (
+          <div class="spec-card">
+            <h2 class="spec-card__title">Specifications</h2>
+            <dl class="spec-list">
+              {Object.entries(product.data.specs).map(([key, val]) => (
+                <><dt>{key}</dt><dd>{val as string}</dd></>
+              ))}
+            </dl>
+          </div>
+        )}
+        <div class="cta-card">
+          <h2>Interested in the {product.data.title}?</h2>
+          <p>Get a free, no-obligation quote from our team.</p>
+          <CTAButton href="/contact/" variant="light" class="cta-card__btn">Contact Now</CTAButton>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <ModelExtras
+    title={product.data.title}
+    upgrades={product.data.upgrades}
+    floorPlans={product.data.floorPlans}
+    gallery={product.data.gallery}
+    spotPrefix={`modular/${product.id}`}
+    models={product.data.models}
+  />
+
+</BaseLayout>
+
+<style>
+.product-layout { display: grid; grid-template-columns: 1fr 340px; gap: 4rem; align-items: start; }
+.prose { line-height: 1.75; }
+.spec-card { background: var(--color-surface); border-radius: var(--radius-card); padding: 1.5rem; margin-bottom: 1.5rem; }
+.spec-card__title { font-size: var(--font-size-lg); margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--color-border); }
+.spec-list { display: grid; grid-template-columns: auto 1fr; gap: 0.5rem 1rem; }
+.spec-list dt { font-weight: 600; font-size: var(--font-size-sm); color: var(--color-text-muted); }
+.spec-list dd { font-size: var(--font-size-sm); }
+.cta-card { background: var(--color-primary); color: #fff; border-radius: var(--radius-card); padding: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.cta-card h2 { font-size: var(--font-size-xl); color: #fff; }
+.cta-card p { font-size: var(--font-size-sm); color: #fff; opacity: 0.9; }
+@media (max-width: 900px) { .product-layout { grid-template-columns: 1fr; } }
+</style>

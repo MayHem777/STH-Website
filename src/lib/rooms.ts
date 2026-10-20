@@ -3,6 +3,9 @@
 type Specs = Record<string, string> | undefined;
 const SPECIAL: Record<string, string> = {
   cabin: 'Studio · 1 bath',
+  banksia: 'Studio · 1 bath',
+  dahlia: 'Studio · 1 bath',
+  raglan: 'Studio · 1 ensuite',
   office: 'Workspace · restroom',
   retreat: 'Wellness · shower & toilet',
 };

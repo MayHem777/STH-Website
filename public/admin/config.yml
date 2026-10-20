@@ -68,6 +68,7 @@ collections:
       - { label: "Hidden (draft)", name: draft, widget: boolean, default: true, hint: "ON = hidden from the website. Turn OFF to publish." }
       - { label: "Sort Order", name: order, widget: number, default: 99 }
       - { label: "Bedrooms", name: bedrooms, widget: number, required: false, hint: "Set this to group the model under a '1 Bedroom' / '2 Bedroom' etc. listing page instead of showing it as its own standalone card." }
+      - { label: "Range", name: range, widget: string, required: false, hint: "Only for models in a range with its own listing page: 'cabin' puts the model on the Cabins page (/modular-homes/cabin/)." }
       - { label: "Hero Image", name: heroImage, widget: image, required: false }
       - { label: "Hero Image Alt Text", name: heroImageAlt, widget: string, required: false }
       - { label: "Price From (whole dollars, incl. GST, ex factory)", name: priceFrom, widget: number, value_type: int, required: false, hint: "e.g. 165000. Shown as 'From $165,000' on the model page, listing cards and homepage." }
@@ -92,7 +93,7 @@ collections:
         name: models
         widget: list
         required: false
-        hint: "Only for pages that cover several models (the Cabin page)."
+        hint: "Only for a page that covers several models on one page (none do now: Cabin models have their own pages)."
         fields:
           - { label: "Name", name: name, widget: string }
           - { label: "Description", name: blurb, widget: text }

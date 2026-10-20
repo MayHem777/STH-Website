@@ -16,6 +16,8 @@ const productSchema = z.object({
   specs: z.record(z.string()).optional(),
   badge: z.string().optional(),
   bedrooms: z.number().optional(),
+  // Model inside a range that has its own listing page, e.g. 'cabin' → /modular-homes/cabin/<id>/
+  range: z.string().optional(),
   // Pricing + plans (Oct 2026 brochure). priceFrom is whole dollars incl. GST, ex factory.
   priceFrom: z.number().optional(),
   area: z.string().optional(),
@@ -23,7 +25,7 @@ const productSchema = z.object({
   upgrades: z.string().optional(),
   floorPlans: z.array(z.object({ src: z.string(), label: z.string().optional() })).optional(),
   gallery: z.array(z.object({ src: z.string(), alt: z.string() })).optional(),
-  // Several models on one page (the Cabin page: Banksia, Dahlia, Raglan)
+  // Several models on one page (no page uses this since the Cabin models got their own pages, 2026-10-20)
   models: z.array(z.object({
     name: z.string(),
     blurb: z.string(),

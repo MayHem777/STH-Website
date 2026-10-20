@@ -188,29 +188,29 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 178 | [Custom Design & Build: main photo (also its card on the tiny houses page and home page)](/tiny-houses-on-wheels/custom-design-build/) | Best exterior of a Custom Design & Build we built | Landscape | `/images/workshop-recent-1.jpeg` |
 | 179 | [Custom Design & Build: photo gallery 1](/tiny-houses-on-wheels/custom-design-build/) | Custom Design & Build, inside or out (today's photo is from the old website) | Landscape | `/images/old/custom-design-build/01.webp` |
 | 181 | [Cabin: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/) | Best exterior of a Cabin (real build if we have one) | Landscape | `/images/models/dahlia-ext.webp` |
-| 182 | [Cabin page: Banksia photo](/modular-homes/cabin/) | Banksia exterior | Landscape | `/images/models/banksia-int-2.webp` |
-| 183 | [Cabin page: Raglan photo](/modular-homes/cabin/) | Raglan exterior | Landscape | `/images/models/raglan-ext.webp` |
-| 184 | [Cabin: photo gallery 1](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/models/banksia-int-1.webp` |
-| 185 | [Cabin: photo gallery 2](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/models/banksia-int-3.webp` |
-| 186 | [Cabin: photo gallery 3](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/models/dahlia-int-1.webp` |
-| 187 | [Cabin: photo gallery 4](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/models/dahlia-int-2.webp` |
-| 188 | [Cabin: photo gallery 5](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/models/raglan-int-1.webp` |
-| 189 | [Cabin: photo gallery 6](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/models/raglan-int-2.webp` |
-| 190 | [Cabin: photo gallery 7](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/01.webp` |
-| 191 | [Cabin: photo gallery 8](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/02.webp` |
-| 192 | [Cabin: photo gallery 9](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/03.webp` |
-| 193 | [Cabin: photo gallery 10](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/04.webp` |
-| 194 | [Cabin: photo gallery 11](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/05.webp` |
-| 195 | [Cabin: photo gallery 12](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/06.webp` |
-| 196 | [Cabin: photo gallery 13](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/07.webp` |
-| 197 | [Cabin: photo gallery 14](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/08.webp` |
-| 198 | [Cabin: photo gallery 15](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/09.webp` |
-| 199 | [Cabin: photo gallery 16](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/10.webp` |
-| 200 | [Cabin: photo gallery 17](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/11.webp` |
-| 201 | [Cabin: photo gallery 18](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/12.webp` |
-| 202 | [Cabin: photo gallery 19](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/13.webp` |
-| 203 | [Cabin: photo gallery 20](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/14.webp` |
-| 204 | [Cabin: photo gallery 21](/modular-homes/cabin/) | Cabin, inside or out | Landscape | `/images/old/cabin/15.webp` |
+| 182 | [Banksia: photo gallery 3](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/models/banksia-int-2.webp` |
+| 183 | [Raglan: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/raglan/) | Best exterior of a Raglan (real build if we have one) | Landscape | `/images/models/raglan-ext.webp` |
+| 184 | [Banksia: photo gallery 2](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/models/banksia-int-1.webp` |
+| 185 | [Banksia: photo gallery 4](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/models/banksia-int-3.webp` |
+| 186 | [Dahlia: photo gallery 2](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/models/dahlia-int-1.webp` |
+| 187 | [Dahlia: photo gallery 3](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/models/dahlia-int-2.webp` |
+| 188 | [Raglan: photo gallery 4](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/models/raglan-int-1.webp` |
+| 189 | [Raglan: photo gallery 5](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/models/raglan-int-2.webp` |
+| 190 | [Banksia: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/banksia/) | Best exterior of a Banksia (real build if we have one) | Landscape | `/images/old/cabin/01.webp` |
+| 191 | [Banksia: photo gallery 5](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/cabin/02.webp` |
+| 192 | [Banksia: photo gallery 6](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/cabin/03.webp` |
+| 193 | [Banksia: photo gallery 7](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/cabin/04.webp` |
+| 194 | [Banksia: photo gallery 8](/modular-homes/cabin/banksia/) | Banksia, inside or out | Landscape | `/images/old/cabin/05.webp` |
+| 195 | [Dahlia: photo gallery 4](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/cabin/06.webp` |
+| 196 | [Dahlia: photo gallery 5](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/cabin/07.webp` |
+| 197 | [Dahlia: photo gallery 6](/modular-homes/cabin/dahlia/) | Dahlia, inside or out | Landscape | `/images/old/cabin/08.webp` |
+| 198 | [Raglan: photo gallery 2](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/09.webp` |
+| 199 | [Raglan: photo gallery 3](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/10.webp` |
+| 200 | [Raglan: photo gallery 6](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/11.webp` |
+| 201 | [Raglan: photo gallery 7](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/12.webp` |
+| 202 | [Raglan: photo gallery 8](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/13.webp` |
+| 203 | [Raglan: photo gallery 9](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/14.webp` |
+| 204 | [Raglan: photo gallery 10](/modular-homes/cabin/raglan/) | Raglan, inside or out | Landscape | `/images/old/cabin/15.webp` |
 | 205 | [Ensuite: main photo (also its card on the modular pages and home page)](/modular-homes/ensuite/) | Best exterior of a Ensuite (real build if we have one) | Landscape | `/images/models/ensuite-ext.webp` |
 | 206 | [Ensuite: photo gallery 2](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/models/ensuite-int-1.webp` |
 | 207 | [Ensuite: photo gallery 3](/modular-homes/ensuite/) | Ensuite, inside or out | Landscape | `/images/models/ensuite-int-2.webp` |
@@ -249,7 +249,7 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 240 | [Rio: photo gallery 5](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/03.webp` |
 | 241 | [Rio: photo gallery 6](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/04.webp` |
 | 242 | [Rio: photo gallery 7](/modular-homes/1-bedroom/rio/) | Rio, inside or out | Landscape | `/images/old/rio/05.webp` |
-| 243 | [Pandanus: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/pandanus/) | Best exterior of a Pandanus (real build if we have one) | Landscape | `/images/modular-scene-3.webp` |
+| 243 | [Pandanus: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/pandanus/) | Best exterior of a Pandanus (real build if we have one) | Landscape | `/photos/243.webp` |
 | 244 | [Pandanus: photo gallery 1](/modular-homes/1-bedroom/pandanus/) | Pandanus, inside or out | Landscape | `/images/old/pandanus/01.webp` |
 | 245 | [Pandanus: photo gallery 2](/modular-homes/1-bedroom/pandanus/) | Pandanus, inside or out | Landscape | `/images/old/pandanus/02.webp` |
 | 246 | [Pandanus: photo gallery 3](/modular-homes/1-bedroom/pandanus/) | Pandanus, inside or out | Landscape | `/images/old/pandanus/03.webp` |
@@ -387,3 +387,4 @@ To load the photos: `node scripts/import-photos.mjs "<folder>"`, then build and 
 | 378 | [New 1 bedroom A (name to come): main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/new-1-bedroom-a/) | Best exterior of a New 1 bedroom A (name to come) (real build if we have one) | Landscape | none (hidden until filled) |
 | 379 | [New 1 bedroom B (name to come): main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/new-1-bedroom-b/) | Best exterior of a New 1 bedroom B (name to come) (real build if we have one) | Landscape | none (hidden until filled) |
 | 380 | [Daintree: main photo (also its card on the modular pages and home page)](/modular-homes/1-bedroom/daintree-1-bedroom/) | Best exterior of a Daintree (real build if we have one) | Landscape | none (hidden until filled) |
+| 381 | [Dahlia: main photo (also its card on the modular pages and home page)](/modular-homes/cabin/dahlia/) | Best exterior of a Dahlia (real build if we have one) | Landscape | `/images/models/dahlia-ext.webp` |

@@ -11,7 +11,7 @@ const allProducts = (await getCollection('products-modular', ({ data }) => liste
   .sort((a, b) => a.data.order - b.data.order);
 
 const standaloneCards = allProducts
-  .filter((p) => !p.data.bedrooms)
+  .filter((p) => !p.data.bedrooms && !p.data.range)
   .map((p) => ({
     id: p.id,
     order: p.data.order,

@@ -8,6 +8,7 @@ import { FOUNDED_YEAR } from '../config/site';
 import { formatPrice, EX_FACTORY_NOTE } from '../lib/price';
 import { spot, photo } from '../lib/photos';
 import { roomsLine } from '../lib/rooms';
+import { modularHref, rangeIds } from '../lib/modular';
 
 const thowProducts = (await getCollection('products-thow', ({ data }) => listed(data)))
   .sort((a, b) => a.data.order - b.data.order)
@@ -17,7 +18,7 @@ const allModularProducts = (await getCollection('products-modular', ({ data }) =
   .sort((a, b) => a.data.order - b.data.order);
 
 const modularStandalone = allModularProducts
-  .filter((p) => !p.data.bedrooms)
+  .filter((p) => !p.data.bedrooms && !p.data.range)
   .map((p) => ({ order: p.data.order, title: p.data.title, href: `/modular-homes/${p.id}/` }));
 
 const modularBedroomCounts = [...new Set(allModularProducts.filter((p) => p.data.bedrooms).map((p) => p.data.bedrooms))].sort();
@@ -38,14 +39,15 @@ const modularProducts = [...modularStandalone, ...modularBedroomLinks]
 const UTILITY_ROOMS = ['office', 'ensuite'];
 
 // Every priced modular model, cheapest first, linking to its own page
+const modularRanges = rangeIds(allModularProducts); // the Cabin range page: its models are listed instead
 const pricedModular = allModularProducts
-  .filter((p) => p.data.priceFrom)
+  .filter((p) => p.data.priceFrom && !modularRanges.has(p.id))
   .sort((a, b) => (a.data.priceFrom ?? 0) - (b.data.priceFrom ?? 0))
   .map((p) => ({
     title: p.data.title,
     rooms: roomsLine(p.id, p.data.specs),
     description: p.data.tagline ?? p.data.description,
-    href: p.data.bedrooms ? `/modular-homes/${p.data.bedrooms}-bedroom/${p.id}/` : `/modular-homes/${p.id}/`,
+    href: modularHref(p.id, p.data),
     image: p.data.heroImage,
     spotKey: `modular/${p.id}/main`,
     badge: UTILITY_ROOMS.includes(p.id) ? 'Utility room' : 'Class 1a',

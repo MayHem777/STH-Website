@@ -16,7 +16,7 @@ function fm(file) {
   const y = m[1], get = (k) => (y.match(new RegExp(`^${k}:\\s*"?([^"\\n]*)"?`, 'm')) || [])[1];
   const list = (k) => { const b = y.match(new RegExp(`^${k}:\\n((?:  .*\\n?)*)`, 'm')); if (!b) return [];
     return b[1].split(/\n  - /).map((x) => ({ src: (x.match(/src:\s*"?([^"\n]+)"?/) || [])[1], name: (x.match(/name:\s*"?([^"\n]+)"?/) || [])[1], image: (x.match(/image:\s*"?([^"\n]+)"?/) || [])[1] })).filter((x) => x.src || x.image); };
-  return { title: get('title'), draft: /^true\b/.test(get('draft') ?? ''), order: Number(get('order') || 99), hero: get('heroImage') || undefined, gallery: list('gallery'), models: list('models'), bedrooms: get('bedrooms') };
+  return { title: get('title'), draft: /^true\b/.test(get('draft') ?? ''), order: Number(get('order') || 99), hero: get('heroImage') || undefined, gallery: list('gallery'), models: list('models'), bedrooms: get('bedrooms'), range: get('range') };
 }
 function items(dir) {
   const d = path.join(ROOT, 'src/content', dir); if (!fs.existsSync(d)) return [];
@@ -42,7 +42,7 @@ for (const p of items('products-thow')) {
   p.gallery.forEach((g, i) => add(`thow/${p.id}/gallery-${i + 1}`, page, `${p.title}: photo gallery ${i + 1}`, `${p.title}, inside or out (today's photo is from the old website)`, 'landscape', g.src));
 }
 for (const p of items('products-modular')) {
-  const page = p.bedrooms ? `/modular-homes/${p.bedrooms}-bedroom/${p.id}/` : `/modular-homes/${p.id}/`;
+  const page = p.range ? `/modular-homes/${p.range}/${p.id}/` : p.bedrooms ? `/modular-homes/${p.bedrooms}-bedroom/${p.id}/` : `/modular-homes/${p.id}/`;
   add(`modular/${p.id}/main`, page, `${p.title}: main photo (also its card on the modular pages and home page)`, `Best exterior of a ${p.title} (real build if we have one)`, 'landscape', p.hero);
   p.models.forEach((m) => m.image && add(`modular/${p.id}/model-${(m.name || '').toLowerCase()}`, page, `${p.title} page: ${m.name} photo`, `${m.name} exterior`, 'landscape', m.image));
   p.gallery.forEach((g, i) => add(`modular/${p.id}/gallery-${i + 1}`, page, `${p.title}: photo gallery ${i + 1}`, /ext/.test(g.src) ? `${p.title} exterior` : `${p.title}, inside or out`, 'landscape', g.src));
@@ -64,9 +64,18 @@ for (let i = 1; i <= 12; i++) { add(`gallery/thow-${i}`, '/gallery/', `Gallery, 
 for (const p of items('blog')) add(`blog/${p.id}/hero`, `/blog/${p.id}/`, `Blog: "${p.title}" top photo`, 'Photo that fits the article', 'wide', p.hero);
 add('site/share', '/', 'Picture shown when someone shares the website on Facebook or in a text', 'One strong wide exterior shot', 'wide', '/og-default.jpg');
 
+// Products split off another page keep their photos' numbers: a new spot takes the number of the old
+// page's spot that showed the same photo, if that old spot is gone. (Cabin → Banksia/Dahlia/Raglan, 2026-10-20)
+const MOVED_FROM = { 'modular/banksia': 'modular/cabin', 'modular/dahlia': 'modular/cabin', 'modular/raglan': 'modular/cabin' };
+const keysNow = new Set(spots.map((s) => s.key)), moved = new Set();
+function movedN(s) {
+  const from = MOVED_FROM[s.key.split('/').slice(0, 2).join('/')]; if (!from || !s.current) return undefined;
+  const o = old.find((x) => !x.retired && x.key.startsWith(from + '/') && x.current === s.current && !keysNow.has(x.key) && !moved.has(x.key));
+  if (o) { moved.add(o.key); return o.n; }
+}
 let next = Math.max(0, ...old.map((s) => s.n)) + 1;
-const out = spots.map((s) => ({ n: oldByKey.get(s.key)?.n ?? oldByKey.get(RENAMED[s.key])?.n ?? next++, ...s, alsoOn: s.alsoOn.length ? s.alsoOn : undefined }));
-for (const o of old) if (!out.find((s) => s.key === o.key) && !Object.values(RENAMED).includes(o.key)) out.push({ ...o, retired: true });
+const out = spots.map((s) => ({ n: oldByKey.get(s.key)?.n ?? oldByKey.get(RENAMED[s.key])?.n ?? movedN(s) ?? next++, ...s, alsoOn: s.alsoOn.length ? s.alsoOn : undefined }));
+for (const o of old) if (!out.find((s) => s.key === o.key) && !Object.values(RENAMED).includes(o.key) && !moved.has(o.key)) out.push({ ...o, retired: true });
 out.sort((a, b) => a.n - b.n);
 fs.writeFileSync(FILE, JSON.stringify(out, null, 1) + '\n');
 console.log(`${out.length} spots (${out.filter((s) => s.current).length} have a photo today, ${out.filter((s) => !s.current).length} empty)`);
