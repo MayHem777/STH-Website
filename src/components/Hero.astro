@@ -86,6 +86,15 @@ const split = variant === 'split' && !!pic.src;
   background-color: var(--color-surface);
 }
 
+/* No photo (listing pages): brand-green banner like the rest of the site (Mitch 2026-10-20, was cream) */
+.hero:not(.hero--has-image):not(.hero--split) { background-color: var(--color-banner); color: #fff; min-height: 0; }
+.hero:not(.hero--has-image):not(.hero--split) .hero__content { padding-block: 4rem 3.5rem; }
+.hero:not(.hero--has-image):not(.hero--split) .hero__title { color: #fff; }
+.hero:not(.hero--has-image):not(.hero--split) .hero__subtitle { color: rgba(255, 255, 255, 0.96); opacity: 1; }
+.hero:not(.hero--has-image):not(.hero--split) .btn--primary { background-color: #fff; border-color: #fff; color: var(--color-primary); }
+.hero:not(.hero--has-image):not(.hero--split) .btn--primary:hover { background-color: #f5ecd8; border-color: #f5ecd8; }
+.hero:not(.hero--has-image):not(.hero--split) .btn--ghost { color: #fff; border-color: #fff; }
+
 .hero--has-image {
   min-height: 620px;
   color: var(--color-text-on-dark);
