@@ -192,11 +192,17 @@ const split = variant === 'split' && !!pic.src;
   background-color: rgba(255,255,255,0.15);
 }
 
-.hero--split { min-height: 0; padding-block: 2.5rem 3rem; }
+.hero--split { min-height: 0; padding-block: 2.5rem 3rem; background-color: var(--color-banner); color: #fff; }
+.hero--split .hero__title { color: #fff; }
+.hero--split .hero__kind { color: #f5ecd8; }
+.hero--split .btn--primary { background-color: #fff; border-color: #fff; color: var(--color-primary); }
+.hero--split .btn--primary:hover { background-color: #f5ecd8; border-color: #f5ecd8; }
+.hero--split .btn--outline { color: #fff; border-color: #fff; }
+.hero--split .btn--outline:hover { background-color: rgba(255, 255, 255, 0.15); color: #fff; }
 .hero__split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 3rem; align-items: center; }
 .hero--split .hero__content { padding-block: 0; max-width: none; }
 .hero__kind { display: block; margin-top: 0.6rem; font-size: var(--font-size-sm); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); }
-.hero--split .hero__subtitle { color: var(--color-text-muted); opacity: 1; }
+.hero--split .hero__subtitle { color: rgba(255, 255, 255, 0.96); opacity: 1; }
 .hero__media { display: block; border-radius: var(--radius-card); overflow: hidden; background: var(--color-border); }
 .hero__media img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.3s; }
 .hero__media:hover img { transform: scale(1.02); }

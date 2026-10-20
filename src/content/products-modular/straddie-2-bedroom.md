@@ -1,5 +1,5 @@
 ---
-title: "Straddie"
+title: "Straddie (2 bed)"
 tagline: "Bright, open, and spacious."
 description: "The 2-bedroom Straddie is a 51.3 m² modular home (13.5 × 3.8 m) with a designer kitchen and clever storage. From $195,000 incl. GST, ex factory."
 draft: false

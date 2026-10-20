@@ -39,10 +39,6 @@ gallery:
     alt: "Banksia cabin: bedroom with gable windows and ceiling fan"
   - src: "/images/old/banksia/05.webp"
     alt: "Banksia cabin: queen bed, plywood walls and highlight window"
-  - src: "/images/old/banksia/06.webp"
-    alt: "Banksia cabin: bathroom with walk-in shower and green tiles"
-  - src: "/images/old/banksia/07.webp"
-    alt: "Banksia cabin: timber slab vanity, round mirror and green tiles"
 ---
 
 ## Banksia

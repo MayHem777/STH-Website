@@ -1,5 +1,5 @@
 ---
-title: "Straddie"
+title: "Straddie (1 bed)"
 tagline: "The perfect balance of comfort and practicality."
 description: "The 1-bedroom Straddie is a 39.9 m² modular home (10.5 × 3.8 m) with integrated storage and a functional layout. From $180,000 incl. GST, ex factory."
 draft: false

@@ -35,12 +35,6 @@ gallery:
     alt: "Daintree modular home: study with built-in desk and window"
   - src: "/images/old/daintree/10.webp"
     alt: "Daintree modular home: second bedroom set up as lounge and study"
-  - src: "/images/old/daintree/11.webp"
-    alt: "Daintree modular home: bathroom with green vanity and arched mirror"
-  - src: "/images/old/daintree/12.webp"
-    alt: "Daintree modular home: bathroom with green subway tiles and brass tapware"
-  - src: "/images/old/daintree/13.webp"
-    alt: "Daintree modular home: walk-in shower with green tiles and niche"
 features:
   - "Two generous bedrooms"
   - "Light-filled open-plan living"
