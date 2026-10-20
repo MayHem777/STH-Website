@@ -86,6 +86,16 @@ const REDIRECTS = {
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   const path = url.pathname.replace(/\/+$/, '') || '/';
+  const reqHost = context.request.headers.get('host') || '';
+
+  // 0. Bare domain → www (one indexed copy of the site; SEO audit 2026-10-20)
+  if (reqHost === 'sunshinetinyhouses.com.au') {
+    return Response.redirect(`https://${PRODUCTION_HOST}${url.pathname}${url.search}`, 301);
+  }
+  // Nat's photo checklist is for preview builds only
+  if (reqHost === PRODUCTION_HOST && path === '/photo-spots') {
+    return new Response('Not found', { status: 404 });
+  }
 
   // 1. Legacy redirects (exact match, then /modulars/* splat).
   // Guard: `path` has trailing slashes stripped, so a rule like
@@ -97,8 +107,8 @@ export async function onRequest(context) {
     return Response.redirect(new URL(target, url.origin).href, 301);
   }
   if (path.startsWith('/modulars/')) {
-    const splat = path.slice('/modulars/'.length);
-    return Response.redirect(new URL(`/modular-homes/${splat}/`, url.origin).href, 301);
+    // Old /modulars/<page> URLs don't map 1:1 to the new model pages (e.g. Rio is under /1-bedroom/)
+    return Response.redirect(new URL('/modular-homes/', url.origin).href, 301);
   }
 
   const response = await context.next();

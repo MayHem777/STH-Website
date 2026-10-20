@@ -54,6 +54,7 @@ import { photo } from '../../lib/photos';
 
   <Hero
     variant="split"
+    kind={({ ensuite: 'Modular ensuite', retreat: 'Modular wellness retreat' } as Record<string, string>)[product.id] ?? 'Class 1a modular home'}
     title={product.data.title}
     subtitle={product.data.tagline}
     image={product.data.heroImage}

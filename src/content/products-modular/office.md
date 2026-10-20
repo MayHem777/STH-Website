@@ -12,7 +12,7 @@ specs:
   Builder: "QBCC #15205110"
   Class: "Class 1a"
   Installation: "~2 weeks on site"
-# Office range page (2026-10-20): the models are office-a.md, office-b.md, office-c.md (range: "office").
+# Office range page (2026-10-20): the models are banksia-office.md (named Banksia on the old site), office-b.md, office-c.md (range: "office").
 ---
 
 ## Offices

@@ -1,5 +1,6 @@
 ---
 title: "The Rise of Modern Modular: Why a Granny Flat is the Ultimate Property Upgrade"
+seoTitle: "Why a Granny Flat Is the Best Property Upgrade"
 description: "Modular granny flats are now the go-to for Sunshine Coast homeowners wanting permanent, high-quality additions to their property."
 publishDate: 2026-03-06
 author: "Mitch Croft"

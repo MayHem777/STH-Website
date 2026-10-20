@@ -26,6 +26,7 @@ const products = (await getCollection('products-class10a', ({ data }) => listed(
       <div class="products-grid">
         {products.map((p) => (
           <ProductCard
+            headingLevel={2}
             title={p.data.title}
             description={p.data.description}
             href={`/backyard-studios/${p.id}/`}

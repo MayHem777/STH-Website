@@ -1,5 +1,5 @@
 ---
-title: "Office"
+title: "Banksia Office"
 range: "office"
 tagline: "A contemporary workspace designed for productivity."
 description: "A 19.2 m² modular office (6 × 3.2 m) with tall louvres, wide stacker doors, a kitchenette and restroom. From $100,000 incl. GST, ex factory."
@@ -33,24 +33,24 @@ specs:
 # Photos mirrored from the old Squarespace page on 2026-10-20 (Nat's latest); numbered photo spots, replace any via PHOTOS.md
 gallery:
   - src: "/images/old/office/01.webp"
-    alt: "Office, photo 1"
+    alt: "Banksia Office, photo 1"
   - src: "/images/old/office/02.webp"
-    alt: "Office, photo 2"
+    alt: "Banksia Office, photo 2"
   - src: "/images/old/office/03.webp"
-    alt: "Office, photo 3"
+    alt: "Banksia Office, photo 3"
   - src: "/images/old/office/04.webp"
-    alt: "Office, photo 4"
+    alt: "Banksia Office, photo 4"
   - src: "/images/old/office/05.webp"
-    alt: "Office, photo 5"
+    alt: "Banksia Office, photo 5"
   - src: "/images/old/office/06.webp"
-    alt: "Office, photo 6"
+    alt: "Banksia Office, photo 6"
   - src: "/images/old/office/07.webp"
-    alt: "Office, photo 7"
+    alt: "Banksia Office, photo 7"
   - src: "/images/old/office/08.webp"
-    alt: "Office, photo 8"
+    alt: "Banksia Office, photo 8"
 ---
 
-## Office
+## Banksia Office
 
 This modern modular office provides a flexible, comfortable and productive workspace. It was designed to be accessible, accommodating different needs and ensuring ease of use for everyone.
 

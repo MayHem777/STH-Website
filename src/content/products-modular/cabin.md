@@ -1,7 +1,7 @@
 ---
 title: "Cabin"
 tagline: "Cosy living, beautifully designed."
-description: "Studio cabins for guest retreats, short-stay rentals, caravan parks or compact homes. Three models: Banksia, Dahlia and Raglan, from $125,000 incl. GST, ex factory."
+description: "Studio cabins for guest retreats, short-stay rentals or compact homes. Three models (Banksia, Dahlia, Raglan) from $125,000 incl. GST, ex factory."
 draft: false
 order: 1
 priceFrom: 125000

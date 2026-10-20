@@ -1,5 +1,6 @@
 ---
 title: "Foundations for Modular Homes: What Sits Under Your Sunshine Tiny Houses Build"
+seoTitle: "Modular Home Foundations Explained"
 description: "Screw piles or concrete bored piers? How modular home foundations work on the Sunshine Coast, from soil testing to set-down day."
 publishDate: 2026-10-02
 author: "Mitch Croft"

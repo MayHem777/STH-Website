@@ -14,6 +14,8 @@ export interface Props {
   // 'split': text left, the whole photo right, not cropped or darkened (model pages, Mitch 2026-10-20).
   // The full-width banner crops a 3:2 photo to about 4:1 on a wide screen and shades it.
   variant?: 'banner' | 'split';
+  // What the model is, shown small under the name inside the h1 (e.g. "Tiny house on wheels")
+  kind?: string;
 }
 
 const {
@@ -29,6 +31,7 @@ const {
   centered = false,
   spotKey,
   variant = 'banner',
+  kind,
 } = Astro.props;
 import { photo } from '../lib/photos';
 const pic = photo(image, spotKey);
@@ -39,7 +42,7 @@ const split = variant === 'split' && !!pic.src;
 <section class="hero hero--split">
   <div class="container hero__split">
     <div class="hero__content">
-      <h1 class="hero__title">{title}</h1>
+      <h1 class="hero__title">{title}{kind && <span class="hero__kind">{kind}</span>}</h1>
       {subtitle && <p class="hero__subtitle">{subtitle}</p>}
       <div class="hero__actions">
         <a href={ctaHref} class="btn btn--primary">{ctaText}</a>
@@ -183,6 +186,7 @@ const split = variant === 'split' && !!pic.src;
 .hero--split { min-height: 0; padding-block: 2.5rem 3rem; }
 .hero__split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: 3rem; align-items: center; }
 .hero--split .hero__content { padding-block: 0; max-width: none; }
+.hero__kind { display: block; margin-top: 0.6rem; font-size: var(--font-size-sm); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-primary); }
 .hero--split .hero__subtitle { color: var(--color-text-muted); opacity: 1; }
 .hero__media { display: block; border-radius: var(--radius-card); overflow: hidden; background: var(--color-border); }
 .hero__media img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; transition: transform 0.3s; }

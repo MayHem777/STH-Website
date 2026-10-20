@@ -1,7 +1,7 @@
 ---
 title: "Sunrise Beach House"
 tagline: "Contemporary design with the relaxed charm of coastal living."
-description: "The Sunrise Beach House is a two-bedroom modular home in 81.6 m² and 88.8 m² layouts, with open-plan entertaining and a large covered deck. From $290,000 incl. GST, ex factory."
+description: "Two-bedroom modular home in 81.6 m² and 88.8 m² layouts, with open-plan entertaining and a large covered deck. From $290,000 incl. GST, ex factory."
 draft: false
 order: 4.4
 bedrooms: 2

@@ -39,7 +39,7 @@ import { photo } from '../../lib/photos';
 ---
 
 <BaseLayout
-  title={`${post.data.title} | Sunshine Tiny Houses`}
+  title={`${post.data.seoTitle ?? post.data.title} | Sunshine Tiny Houses`}
   description={post.data.description}
   ogImage={postImage}
   schema={blogPostingSchema}

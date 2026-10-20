@@ -4,8 +4,9 @@
 // ones as numbered placeholders so Nat can see where photos will go.
 import { spotsWithPrefix, SHOW_SPOT_NUMBERS } from '../lib/photos';
 // group: photo viewer group; model pages pass 'gallery' so the top photo and the gallery page through together.
-export interface Props { prefix: string; title?: string; alt: string; group?: string; }
-const { prefix, title, alt, group = prefix } = Astro.props;
+// alts: alt text by the photo a spot shows today (from the model's gallery list); falls back to "<alt> <n>".
+export interface Props { prefix: string; title?: string; alt: string; group?: string; alts?: Record<string, string>; }
+const { prefix, title, alt, group = prefix, alts = {} } = Astro.props;
 const all = spotsWithPrefix(prefix);
 const shown = all.filter((s) => s.src || SHOW_SPOT_NUMBERS);
 ---
@@ -15,7 +16,7 @@ const shown = all.filter((s) => s.src || SHOW_SPOT_NUMBERS);
       {title && <h2>{title}</h2>}
       <div class="spot-gallery__grid">
         {shown.map((s, i) => s.src ? (
-          <a href={s.src} data-lightbox={group}><img src={s.src} data-spot={s.n} alt={`${alt} ${i + 1}`} width="780" height="520" loading="lazy" /></a>
+          <a href={s.src} data-lightbox={group}><img src={s.src} data-spot={s.n} alt={(s.current && alts[s.current]) || `${alt} ${i + 1}`} width="780" height="520" loading="lazy" /></a>
         ) : (
           <div class="spot-gallery__empty" data-spot={s.n} data-spot-empty=""><span>Photo {String(s.n).padStart(3, '0')}</span></div>
         ))}

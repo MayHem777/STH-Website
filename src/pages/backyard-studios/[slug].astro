@@ -39,7 +39,7 @@ import { photo } from '../../lib/photos';
 ---
 
 <BaseLayout
-  title={`${product.data.title} Backyard Studio | Sunshine Tiny Houses`}
+  title={`${product.data.title.startsWith('Backyard') ? product.data.title : `Backyard ${product.data.title}`} QLD | Sunshine Tiny Houses`}
   description={product.data.description}
   ogImage={product.data.ogImage ?? photo(product.data.heroImage, `studio/${product.id}/main`).src}
   schema={[productSchema, breadcrumbSchema]}
@@ -47,6 +47,7 @@ import { photo } from '../../lib/photos';
 
   <Hero
     variant="split"
+    kind="Backyard studio"
     title={product.data.title}
     subtitle={product.data.tagline}
     image={product.data.heroImage}

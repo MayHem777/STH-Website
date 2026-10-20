@@ -84,7 +84,7 @@ p { color: var(--color-text-body); line-height: 1.7; }
 }
 
 .section--dark {
-  background-color: var(--color-surface-dark);
+  background-color: var(--color-banner);
   color: var(--color-text-on-dark);
 }
 
@@ -135,3 +135,19 @@ p { color: var(--color-text-body); line-height: 1.7; }
 
 /* Text for screen readers only (e.g. "opens in a new tab" on external links). */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* Text on the green banners (Mitch 2026-10-20: banners in brand green, were #1a1a1a).
+   Faded white and gold that read fine on black fall below WCAG AA on #5c6a5b, so on green:
+   body text near-solid white, gold highlights a pale gold (#f5ecd8, 4.9:1).
+   !important because each page's scoped styles would otherwise win. */
+:is(.page-hero:not(.page-hero--light), .home-hero, .section--dark, .turnkey--dark, .og-partner, .licensed) :is(.page-hero__sub, .home-hero__sub, .home-hero__ask, .turnkey__lead, .review-card__author, blockquote, td, li, p:not([class]), .turnkey__grid span) {
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+:is(.page-hero:not(.page-hero--light), .home-hero, .section--dark, .turnkey--dark, .og-partner, .licensed) :is(em, b, .review-card__stars, .turnkey__link) {
+  color: #f5ecd8 !important;
+}
+:is(.page-hero:not(.page-hero--light), .home-hero, .section--dark, .turnkey--dark, .og-partner, .licensed) :is(.eyebrow, .home-hero__eyebrow) {
+  color: #f5ecd8 !important;
+  background: transparent !important;
+  border-color: rgba(245, 236, 216, 0.55) !important;
+}

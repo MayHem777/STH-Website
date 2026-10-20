@@ -1,7 +1,7 @@
 ---
 title: "Fingal"
 tagline: "Everything you need, in one modern granny flat."
-description: "The Fingal is a 29.75 m² one-bedroom granny flat (8.5 × 3.5 m) with a fully equipped kitchen and a combined bathroom/laundry. From $140,000 incl. GST, ex factory."
+description: "A 29.75 m² one-bedroom granny flat (8.5 × 3.5 m) with a full kitchen and combined bathroom/laundry. From $140,000 incl. GST, ex factory."
 draft: false
 order: 3.05
 bedrooms: 1

@@ -1,7 +1,7 @@
 ---
 title: "Rio"
 tagline: "Modern style with clever use of space."
-description: "The Rio is a 42 m² one-bedroom modular home (12 × 3.5 m) with a breakfast bar kitchen, lounge, separate bedroom and laundry. From $180,000 incl. GST, ex factory."
+description: "A 42 m² one-bedroom modular home (12 × 3.5 m) with breakfast bar kitchen, lounge, separate bedroom and laundry. From $180,000 incl. GST, ex factory."
 draft: false
 order: 3.3
 bedrooms: 1

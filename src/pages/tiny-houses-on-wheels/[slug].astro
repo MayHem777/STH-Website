@@ -49,6 +49,7 @@ import { photo } from '../../lib/photos';
 
   <Hero
     variant="split"
+    kind="Tiny house on wheels"
     title={product.data.title}
     subtitle={product.data.tagline}
     image={product.data.heroImage}
@@ -102,7 +103,7 @@ import { photo } from '../../lib/photos';
     </div>
   </section>
 
-  <SpotGallery prefix={`thow/${product.id}/gallery-`} group="gallery" title={`${product.data.title} photos`} alt={`${product.data.title} tiny house on wheels, photo`} />
+  <SpotGallery prefix={`thow/${product.id}/gallery-`} group="gallery" alts={Object.fromEntries((product.data.gallery ?? []).map((g) => [g.src, g.alt]))} title={`${product.data.title} photos`} alt={`${product.data.title} tiny house on wheels, photo`} />
 
 </BaseLayout>
 

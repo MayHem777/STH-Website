@@ -30,17 +30,28 @@ const productSchema = {
   },
 };
 import { photo } from '../lib/photos';
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.sunshinetinyhouses.com.au/' },
+    { '@type': 'ListItem', position: 2, name: 'Modular Homes', item: 'https://www.sunshinetinyhouses.com.au/modular-homes/' },
+    { '@type': 'ListItem', position: 3, name: R.plural, item: `https://www.sunshinetinyhouses.com.au/modular-homes/${product.data.range}/` },
+    { '@type': 'ListItem', position: 4, name: product.data.title, item: Astro.url.href },
+  ],
+};
 ---
 
 <BaseLayout
   title={`${product.data.title} — ${R.modelTitle} | Sunshine Tiny Houses`}
   description={product.data.description}
   ogImage={product.data.ogImage ?? photo(product.data.heroImage, `modular/${product.id}/main`).src}
-  schema={productSchema}
+  schema={[productSchema, breadcrumbSchema]}
 >
 
   <Hero
     variant="split"
+    kind={R.modelTitle}
     title={product.data.title}
     subtitle={product.data.tagline}
     image={product.data.heroImage}

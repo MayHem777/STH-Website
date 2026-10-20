@@ -12,7 +12,8 @@
   --color-bg:              #ffffff;
   --color-surface:         #f4f0eb;   /* warm beige — benefits, FAQ, trust bar */
   --color-surface-input:   #fafaf8;   /* form inputs unfocused */
-  --color-surface-dark:    #1a1a1a;   /* dark sections: hero overlay, mid-CTA, final CTA */
+  --color-surface-dark:    #1a1a1a;   /* footer and dark text on gold */
+  --color-banner:          var(--color-primary);   /* page banners and CTA bands: brand green (Mitch 2026-10-20, was #1a1a1a) */
   --color-text:            #1a1a1a;
   --color-text-body:       #555555;
   --color-text-muted:      #666666;

@@ -49,6 +49,8 @@ const pageSchema = z.object({
 
 const blogSchema = z.object({
   title: z.string(),
+  // Shorter title for the browser tab and Google (about 60 characters with the brand); falls back to title
+  seoTitle: z.string().optional(),
   description: z.string(),
   publishDate: z.date(),
   updatedDate: z.date().optional(),

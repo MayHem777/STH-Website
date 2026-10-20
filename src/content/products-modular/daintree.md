@@ -1,7 +1,7 @@
 ---
 title: "Daintree"
 tagline: "Designed to make everyday living feel effortless."
-description: "The Daintree is a 53.2 m² two-bedroom modular home (14 × 3.8 m) with open-plan living, a stylish kitchen and separate laundry. From $195,000 incl. GST, ex factory."
+description: "A 53.2 m² two-bedroom modular home (14 × 3.8 m) with open-plan living, a stylish kitchen and separate laundry. From $195,000 incl. GST, ex factory."
 draft: false
 order: 4.1
 bedrooms: 2

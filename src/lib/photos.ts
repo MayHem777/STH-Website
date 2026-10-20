@@ -56,6 +56,6 @@ export function photo(currentSrc?: string, key?: string): Resolved {
 }
 
 /** All spots whose key starts with a prefix, in number order (e.g. 'thow/lennox/g'). */
-export function spotsWithPrefix(prefix: string): (Resolved & { key: string })[] {
-  return SPOTS.filter((x) => x.key.startsWith(prefix) && !(x as { retired?: boolean }).retired).sort((a, b) => a.n - b.n).map((x) => ({ key: x.key, ...resolveSpot(x) }));
+export function spotsWithPrefix(prefix: string): (Resolved & { key: string; current?: string })[] {
+  return SPOTS.filter((x) => x.key.startsWith(prefix) && !(x as { retired?: boolean }).retired).sort((a, b) => a.n - b.n).map((x) => ({ key: x.key, current: x.current, ...resolveSpot(x) }));
 }

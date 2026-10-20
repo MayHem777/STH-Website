@@ -1,5 +1,6 @@
 ---
 export interface Props {
+  headingLevel?: 2 | 3;  // 2 on listing pages that have no section h2 above the cards
   title: string;
   description: string;
   href: string;
@@ -13,7 +14,8 @@ export interface Props {
   spotKey?: string;
 }
 import { photo, SHOW_SPOT_NUMBERS } from '../lib/photos';
-const { title, description, href, image, imageAlt, badge, price, meta, rooms, spotKey, comingSoon } = Astro.props;
+const { title, description, href, image, imageAlt, badge, price, meta, rooms, spotKey, comingSoon, headingLevel = 3 } = Astro.props;
+const Heading = headingLevel === 2 ? 'h2' : 'h3';
 const pic = photo(image, spotKey);
 ---
 
@@ -28,7 +30,7 @@ const pic = photo(image, spotKey);
     {comingSoon && <span class="product-card__soon">New · preview only</span>}
   </div>
   <div class="product-card__body">
-    <h3 class="product-card__title">{title}</h3>
+    <Heading class="product-card__title">{title}</Heading>
     {rooms && <p class="product-card__rooms">{rooms}</p>}
     {(price || meta) && (
       <p class="product-card__facts">

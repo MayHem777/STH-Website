@@ -145,6 +145,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: title, widget: string }
+      - { label: "Short title for Google (optional)", name: seoTitle, widget: string, required: false, hint: "About 45 characters. Shown in the browser tab and Google results; the page heading still uses Title." }
       - { label: "Description (SEO)", name: description, widget: text }
       - { label: "Publish Date", name: publishDate, widget: datetime }
       - { label: "Updated Date", name: updatedDate, widget: datetime, required: false, hint: "Only set this if you've made a meaningful update after the original publish date." }

@@ -15,5 +15,5 @@ export function rangeIds(products: { data: { range?: string } }[]): Set<string> 
 export const RANGES: Record<string, { plural: string; modelTitle: string; seoTitle: string; badge?: string }> = {
   cabin: { plural: 'Cabins', modelTitle: 'Modular Cabin', seoTitle: 'Modular Cabins Queensland' },
   // Offices are utility rooms, not studios (Mitch 2026-10-17)
-  office: { plural: 'Offices', modelTitle: 'Modular Office', seoTitle: 'Modular Offices Queensland', badge: 'Utility room' },
+  office: { plural: 'Offices', modelTitle: 'Modular Backyard Office', seoTitle: 'Modular Offices Queensland', badge: 'Utility room' },
 };

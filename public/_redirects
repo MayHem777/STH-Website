@@ -23,7 +23,7 @@
 
 # ── Modulars (Squarespace nav item) ──────────────────────────────────────────
 /modulars                    /modular-homes/                                301
-/modulars/*                  /modular-homes/:splat                          301
+/modulars/*                  /modular-homes/                                301
 
 # ── THOW product pages (lived at root on Squarespace) ────────────────────────
 /1770                        /tiny-houses-on-wheels/1770/                   301

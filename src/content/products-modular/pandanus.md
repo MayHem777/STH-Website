@@ -1,7 +1,7 @@
 ---
 title: "Pandanus"
 tagline: "A chic, open-plan space that feels warm and welcoming."
-description: "The Pandanus is a one-bedroom modular home (10.5 × 3.8 m, 39.9 m² enclosed) with open-plan living, dining and kitchen, and an optional 3.0 × 3.8 m deck. From $195,000 incl. GST, ex factory."
+description: "One-bedroom modular home (10.5 × 3.8 m, 39.9 m²) with open-plan living, dining and kitchen, plus an optional deck. From $195,000 incl. GST, ex factory."
 draft: false
 order: 3.4
 bedrooms: 1
