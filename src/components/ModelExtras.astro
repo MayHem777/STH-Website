@@ -14,8 +14,9 @@ export interface Props {
     upgrades?: string; image?: string; imageAlt?: string; floorPlan?: string;
   }[];
   spotPrefix?: string;   // e.g. 'modular/ensuite' (numbered photo spots)
+  noKitchen?: boolean;   // leave kitchen appliances out of the inclusions table
 }
-const { title, upgrades, floorPlans = [], gallery = [], models: allModels = [], spotPrefix } = Astro.props;
+const { title, upgrades, floorPlans = [], gallery = [], models: allModels = [], spotPrefix, noKitchen } = Astro.props;
 const models = allModels.filter((m) => !(m as { comingSoon?: boolean }).comingSoon || IS_PREVIEW);
 const pics = gallery.map((g, i) => ({ ...g, pic: photo(g.src, spotPrefix && `${spotPrefix}/gallery-${i + 1}`) }));
 const modelPic = (m: { name: string; image?: string }) => photo(m.image, spotPrefix && `${spotPrefix}/model-${m.name.toLowerCase()}`);
@@ -82,7 +83,7 @@ const modelPic = (m: { name: string; image?: string }) => photo(m.image, spotPre
   </section>
 )}
 
-<Inclusions />
+<Inclusions noKitchen={noKitchen} />
 
 <style>
 .model-list h2, .model-gallery h2, .floor-plans h2 { margin-bottom: 1.5rem; }

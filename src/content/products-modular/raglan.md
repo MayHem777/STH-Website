@@ -3,6 +3,7 @@ title: "Raglan"
 tagline: "Exceptional design that doesn't need a large footprint."
 description: "The Raglan is a studio cabin (11 × 3.6 m: 32.4 m² internal + 7.2 m² deck) from our Cabin range. From $160,000 incl. GST, ex factory."
 draft: false
+noKitchen: true
 order: 1.3
 range: "cabin"
 priceFrom: 160000

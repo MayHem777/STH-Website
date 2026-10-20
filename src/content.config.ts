@@ -18,6 +18,8 @@ const productSchema = z.object({
   bedrooms: z.number().optional(),
   // Model inside a range that has its own listing page, e.g. 'cabin' → /modular-homes/cabin/<id>/
   range: z.string().optional(),
+  // No kitchen (Ensuite, Banksia Office, Raglan): the inclusions table leaves out kitchen appliances
+  noKitchen: z.boolean().optional(),
   // Pricing + plans (Oct 2026 brochure). priceFrom is whole dollars incl. GST, ex factory.
   priceFrom: z.number().optional(),
   area: z.string().optional(),

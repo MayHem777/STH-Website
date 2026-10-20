@@ -69,6 +69,7 @@ collections:
       - { label: "Sort Order", name: order, widget: number, default: 99 }
       - { label: "Bedrooms", name: bedrooms, widget: number, required: false, hint: "Set this to group the model under a '1 Bedroom' / '2 Bedroom' etc. listing page instead of showing it as its own standalone card." }
       - { label: "Range", name: range, widget: string, required: false, hint: "Only for models in a range with its own listing page: 'cabin' puts the model on the Cabins page (/modular-homes/cabin/)." }
+      - { label: "No kitchen", name: noKitchen, widget: boolean, required: false, hint: "ON for models without a kitchen (Ensuite, Office, Raglan): hides kitchen appliances in the inclusions table." }
       - { label: "Hero Image", name: heroImage, widget: image, required: false }
       - { label: "Hero Image Alt Text", name: heroImageAlt, widget: string, required: false }
       - { label: "Price From (whole dollars, incl. GST, ex factory)", name: priceFrom, widget: number, value_type: int, required: false, hint: "e.g. 165000. Shown as 'From $165,000' on the model page, listing cards and homepage." }

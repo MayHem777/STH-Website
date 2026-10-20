@@ -1,4 +1,6 @@
 ---
+export interface Props { noKitchen?: boolean; }
+const { noKitchen = false } = Astro.props;
 // Standard inclusions for every modular house, from the October 2026 brochure.
 const inclusions: { item: string; standard: string; upgrades?: string; link?: { text: string; href: string } }[] = [
   { item: 'Structural base floor and frame', standard: 'Engineered structural floor system with engineered 90 mm steel stud frames or 90 mm engineered timber frames.' },
@@ -21,7 +23,7 @@ const inclusions: { item: string; standard: string; upgrades?: string; link?: { 
   { item: 'Plumbing', standard: 'Kitchen, bathroom and laundry rough-in and fit-off as per layout.', upgrades: 'Septic system, water tanks, water filters, gutter guards, gas, site works and site connections.' },
   { item: 'Tapware', standard: 'ABI Interiors, as per layout, in chrome or matte black.', upgrades: 'Other ABI Interiors tapware.' },
   { item: 'Flooring', standard: '4.5 mm vinyl plank (Australian Select Timbers).', upgrades: 'Carpet to bedrooms, hybrid planks, engineered timber or hardwood flooring.' },
-];
+].filter((row) => !(noKitchen && row.item === 'Kitchen appliances'));
 ---
 
 <section class="section section--surface inclusions" id="inclusions">

@@ -3,6 +3,7 @@ title: "Ensuite"
 tagline: "The perfect blend of comfort and style."
 description: "A self-contained 20.4 m² modular ensuite (6 × 3.4 m): a light-filled bedroom with an attached bathroom. From $100,000 incl. GST, ex factory."
 draft: false
+noKitchen: true
 order: 2
 priceFrom: 100000
 area: "20.4 m²"

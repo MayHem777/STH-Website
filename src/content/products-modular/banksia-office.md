@@ -4,6 +4,7 @@ range: "office"
 tagline: "A contemporary workspace designed for productivity."
 description: "A 19.2 m² modular office (6 × 3.2 m) with tall louvres, wide stacker doors, a kitchenette and restroom. From $100,000 incl. GST, ex factory."
 draft: false
+noKitchen: true
 order: 5.1
 priceFrom: 100000
 area: "19.2 m²"
