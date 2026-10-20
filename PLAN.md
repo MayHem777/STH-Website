@@ -12,6 +12,7 @@ Replace the Squarespace sunshinetinyhouses.com.au with this Astro + Decap CMS si
 - Gallery page still "Photos Coming Soon".
 
 ## Assumptions
+- 2026-10-20 (Mitch: more professional): home page label above the two doors "What are you looking for?" → "Explore our two ranges".
 - 2026-10-20 (Mitch): green banner everywhere a banner shows: model pages (split hero), listing pages and Contact; Contact Now buttons on green are white with green text. Gold buttons and the contact form's Continue button now have dark text (7.8:1, white was 2.2:1); step numbers on Delivery and Our Process are green instead of gold. Site-wide contrast scan: nothing below 3:1. Straddie titles are "Straddie (1 bed)" / "Straddie (2 bed)" (Mitch).
 - 2026-10-20 (Mitch: Dahlia bathroom photos showing under Banksia): the OLD site itself had mistakes, so mirroring copied them. Its Banksia slideshow holds files named "STH - DAHLIA 07/08" (removed from Banksia), and its Daintree slideshow holds 3 "IMA-JACARANDA Scene 39/47/51" bathroom renders (removed from Daintree; Daintree now has no bathroom photo until Nat supplies one). A file-name scan of every old model page found no other cross-model photos. Nat may want to fix the same two galleries on the old site.
 - 2026-10-20 (Mitch): listing pages with no banner photo (Modular Homes, Tiny Houses on Wheels, Backyard Studios, 1/2 Bedroom) now have the green banner too (was cream), white Contact button.
