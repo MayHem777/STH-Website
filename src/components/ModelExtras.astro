@@ -39,10 +39,10 @@ const modelPic = (m: { name: string; image?: string }) => photo(m.image, spotPre
             </p>
             <p>{m.blurb}</p>
             {m.upgrades && <p class="model-row__upgrades"><strong>Optional upgrades:</strong> {m.upgrades}</p>}
-            {m.floorPlan && <p><a class="plan-link" href={m.floorPlan}>View the {m.name} floor plan</a></p>}
+            {m.floorPlan && <p><a class="plan-link" href={m.floorPlan} data-lightbox="plan">View the {m.name} floor plan</a></p>}
           </div>
           {m.floorPlan && (
-            <a class="model-row__plan" href={m.floorPlan}>
+            <a class="model-row__plan" href={m.floorPlan} data-lightbox="plan">
               <img src={m.floorPlan} alt={`${m.name} floor plan${m.size ? `, ${m.size}` : ''}`} width="1600" height="1131" loading="lazy" />
             </a>
           )}
@@ -58,7 +58,7 @@ const modelPic = (m: { name: string; image?: string }) => photo(m.image, spotPre
       <h2>Inside and out</h2>
       <div class="model-gallery__grid">
         {pics.map((g) => (
-          <a href={g.pic.src}><img src={g.pic.src} data-spot={g.pic.n} alt={g.alt} width="780" height="494" loading="lazy" /></a>
+          <a href={g.pic.src} data-lightbox="gallery"><img src={g.pic.src} data-spot={g.pic.n} alt={g.alt} width="780" height="494" loading="lazy" /></a>
         ))}
       </div>
       {pics.some((g) => !g.pic.replaced) && <p class="model-gallery__note">Some images are artist's renders and may show optional upgrades.</p>}
@@ -72,7 +72,7 @@ const modelPic = (m: { name: string; image?: string }) => photo(m.image, spotPre
       <h2>Floor plan{floorPlans.length > 1 ? 's' : ''}</h2>
       {floorPlans.map((p) => (
         <figure class="floor-plan">
-          <a href={p.src}><img src={p.src} alt={p.label ?? `${title} floor plan`} width="1600" height="1131" loading="lazy" /></a>
+          <a href={p.src} data-lightbox="plan" data-caption={p.label}><img src={p.src} alt={p.label ?? `${title} floor plan`} width="1600" height="1131" loading="lazy" /></a>
           {p.label && <figcaption>{p.label}. Tap the plan to enlarge.</figcaption>}
         </figure>
       ))}

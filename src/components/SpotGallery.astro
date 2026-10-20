@@ -14,7 +14,7 @@ const shown = all.filter((s) => s.src || SHOW_SPOT_NUMBERS);
       {title && <h2>{title}</h2>}
       <div class="spot-gallery__grid">
         {shown.map((s, i) => s.src ? (
-          <a href={s.src}><img src={s.src} data-spot={s.n} alt={`${alt} ${i + 1}`} width="780" height="520" loading="lazy" /></a>
+          <a href={s.src} data-lightbox={prefix}><img src={s.src} data-spot={s.n} alt={`${alt} ${i + 1}`} width="780" height="520" loading="lazy" /></a>
         ) : (
           <div class="spot-gallery__empty" data-spot={s.n} data-spot-empty=""><span>Photo {String(s.n).padStart(3, '0')}</span></div>
         ))}

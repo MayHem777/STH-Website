@@ -1,0 +1,129 @@
+---
+// Full-screen photo viewer for any link marked data-lightbox="<group>".
+// Links in the same group page through together (arrows, keyboard, swipe); the counter,
+// caption (the img alt) and "Full size" link come from the clicked link. Without JS the
+// links still open the image on its own, as before.
+---
+<dialog class="lb" id="sth-lightbox" aria-label="Photo viewer">
+  <div class="lb__bar">
+    <span class="lb__count" aria-live="polite"></span>
+    <a class="lb__full" target="_blank" rel="noopener">Full size ↗</a>
+    <button type="button" class="lb__btn lb__close" aria-label="Close photo viewer">×</button>
+  </div>
+  <figure class="lb__stage">
+    <img class="lb__img" alt="" />
+    <figcaption class="lb__cap"></figcaption>
+  </figure>
+  <button type="button" class="lb__btn lb__nav lb__prev" aria-label="Previous photo">‹</button>
+  <button type="button" class="lb__btn lb__nav lb__next" aria-label="Next photo">›</button>
+</dialog>
+
+<style is:global>
+.lb { width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: rgba(12, 12, 12, 0.96); color: #fff; overflow: hidden; }
+.lb::backdrop { background: rgba(12, 12, 12, 0.96); }
+.lb[open] { display: flex; flex-direction: column; }
+.lb__bar { display: flex; align-items: center; gap: 1rem; padding: 0.5rem 0.5rem 0.5rem 1rem; font-size: var(--font-size-sm); }
+.lb__count { flex: 1; font-variant-numeric: tabular-nums; opacity: 0.85; }
+.lb__full { color: #fff; opacity: 0.85; text-decoration: underline; text-underline-offset: 2px; }
+.lb__stage { flex: 1; min-height: 0; margin: 0; padding: 0 3.5rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; touch-action: pan-y pinch-zoom; }
+.lb__img { max-width: 100%; max-height: calc(100% - 2.5rem); width: auto; height: auto; object-fit: contain; border-radius: 4px; user-select: none; -webkit-user-drag: none; transition: opacity 0.15s; }
+.lb__img.is-loading { opacity: 0.3; }
+.lb__img.is-plan { background: #fff; }
+.lb__cap { font-size: var(--font-size-sm); opacity: 0.8; text-align: center; max-width: 60ch; min-height: 1.25em; }
+.lb__btn { background: rgba(255, 255, 255, 0.12); color: #fff; border: 0; border-radius: 99px; width: 2.75rem; height: 2.75rem; font-size: 1.9rem; line-height: 1; cursor: pointer; display: grid; place-items: center; }
+.lb__btn:hover, .lb__btn:focus-visible { background: rgba(255, 255, 255, 0.28); }
+.lb__btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+.lb__nav { position: absolute; top: 50%; transform: translateY(-50%); font-size: 2.4rem; padding-bottom: 0.2rem; }
+.lb__prev { left: 0.5rem; }
+.lb__next { right: 0.5rem; }
+.lb.is-single .lb__nav, .lb.is-single .lb__count { visibility: hidden; }
+@media (max-width: 640px) {
+  .lb__stage { padding: 0 0 4.5rem; }
+  .lb__img { border-radius: 0; }
+  .lb__cap { padding-inline: 1rem; }
+  .lb__nav { top: auto; bottom: 1rem; transform: none; }
+  .lb__prev { left: 1rem; }
+  .lb__next { right: 1rem; }
+}
+html.lb-open { overflow: hidden; }
+</style>
+
+<script is:inline>
+(function () {
+  var dlg = document.getElementById('sth-lightbox');
+  if (!dlg || typeof dlg.showModal !== 'function') return; // very old browser: links just open the image
+  var img = dlg.querySelector('.lb__img'), cap = dlg.querySelector('.lb__cap'),
+      count = dlg.querySelector('.lb__count'), full = dlg.querySelector('.lb__full');
+  var items = [], i = 0;
+
+  function show(n) {
+    i = (n + items.length) % items.length;
+    var a = items[i];
+    var thumb = a.querySelector('img') || document.querySelector('a[data-lightbox][href="' + a.getAttribute('href') + '"] img');
+    img.classList.add('is-loading');
+    img.onload = function () { img.classList.remove('is-loading'); };
+    img.src = a.href;
+    img.alt = thumb ? thumb.alt : '';
+    img.classList.toggle('is-plan', a.dataset.lightbox === 'plan' || /floor plan/i.test(img.alt));
+    cap.textContent = a.dataset.caption || (thumb ? thumb.alt : '');
+    count.textContent = (i + 1) + ' / ' + items.length;
+    full.href = a.href;
+    [i + 1, i - 1].forEach(function (k) { // warm the neighbours so swiping feels instant
+      var b = items[(k + items.length) % items.length]; if (b) new Image().src = b.href;
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[data-lightbox]');
+    if (!a || e.ctrlKey || e.metaKey || e.shiftKey || e.button > 0) return;
+    e.preventDefault();
+    var group = a.dataset.lightbox;
+    items = Array.prototype.filter.call(document.querySelectorAll('a[data-lightbox]'), function (x) {
+      return x.dataset.lightbox === group && x.offsetParent !== null; // skip hidden ones
+    }).filter(function (x, k, all) { // a text link and its picture can point at the same image
+      return all.findIndex(function (y) { return y.href === x.href; }) === k;
+    });
+    if (!items.length) items = [a];
+    dlg.classList.toggle('is-single', items.length < 2);
+    show(Math.max(0, items.findIndex(function (x) { return x.href === a.href; })));
+    document.documentElement.classList.add('lb-open');
+    dlg.showModal();
+    // Phone back button/gesture closes the viewer instead of leaving the page.
+    try { history.pushState({ sthLightbox: 1 }, ''); pushed = true; } catch (err) { pushed = false; }
+  });
+  var pushed = false;
+  window.addEventListener('popstate', function () {
+    if (pushed) { pushed = false; if (dlg.open) dlg.close(); }
+  });
+
+  dlg.addEventListener('close', function () {
+    document.documentElement.classList.remove('lb-open');
+    img.removeAttribute('src');
+    if (pushed) { pushed = false; history.back(); }
+  });
+  dlg.querySelector('.lb__close').addEventListener('click', function () { dlg.close(); });
+  dlg.querySelector('.lb__prev').addEventListener('click', function () { show(i - 1); });
+  dlg.querySelector('.lb__next').addEventListener('click', function () { show(i + 1); });
+  dlg.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowLeft') { e.preventDefault(); show(i - 1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); show(i + 1); }
+  });
+  // Tap on the dark area around the photo closes it (Esc is handled by <dialog>).
+  dlg.addEventListener('click', function (e) {
+    if (e.target === dlg || e.target.classList.contains('lb__stage')) dlg.close();
+  });
+
+  // Swipe left/right on phones; ignored while pinch-zoomed or for mostly vertical moves.
+  var x0 = null, y0 = 0;
+  dlg.addEventListener('touchstart', function (e) {
+    if (e.touches.length !== 1 || (window.visualViewport && visualViewport.scale > 1.01)) { x0 = null; return; }
+    x0 = e.touches[0].clientX; y0 = e.touches[0].clientY;
+  }, { passive: true });
+  dlg.addEventListener('touchend', function (e) {
+    if (x0 === null || items.length < 2) return;
+    var dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) show(dx < 0 ? i + 1 : i - 1);
+  });
+})();
+</script>

@@ -1,5 +1,6 @@
 ---
 import SpotLabels from '../components/SpotLabels.astro';
+import Lightbox from '../components/Lightbox.astro';
 import LeadTracking from '../components/LeadTracking.astro';
 import SEOHead from '../components/SEOHead.astro';
 import Header from '../components/Header.astro';
@@ -83,6 +84,7 @@ const { class: className, ...seoProps } = Astro.props;
     <Footer />
     <LeadTracking />
     <SpotLabels />
+    <Lightbox />
     <!-- STH chat widget (separate repo: MayHem777/sth-chat-widget). Loaded on idle or first scroll
          so it never competes with first paint. The Turnstile site key is public. -->
     <script is:inline>
