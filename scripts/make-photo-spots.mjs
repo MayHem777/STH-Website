@@ -67,7 +67,7 @@ add('site/share', '/', 'Picture shown when someone shares the website on Faceboo
 // Products split off another page keep their photos' numbers: a new spot takes the number of the old
 // page's spot that showed the same photo, if that old spot is gone.
 const MOVED_FROM = { 'modular/banksia': 'modular/cabin', 'modular/dahlia': 'modular/cabin', 'modular/raglan': 'modular/cabin',
-  'modular/office-a': 'modular/office' }; // Office → Office A/B/C, 2026-10-20
+  'modular/office-a': 'modular/office', 'modular/banksia-office': 'modular/office-a' }; // Office → Office A/B/C, then A → Banksia Office, 2026-10-20
 const keysNow = new Set(spots.map((s) => s.key)), moved = new Set();
 function movedN(s) {
   const from = MOVED_FROM[s.key.split('/').slice(0, 2).join('/')]; if (!from || !s.current) return undefined;
