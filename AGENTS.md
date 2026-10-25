@@ -111,12 +111,36 @@ Checklist — verify against real repo state, don't assume:
     - Watch the first real paid lead after cutover end to end (HubSpot →
       AutoDraft draft → dashboard) before calling the cutover done.
 
+16. [ ] **Instagram bio links still work** (Mitch, 2026-10-25). The
+    @sunshinetinyhouses bio uses Instagram's own links (Linktree removed
+    2026-10-25). Three point at old Squarespace addresses that `_redirects`
+    must catch; the fourth is the HubSpot booking page (not affected by DNS).
+    Right after cutover, on a phone, tap each link from the Instagram profile:
+    - "Get a price for your build" →
+      `/contact?utm_source=instagram&utm_medium=bio&utm_content=price`
+      must land on `/contact/`
+    - "Explore our modular homes" →
+      `/our-modular-homes?utm_source=instagram&utm_medium=bio` must land on
+      `/modular-homes/`
+    - "Explore our tiny houses" →
+      `/our-tiny-houses?utm_source=instagram&utm_medium=bio` must land on
+      `/tiny-houses-on-wheels/`
+    - "Book a call or factory visit" →
+      `https://meetings-ap1.hubspot.com/mitchell-croft?utm_source=instagram&utm_medium=bio`
+    For each: one hop, no 404, and the `utm_` tags are still in the address
+    bar after the redirect (otherwise HubSpot loses the Instagram source).
+    Then update the three site links in Instagram (phone app only) to the new
+    addresses directly, keeping the same tags, so they no longer depend on the
+    redirects. Never point a bio link at `/google-ads-offer/` or
+    `/meta-ads-offer/`: their thank-you page fires the paid-ad conversions
+    for any lead.
+
 After reporting checklist status: if anything is incomplete, say so plainly
 and do not proceed with DNS/launch actions or advice on how to do them until
 Mitch has seen the gap and explicitly said he wants to proceed anyway despite
 it. Items 1/2 (redirect completeness), 7 (Mitch sign-off), 8 (MX
 records) and 15 (paid-lead pages) are treated with equal severity — a broken MX record is a silent
-business-critical failure, not just an SEO risk. Only once all 15 items are
+business-critical failure, not just an SEO risk. Only once all 16 items are
 checked off (or explicitly overridden by Mitch) should you engage normally
 with DNS cutover questions.
 
