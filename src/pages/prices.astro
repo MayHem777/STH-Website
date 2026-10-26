@@ -1,0 +1,139 @@
+---
+// One page with every model, its price and size (AI search pass 2026-10-27).
+// "How much is a Sunshine Tiny Houses granny flat / tiny house?" is a common question to
+// ChatGPT, Perplexity and Google AI Overviews; a plain table is what they quote best.
+// Built from the content files via catalogue(), so it always matches the model pages.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CTAButton from '../components/CTAButton.astro';
+import { catalogue } from '../lib/catalogue';
+import { EX_FACTORY_NOTE, PRICES_AS_AT, formatPrice } from '../lib/price';
+
+const { modular, thow, studios } = await catalogue();
+const SITE_URL = 'https://www.sunshinetinyhouses.com.au';
+const minOf = (xs: (number | undefined)[]) => Math.min(...xs.filter((x): x is number => !!x));
+const modularFrom = formatPrice(minOf(modular.map((m) => m.priceNum)));
+const modularTo = formatPrice(Math.max(...modular.map((m) => m.priceNum ?? 0)));
+const thowFrom = formatPrice(minOf(thow.map((t) => t.turnKeyNum)));
+const lockUpFrom = formatPrice(minOf(thow.map((t) => (t.lockUp ? Number(t.lockUp.replace(/[$,]/g, '')) : undefined))));
+
+const itemList = (name: string, rows: { title: string; href: string }[]) => ({
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name,
+  itemListElement: rows.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: r.title, url: `${SITE_URL}${r.href}` })),
+});
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+    { '@type': 'ListItem', position: 2, name: 'Price list', item: `${SITE_URL}/prices/` },
+  ],
+};
+---
+
+<BaseLayout
+  title="Price List: Modular Homes & Tiny Houses | Sunshine Tiny Houses"
+  description={`Every Sunshine Tiny Houses model with its price and size: modular homes and granny flats from ${modularFrom}, tiny houses on wheels turn-key from ${thowFrom}. Prices incl. GST, ${PRICES_AS_AT}.`}
+  canonical={`${SITE_URL}/prices/`}
+  schema={[breadcrumbSchema, itemList('Modular homes', modular), itemList('Tiny houses on wheels', thow)]}
+>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Price list</p>
+      <h1>What our homes cost</h1>
+      <p class="page-hero__sub">Every model with its starting price and size, on one page. Prices current {PRICES_AS_AT}.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prices">
+      <div class="prices__summary">
+        <h2>The short answer</h2>
+        <ul>
+          <li><strong>Modular homes and granny flats</strong> (built in our Noosaville factory, craned onto your block) start from <strong>{modularFrom}</strong> for a utility room and go to <strong>{modularTo}</strong> for our largest two-bedroom home.</li>
+          <li><strong>Tiny houses on wheels</strong> start from <strong>{thowFrom}</strong> finished (turn-key), or from <strong>{lockUpFrom}</strong> at lock-up for owner-builders.</li>
+          <li>Prices include GST. {EX_FACTORY_NOTE}</li>
+        </ul>
+        <p>Lock-up means the structure is watertight with windows, roofing and cladding installed, and the inside is bare frames. Turn-key means completely finished and ready to move in.</p>
+      </div>
+
+      <h2 id="modular">Modular homes and granny flats</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Model</th><th scope="col">From (incl. GST)</th><th scope="col">Rooms</th><th scope="col">Floor area</th><th scope="col">Size</th></tr></thead>
+          <tbody>
+            {modular.map((m) => (
+              <tr>
+                <th scope="row"><a href={m.href}>{m.title}</a></th>
+                <td class="price">{m.price ?? 'Ask us'}</td>
+                <td>{m.rooms ?? '–'}</td>
+                <td>{m.area ?? '–'}</td>
+                <td>{m.size ?? '–'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="prices__note">Ex factory: freight, delivery, installation, council approvals and site works are priced for your site. <a href="/modular-homes/our-process/">How a modular build works</a>.</p>
+
+      <h2 id="tiny-houses">Tiny houses on wheels</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Model</th><th scope="col">Turn-key from</th><th scope="col">Lock-up from</th><th scope="col">Length</th><th scope="col">Width</th><th scope="col">Sleeps</th></tr></thead>
+          <tbody>
+            {thow.map((t) => (
+              <tr>
+                <th scope="row"><a href={t.href}>{t.title}</a></th>
+                <td class="price">{t.turnKey ?? '–'}</td>
+                <td class="price">{t.lockUp ?? '–'}</td>
+                <td>{t.length ?? '–'}</td>
+                <td>{t.width ?? '–'}</td>
+                <td>{t.sleeps ?? '–'}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="prices__note">Every tiny house is built on a road-registrable trailer we make ourselves. Want something different? See <a href="/tiny-houses-on-wheels/custom-design-build/">custom design and build</a>. <a href="/delivery/">Delivery</a> is quoted to your address.</p>
+
+      {studios.length > 0 && (
+        <>
+          <h2 id="studios">Backyard studios</h2>
+          <p>Offices, saunas and utility rooms are sized to suit, so they are priced per job:</p>
+          <ul>{studios.map((s) => <li><a href={s.href}>{s.title}</a>: {s.summary}</li>)}</ul>
+        </>
+      )}
+
+      <div class="prices__cta">
+        <h2>Get a price for your site</h2>
+        <p>Tell us the model and your address and we'll price delivery, installation and approvals.</p>
+        <CTAButton href="/contact/">Contact Now</CTAButton>
+        <a class="btn btn--secondary" href="/downloads/sth-brochure.pdf" target="_blank" rel="noopener">Download the brochure</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+.page-hero { background: var(--color-banner); color: #fff; padding: 4rem 0 3rem; }
+.page-hero h1 { color: #fff; }
+.page-hero__sub { margin-top: .75rem; font-size: 1.1rem; max-width: 620px; }
+.prices { max-width: 960px; }
+.prices h2 { margin-top: 2.5rem; margin-bottom: 1rem; }
+.prices__summary { background: var(--color-surface); border-radius: var(--radius-card); padding: 1.5rem 1.75rem; }
+.prices__summary h2 { margin-top: 0; }
+.prices__summary ul { padding-left: 1.25rem; display: grid; gap: 0.5rem; margin-bottom: 1rem; line-height: 1.6; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.prices table { width: 100%; border-collapse: collapse; font-size: var(--font-size-sm); min-width: 560px; }
+.prices th, .prices td { text-align: left; padding: 0.65rem 0.75rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+.prices thead th { font-size: var(--font-size-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-muted); }
+.prices tbody th { font-weight: 600; }
+.prices tbody th a { color: var(--color-primary); text-decoration: underline; }
+.prices td.price { font-weight: 600; white-space: nowrap; }
+.prices__note { font-size: var(--font-size-sm); color: var(--color-text-muted); margin-top: 0.75rem; }
+.prices__note a, .prices ul a { color: var(--color-primary); text-decoration: underline; }
+.prices__cta { margin-top: 3rem; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.prices__cta h2, .prices__cta p { flex-basis: 100%; margin: 0; }
+.prices__cta h2 { margin-top: 0; }
+</style>

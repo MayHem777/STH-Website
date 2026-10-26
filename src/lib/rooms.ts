@@ -18,6 +18,7 @@ export function roomsLine(id: string, specs: Specs): string | undefined {
   const n = (v: string) => (v.match(/\d+/) ?? [''])[0];
   const parts: string[] = [];
   if (bed) parts.push(`${n(bed)} bed`);
-  if (bath) parts.push(/ensuite/i.test(bath) ? '1 ensuite' : `${n(bath)} bath`);
+  // A single ensuite reads "1 ensuite"; more than one bathroom is counted (Jacaranda: "2 (ensuite + bathroom)" = 2 bath)
+  if (bath) parts.push(/ensuite/i.test(bath) && Number(n(bath)) <= 1 ? '1 ensuite' : `${n(bath)} bath`);
   return parts.join(' · ');
 }

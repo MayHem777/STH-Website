@@ -1,5 +1,5 @@
 ---
-import { SITE_NAME } from '../config/site';
+import { SITE_NAME, FOUNDED_YEAR } from '../config/site';
 import { spot } from '../lib/photos';
 
 export interface Props {
@@ -40,6 +40,20 @@ const localBusinessSchema = {
   '@id': `${SITE_URL}/#business`,
   name: 'Sunshine Tiny Houses',
   url: SITE_URL,
+  // Plain-words summary of who we are: AI answer engines quote this when asked "who builds tiny houses / modular homes on the Sunshine Coast"
+  description: 'Queensland licensed builder (QBCC 15205110) in Noosaville on the Sunshine Coast. Designs and builds Class 1a modular homes, granny flats, tiny houses on wheels and backyard studios in its own factory, and delivers Australia-wide.',
+  foundingDate: String(FOUNDED_YEAR),
+  taxID: 'ABN 40 270 427 080',
+  founder: [
+    { '@type': 'Person', name: 'Mitch Croft', jobTitle: 'Builder and managing director', url: `${SITE_URL}/about/` },
+    { '@type': 'Person', name: 'Nat Croft', jobTitle: 'Design and client communication', url: `${SITE_URL}/about/` },
+  ],
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Sunshine Coast, Queensland' },
+    { '@type': 'State', name: 'Queensland' },
+    { '@type': 'Country', name: 'Australia' },
+  ],
+  knowsAbout: ['Modular homes', 'Granny flats', 'Secondary dwellings', 'Tiny houses on wheels', 'Class 1a dwellings', 'Backyard studios', 'Off-grid tiny homes'],
   logo: `${SITE_URL}/images/logo.png`,
   image: new URL(DEFAULT_OG_IMAGE, SITE_URL).href,
   telephone: '+61753158365',
@@ -84,12 +98,23 @@ function tidy(o: any): any {
   if (typeof t.image === 'string') t.image = new URL(t.image, SITE_URL).href;
   if (t['@type'] === 'Product') {
     if (!t.image) t.image = ogImageURL;
-    if (t.offers && t.offers.price == null) delete t.offers;
+    if (t.offers && !Array.isArray(t.offers) && t.offers.price == null) delete t.offers;
   }
   return t;
 }
+// Names the site as one entity, so engines tie every page to the same business
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE_URL}/#website`,
+  name: SITE_NAME,
+  url: `${SITE_URL}/`,
+  inLanguage: 'en-AU',
+  publisher: { '@id': `${SITE_URL}/#business` },
+};
 const schemas = [
   localBusinessSchema,
+  websiteSchema,
   ...(Array.isArray(schema) ? schema : schema ? [schema] : []).map(tidy),
 ];
 ---
@@ -99,7 +124,8 @@ const schemas = [
 <title>{fullTitle}</title>
 <meta name="description" content={description} />
 <link rel="canonical" href={canonicalURL} />
-<meta name="robots" content={isNoindex ? 'noindex, nofollow' : 'index, follow'} />
+<!-- max-snippet/max-image-preview: let Google (incl. AI Overviews) quote and show as much as it likes -->
+<meta name="robots" content={isNoindex ? 'noindex, nofollow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'} />
 <meta name="geo.region" content="AU-QLD" />
 <meta name="geo.placename" content="Noosaville" />
 <meta name="theme-color" content="#5c6a5b" />

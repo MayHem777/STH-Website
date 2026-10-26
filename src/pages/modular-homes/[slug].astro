@@ -1,4 +1,5 @@
 ---
+import { productSchema as buildProductSchema } from '../../lib/schema';
 import ComingSoonNote from '../../components/ComingSoonNote.astro';
 import { listed } from '../../lib/visible';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -19,19 +20,7 @@ export async function getStaticPaths() {
 const { product } = Astro.props;
 const { Content } = await render(product);
 
-const productSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: product.data.title,
-  description: product.data.description,
-  brand: { '@type': 'Brand', name: 'Sunshine Tiny Houses' },
-  offers: {
-    '@type': 'Offer',
-    url: Astro.url.href,
-    ...(product.data.priceFrom && { price: product.data.priceFrom, priceCurrency: 'AUD' }),
-    seller: { '@type': 'Organization', name: 'Sunshine Tiny Houses' },
-  },
-};
+const productSchema = buildProductSchema(product.data, Astro.url.href, 'Modular homes');
 
 const breadcrumbSchema = {
   '@context': 'https://schema.org',

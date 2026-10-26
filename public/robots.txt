@@ -1,4 +1,31 @@
+# Search engines and AI assistants are welcome (AI search pass 2026-10-27).
+# The rule for * already allows everyone; the named AI crawlers below are listed so a
+# future blanket block (e.g. a Cloudflare "block AI bots" setting) is easy to spot as a change.
+# Search/answer bots (ChatGPT search, Claude, Perplexity) are what put us in AI answers;
+# training bots (GPTBot, ClaudeBot, Google-Extended, Applebot-Extended, CCBot) teach the
+# models that Sunshine Tiny Houses exists. To opt out of training only, change their Allow to Disallow.
+
 User-agent: *
+Allow: /
+Disallow: /admin/
+
+# OpenAI: ChatGPT search results, ChatGPT browsing on a user's request, model training
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+# Anthropic: Claude search, Claude fetching on a user's request, model training
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+# Perplexity
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+# Google Gemini / Apple Intelligence use of pages (Google Search and AI Overviews use Googlebot)
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+# Microsoft Copilot uses Bingbot; Common Crawl feeds many open models
+User-agent: Bingbot
+User-agent: CCBot
 Allow: /
 Disallow: /admin/
 

@@ -135,12 +135,27 @@ Checklist — verify against real repo state, don't assume:
     `/meta-ads-offer/`: their thank-you page fires the paid-ad conversions
     for any lead.
 
+17. [ ] **AI search engines can reach and re-read the site** (AI search pass,
+    2026-10-27). ChatGPT search and Copilot use Bing's index, Perplexity and
+    Claude run their own crawlers, and Google AI Overviews use Googlebot.
+    - If the domain's DNS moves to Cloudflare: in the zone's AI Crawl Control /
+      Bots settings, confirm "Block AI bots" and the managed robots.txt are OFF
+      (or at least let OAI-SearchBot, ChatGPT-User, Claude-SearchBot,
+      Claude-User, PerplexityBot through). Cloudflare can switch this on for
+      new zones, and it silently removes the site from AI answers.
+    - `https://www.sunshinetinyhouses.com.au/robots.txt` is ours (lists the AI
+      crawlers as allowed), and `/llms.txt` and `/prices/` load.
+    - Bing Webmaster Tools (Mitch: sign in, or import from Search Console):
+      add the site and submit `sitemap-index.xml`.
+    - Run `node scripts/indexnow.mjs` once from the repo (tells Bing every URL
+      is new). Re-run it after any deploy that changes prices or pages.
+
 After reporting checklist status: if anything is incomplete, say so plainly
 and do not proceed with DNS/launch actions or advice on how to do them until
 Mitch has seen the gap and explicitly said he wants to proceed anyway despite
 it. Items 1/2 (redirect completeness), 7 (Mitch sign-off), 8 (MX
 records) and 15 (paid-lead pages) are treated with equal severity — a broken MX record is a silent
-business-critical failure, not just an SEO risk. Only once all 16 items are
+business-critical failure, not just an SEO risk. Only once all 17 items are
 checked off (or explicitly overridden by Mitch) should you engage normally
 with DNS cutover questions.
 

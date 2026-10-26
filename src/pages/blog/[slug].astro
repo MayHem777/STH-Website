@@ -26,12 +26,11 @@ const blogPostingSchema = {
   description: post.data.description,
   datePublished: post.data.publishDate.toISOString(),
   dateModified: (post.data.updatedDate ?? post.data.publishDate).toISOString(),
-  author: { '@type': 'Person', name: post.data.author },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Sunshine Tiny Houses',
-    logo: { '@type': 'ImageObject', url: `${SITE_URL}/images/logo.png` },
-  },
+  // A named builder (with a page about them) is what AI engines and Google look for as the source of a how-to answer
+  author: post.data.author === 'Sunshine Tiny Houses'
+    ? { '@id': `${SITE_URL}/#business` }
+    : { '@type': 'Person', name: post.data.author, url: `${SITE_URL}/about/`, worksFor: { '@id': `${SITE_URL}/#business` } },
+  publisher: { '@id': `${SITE_URL}/#business` },
   ...(postImage && { image: postImage }),
   mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/${post.id}/` },
 };

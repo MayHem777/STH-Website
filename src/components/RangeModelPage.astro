@@ -1,4 +1,5 @@
 ---
+import { productSchema as buildProductSchema } from '../lib/schema';
 // A model inside a range (Cabin: Banksia/Dahlia/Raglan; Office: A/B/C): its own page under /modular-homes/<range>/<id>/.
 import ComingSoonNote from './ComingSoonNote.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -16,19 +17,7 @@ const { product } = Astro.props;
 const R = RANGES[product.data.range!];
 const { Content } = await render(product);
 
-const productSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Product',
-  name: product.data.title,
-  description: product.data.description,
-  brand: { '@type': 'Brand', name: 'Sunshine Tiny Houses' },
-  offers: {
-    '@type': 'Offer',
-    url: Astro.url.href,
-    ...(product.data.priceFrom && { price: product.data.priceFrom, priceCurrency: 'AUD' }),
-    seller: { '@type': 'Organization', name: 'Sunshine Tiny Houses' },
-  },
-};
+const productSchema = buildProductSchema(product.data, Astro.url.href, 'Modular homes');
 import { photo } from '../lib/photos';
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
